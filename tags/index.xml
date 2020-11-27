@@ -1,7 +1,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - Tag - Tiago Vignatti</title>
-        <link>http://example.org/tags/</link>
+        <link>https://tiagovignatti.github.io/my_website/tags/</link>
         <description>Tags - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /></channel>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://tiagovignatti.github.io/my_website/tags/" rel="self" type="application/rss+xml" /></channel>
 </rss>
