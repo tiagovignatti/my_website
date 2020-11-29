@@ -1,14 +1,14 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Tiago Vignatti",
+    "short_name": "Tiago Vignatti",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "/my_website/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-384x384.png",
+            "src": "/my_website/android-chrome-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
         }
