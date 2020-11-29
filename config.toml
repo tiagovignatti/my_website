@@ -41,9 +41,9 @@ theme = "LoveIt"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page
-      subtitle = "This is New Tiago Vignatti Site"
+      subtitle = "ideas – computer science – art"
       # whether to use typeit animation for subtitle
-      typeit = true
+      # typeit = true
       # whether to show social links
       social = true
       # LoveIt NEW | 0.2.0 disclaimer (HTML format is supported)
@@ -122,7 +122,7 @@ theme = "LoveIt"
     Matrix = ""
     Bilibili = ""
     Email = ""
-    RSS = true # LoveIt NEW | 0.2.0
+    # RSS = true # LoveIt NEW | 0.2.0
   
 [menu]
   [[menu.main]]
