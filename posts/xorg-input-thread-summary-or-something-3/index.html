@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Xorg input thread - summary or something #3 - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Xorg input thread - summary or something #3" />
+<meta property="og:description" content="Not so much, but here are the news:
+ * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I&#39;m maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something-3/" />
+<meta property="article:published_time" content="2007-08-28T02:32:41+00:00" />
+<meta property="article:modified_time" content="2007-08-28T02:32:41+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Xorg input thread - summary or something #3"/>
+<meta name="twitter:description" content="Not so much, but here are the news:
+ * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I&#39;m maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something-3/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/mlocking-adventure/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/macosx-gnulinux/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Xorg input thread - summary or something #3",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/xorg-input-thread-summary-or-something-3\/"
+        },"genre": "posts","wordcount":  185 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/xorg-input-thread-summary-or-something-3\/","datePublished": "2007-08-28T02:32:41+00:00","dateModified": "2007-08-28T02:32:41+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Xorg input thread - summary or something #3</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/my_website/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2007-08-28">2007-08-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;185 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>Not so much, but here are the news:</p>
+<pre><code>  * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.
+  * The last new regarding the thread implementation is that we're unfortunately dealing with **critical sections** inside the X event queue (mi/mieq.c), so mutex is needed there (just to note: currently, mutex is only implemented using pthread (X11/Xthreads.h), so we also need implement something that is pthread-independent). Probably can exist other pieces of code that might be in an unpredictable way resulting some race conditions (didn't note anything strange yet!).
+  * I finally managed how to implement the page fault notifier without any patch inside the kernel. The read_cr2() can be called directly since the page fault notifier runs with interrupts disabled. The implementation can be found [here](http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c).
+</code></pre>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2007-08-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/mlocking-adventure/" class="prev" rel="prev" title="mlock()&#39;ing adventure"><i class="fas fa-angle-left fa-fw"></i>mlock()&#39;ing adventure</a>
+            <a href="/my_website/posts/macosx-gnulinux/" class="next" rel="next" title="MacOSX -&gt; GNU/Linux">MacOSX -&gt; GNU/Linux<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>tiny X - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/tiny-x/</link>
+        <description>tiny X - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 18 Aug 2010 15:22:26 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/tiny-x/" rel="self" type="application/rss+xml" /><item>
+    <title>Xorg server 1.9 minimal</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/xorg-server-1-9-minimal/</link>
+    <pubDate>Wed, 18 Aug 2010 15:22:26 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-server-1-9-minimal/</guid>
+    <description><![CDATA[That&rsquo;s what I&rsquo;m using for MeeGo now. Autoconf parameters, theeere we go:
+&ndash;disable-static &ndash;disable-aiglx &ndash;disable-config-dbus &ndash;disable-config-hal &ndash;disable-dbe &ndash;disable-dga &ndash;disable-dpms &ndash;disable-dri &ndash;disable-glx &ndash;disable-glx-tls &ndash;disable-int10-module &ndash;disable-ipv6 &ndash;disable-screensaver &ndash;disable-secure-rpc &ndash;disable-tcp-transport &ndash;disable-vbe &ndash;disable-vgahw &ndash;disable-xdm-auth-1 &ndash;disable-xinerama &ndash;disable-xwin &ndash;disable-xaa &ndash;disable-xace &ndash;disable-xdmcp &ndash;disable-xf86vidmode &ndash;disable-xfree86-utils &ndash;disable-xnest &ndash;disable-xvmc &ndash;disable-libdrm &ndash;enable-config-udev &ndash;enable-dri2 &ndash;enable-null-root-cursor &ndash;enable-record &ndash;enable-unit-tests &ndash;enable-visibility &ndash;enable-xorg &ndash;with-sha1=libsha1
+PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>fakemouse -- a driver that emulates a mouse - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="fakemouse -- a driver that emulates a mouse" />
+<meta property="og:description" content="For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/" />
+<meta property="article:published_time" content="2008-05-28T02:36:09+00:00" />
+<meta property="article:modified_time" content="2008-05-28T02:36:09+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="fakemouse -- a driver that emulates a mouse"/>
+<meta name="twitter:description" content="For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/google-summer-of-code-2008/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/to-thread-the-x-server/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "fakemouse -- a driver that emulates a mouse",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/fakemouse-a-driver-that-emulates-a-mouse\/"
+        },"genre": "posts","keywords": "device, event, fake, input, kernel, linux, mouse, vignatti, xorg","wordcount":  195 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/fakemouse-a-driver-that-emulates-a-mouse\/","datePublished": "2008-05-28T02:36:09+00:00","dateModified": "2008-05-28T02:36:09+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">fakemouse -- a driver that emulates a mouse</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/my_website/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2008-05-28">2008-05-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;195 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>For my SoC <a href="http://vignatti.wordpress.com/2008/04/29/google-summer-of-code-2008/" target="_blank" rel="noopener noreffer">project</a> I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.</p>
+<p>Why emulate a device? I need stress the X server always with same routines and things like XWarpPointer() and XTestFake*MotionEvent() is not close to a real user usage because they do not pass through all the paths of the event creation stage inside X. So now I can run fakemouse module together with some x11perf test and collect the results comparing the X with and without input thread. Cool :)</p>
+<hr>
+<p>For those who are interested in the driver can do the following:</p>
+<h1 id="wget-httpwebinfufprbrvignatticodefakemouse-001targz">wget <a href="http://web.inf.ufpr.br/vignatti/code/fakemouse-0.01.tar.gz">http://web.inf.ufpr.br/vignatti/code/fakemouse-0.01.tar.gz</a></h1>
+<h1 id="tar-xzvf-fakemouse-001targz">tar xzvf fakemouse-0.01.tar.gz</h1>
+<h1 id="cd-fakemouse-001">cd fakemouse-0.01</h1>
+<h1 id="make">make</h1>
+<h1 id="insmod-fakemouseko">insmod fakemouse.ko</h1>
+<h1 id="echo-1--sysmodulefakemouseparametersmouseon">echo 1 &gt; /sys/module/fakemouse/parameters/mouseon</h1>
+<p>and be happy seeing what happens in some event node create by fakemouse (/dev/input/event*).</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2008-05-28</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/my_website/tags/device/">device</a>,&nbsp;<a href="/my_website/tags/event/">event</a>,&nbsp;<a href="/my_website/tags/fake/">fake</a>,&nbsp;<a href="/my_website/tags/input/">input</a>,&nbsp;<a href="/my_website/tags/kernel/">kernel</a>,&nbsp;<a href="/my_website/tags/linux/">linux</a>,&nbsp;<a href="/my_website/tags/mouse/">mouse</a>,&nbsp;<a href="/my_website/tags/vignatti/">vignatti</a>,&nbsp;<a href="/my_website/tags/xorg/">xorg</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/google-summer-of-code-2008/" class="prev" rel="prev" title="Google Summer of Code 2008"><i class="fas fa-angle-left fa-fw"></i>Google Summer of Code 2008</a>
+            <a href="/my_website/posts/to-thread-the-x-server/" class="next" rel="next" title="to thread the X server (?)">to thread the X server (?)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>developer - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/developer/</link>
+        <description>developer - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 18 Jan 2012 13:53:43 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/developer/" rel="self" type="application/rss+xml" /><item>
+    <title>starting on Wayland development</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/starting-on-wayland-development/</link>
+    <pubDate>Wed, 18 Jan 2012 13:53:43 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/starting-on-wayland-development/</guid>
+    <description><![CDATA[Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!
+ While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love.]]></description>
+</item><item>
+    <title>Nokia, FI...</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/nokia-fi/</link>
+    <pubDate>Fri, 12 Jun 2009 07:06:59 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/nokia-fi/</guid>
+    <description><![CDATA[&hellip; here I&rsquo;am :)]]></description>
+</item></channel>
+</rss>

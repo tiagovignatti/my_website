@@ -1,0 +1,57 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Life - Category - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/categories/life/</link>
+        <description>Life - Category - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/categories/life/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux Graphics for Small Devices at FISL</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</link>
+    <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</guid>
+    <description><![CDATA[Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for _freedesktopers_ though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow here.
+*actually, two nights in Porto Alegre and two nights in Curitiba.]]></description>
+</item><item>
+    <title>Xorg: What is it, and what does it mean?</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/xorg-what-is-it-and-what-does-it-mean/</link>
+    <pubDate>Sat, 26 Dec 2009 18:36:49 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-what-is-it-and-what-does-it-mean/</guid>
+    <description><![CDATA[Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM
+I don&rsquo;t have words for it.]]></description>
+</item><item>
+    <title>my dear diary... (some not-so-old memories)</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/my-dear-diary-some-not-so-old-memories/</link>
+    <pubDate>Mon, 09 Nov 2009 01:47:17 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/my-dear-diary-some-not-so-old-memories/</guid>
+    <description><![CDATA[Portland, OR
+I was so proud for the forth time be part of the X crew, this time in Portland. Really amazing the city. I had the opportunity to play tourist and visit some nice places.
+My X conferences
+BTW, I just collect the photos of all four X conferences that I&rsquo;ve attended. It&rsquo;s not much photos but there&rsquo;s some funny things :)
+X on embedded
+The cool thing of the work that I&rsquo;m doing at Nokia is that I can publish and discuss mostly all X fun with the open source communities.]]></description>
+</item><item>
+    <title>Realistic :(</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/realistic/</link>
+    <pubDate>Fri, 09 Nov 2007 19:43:36 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/realistic/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>MacOSX -&gt; GNU/Linux</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/macosx-gnulinux/</link>
+    <pubDate>Wed, 26 Sep 2007 04:06:33 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/macosx-gnulinux/</guid>
+    <description><![CDATA[I used a part of the money that I earned on the SoC 2007 to buy a laptop to me. My university friends found a good price of a MacBook and we went to the shop in a total of 6 people (!) to buy this laptop trying to get some discount. It cost R$ 3400 (about USD 1800), a very cheap value to the Brazil standards.
+Fine. My MacBook arrived one week ago.]]></description>
+</item><item>
+    <title>Hello world!</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/hello-world/</link>
+    <pubDate>Sun, 11 Feb 2007 04:12:56 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/hello-world/</guid>
+    <description><![CDATA[This is my first post and even my first blog. Well, the blog&rsquo;s intention is to bring in evidence my interests about linux (and maybe music).]]></description>
+</item></channel>
+</rss>

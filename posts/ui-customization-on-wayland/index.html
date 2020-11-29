@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>UI customization on Wayland - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="UI customization on Wayland" />
+<meta property="og:description" content="Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
+
+(I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/ui-customization-on-wayland/" />
+<meta property="article:published_time" content="2013-03-05T15:00:00+00:00" />
+<meta property="article:modified_time" content="2013-03-05T15:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="UI customization on Wayland"/>
+<meta name="twitter:description" content="Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
+
+(I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/ui-customization-on-wayland/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/the-damn-small-wayland-api/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/welcome-to-chromiums-ozone-wayland/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "UI customization on Wayland",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/ui-customization-on-wayland\/"
+        },"genre": "posts","keywords": "canonical, customize, mir, protocol, shell, ubuntu, user interface, wayland","wordcount":  646 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/ui-customization-on-wayland\/","datePublished": "2013-03-05T15:00:00+00:00","dateModified": "2013-03-05T15:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">UI customization on Wayland</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2013-03-05">2013-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;646 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#a-footnote-about-canonicals-mir">A footnote about Canonical&rsquo;s Mir</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is <a href="http://ppaalanen.blogspot.com/2012/11/on-supporting-wayland-gl-clients-and.html" target="_blank" rel="noopener noreffer">all solved</a>. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.</p>
+<p><a href="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png" target="_blank" rel="noopener noreffer"><img
+        class="lazyload"
+        src="/my_website/svg/loading.min.svg"
+        data-src="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450"
+        data-srcset="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450, http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450 1.5x, http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450 2x"
+        data-sizes="auto"
+        alt="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450"
+        title="wayland-ui-customization" />
+</a></p>
+<p>(I&rsquo;ve made a <a href="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization-cheat-sheet.png" target="_blank" rel="noopener noreffer">cheat sheet here</a> also &ndash; Creative Commons Legal Code Attribution 2.0. for both figures)</p>
+<p>On customization, the <strong>shell plugin</strong> comes first: changes in there will impact directly which UI paradigm will be used. Specifically, one implementing the plugin protocol will be defining whether the UI is meant for phones, IVI, desktops, etc.</p>
+<p>Probably the most important characteristic of the shell plugin is to give &ldquo;roles&rdquo; for surfaces, i.e. define where and how they will be mapped on the screen. For example, if a client wants its surface mapped as a top-level window, or say to resize the dimensions of it, then it&rsquo;s up to the shell to expose these different surfaces roles, all according the UI paradigm the shell itself is providing.</p>
+<p>Worth to note that the shell plugin doesn&rsquo;t need to rely on any drawing library or graphics toolkit because it doesn&rsquo;t tackle directly drawing aspects. Also, conceptually it&rsquo;s mandatory to give roles for surfaces and therefore a shell plugin is a must (or at least a simple implementation of surface::configure).</p>
+<p>An special <strong>shell client</strong> through an special &ldquo;private&rdquo; protocol can be used for setting up basic UI elements that require special treatment. For example in the desktop UI, widget elements such as panel, dock, lockscreen and cursors will need special treatments for their positioning, grabbing semantics and so forth.</p>
+<p>On customization, different shell clients, exposing different UI elements can be implemented using <em>the</em> <em>same</em> shell plugin. Some architectures will rather be using one overlay simple client that will take care of spawning and controlling other UI basics applications also.</p>
+<p>The special client will probably want to rely on graphics toolkits.</p>
+<p><strong>Wayland clients</strong> use the Wayland core protocol and the protocol that shell plugin has defined. The corollary is that one client will always know the UI paradigm (due shell plugin) and will <em>not</em> work across different paradigms. Though, that doesn&rsquo;t mean applications will need to know their paradigm necessarily but only the middleware software is connecting to Wayland (like the graphics toolkits).</p>
+<h3 id="a-footnote-about-canonicals-mir">A footnote about Canonical&rsquo;s Mir</h3>
+<p>Canonical announced their <a href="https://wiki.ubuntu.com/MirSpec" target="_blank" rel="noopener noreffer">new display manager</a> yesterday. There&rsquo;s a section &ldquo;Why Not Wayland / Weston?&rdquo; where they claim:</p>
+<p><em>&ldquo;we consider the shell integration parts of the protocol as privileged and we&rsquo;d rather avoid having any sort of shell behavior defined in the client facing protocol.&quot;</em></p>
+<p>and something similar was <a href="http://samohtv.wordpress.com/2013/03/04/mir-an-outpost-envisioned-as-a-new-home/" target="_blank" rel="noopener noreffer">written here</a> also:</p>
+<p><em>&rdquo; Wayland .. exposes privileged sections like the shell integration that we planned to handle differently, both for security reasons and as we wanted to decouple the way the shell works on top of the display server from the application-facing protocol&quot;</em></p>
+<p>so they would rather have:</p>
+<p><em>&ldquo;An outer-shell together with a frontend-firewall that allow us to port our display server to arbitrary graphics stacks and bind it to multiple protocols.&quot;</em></p>
+<p>First of all, there&rsquo;s nothing privileged about the shell protocol Wayland is exposing. wl_shell and wl_shell_surface (the &ldquo;shell protocols&rdquo;) are part of the Wayland core protocol, yes, but as I&rsquo;ve explained on this post, it&rsquo;s all customizable for whatever UI needs. Nevertheless, their usage is completely optional and anyone can build a different shell and stack with the rest of Wayland, just like tablet-shell protocol for instance does. Still, this will be Wayland and use the shiny libwayland for IPC.</p>
+<p>Therefore I don&rsquo;t think Canonical should justify their new project because Wayland <em>&ldquo;does not fulfill .. requirements completely&rdquo;</em>. There are no technical reasons Ubuntu cannot use Wayland in principle. What they wrote there is a very very mean excuse instead.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2013-03-05</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/my_website/tags/canonical/">canonical</a>,&nbsp;<a href="/my_website/tags/customize/">customize</a>,&nbsp;<a href="/my_website/tags/mir/">mir</a>,&nbsp;<a href="/my_website/tags/protocol/">protocol</a>,&nbsp;<a href="/my_website/tags/shell/">shell</a>,&nbsp;<a href="/my_website/tags/ubuntu/">ubuntu</a>,&nbsp;<a href="/my_website/tags/user-interface/">user interface</a>,&nbsp;<a href="/my_website/tags/wayland/">wayland</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/the-damn-small-wayland-api/" class="prev" rel="prev" title="the damn small Wayland API"><i class="fas fa-angle-left fa-fw"></i>the damn small Wayland API</a>
+            <a href="/my_website/posts/welcome-to-chromiums-ozone-wayland/" class="next" rel="next" title="Welcome to Chromium&#39;s Ozone-Wayland">Welcome to Chromium&#39;s Ozone-Wayland<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

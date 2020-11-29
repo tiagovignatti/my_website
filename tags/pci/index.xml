@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>pci - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/pci/</link>
+        <description>pci - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 21 Feb 2008 23:53:39 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/pci/" rel="self" type="application/rss+xml" /><item>
+    <title>Benchmarking it all</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/benchmarking-it-all/</link>
+    <pubDate>Thu, 21 Feb 2008 23:53:39 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/benchmarking-it-all/</guid>
+    <description><![CDATA[After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.
+The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens.]]></description>
+</item></channel>
+</rss>

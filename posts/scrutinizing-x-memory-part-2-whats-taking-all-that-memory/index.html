@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Scrutinizing X memory, part 2: what&#39;s taking all that memory? - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Scrutinizing X memory, part 2: what&#39;s taking all that memory?" />
+<meta property="og:description" content="So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/pidof Xorg/{smaps, status}. I used also a script found on the Web to parse and organize these informations; Mikhail Gusarov has extended this script to show a very useful output.
+Xorg per se Running just one standalone Xorg -retro. In my system it represents: VmRSS: 5440 kB VmSize: 13620 kB
+from those 5440 kB of RSS: 3404 kB (63 %) come from code 1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) 228 kB (4 %) come from other data mapped in memory 180 kB (3 %) come from rodata" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/" />
+<meta property="article:published_time" content="2010-03-25T18:01:10+00:00" />
+<meta property="article:modified_time" content="2010-03-25T18:01:10+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Scrutinizing X memory, part 2: what&#39;s taking all that memory?"/>
+<meta name="twitter:description" content="So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/pidof Xorg/{smaps, status}. I used also a script found on the Web to parse and organize these informations; Mikhail Gusarov has extended this script to show a very useful output.
+Xorg per se Running just one standalone Xorg -retro. In my system it represents: VmRSS: 5440 kB VmSize: 13620 kB
+from those 5440 kB of RSS: 3404 kB (63 %) come from code 1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) 228 kB (4 %) come from other data mapped in memory 180 kB (3 %) come from rodata"/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/toolkit-please-xlib-xcb/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Scrutinizing X memory, part 2: what's taking all that memory?",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/scrutinizing-x-memory-part-2-whats-taking-all-that-memory\/"
+        },"genre": "posts","keywords": "embedded, footprint, memory, n900, x, x11, xorg","wordcount":  850 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/scrutinizing-x-memory-part-2-whats-taking-all-that-memory\/","datePublished": "2010-03-25T18:01:10+00:00","dateModified": "2010-03-25T18:01:10+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Scrutinizing X memory, part 2: what&#39;s taking all that memory?</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2010-03-25">2010-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;850 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#xorg-per-se">Xorg per se</a></li>
+        <li><a href="#the-code-being-started">the code being started</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/<code>pidof Xorg</code>/{smaps, status}. I used also a <a href="http://wingolog.org/pub/mem_usage.py" target="_blank" rel="noopener noreffer">script</a> found on the <a href="http://wingolog.org/archives/2007/11/27/reducing-the-footprint-of-python-applications" target="_blank" rel="noopener noreffer">Web</a> to parse and organize these informations; Mikhail Gusarov has <a href="http://github.com/dottedmag/mem-usage" target="_blank" rel="noopener noreffer">extended</a> this script to show a very useful <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/x-standalone-memory-per-libraries.txt" target="_blank" rel="noopener noreffer">output</a>.</p>
+<h3 id="xorg-per-se">Xorg per se</h3>
+<p>Running just one standalone <code>Xorg -retro</code>. In my system it represents:
+VmRSS:      5440 kB
+VmSize:    13620 kB</p>
+<p>from those 5440 kB of RSS:
+3404 kB (63 %) come from code
+1628 kB (30 %) come from malloc/mmap in anonymous memory (heap)
+228 kB  (4 %) come from other data mapped in memory
+180 kB  (3 %) come from rodata</p>
+<p>from those same 5440 kB of RSS:
+1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) somewhere*
+1200 kB (22 %) come from Xorg
+628 kB (12 %) come from libc
+316 kB  (6 %) come from libcrypto
+164 kB  (3 %) come from libint10
+136 kB (2.5%) come from libXfont
+128 kB come from libxaa
+120 kB come from libpixman
+116 kB come from nv_drv
+112 kB come from ld
+102 kB come from libglx
+100 kB come from swrast_dri
+88 kB come from libfb
+60 kB come from libpthread
+48 kB come from evdev
+xxx kB come from other libraries**</p>
+<h5 id="-just-looking-into-proc-theres-no-way-to-determine-if-the-allocations-came-either-from-the-binary-itself-or-some-dso-ill-definitely-analyse-carefully-this-in-a-near-future-using-another-approachhttppeoplefreedesktoporgvignattiscrutinizing-x-mem0001-dix-add-memory-allocation-wrapping-functions-for-propatch">* just looking into /proc/, there&rsquo;s no way to determine if the allocations came either from the binary itself or some DSO. I&rsquo;ll definitely analyse carefully this in a near future using <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/0001-dix-add-memory-allocation-wrapping-functions-for-pro.patch" target="_blank" rel="noopener noreffer">another approach</a>.</h5>
+<p>** it&rsquo;s missing from these numbers the input hotplug layer, which mostly systems are using today. In another data collected, I&rsquo;ve seen dbus + hal taking 268 kB against amazingly 64 kB from libudev.</p>
+<p>These measurements are not perfect; they are a snapshot of the memory when the server just started. The same footprint brought to memory at Xorg&rsquo;s initialization time will differs a lot from the regular usage of the rest of Xorg&rsquo;s life, which would deals with clients and users interacting. For instance, libint10 is mapping 164 kB and it&rsquo;s likely that will never be swapped back to the memory again. Likewise, the heap portion will increase when clients starts to allocate pixmaps on the server.</p>
+<p>Even though, we can see some nice facts. From the first chart, we see that almost 2/3 in RSS is used by instructions. Is it a normal behaviour of a graphics server? I don&rsquo;t know. In the other chart, we see a huge footprint of libcrypto. In such library, when not counting shared mappings (e.g. used by openssl), it&rsquo;s using 88 kB of RSS for private mappings only - sigh. We probably can replace it by other SHA1 implementation (in fact, we have already others inside the server) or <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/0001-Revert-Revert-Render-Use-built-in-SHA1-library.patch" target="_blank" rel="noopener noreffer">use our built-in</a>. We have also libpthread, used in GLX, which is being built even on systems that are not using it (e.g. Maemo on N900). libXfont shows up as a surprise to me either, taking a considerable amount of memory. We&rsquo;re probably able to <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/0001-configure-introduce-enable-disable-fontserver.patch" target="_blank" rel="noopener noreffer">tweak it</a> a bit though.</p>
+<h3 id="the-code-being-started">the code being started</h3>
+<p>Another way to analyse Xorg, is getting informations per code and modules being started. So I first set a breakpoint in InitOutput() function. Until InitOutput() be called:
+VmRSS:      1728 kB
+VmSize:     8788 kB</p>
+<p>from 1728 kB in RSS:
+1336 kB (77.3 %) come from code
+132 kB  (7.6 %) come from malloc/mmap in anonymous memory (heap)
+144 kB  (8.3 %) come from other data mapped in memory
+116 kB  (6.7 %) come from rodata</p>
+<p>from 1728 kB in RSS:
+436 kB (25.2 %) come from libc
+328 kB (19  %) come from Xorg
+316 kB (18.3 %) come from libcrypto</p>
+<p>A breakpoint in InitOutput() means the very first steps of Xorg initialization: command line processing, OS layer being started and other basic routines. At this point, naturally it wasn&rsquo;t executed much code inside Xorg yet, neither any drivers were loaded. Therefore, almost half memory usage of the process (44 %) came from basic libraries start up such as libc, libcrypto, etc.</p>
+<p>The next chart, when setting a break point at InitInput(), shows the moment that the output is mostly done. I.e., internal loader initialized, configuration and its parsing done and output drivers already loaded. Until InitInput() be called:
+VmRSS:      4436 kB
+VmSize:    13724 kB</p>
+<p>from 4436 kB in RSS:
+3352 kB (75.6 %) come from code
+676 kB (15.2 %) come from malloc/mmap in anonymous memory (heap)
+228 kB  (5.1 %) come from other data mapped in memory
+180 kB  (4 %) come from rodata</p>
+<p>We see the the server&rsquo;s RSS has jumped 2708 kB from the previous chart. In other words, it represents 2708 kB, or 50%, just being used to output&rsquo;s initialization, and that 1004 kB (18.4 %) will be used for input initialization routines.</p>
+<hr>
+<p>Well, I&rsquo;m already happy with these preliminary statistics. I guess we have already work to do just looking into. Now, I plan to investigate a bit further X&rsquo;s heap creation and how efficiently X clients are using pixmaps.</p>
+<p>As always, I appreciate any corrections, suggestions and improvements.</p>
+<h5 id="-this-text-was-kindly-reviewed-by-mikhail-gusarov">* this text was kindly reviewed by Mikhail Gusarov.</h5>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2010-03-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/my_website/tags/embedded/">embedded</a>,&nbsp;<a href="/my_website/tags/footprint/">footprint</a>,&nbsp;<a href="/my_website/tags/memory/">memory</a>,&nbsp;<a href="/my_website/tags/n900/">n900</a>,&nbsp;<a href="/my_website/tags/x/">x</a>,&nbsp;<a href="/my_website/tags/x11/">x11</a>,&nbsp;<a href="/my_website/tags/xorg/">xorg</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/scrutinizing-x-memory-part-1-overview/" class="prev" rel="prev" title="Scrutinizing X Memory, part 1: overview"><i class="fas fa-angle-left fa-fw"></i>Scrutinizing X Memory, part 1: overview</a>
+            <a href="/my_website/posts/toolkit-please-xlib-xcb/" class="next" rel="next" title="Toolkit, please: Xlib -&gt; XCB">Toolkit, please: Xlib -&gt; XCB<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

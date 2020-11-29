@@ -1,0 +1,32 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>development - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/development/</link>
+        <description>development - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 18 Jan 2012 13:53:43 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/development/" rel="self" type="application/rss+xml" /><item>
+    <title>starting on Wayland development</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/starting-on-wayland-development/</link>
+    <pubDate>Wed, 18 Jan 2012 13:53:43 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/starting-on-wayland-development/</guid>
+    <description><![CDATA[Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!
+ While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love.]]></description>
+</item><item>
+    <title>X Census (for 1.9)</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-9/</link>
+    <pubDate>Thu, 02 Sep 2010 13:41:11 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-9/</guid>
+    <description><![CDATA[Topic&rsquo;s name is a funny (and friendly) devotion to GNOME Census. So let&rsquo;s take a look at some numbers from the time Xorg 1.9 was in development - raw data is here.
+Would be unfair to measure only the work that happened e.g. in X server or in the drivers being developed and come up with the statistics about &ldquo;who developed X&rdquo;. X and X development community are quite extensive and don&rsquo;t concern only &ldquo;graphics&rdquo; related, i.]]></description>
+</item><item>
+    <title>Attracting reviewers in your patch series</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/attracting-reviewers-in-your-patch-series/</link>
+    <pubDate>Mon, 12 Jul 2010 12:56:01 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/attracting-reviewers-in-your-patch-series/</guid>
+    <description><![CDATA[Usually faster the number of commits, faster the development process. But development without strict reviewing doesn&rsquo;t guarantee quality on the code. Unfortunately, rarely you will see people willing or even just being able to review the changes you are proposing. Attract reviewers is hard!
+Lemma: The art of writing a good patch series is all about to attract reviewers.
+Proof is omitted due to lack of space. Sorry ;) I&rsquo;d start to write a post about how to write a nice commit message and patch series, so I could use as a future reference for you.]]></description>
+</item></channel>
+</rss>

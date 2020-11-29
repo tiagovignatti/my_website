@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>toolkit - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/toolkit/</link>
+        <description>toolkit - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Jun 2010 15:24:11 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/toolkit/" rel="self" type="application/rss+xml" /><item>
+    <title>Toolkit, please: Xlib -&gt; XCB</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/toolkit-please-xlib-xcb/</link>
+    <pubDate>Tue, 15 Jun 2010 15:24:11 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/toolkit-please-xlib-xcb/</guid>
+    <description><![CDATA[We all know since 2006 (?) that the world is turning to use XCB instead Xlib as the interface between X clients and the server. The advantages of using XCB is well know but, even so, it&rsquo;s being adopted very slowly for some reason - for instance no toolkits yet ported it. If this serves as a motivation, Alan got a really nice measurements porting a simple X app.
+Translate your toolkit and application now!]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>VGA arbiter: removing RAC - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="VGA arbiter: removing RAC" />
+<meta property="og:description" content="The Resource Access Control inside Xorg is the guy responsible to take care of the various resources of memory and to share them in a wise manner when two or more graphics devices are active (think multi-head). As an alternative from RAC we can rely on VGA arbiter. So me and Paulo Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the arbiter code with this purpose." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/vga-arbiter-removing-rac/" />
+<meta property="article:published_time" content="2007-12-20T01:18:39+00:00" />
+<meta property="article:modified_time" content="2007-12-20T01:18:39+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="VGA arbiter: removing RAC"/>
+<meta name="twitter:description" content="The Resource Access Control inside Xorg is the guy responsible to take care of the various resources of memory and to share them in a wise manner when two or more graphics devices are active (think multi-head). As an alternative from RAC we can rely on VGA arbiter. So me and Paulo Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the arbiter code with this purpose."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/vga-arbiter-removing-rac/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/the-vga-arbiter/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/benchmarking-it-all/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "VGA arbiter: removing RAC",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/vga-arbiter-removing-rac\/"
+        },"genre": "posts","keywords": "rac, vga arbiter, x11, xorg, xserver","wordcount":  249 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/vga-arbiter-removing-rac\/","datePublished": "2007-12-20T01:18:39+00:00","dateModified": "2007-12-20T01:18:39+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">VGA arbiter: removing RAC</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2007-12-20">2007-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;249 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>The Resource Access Control inside Xorg is the guy responsible to take  care of the various resources of memory and to share them in a wise  manner when two or more graphics devices are active (think multi-head).  As an alternative from RAC we can rely on <a href="http://vignatti.wordpress.com/2007/11/23/the-vga-arbiter/" target="_blank" rel="noopener noreffer">VGA arbiter</a>. So me and Paulo  Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the  arbiter code with this purpose.</p>
+<p>Now we&rsquo;re trying to do some experiments to see what&rsquo;s the performance difference using the RAC and the arbiter. We thought in two tests: (a) a multi-head X with RAC and other with the arbiter. And (b), test a  single-head X using the arbiter and other not using. In the (a), we can  evaluate if the usage of the arbiter overloads the X server and (b) if  there&rsquo;s some difference in use RAC or arbiter in a multi-head  environment. So we ran the x11perf tool and reported a very tiny  worthless gap in both tests (used with -comppixwin500, -move and  -rect500 options). All the experiments you can see here:
+<a href="http://people.freedesktop.org/%7Evignatti/logs-between-rac-arb_19Dez2007.tar.gz" target="_blank" rel="noopener noreffer">http://people.freedesktop.org/~vignatti/logs-between-rac-arb_19Dez2007.tar.gz</a></p>
+<p>Am I missing something about how I did these results or everything seems  fine?</p>
+<p>(I made the mistake to test this things using CFLAGS='-g3 -O0'. Anyone  knows if this will result in different conclusions between the two test  cases? I&rsquo;m using the git upstream code of server-1.4-branch and nv driver)</p>
+<p>Anyway, we will keep our working and the next challenge will be to think  about DRI, xv and GL.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2007-12-20</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/my_website/tags/rac/">rac</a>,&nbsp;<a href="/my_website/tags/vga-arbiter/">vga arbiter</a>,&nbsp;<a href="/my_website/tags/x11/">x11</a>,&nbsp;<a href="/my_website/tags/xorg/">xorg</a>,&nbsp;<a href="/my_website/tags/xserver/">xserver</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/the-vga-arbiter/" class="prev" rel="prev" title="The VGA arbiter"><i class="fas fa-angle-left fa-fw"></i>The VGA arbiter</a>
+            <a href="/my_website/posts/benchmarking-it-all/" class="next" rel="next" title="Benchmarking it all">Benchmarking it all<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

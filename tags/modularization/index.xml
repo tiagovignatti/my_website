@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>modularization - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/modularization/</link>
+        <description>modularization - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 23 Jan 2010 17:20:25 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/modularization/" rel="self" type="application/rss+xml" /><item>
+    <title>Customization and true modularization of Xorg</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/</link>
+    <pubDate>Sat, 23 Jan 2010 17:20:25 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/</guid>
+    <description><![CDATA[For the first time in life, Xorg is being used in a single platform and for a given device only (other devices have used an X11 implementation but using other non-canonical servers, such kdrive&rsquo;s based - Tiny-X).
+Previously Xorg was being packed to run in a huge amount of OSes - mostly Linux and Unix-like distributions - with the characteristic of be architecture portable and able to run on a huge set of video and input devices.]]></description>
+</item></channel>
+</rss>

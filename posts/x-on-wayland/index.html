@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>X on Wayland - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="X on Wayland" />
+<meta property="og:description" content="A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/x-on-wayland/" />
+<meta property="article:published_time" content="2012-06-13T14:01:32+00:00" />
+<meta property="article:modified_time" content="2012-06-13T14:01:32+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="X on Wayland"/>
+<meta name="twitter:description" content="A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/x-on-wayland/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/starting-on-wayland-development/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/the-damn-small-wayland-api/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "X on Wayland",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/x-on-wayland\/"
+        },"genre": "posts","keywords": "wayland, weston, x11, xorg, xwayland","wordcount":  650 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/x-on-wayland\/","datePublished": "2012-06-13T14:01:32+00:00","dateModified": "2012-06-13T14:01:32+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">X on Wayland</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2012-06-13">2012-06-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;650 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it. Hence, X on Wayland fits pretty well with our overall transition plan.</p>
+<p>The architecture behind and the mechanisms are a little tricky though, let&rsquo;s take a look.</p>
+<hr>
+<p><a href="http://vignatti.files.wordpress.com/2012/06/xwayland.png" target="_blank" rel="noopener noreffer"><img
+        class="lazyload"
+        src="/my_website/svg/loading.min.svg"
+        data-src="http://vignatti.files.wordpress.com/2012/06/xwayland.png"
+        data-srcset="http://vignatti.files.wordpress.com/2012/06/xwayland.png, http://vignatti.files.wordpress.com/2012/06/xwayland.png 1.5x, http://vignatti.files.wordpress.com/2012/06/xwayland.png 2x"
+        data-sizes="auto"
+        alt="http://vignatti.files.wordpress.com/2012/06/xwayland.png"
+        title="http://vignatti.files.wordpress.com/2012/06/xwayland.png" />
+</a></p>
+<p>Once Weston is started, it launches the <strong>xwayland module</strong> which creates an X socket, adds it to the main Weston loop and waits for X clients to be connected into. When the first client gets connected, it triggers Weston to fork and exec one X server. Weston continues its normal execution but unregister itself that socket.</p>
+<p>The X server, with the <strong>Wayland backend</strong> on it (xwayland), keeps listening Weston via a special <strong>Wayland protocol interface</strong>. Weston binds such interface and announces back the socket that X clients will be connecting to (<code>xserver_send_listen_socket event</code>) and the first X client that was just connected (<code>xserver_send_client event</code>). The idea is to give now to X the responsibility of clients trying to be connected, naturally. Worth to mention that this lazy initialization method was intentionally designed in order to avoid extra lags at Weston start up and memory overhead when X11 applications are not being used. So the X server is started on demand, only when actually needed.</p>
+<p>At this point now, Weston also starts its <strong>own X Window Manager</strong>. In short, the main task of it is to proxy X applications built based on those old WM standards, such as EWMH and the jurassic ICCCM, and plumb them into the shiny Wayland desktop shell interface. In other words, the idea is to map different type of X windows on Wayland surfaces (<code>xserver_set_window_id request</code>), and specially give some meaningful user-interface policies on X Windows to the desktop shell, for instance making a surface to get maximized, or say to resize/move it around.</p>
+<p>Other tasks the Weston X window manager performs are embed a pretty decoration frame around windows and also make sure the client-to-client communication such as copy and paste (selection) and eventually drag and drop work nicely. Remark that the X protocol doesn&rsquo;t define policy but the WMs, and this is a challenge for Wayland, that does define. So the Weston X WM has to come up with the right amount of salt to fit perfectly the policies that were already straighten up by Wayland&rsquo;s desktop shell&hellip; hmm way too philosophical.</p>
+<p>All X windows created from now on will be redirected to offscreen pixmap and stored on a DRM buffer (via the <strong>xwayland video driver</strong>); that&rsquo;s how compositing works on Wayland. The idea is that a X client will behave very likely as a regular Wayland client. Therefore, there&rsquo;s no protocol calls or any major task involved on xwayland and all happens seamlessly, with the protocol &ldquo;conversion&rdquo; penalty close to nil.</p>
+<p>The architecture for input handling looks good already as well. At X init time, it&rsquo;s created fake devices, the keyboard and the pointer, and the concept goes the other way around of window creation: it gives the input devices capabilities from Weston to Xorg. We&rsquo;re still shaping the cursor settings, the complex logic of client and surface grabbing, among other features, but the basics are most definitely in place already.</p>
+<p><a href="http://www.youtube.com/watch?v=FLhMINYf3iE">http://www.youtube.com/watch?v=FLhMINYf3iE</a></p>
+<p>So the video is there for demoing what we&rsquo;ve got until now. You can see in practice all these rather cool building blocks I mentioned. It&rsquo;s rather cool.. specially for developers; one has to have the know-how on X11 and Wayland protocols, Xorg and Weston internals, X Window Manager standards, etc. Lot of fun!!!</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2012-06-13</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/my_website/tags/wayland/">wayland</a>,&nbsp;<a href="/my_website/tags/weston/">weston</a>,&nbsp;<a href="/my_website/tags/x11/">x11</a>,&nbsp;<a href="/my_website/tags/xorg/">xorg</a>,&nbsp;<a href="/my_website/tags/xwayland/">xwayland</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/starting-on-wayland-development/" class="prev" rel="prev" title="starting on Wayland development"><i class="fas fa-angle-left fa-fw"></i>starting on Wayland development</a>
+            <a href="/my_website/posts/the-damn-small-wayland-api/" class="next" rel="next" title="the damn small Wayland API">the damn small Wayland API<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

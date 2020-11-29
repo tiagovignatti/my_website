@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>user interface - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/user-interface/</link>
+        <description>user interface - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 05 Mar 2013 15:00:00 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/user-interface/" rel="self" type="application/rss+xml" /><item>
+    <title>UI customization on Wayland</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/ui-customization-on-wayland/</link>
+    <pubDate>Tue, 05 Mar 2013 15:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/ui-customization-on-wayland/</guid>
+    <description><![CDATA[Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
+
+(I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2.]]></description>
+</item></channel>
+</rss>

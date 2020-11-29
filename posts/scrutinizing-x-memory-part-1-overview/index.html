@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Scrutinizing X Memory, part 1: overview - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Scrutinizing X Memory, part 1: overview" />
+<meta property="og:description" content="This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
+Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/" />
+<meta property="article:published_time" content="2010-03-25T17:58:47+00:00" />
+<meta property="article:modified_time" content="2010-03-25T17:58:47+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Scrutinizing X Memory, part 1: overview"/>
+<meta name="twitter:description" content="This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
+Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Scrutinizing X Memory, part 1: overview",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/scrutinizing-x-memory-part-1-overview\/"
+        },"genre": "posts","keywords": "embedded, footprint, memory, n900, x, x11, xorg","wordcount":  808 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/scrutinizing-x-memory-part-1-overview\/","datePublished": "2010-03-25T17:58:47+00:00","dateModified": "2010-03-25T17:58:47+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Scrutinizing X Memory, part 1: overview</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2010-03-25">2010-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;808 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#x-file-object">X file object</a></li>
+        <li><a href="#x-dynamic-allocations-stack-heap-and-friends">X dynamic allocations (stack, heap and friends)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.</p>
+<h3 id="overview">Overview</h3>
+<p>One way to analyse aspects of memory usage of a given program is to scrutinize its object data. Object data contains executable code and static data. Both are of little interest from the process memory management point of view given their layout is determined by the compiler and does not change during process execution. However, we can deduce some nice informations about the object. For instance, from Xorg object we are able to get some statistics about the code, identify its structure and point out architectural mistakes just looking into.</p>
+<p>Besides the object itself, also important is to see it in execution and how the dynamic allocations are performed on the stack and heap. So an analysis of the file object running is valuable as well.</p>
+<h3 id="x-file-object">X file object</h3>
+<p>Consider the following sections of Xorg:</p>
+<p><strong>.text</strong>: contains the instructions executed by the CPU and all constant data - literals. While the program is being executed, pages are loaded into physical memory carrying instructions and literals.</p>
+<p>The number of lines in X code is <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/x-lines-of-code.txt" target="_blank" rel="noopener noreffer">huge</a>, which in some way impacts in a huge .text segment size. In my environment .text is 1833738 bytes (1.74 MB) when the compiler is performing third degree of optimization (-O3). In a very gross view, removal of code means less instructions to execute, consequently less text and less memory footprint. For instance, just a single inclusion of fprintf will cost ~40 bytes of text in your object. Of course it&rsquo;s not straightforward to cut off code all over the server, but for a given device/environment we can <a href="http://vignatti.wordpress.com/2010/01/23/xorg-customization-and-true-modularization/" target="_blank" rel="noopener noreffer">customize</a> it, as already discussed.</p>
+<p>Besides code elimination, optimize the code using compiler&rsquo;s size optimization (-Os) helps a lot either: 260 kB of RSS saved here, only optimizing X server. So we might considered this and also apply the same idea in DSOs. For instance, the size of pixman library mapped on the server shrinks 30% when compiled with size optimization. Good job, compiler!</p>
+<p><strong>.data and .bss</strong>: static or global variables allocated at program startup.</p>
+<p>If the variables allocated in compilation time are not initialized, then BSS (Block Started by Symbol) increases; increase BSS means also increase VM (Virtual Memory), but not necessarily RSS. The VM size is quite meaningless when measuring real memory usage.  So I wouldn&rsquo;t bother to analyse BSS, given the RSS occupied by X is what I really care.</p>
+<p>On the other hand, .data section increases when some data object is initialized for permanent variables. And if these variables is being accessed, it increases directly the physical memory. A good habit here is to declare constant variables whenever is possible, so then they go to .text segment and the compiler might be able to perform optimizations.</p>
+<h3 id="x-dynamic-allocations-stack-heap-and-friends">X dynamic allocations (stack, heap and friends)</h3>
+<p>Probably this is where there&rsquo;s more room for optimizations. The <strong>heap</strong> grows in response the program needs: a program like &ldquo;ls&rdquo; will not make a lot of demands on the heap (one hopes), while the heap of a running Xorg can grow in a truly amazing way. It shouldn&rsquo;t be hard to profile all allocations done inside the server. Probably valgrind&rsquo;s massif with a bunch of arguments give this for us.</p>
+<p>X clients are able to request the server to allocate pixmaps in its own memory. Such feature is one of the main reasons of the growing-shrinking in the server&rsquo;s memory footprint. Because of that, it&rsquo;s very usual to see people getting confused thinking there&rsquo;s a leak on the server while actually it&rsquo;s on client side.</p>
+<p>Besides heap allocations there&rsquo;s also the <strong>stack</strong>, used to hold automatic variables and functions data. I don&rsquo;t think there&rsquo;s much to track in stack memory or ways to save overall process memory. But a good rule to follow is that typically allocation here is much faster than for dynamic storage (heap or free store), because a memory allocation in the stack involves only pointer increment rather than more complex management.</p>
+<hr>
+<p>The ideas above were just an overview where we can start to work on. I don&rsquo;t believe there&rsquo;s an unique and certain point that we can go and <em>fix</em> X memory usage. We should analyse the code and attack all sides.</p>
+<p>Next, I&rsquo;ll analyse in depth each of these dynamic and static allocation ways discussed in this document, starting doing some statistics where X <em>sucks</em> more&hellip; memory :-P I&rsquo;ll appreciate any kind of corrections/suggestions on these documents.</p>
+<h5 id="-this-text-was-kindly-reviewed-by-ander-conselvan-and-mikhail-gusarov">* this text was kindly reviewed by Ander Conselvan and Mikhail Gusarov.</h5>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2010-03-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/my_website/tags/embedded/">embedded</a>,&nbsp;<a href="/my_website/tags/footprint/">footprint</a>,&nbsp;<a href="/my_website/tags/memory/">memory</a>,&nbsp;<a href="/my_website/tags/n900/">n900</a>,&nbsp;<a href="/my_website/tags/x/">x</a>,&nbsp;<a href="/my_website/tags/x11/">x11</a>,&nbsp;<a href="/my_website/tags/xorg/">xorg</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/xorg-customization-and-true-modularization/" class="prev" rel="prev" title="Customization and true modularization of Xorg"><i class="fas fa-angle-left fa-fw"></i>Customization and true modularization of Xorg</a>
+            <a href="/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/" class="next" rel="next" title="Scrutinizing X memory, part 2: what&#39;s taking all that memory?">Scrutinizing X memory, part 2: what&#39;s taking all that memory?<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

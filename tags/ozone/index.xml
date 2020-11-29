@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Ozone - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/ozone/</link>
+        <description>Ozone - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/ozone/" rel="self" type="application/rss+xml" /><item>
+    <title>Chromium Ozone-GBM explained</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/chromium-ozone-gbm-explained/</link>
+    <pubDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/chromium-ozone-gbm-explained/</guid>
+    <description><![CDATA[I&rsquo;ve wrote an article about the new graphics platform for Chromium called Ozone-GBM. I particularly think that Ozone-GBM will play an important role next in Chromium and Linux graphics communities in general. I hope you enjoy the read :) Please share it.
+https://01.org/chromium/blogs/tiagovignatti/2014/chromium-ozone-gbm-explained]]></description>
+</item><item>
+    <title>developing Chromium on Wayland</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/developing-chromium-on-wayland/</link>
+    <pubDate>Mon, 07 Oct 2013 14:42:17 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/developing-chromium-on-wayland/</guid>
+    <description><![CDATA[A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.
+communities
+There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS.]]></description>
+</item></channel>
+</rss>

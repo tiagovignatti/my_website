@@ -3,5 +3,40 @@
         <title>Categories - Category - Tiago Vignatti</title>
         <link>https://tiagovignatti.github.io/my_website/categories/</link>
         <description>Categories - Category - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://tiagovignatti.github.io/my_website/categories/" rel="self" type="application/rss+xml" /></channel>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 15 Oct 2018 17:21:23 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Computing</title>
+    <link>https://tiagovignatti.github.io/my_website/categories/computing/</link>
+    <pubDate>Mon, 15 Oct 2018 17:21:23 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/categories/computing/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Life</title>
+    <link>https://tiagovignatti.github.io/my_website/categories/life/</link>
+    <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/categories/life/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Links</title>
+    <link>https://tiagovignatti.github.io/my_website/categories/links/</link>
+    <pubDate>Tue, 15 Jun 2010 15:24:11 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/categories/links/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>SoC2008</title>
+    <link>https://tiagovignatti.github.io/my_website/categories/soc2008/</link>
+    <pubDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/categories/soc2008/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Soc2007</title>
+    <link>https://tiagovignatti.github.io/my_website/categories/soc2007/</link>
+    <pubDate>Tue, 28 Aug 2007 02:32:41 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/categories/soc2007/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>dri2 - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/dri2/</link>
+        <description>dri2 - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 20 Apr 2011 13:35:44 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/dri2/" rel="self" type="application/rss+xml" /><item>
+    <title>X characterization for MeeGo</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/x-characterization-for-meego/</link>
+    <pubDate>Wed, 20 Apr 2011 13:35:44 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/x-characterization-for-meego/</guid>
+    <description><![CDATA[Actually this is not a big news but it&rsquo;s nice to see on practice X being used on the advanced age :) Here I&rsquo;ve played with some UI configuration settings, browsed for while, toyed with facebook, opened some photos in the viewer and etc, all for about 5 minutes:
+ x-meego-Apr2011
+and zooming in the X11 core slice we have:
+ x-meego-x11only-Apr2011
+Moral of the story: as showed on the last figure, most of the traffic from the core protocol is related with window management, window state changes and notifications of positioning for clients.]]></description>
+</item></channel>
+</rss>

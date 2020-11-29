@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>latency - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/latency/</link>
+        <description>latency - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/latency/" rel="self" type="application/rss+xml" /><item>
+    <title>Improving input latency</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/improving-input-latency/</link>
+    <pubDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/improving-input-latency/</guid>
+    <description><![CDATA[GSoC summary #1 - July 29
+The current implementation of X Window System relies in a signal scheme to manage the input event coming from hardware devices. This scheme frequently get blocked when lot of IO is occurring (for instance, when the process is swapping in/out). Get blocked means for instance a jumping cursor on the screen and in GUI is always desirable to prioritize the system responsiveness for end users.]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,62 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>linux - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/linux/</link>
+        <description>linux - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Chromium Ozone-GBM explained</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/chromium-ozone-gbm-explained/</link>
+    <pubDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/chromium-ozone-gbm-explained/</guid>
+    <description><![CDATA[I&rsquo;ve wrote an article about the new graphics platform for Chromium called Ozone-GBM. I particularly think that Ozone-GBM will play an important role next in Chromium and Linux graphics communities in general. I hope you enjoy the read :) Please share it.
+https://01.org/chromium/blogs/tiagovignatti/2014/chromium-ozone-gbm-explained]]></description>
+</item><item>
+    <title>Linux Graphics for Small Devices at FISL</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</link>
+    <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</guid>
+    <description><![CDATA[Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for _freedesktopers_ though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow here.
+*actually, two nights in Porto Alegre and two nights in Curitiba.]]></description>
+</item><item>
+    <title>adopt a child and make multi-card work on Linux</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/adopt-a-child-and-make-multi-card-work-on-linux/</link>
+    <pubDate>Wed, 23 Jun 2010 15:12:11 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/adopt-a-child-and-make-multi-card-work-on-linux/</guid>
+    <description><![CDATA[Previously, the message was for toolkit, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)
+ I have started hacking on X due the laboratory at my university I was working was running an amazing project to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.]]></description>
+</item><item>
+    <title>multiseat - roadmap</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/multiseat-roadmap/</link>
+    <pubDate>Tue, 23 Sep 2008 04:52:08 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/multiseat-roadmap/</guid>
+    <description><![CDATA[This week our laboratory at university released the MDM utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)
+But I would like to call attention here because we&rsquo;re still relying on the ugly Xephyr solution to build the multiseat on a simple PC machine (there are people selling this solution.]]></description>
+</item><item>
+    <title>Improving input latency</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/improving-input-latency/</link>
+    <pubDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/improving-input-latency/</guid>
+    <description><![CDATA[GSoC summary #1 - July 29
+The current implementation of X Window System relies in a signal scheme to manage the input event coming from hardware devices. This scheme frequently get blocked when lot of IO is occurring (for instance, when the process is swapping in/out). Get blocked means for instance a jumping cursor on the screen and in GUI is always desirable to prioritize the system responsiveness for end users.]]></description>
+</item><item>
+    <title>fakemouse -- a driver that emulates a mouse</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
+    <pubDate>Wed, 28 May 2008 02:36:09 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
+    <description><![CDATA[For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.]]></description>
+</item><item>
+    <title>Benchmarking it all</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/benchmarking-it-all/</link>
+    <pubDate>Thu, 21 Feb 2008 23:53:39 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/benchmarking-it-all/</guid>
+    <description><![CDATA[After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.
+The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens.]]></description>
+</item></channel>
+</rss>

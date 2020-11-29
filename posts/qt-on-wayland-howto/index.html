@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Qt on wayland: howto - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Qt on wayland: howto" />
+<meta property="og:description" content="To run Qt applications on Wayland is fairly simple nowadays. Thank to Qt developers, they are following up quite well our last changes on Wayland protocol and updating accordingly on Qt5 code base &ndash; by the way, the fresh and just released Qt 4.8 does not ship the latest protocol additions, so that&rsquo;s not the one I&rsquo;m referring.
+So, today I&rsquo;ve set up the last bits of Qt environment on my Intel Pine-Trail pretty easy (yeah, I compile on my tablet :-O)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/qt-on-wayland-howto/" />
+<meta property="article:published_time" content="2011-12-19T23:31:29+00:00" />
+<meta property="article:modified_time" content="2011-12-19T23:31:29+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Qt on wayland: howto"/>
+<meta name="twitter:description" content="To run Qt applications on Wayland is fairly simple nowadays. Thank to Qt developers, they are following up quite well our last changes on Wayland protocol and updating accordingly on Qt5 code base &ndash; by the way, the fresh and just released Qt 4.8 does not ship the latest protocol additions, so that&rsquo;s not the one I&rsquo;m referring.
+So, today I&rsquo;ve set up the last bits of Qt environment on my Intel Pine-Trail pretty easy (yeah, I compile on my tablet :-O)."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/qt-on-wayland-howto/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/if-i-didnt-say/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/starting-on-wayland-development/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Qt on wayland: howto",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/qt-on-wayland-howto\/"
+        },"genre": "posts","wordcount":  476 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/qt-on-wayland-howto\/","datePublished": "2011-12-19T23:31:29+00:00","dateModified": "2011-12-19T23:31:29+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Qt on wayland: howto</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2011-12-19">2011-12-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;476 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>To run Qt applications on Wayland is fairly simple nowadays. Thank to Qt developers, they are following up quite well our last changes on Wayland protocol and updating accordingly on Qt5 code base &ndash; by the way, the fresh and just released Qt 4.8 <a href="https://qt.gitorious.org/qt/qt/blobs/4.8/src/plugins/platforms/wayland/wayland_sha1.txt" target="_blank" rel="noopener noreffer">does not ship the latest</a> protocol additions, so that&rsquo;s not the one I&rsquo;m referring.</p>
+<p>So, today I&rsquo;ve set up the last bits of Qt environment on my Intel Pine-Trail pretty easy (yeah, I compile on my tablet :-O). You don&rsquo;t need to clone the whole data base for starting hacking on it. Let&rsquo;s see.</p>
+<p>first, you have to clone qtbase:</p>
+<h1 id="mkdir-qt-cd-qt">mkdir qt; cd qt</h1>
+<h1 id="git-clone-gitgitoriousorgqtqtbasegit">git clone git://gitorious.org/qt/qtbase.git</h1>
+<p>Before start the compilation steps, I like to set up my testbed in a different directory than what the ordinary system uses, so I include this on my .bashrc:</p>
+<p>export QTVER=qt5
+export QTDIR=/opt/qt/$QTVER
+export PATH=$QTDIR/bin/:$PATH
+export LD_LIBRARY_PATH=$QTDIR/lib/:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=$QTDIR/lib/pkgconfig/:$PKG_CONFIG_PATH
+export QT_PLUGIN_PATH=$QTDIR/lib/plugins/</p>
+<p>and don&rsquo;t forget to re-run your bashrc! Now, when developing a Wayland application it&rsquo;s quite useful to check if your app is behaving nicely, so for doing so I like to compare it with Qt&rsquo;s XCB backend. Then you&rsquo;ll need the following &ndash; I&rsquo;m under Ubuntu 11.10:</p>
+<h1 id="apt-get-install-libxcb1-libxcb1-dev-libx11-xcb1-libx11-xcb-dev-libxcb-keysyms1-libxcb-keysyms1-dev-libxcb-image0-libxcb-image0-dev-libxcb-shm0-libxcb-shm0-dev-libxcb-icccm4-libxcb-icccm4-dev-libxcb-sync0-libxcb-sync0-dev-libxcb-xfixes0-dev">apt-get install libxcb1 libxcb1-dev libx11-xcb1 libx11-xcb-dev libxcb-keysyms1 libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev libxcb-shm0 libxcb-shm0-dev libxcb-icccm4 libxcb-icccm4-dev libxcb-sync0 libxcb-sync0-dev libxcb-xfixes0-dev</h1>
+<p>you should be ready now to go for the configuration:</p>
+<h1 id="configure--confirm-license--opensource--no-qt3support--no-multimedia--no-webkit--no-phonon--no-v8--debug--qpa--xcb--wayland--egl--opengl-es2--nomake-examples--prefix-qtdir">./configure -confirm-license -opensource -no-qt3support -no-multimedia -no-webkit -no-phonon -no-v8 -debug -qpa -xcb -wayland -egl -opengl es2 -nomake examples -prefix ${QTDIR}</h1>
+<p>and now, the compilation &ndash; which took approximately 1hr and half in my system:</p>
+<h1 id="make">make</h1>
+<p>install it:</p>
+<h1 id="make-install">make install</h1>
+<p>At this point you got all Qt libraries, and needed tools to compile qtwayland platform. So go back one directory and clone that:</p>
+<h1 id="cd-">cd ../</h1>
+<h1 id="git-clone-gitgitoriousorgqtqtwaylandgit">git clone git://gitorious.org/qt/qtwayland.git</h1>
+<p>You need Wayland protocol libraries now in your system, and that&rsquo;s the very late ones, which means the stock packages from your distro won&rsquo;t work. Get and
+build them using the following:</p>
+<p><a href="http://wayland.freedesktop.org/building.html">http://wayland.freedesktop.org/building.html</a></p>
+<p>You might want to develop Wayland on the top of X, so before compile you&rsquo;ll need this:</p>
+<h1 id="apt-get-install-libxcomposite-dev">apt-get install libxcomposite-dev</h1>
+<p>Jørgen Lind, updated me with: &ldquo;the default buffersharing to use is wayland_egl. To be able to use the xcomposite stuff you need to export the environment variable QT_WAYLAND_GL_CONFIG to be either xcomposite_egl or xcomposite_glx&rdquo;. So in order do to Wayland on X you will need to tweak it as well.</p>
+<p>and then:</p>
+<h1 id="cd-qtwayland">cd qtwayland/</h1>
+<h1 id="qmake">qmake</h1>
+<h1 id="make--make-install">make &amp;&amp; make install</h1>
+<p>To run now a Qt app, I first set the XDG directory that compositor and clients use to talk under Wayland. You better to watch out, cause some distros already have this set somewhere. Anyway, I put this on my .bashrc:</p>
+<h1 id="export-xdg_runtime_dirhomexdg">export XDG_RUNTIME_DIR=$HOME/.xdg</h1>
+<h1 id="mkdir-homexdg">mkdir $HOME/.xdg</h1>
+<p>and re-ran .bashrc. Finally the Qt app running and voilà:</p>
+<h1 id="cd-qtbaseexamplesopenglhellowindow">cd ../qtbase/examples/opengl/hellowindow</h1>
+<h1 id="qmake-1">qmake</h1>
+<h1 id="make-1">make</h1>
+<h1 id="wayland-compositor-">wayland-compositor &amp;</h1>
+<h1 id="hellowindow--platform-wayland">./hellowindow -platform wayland</h1>
+<hr>
+<p>Kudos to <a href="http://www.macieira.org/blog/" target="_blank" rel="noopener noreffer">Thiago Macieira</a> for reviewing the content!</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2011-12-19</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/if-i-didnt-say/" class="prev" rel="prev" title="... if I didn&#39;t say"><i class="fas fa-angle-left fa-fw"></i>... if I didn&#39;t say</a>
+            <a href="/my_website/posts/starting-on-wayland-development/" class="next" rel="next" title="starting on Wayland development">starting on Wayland development<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

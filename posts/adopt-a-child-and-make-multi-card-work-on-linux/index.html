@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>adopt a child and make multi-card work on Linux - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="adopt a child and make multi-card work on Linux" />
+<meta property="og:description" content="Previously, the message was for toolkit, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)
+ I have started hacking on X due the laboratory at my university I was working was running an amazing project to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/adopt-a-child-and-make-multi-card-work-on-linux/" />
+<meta property="article:published_time" content="2010-06-23T15:12:11+00:00" />
+<meta property="article:modified_time" content="2010-06-23T15:12:11+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="adopt a child and make multi-card work on Linux"/>
+<meta name="twitter:description" content="Previously, the message was for toolkit, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)
+ I have started hacking on X due the laboratory at my university I was working was running an amazing project to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/adopt-a-child-and-make-multi-card-work-on-linux/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/toolkit-please-xlib-xcb/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/attracting-reviewers-in-your-patch-series/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "adopt a child and make multi-card work on Linux",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/adopt-a-child-and-make-multi-card-work-on-linux\/"
+        },"genre": "posts","keywords": "linux, multicard, multiseat, x11, xorg","wordcount":  334 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/adopt-a-child-and-make-multi-card-work-on-linux\/","datePublished": "2010-06-23T15:12:11+00:00","dateModified": "2010-06-23T15:12:11+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">adopt a child and make multi-card work on Linux</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2010-06-23">2010-06-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;334 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p><em>Previously, the <a href="http://vignatti.wordpress.com/2010/06/15/toolkit-please-xlib-xcb/" target="_blank" rel="noopener noreffer">message was for toolkit</a>, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)</em></p>
+<hr>
+<p>I have started hacking on X due the <a href="http://www.c3sl.ufpr.br/" target="_blank" rel="noopener noreffer">laboratory at my university</a> I was working was running an <a href="http://pt.wikipedia.org/wiki/Paran%C3%A1_Digital" target="_blank" rel="noopener noreffer">amazing project</a> to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.100 schools used the <a href="http://en.wikipedia.org/wiki/Multiseat_configuration" target="_blank" rel="noopener noreffer">multiseat computing model</a>.</p>
+<p>The beginning of my work in this project happened back in 2006 [0], and on that time I was trying to understand the situation that Linux using multiple graphics cards was living - that is only part of the needed work for making multiseat. The work proceeded but I never could actually push the patches to the mainline. Afterwards, and now at Nokia, I took this work again targeting some clean-up on X server code. It mostly went upstream (see <a href="http://www.linuxhq.com/kernel/v2.6/32/Documentation/vgaarbiter.txt" target="_blank" rel="noopener noreffer">VGA arbiter</a>, libpciaccess and current xserver code). But <a href="http://lists.x.org/archives/xorg-devel/2010-June/009906.html" target="_blank" rel="noopener noreffer">the code is buggy</a> and lot of work still needs to make it work properly.</p>
+<hr>
+<p>Seems that I have a son now, but he (or should be she?) is a rebel baby and generates lot of trouble. Rather, I&rsquo;m mean and want to give he away!</p>
+<hr>
+<p>I don&rsquo;t care about multi-card development nowadays and for an unknown reason no one also cares. But people use a lot: try to mix old graphics cards with new cards&hellip;. boom! Try to use multi-card with decent hw acceleration&hellip; boom! Try to hotplug graphics devices&hellip; no way! Hotswitch&hellip; <a href="http://airlied.livejournal.com/71734.html" target="_blank" rel="noopener noreffer">hardly</a>! Perform close to a single-card system&hellip; only in your dream! Some guys are kindly contributing <a href="http://lists.x.org/archives/xorg-devel/2010-June/009906.html" target="_blank" rel="noopener noreffer">sending patches</a> for a while and unfortunately our open-source community are lacking man-power to make it get reviewed properly and eventually land at upstream.  So here&rsquo;s your big chance:</p>
+<p><strong>ADOPT IT!</strong></p>
+<p>[0] BTW, I found the <a href="https://bugs.freedesktop.org/show_bug.cgi?id=6489" target="_blank" rel="noopener noreffer">first patch I sent for X</a>. It dates back in April 2006 and was against Xgl, GLX backend. Very funny :)</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2010-06-23</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/my_website/tags/linux/">linux</a>,&nbsp;<a href="/my_website/tags/multicard/">multicard</a>,&nbsp;<a href="/my_website/tags/multiseat/">multiseat</a>,&nbsp;<a href="/my_website/tags/x11/">x11</a>,&nbsp;<a href="/my_website/tags/xorg/">xorg</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/toolkit-please-xlib-xcb/" class="prev" rel="prev" title="Toolkit, please: Xlib -&gt; XCB"><i class="fas fa-angle-left fa-fw"></i>Toolkit, please: Xlib -&gt; XCB</a>
+            <a href="/my_website/posts/attracting-reviewers-in-your-patch-series/" class="next" rel="next" title="Attracting reviewers in your patch series">Attracting reviewers in your patch series<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

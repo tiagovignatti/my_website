@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>multiseat - roadmap - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="multiseat - roadmap" />
+<meta property="og:description" content="This week our laboratory at university released the MDM utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)
+But I would like to call attention here because we&rsquo;re still relying on the ugly Xephyr solution to build the multiseat on a simple PC machine (there are people selling this solution." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/multiseat-roadmap/" />
+<meta property="article:published_time" content="2008-09-23T04:52:08+00:00" />
+<meta property="article:modified_time" content="2008-09-23T04:52:08+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="multiseat - roadmap"/>
+<meta name="twitter:description" content="This week our laboratory at university released the MDM utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)
+But I would like to call attention here because we&rsquo;re still relying on the ugly Xephyr solution to build the multiseat on a simple PC machine (there are people selling this solution."/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/multiseat-roadmap/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/parallel-events-panic-with-x/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/multiseat-documentation-and-references/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "multiseat - roadmap",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/multiseat-roadmap\/"
+        },"genre": "posts","keywords": "linux, multiseat, roadmap, x, xorg","wordcount":  452 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/multiseat-roadmap\/","datePublished": "2008-09-23T04:52:08+00:00","dateModified": "2008-09-23T04:52:08+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">multiseat - roadmap</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2008-09-23">2008-09-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;452 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>This week our laboratory at university <a href="http://lists.freedesktop.org/archives/xorg/2008-September/038674.html" target="_blank" rel="noopener noreffer">released</a> the <a href="http://cgit.freedesktop.org/xorg/app/mdm/" target="_blank" rel="noopener noreffer">MDM</a> utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)</p>
+<p>But I would like to call attention here because we&rsquo;re still relying on the <a href="http://www.c3sl.ufpr.br/multiterminal/howtos/howto-xephyr-en.htm" target="_blank" rel="noopener noreffer">ugly Xephyr solution</a> to build the multiseat on a simple PC machine (there are people selling this solution. Sigh). A lot of cool stuffs arriving in the linux graphics stack are lacking with this solution. So lets try trace the roadmap here that we can follow in the short/medium-term to build a good one solution:</p>
+<p><strong>- Vga Arbiter</strong>
+We should as fast as we can forget the Xephyr hack. Definitely several instances of Xorg - one for each user session - is what we want. If someone wants to use several graphics cards to deploy a multiseat, then (s)he would probably face the problem of the vga legacy address. The <a href="http://wiki.x.org/wiki/VgaArbiter" target="_blank" rel="noopener noreffer">vga arbitration</a> is the solution.</p>
+<p>Jesse <a href="http://virtuousgeek.org/blog/index.php/jbarnes/2008/09/17/too_much_travel" target="_blank" rel="noopener noreffer">seems that will work</a> towards this in 2.6.28. There&rsquo;s also a &ldquo;minor&rdquo; problem here that the X server still not posting secondary cards (after pci-rework).</p>
+<p><strong>- xrandr 1.3</strong>
+To deploy a multiseat with one video card/multi-crtc, the randr extension is enough to cover the hotplug of output devices. For a multi-card configuration, xrandr must be GPU aware. So we must done some work here as well to do the automagically configuration of output devices.</p>
+<p><strong>- input hotplug</strong>
+So far MDM is not using the last input features of X to plug or re-plug a device in the machine. It is using its own ugly method to poll for devices. Some work here is needed.</p>
+<p><strong>- ConsoleKit integration</strong>
+Device ownership (e.g. audio, pen drive, cameras, usb toys, output and input devices) when multiple users are in the same machine could be a mess. Moreover, the security problems implied by this could be harmful. <a href="http://fedoraproject.org/wiki/Desktop/FastUserSwitching" target="_blank" rel="noopener noreffer">ConsoleKit</a> seems to solve this all. It is able to keep track of all the users currently logged in.</p>
+<p>Honestly I never took a closer look at ConsoleKit. I&rsquo;m not sure if it&rsquo;s prepared enough to support multiseat. So we need to take care of this as well eventually putting some hook inside MDM to work with it.</p>
+<p><strong>- DRI + modesetting</strong>
+Support DRI in multiple X servers in parallel is not ready yet. Some <a href="http://dri.freedesktop.org/wiki/DRMRedesign" target="_blank" rel="noopener noreffer">redesign</a> must be done to achieve this.</p>
+<p><strong>- tools for auto configuration</strong>
+After all this work, some easy tools and very user-friendly would be awesome to setup on-the-fly the multiseat in the desktop environments.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2008-09-23</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/my_website/tags/linux/">linux</a>,&nbsp;<a href="/my_website/tags/multiseat/">multiseat</a>,&nbsp;<a href="/my_website/tags/roadmap/">roadmap</a>,&nbsp;<a href="/my_website/tags/x/">x</a>,&nbsp;<a href="/my_website/tags/xorg/">xorg</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/parallel-events-panic-with-x/" class="prev" rel="prev" title="Parallel events (panic) with X"><i class="fas fa-angle-left fa-fw"></i>Parallel events (panic) with X</a>
+            <a href="/my_website/posts/multiseat-documentation-and-references/" class="next" rel="next" title="multiseat - documentation and references">multiseat - documentation and references<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

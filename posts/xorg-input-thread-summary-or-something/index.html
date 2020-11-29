@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Xorg input thread - summary or something - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Xorg input thread - summary or something" />
+<meta property="og:description" content="This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.
+ cut here -  Hi guys.
+As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse thread for the X server. Now, I&rsquo;m really stucked with it and I need some good ideas from you before go to the next steps.
+Today the cursor lags in two situations on Xorg:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something/" />
+<meta property="article:published_time" content="2007-07-06T03:13:09+00:00" />
+<meta property="article:modified_time" content="2007-07-06T03:13:09+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Xorg input thread - summary or something"/>
+<meta name="twitter:description" content="This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.
+ cut here -  Hi guys.
+As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse thread for the X server. Now, I&rsquo;m really stucked with it and I need some good ideas from you before go to the next steps.
+Today the cursor lags in two situations on Xorg:"/>
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://tiagovignatti.github.io/my_website/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://tiagovignatti.github.io/my_website/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://tiagovignatti.github.io/my_website/apple-touch-icon.png"><link rel="manifest" href="https://tiagovignatti.github.io/my_website/site.webmanifest"><link rel="canonical" href="https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something/" /><link rel="prev" href="https://tiagovignatti.github.io/my_website/posts/moving-the-mouse-handling-code-into-a-separate-thread/" /><link rel="next" href="https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something-2/" /><link rel="stylesheet" href="/my_website/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/my_website/css/style.min.css"><link rel="stylesheet" href="/my_website/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/my_website/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Xorg input thread - summary or something",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/xorg-input-thread-summary-or-something\/"
+        },"genre": "posts","wordcount":  546 ,
+        "url": "https:\/\/tiagovignatti.github.io\/my_website\/posts\/xorg-input-thread-summary-or-something\/","datePublished": "2007-07-06T03:13:09+00:00","dateModified": "2007-07-06T03:13:09+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Xorg input thread - summary or something</h1><div class="post-meta">
+            <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/my_website/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2007-07-06">2007-07-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;546 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.</p>
+<ul>
+<li>cut here -</li>
+</ul>
+<p>Hi guys.</p>
+<p>As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse  thread for the X server. Now, I&rsquo;m really stucked with it and I need some  good ideas from you before go to the next steps.</p>
+<p>Today the cursor lags in two situations on Xorg:</p>
+<ol>
+<li>lot of rendering on the server (CPU usage)</li>
+</ol>
+<p>This lags the cursor only if the rendering is done by sw. So, if we&rsquo;re  worried only with hw cursor then CPU is definitely not our problem.  Should we take care with the sw cursor for now? And the MPX case which  only do sw cursor?</p>
+<p>Q: How to reproduce 1)? A: &ldquo;x11perf -putimagexy500&rdquo;</p>
+<ol start="2">
+<li>heavy memory loads</li>
+</ol>
+<p>Under heavy memory usage we&rsquo;ve got two problems: the X server process in  the uninterruptible sleep (&lsquo;D&rsquo; state)  and some parts of the server  getting paged to the disk (which leads to the first). These two problems  happens when all the physical memory has ended up.</p>
+<p>The good news: since my approach of implementation is not using signals  (SIGIO) in the input thread, the D state problem is the first which is  over. The bad news here is that I didn&rsquo;t note any performance difference  on the cursor movement with heavy memory loads  :(</p>
+<p>Also, different from what was expected, the input thread is paging to  disk. I tried the Jesse Barnes suggestion [2] to mlock the thread with  no real success (with or without the input thread when I mlock some mice  functions I obtained an unbelievable smooth movement. But I know that  this isn&rsquo;t an elegant solution).</p>
+<p>Q: How to reproduce 2)? A: a malloc hog.</p>
+<p>The small conclusion of 2): if the real focus of the input thread is to  stop with the cursor&rsquo;s lag then we must provide other ways to keep the  cursor&rsquo;s footprint in the physical memory. (Should I consider the  Jesse&rsquo;s suggestion to put this all inside DRM? I really don&rsquo;t know how  difficult this can be. Jesse, please?)</p>
+<p>Also, if we&rsquo;re running to achieve the 2) solution, the real interest  will be systems with few memory (embedded and so on)? On this mobile  systems people active the swap all the time (the OLPC&rsquo;s laptop not,  right?)? This leads to other question: would really advantageous to do  the input thread only having in mind tiny systems?</p>
+<p>So far, we&rsquo;re not requiring any thread lock mechanism. (Yes, I already  tested it on a SMP machine)</p>
+<p>To end with a pessimist quote from Jim Gettys [3]:
+&ldquo;And I don&rsquo;t want all input events routed through a secondary input  process, as that has bad effects on latency (we can&rsquo;t guarantee that  such a helper process gets scheduled at the right moment, and latency  variability drives people nuts in interactive situations).  So through  such a module, the X server would call all the way down to the input  device or socket (depending on input type), and not be subject to such  variability.&rdquo;</p>
+<p>Well, the last patch you can see here (it&rsquo;s tiny! Go ahead and tell me  something about it!):
+<a href="http://web.inf.ufpr.br/vignatti/xorg/xorg-input-thread_03Jul.diff" target="_blank" rel="noopener noreffer">http://web.inf.ufpr.br/vignatti/xorg/xorg-input-thread_03Jul.diff</a></p>
+<p>I&rsquo;ll be really appreciating any comments on this mail, please.</p>
+<p>Thanks!</p>
+<p>[1] <a href="http://lists.freedesktop.org/archives/xorg/2007-June/025610.html" target="_blank" rel="noopener noreffer">http://lists.freedesktop.org/archives/xorg/2007-June/025610.html</a></p>
+<p>[2] <a href="http://lists.freedesktop.org/archives/xorg/2007-June/025612.html" target="_blank" rel="noopener noreffer">http://lists.freedesktop.org/archives/xorg/2007-June/025612.html</a></p>
+<p>[3] <a href="http://lists.freedesktop.org/archives/xorg/2005-August/009626.html" target="_blank" rel="noopener noreffer">http://lists.freedesktop.org/archives/xorg/2005-August/009626.html</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2007-07-06</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/my_website/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my_website/posts/moving-the-mouse-handling-code-into-a-separate-thread/" class="prev" rel="prev" title="Moving the mouse handling code into a separate thread"><i class="fas fa-angle-left fa-fw"></i>Moving the mouse handling code into a separate thread</a>
+            <a href="/my_website/posts/xorg-input-thread-summary-or-something-2/" class="next" rel="next" title="Xorg input thread - summary or something #2">Xorg input thread - summary or something #2<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.78.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/my_website/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/my_website/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/my_website/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/my_website/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/my_website/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

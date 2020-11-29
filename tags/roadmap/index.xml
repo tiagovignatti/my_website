@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>roadmap - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/roadmap/</link>
+        <description>roadmap - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 23 Sep 2008 04:52:08 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/roadmap/" rel="self" type="application/rss+xml" /><item>
+    <title>multiseat - roadmap</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/multiseat-roadmap/</link>
+    <pubDate>Tue, 23 Sep 2008 04:52:08 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/multiseat-roadmap/</guid>
+    <description><![CDATA[This week our laboratory at university released the MDM utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)
+But I would like to call attention here because we&rsquo;re still relying on the ugly Xephyr solution to build the multiseat on a simple PC machine (there are people selling this solution.]]></description>
+</item></channel>
+</rss>

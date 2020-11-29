@@ -1,0 +1,72 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>x - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/x/</link>
+        <description>x - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/x/" rel="self" type="application/rss+xml" /><item>
+    <title>late Christmas gift: freedesktop&#39;s Xorg for MeeGo</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
+    <pubDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
+    <description><![CDATA[Moikka.
+If you follow here [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for MeeGo-Harmattan, where we target embedded systems only. Feel free to use it!
+ At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
+</item><item>
+    <title>X Census (for 1.9)</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-9/</link>
+    <pubDate>Thu, 02 Sep 2010 13:41:11 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-9/</guid>
+    <description><![CDATA[Topic&rsquo;s name is a funny (and friendly) devotion to GNOME Census. So let&rsquo;s take a look at some numbers from the time Xorg 1.9 was in development - raw data is here.
+Would be unfair to measure only the work that happened e.g. in X server or in the drivers being developed and come up with the statistics about &ldquo;who developed X&rdquo;. X and X development community are quite extensive and don&rsquo;t concern only &ldquo;graphics&rdquo; related, i.]]></description>
+</item><item>
+    <title>Scrutinizing X memory, part 2: what&#39;s taking all that memory?</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</link>
+    <pubDate>Thu, 25 Mar 2010 18:01:10 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</guid>
+    <description><![CDATA[So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/pidof Xorg/{smaps, status}. I used also a script found on the Web to parse and organize these informations; Mikhail Gusarov has extended this script to show a very useful output.
+Xorg per se Running just one standalone Xorg -retro. In my system it represents: VmRSS: 5440 kB VmSize: 13620 kB
+from those 5440 kB of RSS: 3404 kB (63 %) come from code 1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) 228 kB (4 %) come from other data mapped in memory 180 kB (3 %) come from rodata]]></description>
+</item><item>
+    <title>Scrutinizing X Memory, part 1: overview</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/</link>
+    <pubDate>Thu, 25 Mar 2010 17:58:47 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/</guid>
+    <description><![CDATA[This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
+Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data.]]></description>
+</item><item>
+    <title>Nokia, FI...</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/nokia-fi/</link>
+    <pubDate>Fri, 12 Jun 2009 07:06:59 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/nokia-fi/</guid>
+    <description><![CDATA[&hellip; here I&rsquo;am :)]]></description>
+</item><item>
+    <title>multiseat - roadmap</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/multiseat-roadmap/</link>
+    <pubDate>Tue, 23 Sep 2008 04:52:08 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/multiseat-roadmap/</guid>
+    <description><![CDATA[This week our laboratory at university released the MDM utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)
+But I would like to call attention here because we&rsquo;re still relying on the ugly Xephyr solution to build the multiseat on a simple PC machine (there are people selling this solution.]]></description>
+</item><item>
+    <title>Improving input latency</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/improving-input-latency/</link>
+    <pubDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/improving-input-latency/</guid>
+    <description><![CDATA[GSoC summary #1 - July 29
+The current implementation of X Window System relies in a signal scheme to manage the input event coming from hardware devices. This scheme frequently get blocked when lot of IO is occurring (for instance, when the process is swapping in/out). Get blocked means for instance a jumping cursor on the screen and in GUI is always desirable to prioritize the system responsiveness for end users.]]></description>
+</item><item>
+    <title>Google Summer of Code 2008</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/google-summer-of-code-2008/</link>
+    <pubDate>Tue, 29 Apr 2008 21:31:27 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/google-summer-of-code-2008/</guid>
+    <description><![CDATA[I&rsquo;m very happy to say that I was selected again to work on Google Summer of Code with X.Org Foundation. Daniel will be my mentor again. Thanks Google. Thanks X.Org!
+In the last year we did a nice work separating the input event generation code of the X server into a different thread. We saw some performance improvement there specially because the implementation is not using signals anymore to wake up the server when some device emits an event.]]></description>
+</item></channel>
+</rss>

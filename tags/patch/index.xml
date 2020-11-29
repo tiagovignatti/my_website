@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>patch - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/patch/</link>
+        <description>patch - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 12 Jul 2010 12:56:01 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/patch/" rel="self" type="application/rss+xml" /><item>
+    <title>Attracting reviewers in your patch series</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/attracting-reviewers-in-your-patch-series/</link>
+    <pubDate>Mon, 12 Jul 2010 12:56:01 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/attracting-reviewers-in-your-patch-series/</guid>
+    <description><![CDATA[Usually faster the number of commits, faster the development process. But development without strict reviewing doesn&rsquo;t guarantee quality on the code. Unfortunately, rarely you will see people willing or even just being able to review the changes you are proposing. Attract reviewers is hard!
+Lemma: The art of writing a good patch series is all about to attract reviewers.
+Proof is omitted due to lack of space. Sorry ;) I&rsquo;d start to write a post about how to write a nice commit message and patch series, so I could use as a future reference for you.]]></description>
+</item></channel>
+</rss>

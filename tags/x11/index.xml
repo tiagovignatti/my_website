@@ -1,0 +1,87 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>x11 - Tag - Tiago Vignatti</title>
+        <link>https://tiagovignatti.github.io/my_website/tags/x11/</link>
+        <description>x11 - Tag - Tiago Vignatti</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 17 Oct 2012 13:15:38 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/x11/" rel="self" type="application/rss+xml" /><item>
+    <title>the damn small Wayland API</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/the-damn-small-wayland-api/</link>
+    <pubDate>Wed, 17 Oct 2012 13:15:38 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/the-damn-small-wayland-api/</guid>
+    <description><![CDATA[Wayland 1.0 release is knocking the door and people keep asking &ldquo;why Wayland if we got X already&rdquo;, or things like performance, memory consumption, power savings and other kind of advantages on having Wayland instead X. Those are very important points to consider, of course, but for one individual actually programming the graphics system the answer should be straightforward: Wayland API is damn small.
+1. But who&rsquo;s going to program Wayland or X?]]></description>
+</item><item>
+    <title>X on Wayland</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/x-on-wayland/</link>
+    <pubDate>Wed, 13 Jun 2012 14:01:32 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/x-on-wayland/</guid>
+    <description><![CDATA[A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it.]]></description>
+</item><item>
+    <title>X Census (for 1.10)</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-10/</link>
+    <pubDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-10/</guid>
+    <description><![CDATA[Following is the census of 1.10 window for all X infrastructure - raw numbers here. I did it in a similar way as the previous version. Worth to mention that there&rsquo;s almost no relation between the cycles of development from each of the components listed below, which can lead to some misunderstanding. Anyway, still a nice indicative to see and evaluate how the free desktop community behaved.
+Numbers for X implementation (xserver, proto, lib and xcb repositories):]]></description>
+</item><item>
+    <title>Xorg server 1.9 minimal</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/xorg-server-1-9-minimal/</link>
+    <pubDate>Wed, 18 Aug 2010 15:22:26 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-server-1-9-minimal/</guid>
+    <description><![CDATA[That&rsquo;s what I&rsquo;m using for MeeGo now. Autoconf parameters, theeere we go:
+&ndash;disable-static &ndash;disable-aiglx &ndash;disable-config-dbus &ndash;disable-config-hal &ndash;disable-dbe &ndash;disable-dga &ndash;disable-dpms &ndash;disable-dri &ndash;disable-glx &ndash;disable-glx-tls &ndash;disable-int10-module &ndash;disable-ipv6 &ndash;disable-screensaver &ndash;disable-secure-rpc &ndash;disable-tcp-transport &ndash;disable-vbe &ndash;disable-vgahw &ndash;disable-xdm-auth-1 &ndash;disable-xinerama &ndash;disable-xwin &ndash;disable-xaa &ndash;disable-xace &ndash;disable-xdmcp &ndash;disable-xf86vidmode &ndash;disable-xfree86-utils &ndash;disable-xnest &ndash;disable-xvmc &ndash;disable-libdrm &ndash;enable-config-udev &ndash;enable-dri2 &ndash;enable-null-root-cursor &ndash;enable-record &ndash;enable-unit-tests &ndash;enable-visibility &ndash;enable-xorg &ndash;with-sha1=libsha1
+PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!]]></description>
+</item><item>
+    <title>Linux Graphics for Small Devices at FISL</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</link>
+    <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</guid>
+    <description><![CDATA[Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for _freedesktopers_ though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow here.
+*actually, two nights in Porto Alegre and two nights in Curitiba.]]></description>
+</item><item>
+    <title>adopt a child and make multi-card work on Linux</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/adopt-a-child-and-make-multi-card-work-on-linux/</link>
+    <pubDate>Wed, 23 Jun 2010 15:12:11 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/adopt-a-child-and-make-multi-card-work-on-linux/</guid>
+    <description><![CDATA[Previously, the message was for toolkit, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)
+ I have started hacking on X due the laboratory at my university I was working was running an amazing project to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.]]></description>
+</item><item>
+    <title>Scrutinizing X memory, part 2: what&#39;s taking all that memory?</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</link>
+    <pubDate>Thu, 25 Mar 2010 18:01:10 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</guid>
+    <description><![CDATA[So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/pidof Xorg/{smaps, status}. I used also a script found on the Web to parse and organize these informations; Mikhail Gusarov has extended this script to show a very useful output.
+Xorg per se Running just one standalone Xorg -retro. In my system it represents: VmRSS: 5440 kB VmSize: 13620 kB
+from those 5440 kB of RSS: 3404 kB (63 %) come from code 1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) 228 kB (4 %) come from other data mapped in memory 180 kB (3 %) come from rodata]]></description>
+</item><item>
+    <title>Scrutinizing X Memory, part 1: overview</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/</link>
+    <pubDate>Thu, 25 Mar 2010 17:58:47 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/</guid>
+    <description><![CDATA[This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
+Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data.]]></description>
+</item><item>
+    <title>Customization and true modularization of Xorg</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/</link>
+    <pubDate>Sat, 23 Jan 2010 17:20:25 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/</guid>
+    <description><![CDATA[For the first time in life, Xorg is being used in a single platform and for a given device only (other devices have used an X11 implementation but using other non-canonical servers, such kdrive&rsquo;s based - Tiny-X).
+Previously Xorg was being packed to run in a huge amount of OSes - mostly Linux and Unix-like distributions - with the characteristic of be architecture portable and able to run on a huge set of video and input devices.]]></description>
+</item><item>
+    <title>multiseat with multiple X servers (or &#34;the right way&#34;)</title>
+    <link>https://tiagovignatti.github.io/my_website/posts/multiseat-with-multiple-x-servers-or-the-right-way/</link>
+    <pubDate>Fri, 24 Jul 2009 13:56:33 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://tiagovignatti.github.io/my_website/posts/multiseat-with-multiple-x-servers-or-the-right-way/</guid>
+    <description><![CDATA[So last week I posted on lkml an old patch that we were carrying for a long time in the Linux community. It basically brings the multiple (old) video cards functionally again on Linux and X server (and this time doing on the right and beauty way). For the people that was following multiseat implementations, this is a HUGE step: we will finally be able to discard the old and ugly hack (a mix of Xorg, several Xephyr servers + evdev) and and go to a clean way, starting multiple X servers in parallel.]]></description>
+</item></channel>
+</rss>
