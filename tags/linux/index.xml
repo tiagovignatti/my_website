@@ -9,8 +9,10 @@
     <pubDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://tiagovignatti.github.io/my_website/posts/chromium-ozone-gbm-explained/</guid>
-    <description><![CDATA[I&rsquo;ve wrote an article about the new graphics platform for Chromium called Ozone-GBM. I particularly think that Ozone-GBM will play an important role next in Chromium and Linux graphics communities in general. I hope you enjoy the read :) Please share it.
-https://01.org/chromium/blogs/tiagovignatti/2014/chromium-ozone-gbm-explained]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://01.org/sites/default/files/users/u18252/ozone_architecture_-_overview.png" referrerpolicy="no-referrer">
+            </div>I&rsquo;ve wrote an article about the new graphics platform for Chromium called Ozone-GBM. I particularly think that Ozone-GBM will play an important role next in Chromium and Linux graphics communities in general. I hope you enjoy the read :) Please share it.
+https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html]]></description>
 </item><item>
     <title>Linux Graphics for Small Devices at FISL</title>
     <link>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</link>

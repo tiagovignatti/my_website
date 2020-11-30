@@ -7,7 +7,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>UI customization on Wayland - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="UI customization on Wayland" />
 <meta property="og:description" content="Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
-
 (I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tiagovignatti.github.io/my_website/posts/ui-customization-on-wayland/" />
@@ -16,7 +15,6 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="UI customization on Wayland"/>
 <meta name="twitter:description" content="Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
-
 (I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2."/>
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://tiagovignatti.github.io/my_website/favicon.ico" />
@@ -47,7 +45,7 @@
             <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -63,7 +61,7 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -82,7 +80,14 @@
             <div class="post-meta-line">&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2013-03-05">2013-03-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;646 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="">
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/my_website/svg/loading.min.svg"
+        data-src="https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png"
+        data-srcset="https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png, https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png 1.5x, https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png 2x"
+        data-sizes="auto"
+        alt="https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png"
+        title="https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png" /></div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
@@ -97,15 +102,6 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is <a href="http://ppaalanen.blogspot.com/2012/11/on-supporting-wayland-gl-clients-and.html" target="_blank" rel="noopener noreffer">all solved</a>. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.</p>
-<p><a href="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png" target="_blank" rel="noopener noreffer"><img
-        class="lazyload"
-        src="/my_website/svg/loading.min.svg"
-        data-src="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450"
-        data-srcset="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450, http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450 1.5x, http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450 2x"
-        data-sizes="auto"
-        alt="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450"
-        title="wayland-ui-customization" />
-</a></p>
 <p>(I&rsquo;ve made a <a href="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization-cheat-sheet.png" target="_blank" rel="noopener noreffer">cheat sheet here</a> also &ndash; Creative Commons Legal Code Attribution 2.0. for both figures)</p>
 <p>On customization, the <strong>shell plugin</strong> comes first: changes in there will impact directly which UI paradigm will be used. Specifically, one implementing the plugin protocol will be defining whether the UI is meant for phones, IVI, desktops, etc.</p>
 <p>Probably the most important characteristic of the shell plugin is to give &ldquo;roles&rdquo; for surfaces, i.e. define where and how they will be mapped on the screen. For example, if a client wants its surface mapped as a top-level window, or say to resize the dimensions of it, then it&rsquo;s up to the shell to expose these different surfaces roles, all according the UI paradigm the shell itself is providing.</p>

@@ -11,7 +11,9 @@
     <pubDate>Thu, 19 Nov 2020 23:39:48 -0300</pubDate>
     <author>Author</author>
     <guid>https://tiagovignatti.github.io/my_website/posts/first_post/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/my_website/images/20200921_085614.jpg" referrerpolicy="no-referrer">
+            </div>]]></description>
 </item><item>
     <title>Oculus Quest</title>
     <link>https://tiagovignatti.github.io/my_website/posts/oculus-quest/</link>
@@ -29,23 +31,29 @@ Rift device runs tethered to a PC, which is a x86 architecture based machine. Th
     <pubDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://tiagovignatti.github.io/my_website/posts/chromium-ozone-gbm-explained/</guid>
-    <description><![CDATA[I&rsquo;ve wrote an article about the new graphics platform for Chromium called Ozone-GBM. I particularly think that Ozone-GBM will play an important role next in Chromium and Linux graphics communities in general. I hope you enjoy the read :) Please share it.
-https://01.org/chromium/blogs/tiagovignatti/2014/chromium-ozone-gbm-explained]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://01.org/sites/default/files/users/u18252/ozone_architecture_-_overview.png" referrerpolicy="no-referrer">
+            </div>I&rsquo;ve wrote an article about the new graphics platform for Chromium called Ozone-GBM. I particularly think that Ozone-GBM will play an important role next in Chromium and Linux graphics communities in general. I hope you enjoy the read :) Please share it.
+https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html]]></description>
 </item><item>
     <title>[video] Chromium Browser on Wayland</title>
     <link>https://tiagovignatti.github.io/my_website/posts/video-chromium-browser-on-wayland/</link>
     <pubDate>Fri, 07 Feb 2014 09:00:33 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://tiagovignatti.github.io/my_website/posts/video-chromium-browser-on-wayland/</guid>
-    <description><![CDATA[Some state-of-the-art progress of the project we&rsquo;re proudly working with:
-https://01.org/ozone-wayland/blogs/tiagovignatti/2014/chromium-browser-wayland]]></description>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://img.youtube.com/vi/EJB2pznc6iY/0.jpg" referrerpolicy="no-referrer">
+            </div>Some state-of-the-art progress of the project we&rsquo;re proudly working with:
+https://www.youtube.com/watch?v=EJB2pznc6iY]]></description>
 </item><item>
     <title>developing Chromium on Wayland</title>
     <link>https://tiagovignatti.github.io/my_website/posts/developing-chromium-on-wayland/</link>
     <pubDate>Mon, 07 Oct 2013 14:42:17 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://tiagovignatti.github.io/my_website/posts/developing-chromium-on-wayland/</guid>
-    <description><![CDATA[A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Chromium_78_running_on_GNOME_Shell_and_Ubuntu_Linux.png" referrerpolicy="no-referrer">
+            </div>A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.
 communities
 There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS.]]></description>
 </item><item>
@@ -54,8 +62,9 @@ There are three main projects involved in here: Chromium, Wayland and Ozone-Way
     <pubDate>Wed, 18 Sep 2013 13:34:24 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://tiagovignatti.github.io/my_website/posts/welcome-to-chromiums-ozone-wayland/</guid>
-    <description><![CDATA[The following message was sent out this morning &ndash; I&rsquo;m copying it here and attaching a cute screenshot of my desktop :)
-
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png" referrerpolicy="no-referrer">
+            </div>The following message was sent out this morning &ndash; I&rsquo;m copying it here and attaching a cute screenshot of my desktop :)
  Ozone is a set of C++ classes in Chromium for abstracting different window systems on Linux. It provides abstraction for the construction of accelerated surfaces underlying Aura UI framework, input devices assignment and event handling.
 http://www.chromium.org/developers/design-documents/ozone
 Today we are launching publicly Ozone-Wayland, which is the implementation of Chromium&rsquo;s Ozone for supporting Wayland graphics system.]]></description>
@@ -65,8 +74,9 @@ Today we are launching publicly Ozone-Wayland, which is the implementation of Ch
     <pubDate>Tue, 05 Mar 2013 15:00:00 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://tiagovignatti.github.io/my_website/posts/ui-customization-on-wayland/</guid>
-    <description><![CDATA[Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
-
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png" referrerpolicy="no-referrer">
+            </div>Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
 (I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2.]]></description>
 </item><item>
     <title>the damn small Wayland API</title>

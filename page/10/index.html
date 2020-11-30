@@ -33,7 +33,7 @@
             <a href="/my_website/" title="Tiago Vignatti">Tiago Vignatti</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/tags/"> Tags </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/my_website/posts/"> Posts </a><a class="menu-item" href="/my_website/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -49,7 +49,7 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/tags/" title="">Tags</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/my_website/posts/" title="">Posts</a><a class="menu-item" href="/my_website/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw"></i>
             </a></div>
     </div>
@@ -64,41 +64,53 @@
                 <div class="container"><div class="page home" posts><div class="home-profile"><div class="home-avatar"><a href="/my_website/posts/" title="Posts"><img
         class="lazyload"
         src="/my_website/svg/loading.min.svg"
-        data-src="https://www.gravatar.com/avatar/c80e0b79eb21bbd134add2362d74f4ce?s=240&amp;d=mp"
-        data-srcset="https://www.gravatar.com/avatar/c80e0b79eb21bbd134add2362d74f4ce?s=240&amp;d=mp, https://www.gravatar.com/avatar/c80e0b79eb21bbd134add2362d74f4ce?s=240&amp;d=mp 1.5x, https://www.gravatar.com/avatar/c80e0b79eb21bbd134add2362d74f4ce?s=240&amp;d=mp 2x"
+        data-src="/images/avatar.png"
+        data-srcset="/my_website/images/avatar.png, /images/avatar.png 1.5x, /my_website/images/avatar.png 2x"
         data-sizes="auto"
-        alt="https://www.gravatar.com/avatar/c80e0b79eb21bbd134add2362d74f4ce?s=240&amp;d=mp"
-        title="https://www.gravatar.com/avatar/c80e0b79eb21bbd134add2362d74f4ce?s=240&amp;d=mp" /></a></div><h2 class="home-subtitle">ideas – computer science – art</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/tiagovignatti" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/tiagovignatti" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a></div></div>
+        alt="/my_website/images/avatar.png"
+        title="/my_website/images/avatar.png" /></a></div><h2 class="home-subtitle">ideas – computer science – art</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/tiagovignatti" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/tiagovignatti" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/my_website/posts/moving-the-mouse-handling-code-into-a-separate-thread/">Moving the mouse handling code into a separate thread</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-06-16">2007-06-16</time></span>&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/my_website/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">(In a puny attempt to write my SoC project progress to my mentor, I decided to expand it and share my thoughts with you)
 Today, we have two methods to register the pointer devices on Xorg server: (1) under SIGIO and (2) put they fd on EnableDevices set. There is also the silken mouse concept, which means updates fired during sigio handler (in the case of hw cursor).
 We always try to prioritize silken - i.</div><div class="post-footer">
-        <a href="/my_website/posts/moving-the-mouse-handling-code-into-a-separate-thread/">Read More</a></div>
+        <a href="/my_website/posts/moving-the-mouse-handling-code-into-a-separate-thread/">Read More</a>
+        
+    </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/my_website/posts/multiseat-input-hotplug/">multiseat input hotplug</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-06-02">2007-06-02</time></span>&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">This week I spent a good time trying to understand the new input hotplug of devices on X and liked a lot. With this new subsystem the multiseat&rsquo;s life will becomes easier. I&rsquo;ll briefly explain here to you.
 Before the hotplug sweetness, to add a new mouse/keyboad on X was only possibly on initialization time. Both of Xorg drivers, &ldquo;evdev&rdquo; and &ldquo;mouse&rdquo;, made a hack to try initializations &ldquo;on the run&rdquo;.</div><div class="post-footer">
-        <a href="/my_website/posts/multiseat-input-hotplug/">Read More</a></div>
+        <a href="/my_website/posts/multiseat-input-hotplug/">Read More</a>
+        
+    </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/my_website/posts/google-summer-of-code-2007/">Google Summer of Code 2007</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-05-02">2007-05-02</time></span>&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/my_website/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">Certainly, my great new is that I was accepted as a student of X.Org Foundation sponsored by Google, on Summer of Code 2007. The project&rsquo;s name is Moving the mouse handling code into a separate thread and in this link you can see what does this mean specifically.
 Possibly, for some time this blog will be filled with a lot of posts regarding this subject :D :D :D</div><div class="post-footer">
-        <a href="/my_website/posts/google-summer-of-code-2007/">Read More</a></div>
+        <a href="/my_website/posts/google-summer-of-code-2007/">Read More</a>
+        
+    </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/my_website/posts/fisl8/">FISL8</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-05-02">2007-05-02</time></span>&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">Here is the presentation I&rsquo;ve given on 8th International Free Software Forum, at Porto Alegre. My first (really) public talk was really cool and I&rsquo;ll show to you the video/photos when the organizers get it done.</div><div class="post-footer">
-        <a href="/my_website/posts/fisl8/">Read More</a></div>
+        <a href="/my_website/posts/fisl8/">Read More</a>
+        
+    </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/my_website/posts/the-conception-and-the-future-of-multiseat/">The conception and the future of multiseat...</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-04-10">2007-04-10</time></span>&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">&hellip;this is the subject of my talk which will be held at FISL (International Free Software Forum) on this saturday, April 14th. I&rsquo;ll post the feedbacks here.</div><div class="post-footer">
-        <a href="/my_website/posts/the-conception-and-the-future-of-multiseat/">Read More</a></div>
+        <a href="/my_website/posts/the-conception-and-the-future-of-multiseat/">Read More</a>
+        
+    </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/my_website/posts/x-server-semantics-number-of-users-per-server/">X server semantics - number of users per server</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-03-29">2007-03-29</time></span>&nbsp;<span class="post-category">included in <a href="/my_website/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">Here is mail that I sent to xorg list a week ago. No one replied it :(
 On IRC I talked with some developers and asked why they didn&rsquo;t said nothing about my comments and the answer summarized was that no one is really interested on multiseat (well, at least on first world countries). Strangely, it really give me a good perspective and motivation to keep the work :)
 &ndash; cut here &ndash;</div><div class="post-footer">
-        <a href="/my_website/posts/x-server-semantics-number-of-users-per-server/">Read More</a></div>
+        <a href="/my_website/posts/x-server-semantics-number-of-users-per-server/">Read More</a>
+        
+    </div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/my_website/">1</a>
