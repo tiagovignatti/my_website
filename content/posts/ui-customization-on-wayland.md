@@ -2,6 +2,7 @@
 date: 2013-03-05 15:00:00+00:00
 draft: false
 title: UI customization on Wayland
+featuredImage: https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png
 categories:
 - Computing
 tags:
@@ -16,9 +17,6 @@ tags:
 ---
 
 Let's forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is [all solved](http://ppaalanen.blogspot.com/2012/11/on-supporting-wayland-gl-clients-and.html). Let's talk about the user interface (UI) and ways to customize it all over the computing continuum -- from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
-
-[![wayland-ui-customization](http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png?w=450)
-](http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png)
 
 (I've made a [cheat sheet here](http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization-cheat-sheet.png) also -- Creative Commons Legal Code Attribution 2.0. for both figures)
 

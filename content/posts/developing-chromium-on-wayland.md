@@ -2,6 +2,7 @@
 date: 2013-10-07 14:42:17+00:00
 draft: false
 title: developing Chromium on Wayland
+featuredImage: https://upload.wikimedia.org/wikipedia/commons/5/53/Chromium_78_running_on_GNOME_Shell_and_Ubuntu_Linux.png
 categories:
 - Computing
 tags:

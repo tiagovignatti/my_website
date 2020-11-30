@@ -2,6 +2,7 @@
 date: 2013-09-18 13:34:24+00:00
 draft: false
 title: Welcome to Chromium's Ozone-Wayland
+featuredImage: https://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png
 categories:
 - Computing
 tags:
@@ -16,9 +17,6 @@ tags:
 ---
 
 The following message was sent out this morning -- I'm copying it here and attaching a cute screenshot of my desktop :)
-
-[![screenshot_2013-09-17](http://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png?w=450)
-](http://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png)
 
 ---
 

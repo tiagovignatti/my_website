@@ -9,9 +9,13 @@ snap install hugo --channel=extended
 hugo server
 ```
 
-## Publising to GitHub Pages
+## Publishing to GitHub Pages
 
 
 ```bash
 ./publish_to_ghpages.sh
 ```
+
+## Self Notes
+
+- image processing for performance reasons: https://github.com/spech66/hugo-best-practices#images
