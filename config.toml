@@ -35,7 +35,7 @@ theme = "LoveIt"
     [params.home.profile]
       enable = true
       # Gravatar Email for preferred avatar in home page
-      gravatarEmail = "tvignatti@gmail.com"
+      # gravatarEmail = "tvignatti@gmail.com"
       # URL of avatar shown in home page
       avatarURL = "/images/avatar.png"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
@@ -136,14 +136,14 @@ theme = "LoveIt"
     # title will be shown when you hover on this menu link
     title = ""
     weight = 1
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "tags/"
-    title = ""
-    weight = 2
+  # [[menu.main]]
+  #   identifier = "tags"
+  #   pre = ""
+  #   post = ""
+  #   name = "Tags"
+  #   url = "tags/"
+  #   title = ""
+  #   weight = 2
   [[menu.main]]
     identifier = "categories"
     pre = ""
