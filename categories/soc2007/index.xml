@@ -1,65 +1,65 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Soc2007 - Category - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/categories/soc2007/</link>
+        <link>https://vignatti.com/categories/soc2007/</link>
         <description>Soc2007 - Category - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Aug 2007 02:32:41 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/categories/soc2007/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 28 Aug 2007 02:32:41 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/categories/soc2007/" rel="self" type="application/rss+xml" /><item>
     <title>Xorg input thread - summary or something #3</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something-3/</link>
+    <link>https://vignatti.com/posts/xorg-input-thread-summary-or-something-3/</link>
     <pubDate>Tue, 28 Aug 2007 02:32:41 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something-3/</guid>
+    <guid>https://vignatti.com/posts/xorg-input-thread-summary-or-something-3/</guid>
     <description><![CDATA[Not so much, but here are the news:
  * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.]]></description>
 </item><item>
     <title>mlock()&#39;ing adventure</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/mlocking-adventure/</link>
+    <link>https://vignatti.com/posts/mlocking-adventure/</link>
     <pubDate>Fri, 10 Aug 2007 22:30:07 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/mlocking-adventure/</guid>
+    <guid>https://vignatti.com/posts/mlocking-adventure/</guid>
     <description><![CDATA[It&rsquo;s being a great adventure to lock the X input thread on the memory. I&rsquo;m touching a lot of things that I&rsquo;d never imagined before :)
 To trace the pages that are faulting when I move the device pointer I&rsquo;m using my own ultra mega super kernel&rsquo;s page fault notifier. It&rsquo;s very simple, but as the things are not always perfect, it needs a little patch in the kernel.
 The page fault notifier does (almost) all that I need to trace exactly which piece of code inside X is causing the page faults.]]></description>
 </item><item>
     <title>Page fault notifier</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/page-fault-notifier/</link>
+    <link>https://vignatti.com/posts/page-fault-notifier/</link>
     <pubDate>Fri, 27 Jul 2007 05:24:05 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/page-fault-notifier/</guid>
+    <guid>https://vignatti.com/posts/page-fault-notifier/</guid>
     <description><![CDATA[This week I tried to lock in the physical memory the Xorg&rsquo;s input code using mlock(). To do this I traced the code minutely and locked all the text and data related to input. I didn&rsquo;t get success. The mouse still lags when the system is paging (you might remember that with mlockall() all worked wonderful except that it eats much memory). So what might be happening is that something is not locked yet.]]></description>
 </item><item>
     <title>Xorg input thread - summary or something #2</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something-2/</link>
+    <link>https://vignatti.com/posts/xorg-input-thread-summary-or-something-2/</link>
     <pubDate>Wed, 18 Jul 2007 02:14:13 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something-2/</guid>
+    <guid>https://vignatti.com/posts/xorg-input-thread-summary-or-something-2/</guid>
     <description><![CDATA[In the last week, I did some cool experiments to see the effects of the D state acting on the X server process when I start it with and without the input thread and always mlock&rsquo;ing it.
 First I set the grub to start my machine with only 170 mb of physical memory. Then I put a &lsquo;mlockall(MCL_CURRENT)&rsquo; just before the call of Dispatch() function, on the main.c. So then I started the server.]]></description>
 </item><item>
     <title>Xorg input thread - summary or something</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something/</link>
+    <link>https://vignatti.com/posts/xorg-input-thread-summary-or-something/</link>
     <pubDate>Fri, 06 Jul 2007 03:13:09 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-input-thread-summary-or-something/</guid>
+    <guid>https://vignatti.com/posts/xorg-input-thread-summary-or-something/</guid>
     <description><![CDATA[This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.
  cut here -  Hi guys.
 As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse thread for the X server. Now, I&rsquo;m really stucked with it and I need some good ideas from you before go to the next steps.
 Today the cursor lags in two situations on Xorg:]]></description>
 </item><item>
     <title>Moving the mouse handling code into a separate thread</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/moving-the-mouse-handling-code-into-a-separate-thread/</link>
+    <link>https://vignatti.com/posts/moving-the-mouse-handling-code-into-a-separate-thread/</link>
     <pubDate>Sat, 16 Jun 2007 19:12:23 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/moving-the-mouse-handling-code-into-a-separate-thread/</guid>
+    <guid>https://vignatti.com/posts/moving-the-mouse-handling-code-into-a-separate-thread/</guid>
     <description><![CDATA[(In a puny attempt to write my SoC project progress to my mentor, I decided to expand it and share my thoughts with you)
 Today, we have two methods to register the pointer devices on Xorg server: (1) under SIGIO and (2) put they fd on EnableDevices set. There is also the silken mouse concept, which means updates fired during sigio handler (in the case of hw cursor).
 We always try to prioritize silken - i.]]></description>
 </item><item>
     <title>Google Summer of Code 2007</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/google-summer-of-code-2007/</link>
+    <link>https://vignatti.com/posts/google-summer-of-code-2007/</link>
     <pubDate>Wed, 02 May 2007 04:11:17 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/google-summer-of-code-2007/</guid>
+    <guid>https://vignatti.com/posts/google-summer-of-code-2007/</guid>
     <description><![CDATA[Certainly, my great new is that I was accepted as a student of X.Org Foundation sponsored by Google, on Summer of Code 2007. The project&rsquo;s name is Moving the mouse handling code into a separate thread and in this link you can see what does this mean specifically.
 Possibly, for some time this blog will be filled with a lot of posts regarding this subject :D :D :D]]></description>
 </item></channel>

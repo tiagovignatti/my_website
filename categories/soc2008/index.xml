@@ -1,61 +1,61 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>SoC2008 - Category - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/categories/soc2008/</link>
+        <link>https://vignatti.com/categories/soc2008/</link>
         <description>SoC2008 - Category - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/categories/soc2008/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/categories/soc2008/" rel="self" type="application/rss+xml" /><item>
     <title>Parallel events (panic) with X</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/parallel-events-panic-with-x/</link>
+    <link>https://vignatti.com/posts/parallel-events-panic-with-x/</link>
     <pubDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/parallel-events-panic-with-x/</guid>
+    <guid>https://vignatti.com/posts/parallel-events-panic-with-x/</guid>
     <description><![CDATA[Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
 I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way.]]></description>
 </item><item>
     <title>keep it going...</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/keep-it-going/</link>
+    <link>https://vignatti.com/posts/keep-it-going/</link>
     <pubDate>Thu, 07 Aug 2008 23:22:27 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/keep-it-going/</guid>
+    <guid>https://vignatti.com/posts/keep-it-going/</guid>
     <description><![CDATA[Given that GSoC &lsquo;08 is getting close to the end, strategy number 2 showed more feasible to proceed my work. Strategy #3 would be a lot of fun but would imply a hell massive codification as well (also a little out of our scope). Unfortunately no-no for now.]]></description>
 </item><item>
     <title>Improving input latency</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/improving-input-latency/</link>
+    <link>https://vignatti.com/posts/improving-input-latency/</link>
     <pubDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/improving-input-latency/</guid>
+    <guid>https://vignatti.com/posts/improving-input-latency/</guid>
     <description><![CDATA[GSoC summary #1 - July 29
 The current implementation of X Window System relies in a signal scheme to manage the input event coming from hardware devices. This scheme frequently get blocked when lot of IO is occurring (for instance, when the process is swapping in/out). Get blocked means for instance a jumping cursor on the screen and in GUI is always desirable to prioritize the system responsiveness for end users.]]></description>
 </item><item>
     <title>cursor handling and updates inside DRM</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/cursor-handling-and-updates-inside-drm/</link>
+    <link>https://vignatti.com/posts/cursor-handling-and-updates-inside-drm/</link>
     <pubDate>Thu, 10 Jul 2008 07:03:49 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/cursor-handling-and-updates-inside-drm/</guid>
+    <guid>https://vignatti.com/posts/cursor-handling-and-updates-inside-drm/</guid>
     <description><![CDATA[The current DRM kernel modesetting tree is already taking care to update the cursor registers and paint it to the screen. Very cool [0].
 What I&rsquo;ve done today is a shortcut between the kernel input layer and DRM to update the cursor directly on screen without the X server be notified always. Of course, a lot of issues raised up together. So let&rsquo;s try to delegates the tasks again.
 userspace app (X server):]]></description>
 </item><item>
     <title>to thread the X server (?)</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/to-thread-the-x-server/</link>
+    <link>https://vignatti.com/posts/to-thread-the-x-server/</link>
     <pubDate>Tue, 17 Jun 2008 23:39:53 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/to-thread-the-x-server/</guid>
+    <guid>https://vignatti.com/posts/to-thread-the-x-server/</guid>
     <description><![CDATA[I really don&rsquo;t like to read large blog posts. Anyway&hellip;
 What I did so far is a separated thread that takes care only the injection stage on the X server queue. Who is interested with the results, please read some past posts in my blog. It is currently in a very good shape (synced with post-mpx merge, all input devices are inside the thread and etc). The implementation looks like this: thread #1 deals with - injection of input events from devices thread #2 deals with - processing of input events to clients - requests from known clients (rendering things) - new client that tries to connect (pretty easy to do)]]></description>
 </item><item>
     <title>fakemouse -- a driver that emulates a mouse</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
+    <link>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
     <pubDate>Wed, 28 May 2008 02:36:09 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
+    <guid>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
     <description><![CDATA[For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.]]></description>
 </item><item>
     <title>Google Summer of Code 2008</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/google-summer-of-code-2008/</link>
+    <link>https://vignatti.com/posts/google-summer-of-code-2008/</link>
     <pubDate>Tue, 29 Apr 2008 21:31:27 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/google-summer-of-code-2008/</guid>
+    <guid>https://vignatti.com/posts/google-summer-of-code-2008/</guid>
     <description><![CDATA[I&rsquo;m very happy to say that I was selected again to work on Google Summer of Code with X.Org Foundation. Daniel will be my mentor again. Thanks Google. Thanks X.Org!
 In the last year we did a nice work separating the input event generation code of the X server into a different thread. We saw some performance improvement there specially because the implementation is not using signals anymore to wake up the server when some device emits an event.]]></description>
 </item></channel>

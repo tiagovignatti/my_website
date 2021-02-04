@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>event - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/event/</link>
+        <link>https://vignatti.com/tags/event/</link>
         <description>event - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/event/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/event/" rel="self" type="application/rss+xml" /><item>
     <title>Parallel events (panic) with X</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/parallel-events-panic-with-x/</link>
+    <link>https://vignatti.com/posts/parallel-events-panic-with-x/</link>
     <pubDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/parallel-events-panic-with-x/</guid>
+    <guid>https://vignatti.com/posts/parallel-events-panic-with-x/</guid>
     <description><![CDATA[Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
 I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way.]]></description>
 </item><item>
     <title>fakemouse -- a driver that emulates a mouse</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
+    <link>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
     <pubDate>Wed, 28 May 2008 02:36:09 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
+    <guid>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
     <description><![CDATA[For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.]]></description>
 </item></channel>
 </rss>

@@ -1,34 +1,34 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Ozone-Wayland - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/ozone-wayland/</link>
+        <link>https://vignatti.com/tags/ozone-wayland/</link>
         <description>Ozone-Wayland - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/ozone-wayland/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/ozone-wayland/" rel="self" type="application/rss+xml" /><item>
     <title>Chromium Ozone-GBM explained</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/chromium-ozone-gbm-explained/</link>
+    <link>https://vignatti.com/posts/chromium-ozone-gbm-explained/</link>
     <pubDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/chromium-ozone-gbm-explained/</guid>
+    <guid>https://vignatti.com/posts/chromium-ozone-gbm-explained/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://01.org/sites/default/files/users/u18252/ozone_architecture_-_overview.png" referrerpolicy="no-referrer">
             </div>I&rsquo;ve wrote an article about the new graphics platform for Chromium called Ozone-GBM. I particularly think that Ozone-GBM will play an important role next in Chromium and Linux graphics communities in general. I hope you enjoy the read :) Please share it.
 https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html]]></description>
 </item><item>
     <title>[video] Chromium Browser on Wayland</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/video-chromium-browser-on-wayland/</link>
+    <link>https://vignatti.com/posts/video-chromium-browser-on-wayland/</link>
     <pubDate>Fri, 07 Feb 2014 09:00:33 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/video-chromium-browser-on-wayland/</guid>
+    <guid>https://vignatti.com/posts/video-chromium-browser-on-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://img.youtube.com/vi/EJB2pznc6iY/0.jpg" referrerpolicy="no-referrer">
             </div>Some state-of-the-art progress of the project we&rsquo;re proudly working with:
 https://www.youtube.com/watch?v=EJB2pznc6iY]]></description>
 </item><item>
     <title>developing Chromium on Wayland</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/developing-chromium-on-wayland/</link>
+    <link>https://vignatti.com/posts/developing-chromium-on-wayland/</link>
     <pubDate>Mon, 07 Oct 2013 14:42:17 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/developing-chromium-on-wayland/</guid>
+    <guid>https://vignatti.com/posts/developing-chromium-on-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Chromium_78_running_on_GNOME_Shell_and_Ubuntu_Linux.png" referrerpolicy="no-referrer">
             </div>A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.
@@ -36,10 +36,10 @@ communities
 There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS.]]></description>
 </item><item>
     <title>Welcome to Chromium&#39;s Ozone-Wayland</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/welcome-to-chromiums-ozone-wayland/</link>
+    <link>https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/</link>
     <pubDate>Wed, 18 Sep 2013 13:34:24 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/welcome-to-chromiums-ozone-wayland/</guid>
+    <guid>https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png" referrerpolicy="no-referrer">
             </div>The following message was sent out this morning &ndash; I&rsquo;m copying it here and attaching a cute screenshot of my desktop :)

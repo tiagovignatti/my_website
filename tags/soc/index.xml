@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>soc - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/soc/</link>
+        <link>https://vignatti.com/tags/soc/</link>
         <description>soc - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Aug 2008 23:22:27 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/soc/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Aug 2008 23:22:27 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/soc/" rel="self" type="application/rss+xml" /><item>
     <title>keep it going...</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/keep-it-going/</link>
+    <link>https://vignatti.com/posts/keep-it-going/</link>
     <pubDate>Thu, 07 Aug 2008 23:22:27 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/keep-it-going/</guid>
+    <guid>https://vignatti.com/posts/keep-it-going/</guid>
     <description><![CDATA[Given that GSoC &lsquo;08 is getting close to the end, strategy number 2 showed more feasible to proceed my work. Strategy #3 would be a lot of fun but would imply a hell massive codification as well (also a little out of our scope). Unfortunately no-no for now.]]></description>
 </item></channel>
 </rss>

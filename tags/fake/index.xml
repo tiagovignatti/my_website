@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>fake - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/fake/</link>
+        <link>https://vignatti.com/tags/fake/</link>
         <description>fake - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 28 May 2008 02:36:09 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/fake/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 28 May 2008 02:36:09 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/fake/" rel="self" type="application/rss+xml" /><item>
     <title>fakemouse -- a driver that emulates a mouse</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
+    <link>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
     <pubDate>Wed, 28 May 2008 02:36:09 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
+    <guid>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
     <description><![CDATA[For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.]]></description>
 </item></channel>
 </rss>

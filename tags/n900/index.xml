@@ -1,39 +1,39 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>n900 - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/n900/</link>
+        <link>https://vignatti.com/tags/n900/</link>
         <description>n900 - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Mar 2010 18:01:10 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/n900/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Mar 2010 18:01:10 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/n900/" rel="self" type="application/rss+xml" /><item>
     <title>Scrutinizing X memory, part 2: what&#39;s taking all that memory?</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</link>
+    <link>https://vignatti.com/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</link>
     <pubDate>Thu, 25 Mar 2010 18:01:10 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</guid>
+    <guid>https://vignatti.com/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</guid>
     <description><![CDATA[So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/pidof Xorg/{smaps, status}. I used also a script found on the Web to parse and organize these informations; Mikhail Gusarov has extended this script to show a very useful output.
 Xorg per se Running just one standalone Xorg -retro. In my system it represents: VmRSS: 5440 kB VmSize: 13620 kB
 from those 5440 kB of RSS: 3404 kB (63 %) come from code 1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) 228 kB (4 %) come from other data mapped in memory 180 kB (3 %) come from rodata]]></description>
 </item><item>
     <title>Scrutinizing X Memory, part 1: overview</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/</link>
+    <link>https://vignatti.com/posts/scrutinizing-x-memory-part-1-overview/</link>
     <pubDate>Thu, 25 Mar 2010 17:58:47 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/scrutinizing-x-memory-part-1-overview/</guid>
+    <guid>https://vignatti.com/posts/scrutinizing-x-memory-part-1-overview/</guid>
     <description><![CDATA[This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
 Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data.]]></description>
 </item><item>
     <title>Customization and true modularization of Xorg</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/</link>
+    <link>https://vignatti.com/posts/xorg-customization-and-true-modularization/</link>
     <pubDate>Sat, 23 Jan 2010 17:20:25 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/</guid>
+    <guid>https://vignatti.com/posts/xorg-customization-and-true-modularization/</guid>
     <description><![CDATA[For the first time in life, Xorg is being used in a single platform and for a given device only (other devices have used an X11 implementation but using other non-canonical servers, such kdrive&rsquo;s based - Tiny-X).
 Previously Xorg was being packed to run in a huge amount of OSes - mostly Linux and Unix-like distributions - with the characteristic of be architecture portable and able to run on a huge set of video and input devices.]]></description>
 </item><item>
     <title>my dear diary... (some not-so-old memories)</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/my-dear-diary-some-not-so-old-memories/</link>
+    <link>https://vignatti.com/posts/my-dear-diary-some-not-so-old-memories/</link>
     <pubDate>Mon, 09 Nov 2009 01:47:17 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/my-dear-diary-some-not-so-old-memories/</guid>
+    <guid>https://vignatti.com/posts/my-dear-diary-some-not-so-old-memories/</guid>
     <description><![CDATA[Portland, OR
 I was so proud for the forth time be part of the X crew, this time in Portland. Really amazing the city. I had the opportunity to play tourist and visit some nice places.
 My X conferences

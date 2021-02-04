@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>zanoni - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/zanoni/</link>
+        <link>https://vignatti.com/tags/zanoni/</link>
         <description>zanoni - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Feb 2008 21:59:17 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/zanoni/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Feb 2008 21:59:17 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/zanoni/" rel="self" type="application/rss+xml" /><item>
     <title>VgaArbiter wiki</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/vgaarbiter-wiki/</link>
+    <link>https://vignatti.com/posts/vgaarbiter-wiki/</link>
     <pubDate>Mon, 25 Feb 2008 21:59:17 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/vgaarbiter-wiki/</guid>
+    <guid>https://vignatti.com/posts/vgaarbiter-wiki/</guid>
     <description><![CDATA[Today, Paulo Zanoni help me to put in a shape the VgaArbiter wiki page. The primary intention of that page is to bring more developers in that project and some users++ who could also help testing. Feedback is very welcome. Here is the link.]]></description>
 </item></channel>
 </rss>

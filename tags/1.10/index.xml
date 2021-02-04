@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>1.10 - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/1.10/</link>
+        <link>https://vignatti.com/tags/1.10/</link>
         <description>1.10 - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/1.10/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/1.10/" rel="self" type="application/rss+xml" /><item>
     <title>X Census (for 1.10)</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-10/</link>
+    <link>https://vignatti.com/posts/x-census-for-1-10/</link>
     <pubDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-10/</guid>
+    <guid>https://vignatti.com/posts/x-census-for-1-10/</guid>
     <description><![CDATA[Following is the census of 1.10 window for all X infrastructure - raw numbers here. I did it in a similar way as the previous version. Worth to mention that there&rsquo;s almost no relation between the cycles of development from each of the components listed below, which can lead to some misunderstanding. Anyway, still a nice indicative to see and evaluate how the free desktop community behaved.
 Numbers for X implementation (xserver, proto, lib and xcb repositories):]]></description>
 </item></channel>

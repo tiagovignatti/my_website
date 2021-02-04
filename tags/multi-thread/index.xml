@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>multi-thread - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/multi-thread/</link>
+        <link>https://vignatti.com/tags/multi-thread/</link>
         <description>multi-thread - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 Jun 2008 23:39:53 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/multi-thread/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 Jun 2008 23:39:53 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/multi-thread/" rel="self" type="application/rss+xml" /><item>
     <title>to thread the X server (?)</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/to-thread-the-x-server/</link>
+    <link>https://vignatti.com/posts/to-thread-the-x-server/</link>
     <pubDate>Tue, 17 Jun 2008 23:39:53 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/to-thread-the-x-server/</guid>
+    <guid>https://vignatti.com/posts/to-thread-the-x-server/</guid>
     <description><![CDATA[I really don&rsquo;t like to read large blog posts. Anyway&hellip;
 What I did so far is a separated thread that takes care only the injection stage on the X server queue. Who is interested with the results, please read some past posts in my blog. It is currently in a very good shape (synced with post-mpx merge, all input devices are inside the thread and etc). The implementation looks like this: thread #1 deals with - injection of input events from devices thread #2 deals with - processing of input events to clients - requests from known clients (rendering things) - new client that tries to connect (pretty easy to do)]]></description>
 </item></channel>

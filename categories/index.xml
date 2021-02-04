@@ -1,42 +1,42 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - Category - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/categories/</link>
+        <link>https://vignatti.com/categories/</link>
         <description>Categories - Category - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 15 Oct 2018 17:21:23 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 15 Oct 2018 17:21:23 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Computing</title>
-    <link>https://tiagovignatti.github.io/my_website/categories/computing/</link>
+    <link>https://vignatti.com/categories/computing/</link>
     <pubDate>Mon, 15 Oct 2018 17:21:23 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/categories/computing/</guid>
+    <guid>https://vignatti.com/categories/computing/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Life</title>
-    <link>https://tiagovignatti.github.io/my_website/categories/life/</link>
+    <link>https://vignatti.com/categories/life/</link>
     <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/categories/life/</guid>
+    <guid>https://vignatti.com/categories/life/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Links</title>
-    <link>https://tiagovignatti.github.io/my_website/categories/links/</link>
+    <link>https://vignatti.com/categories/links/</link>
     <pubDate>Tue, 15 Jun 2010 15:24:11 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/categories/links/</guid>
+    <guid>https://vignatti.com/categories/links/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>SoC2008</title>
-    <link>https://tiagovignatti.github.io/my_website/categories/soc2008/</link>
+    <link>https://vignatti.com/categories/soc2008/</link>
     <pubDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/categories/soc2008/</guid>
+    <guid>https://vignatti.com/categories/soc2008/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Soc2007</title>
-    <link>https://tiagovignatti.github.io/my_website/categories/soc2007/</link>
+    <link>https://vignatti.com/categories/soc2007/</link>
     <pubDate>Tue, 28 Aug 2007 02:32:41 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/categories/soc2007/</guid>
+    <guid>https://vignatti.com/categories/soc2007/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

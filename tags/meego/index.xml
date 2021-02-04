@@ -1,21 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>meego - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/meego/</link>
+        <link>https://vignatti.com/tags/meego/</link>
         <description>meego - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 22 Sep 2011 15:55:54 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/meego/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 22 Sep 2011 15:55:54 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/meego/" rel="self" type="application/rss+xml" /><item>
     <title>... if I didn&#39;t say</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/if-i-didnt-say/</link>
+    <link>https://vignatti.com/posts/if-i-didnt-say/</link>
     <pubDate>Thu, 22 Sep 2011 15:55:54 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/if-i-didnt-say/</guid>
+    <guid>https://vignatti.com/posts/if-i-didnt-say/</guid>
     <description><![CDATA[Hello Intel Finland :) Here I am now; four months already at OTC big team.]]></description>
 </item><item>
     <title>X characterization for MeeGo</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/x-characterization-for-meego/</link>
+    <link>https://vignatti.com/posts/x-characterization-for-meego/</link>
     <pubDate>Wed, 20 Apr 2011 13:35:44 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/x-characterization-for-meego/</guid>
+    <guid>https://vignatti.com/posts/x-characterization-for-meego/</guid>
     <description><![CDATA[Actually this is not a big news but it&rsquo;s nice to see on practice X being used on the advanced age :) Here I&rsquo;ve played with some UI configuration settings, browsed for while, toyed with facebook, opened some photos in the viewer and etc, all for about 5 minutes:
  x-meego-Apr2011
 and zooming in the X11 core slice we have:
@@ -23,36 +23,36 @@ and zooming in the X11 core slice we have:
 Moral of the story: as showed on the last figure, most of the traffic from the core protocol is related with window management, window state changes and notifications of positioning for clients.]]></description>
 </item><item>
     <title>X Census (for 1.10)</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-10/</link>
+    <link>https://vignatti.com/posts/x-census-for-1-10/</link>
     <pubDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-10/</guid>
+    <guid>https://vignatti.com/posts/x-census-for-1-10/</guid>
     <description><![CDATA[Following is the census of 1.10 window for all X infrastructure - raw numbers here. I did it in a similar way as the previous version. Worth to mention that there&rsquo;s almost no relation between the cycles of development from each of the components listed below, which can lead to some misunderstanding. Anyway, still a nice indicative to see and evaluate how the free desktop community behaved.
 Numbers for X implementation (xserver, proto, lib and xcb repositories):]]></description>
 </item><item>
     <title>late Christmas gift: freedesktop&#39;s Xorg for MeeGo</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
+    <link>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
     <pubDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
+    <guid>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
     <description><![CDATA[Moikka.
 If you follow here [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for MeeGo-Harmattan, where we target embedded systems only. Feel free to use it!
  At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
 </item><item>
     <title>Xorg server 1.9 minimal</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/xorg-server-1-9-minimal/</link>
+    <link>https://vignatti.com/posts/xorg-server-1-9-minimal/</link>
     <pubDate>Wed, 18 Aug 2010 15:22:26 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-server-1-9-minimal/</guid>
+    <guid>https://vignatti.com/posts/xorg-server-1-9-minimal/</guid>
     <description><![CDATA[That&rsquo;s what I&rsquo;m using for MeeGo now. Autoconf parameters, theeere we go:
 &ndash;disable-static &ndash;disable-aiglx &ndash;disable-config-dbus &ndash;disable-config-hal &ndash;disable-dbe &ndash;disable-dga &ndash;disable-dpms &ndash;disable-dri &ndash;disable-glx &ndash;disable-glx-tls &ndash;disable-int10-module &ndash;disable-ipv6 &ndash;disable-screensaver &ndash;disable-secure-rpc &ndash;disable-tcp-transport &ndash;disable-vbe &ndash;disable-vgahw &ndash;disable-xdm-auth-1 &ndash;disable-xinerama &ndash;disable-xwin &ndash;disable-xaa &ndash;disable-xace &ndash;disable-xdmcp &ndash;disable-xf86vidmode &ndash;disable-xfree86-utils &ndash;disable-xnest &ndash;disable-xvmc &ndash;disable-libdrm &ndash;enable-config-udev &ndash;enable-dri2 &ndash;enable-null-root-cursor &ndash;enable-record &ndash;enable-unit-tests &ndash;enable-visibility &ndash;enable-xorg &ndash;with-sha1=libsha1
 PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!]]></description>
 </item><item>
     <title>Linux Graphics for Small Devices at FISL</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</link>
+    <link>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</link>
     <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</guid>
+    <guid>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</guid>
     <description><![CDATA[Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for _freedesktopers_ though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow here.
 *actually, two nights in Porto Alegre and two nights in Curitiba.]]></description>
 </item></channel>

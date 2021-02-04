@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>ironic - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/ironic/</link>
+        <link>https://vignatti.com/tags/ironic/</link>
         <description>ironic - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 29 Dec 2009 01:42:19 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/ironic/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 29 Dec 2009 01:42:19 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/ironic/" rel="self" type="application/rss+xml" /><item>
     <title>New blog interface</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/new-blog-ui-2/</link>
+    <link>https://vignatti.com/posts/new-blog-ui-2/</link>
     <pubDate>Tue, 29 Dec 2009 01:42:19 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/new-blog-ui-2/</guid>
+    <guid>https://vignatti.com/posts/new-blog-ui-2/</guid>
     <description><![CDATA[I like UI and I&rsquo;m not gay.
 Some time ago someone posted a comment, complaining about the white fonts over the dark background in my blog, which makes the read be difficult. The guy teased me, recommending an ironic page where shows how hard is to read texts like this. He was right&hellip;
 So now I changed wordpress to a totally opposite theme called &ldquo;White as Milk&rdquo;. Yay, total white and easy to read now!]]></description>

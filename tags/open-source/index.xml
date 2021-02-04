@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>open-source - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/open-source/</link>
+        <link>https://vignatti.com/tags/open-source/</link>
         <description>open-source - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 07 Oct 2013 14:42:17 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/open-source/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 07 Oct 2013 14:42:17 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/open-source/" rel="self" type="application/rss+xml" /><item>
     <title>developing Chromium on Wayland</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/developing-chromium-on-wayland/</link>
+    <link>https://vignatti.com/posts/developing-chromium-on-wayland/</link>
     <pubDate>Mon, 07 Oct 2013 14:42:17 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/developing-chromium-on-wayland/</guid>
+    <guid>https://vignatti.com/posts/developing-chromium-on-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Chromium_78_running_on_GNOME_Shell_and_Ubuntu_Linux.png" referrerpolicy="no-referrer">
             </div>A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.

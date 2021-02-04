@@ -1,31 +1,31 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>maemo - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/maemo/</link>
+        <link>https://vignatti.com/tags/maemo/</link>
         <description>maemo - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/maemo/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/maemo/" rel="self" type="application/rss+xml" /><item>
     <title>late Christmas gift: freedesktop&#39;s Xorg for MeeGo</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
+    <link>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
     <pubDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
+    <guid>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
     <description><![CDATA[Moikka.
 If you follow here [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for MeeGo-Harmattan, where we target embedded systems only. Feel free to use it!
  At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
 </item><item>
     <title>Xorg: What is it, and what does it mean?</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/xorg-what-is-it-and-what-does-it-mean/</link>
+    <link>https://vignatti.com/posts/xorg-what-is-it-and-what-does-it-mean/</link>
     <pubDate>Sat, 26 Dec 2009 18:36:49 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-what-is-it-and-what-does-it-mean/</guid>
+    <guid>https://vignatti.com/posts/xorg-what-is-it-and-what-does-it-mean/</guid>
     <description><![CDATA[Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM
 I don&rsquo;t have words for it.]]></description>
 </item><item>
     <title>Nokia, FI...</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/nokia-fi/</link>
+    <link>https://vignatti.com/posts/nokia-fi/</link>
     <pubDate>Fri, 12 Jun 2009 07:06:59 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/nokia-fi/</guid>
+    <guid>https://vignatti.com/posts/nokia-fi/</guid>
     <description><![CDATA[&hellip; here I&rsquo;am :)]]></description>
 </item></channel>
 </rss>

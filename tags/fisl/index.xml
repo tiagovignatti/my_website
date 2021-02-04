@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>FISL - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/fisl/</link>
+        <link>https://vignatti.com/tags/fisl/</link>
         <description>FISL - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/fisl/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/fisl/" rel="self" type="application/rss+xml" /><item>
     <title>Linux Graphics for Small Devices at FISL</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</link>
+    <link>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</link>
     <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/linux-graphics-for-small-devices-at-fisl/</guid>
+    <guid>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</guid>
     <description><![CDATA[Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for _freedesktopers_ though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow here.
 *actually, two nights in Porto Alegre and two nights in Curitiba.]]></description>
 </item></channel>

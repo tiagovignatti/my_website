@@ -1,47 +1,47 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>nokia - Tag - Tiago Vignatti</title>
-        <link>https://tiagovignatti.github.io/my_website/tags/nokia/</link>
+        <link>https://vignatti.com/tags/nokia/</link>
         <description>nokia - Tag - Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</lastBuildDate><atom:link href="https://tiagovignatti.github.io/my_website/tags/nokia/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/nokia/" rel="self" type="application/rss+xml" /><item>
     <title>X Census (for 1.10)</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-10/</link>
+    <link>https://vignatti.com/posts/x-census-for-1-10/</link>
     <pubDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-10/</guid>
+    <guid>https://vignatti.com/posts/x-census-for-1-10/</guid>
     <description><![CDATA[Following is the census of 1.10 window for all X infrastructure - raw numbers here. I did it in a similar way as the previous version. Worth to mention that there&rsquo;s almost no relation between the cycles of development from each of the components listed below, which can lead to some misunderstanding. Anyway, still a nice indicative to see and evaluate how the free desktop community behaved.
 Numbers for X implementation (xserver, proto, lib and xcb repositories):]]></description>
 </item><item>
     <title>late Christmas gift: freedesktop&#39;s Xorg for MeeGo</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
+    <link>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
     <pubDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
+    <guid>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
     <description><![CDATA[Moikka.
 If you follow here [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for MeeGo-Harmattan, where we target embedded systems only. Feel free to use it!
  At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
 </item><item>
     <title>X Census (for 1.9)</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-9/</link>
+    <link>https://vignatti.com/posts/x-census-for-1-9/</link>
     <pubDate>Thu, 02 Sep 2010 13:41:11 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/x-census-for-1-9/</guid>
+    <guid>https://vignatti.com/posts/x-census-for-1-9/</guid>
     <description><![CDATA[Topic&rsquo;s name is a funny (and friendly) devotion to GNOME Census. So let&rsquo;s take a look at some numbers from the time Xorg 1.9 was in development - raw data is here.
 Would be unfair to measure only the work that happened e.g. in X server or in the drivers being developed and come up with the statistics about &ldquo;who developed X&rdquo;. X and X development community are quite extensive and don&rsquo;t concern only &ldquo;graphics&rdquo; related, i.]]></description>
 </item><item>
     <title>Customization and true modularization of Xorg</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/</link>
+    <link>https://vignatti.com/posts/xorg-customization-and-true-modularization/</link>
     <pubDate>Sat, 23 Jan 2010 17:20:25 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/xorg-customization-and-true-modularization/</guid>
+    <guid>https://vignatti.com/posts/xorg-customization-and-true-modularization/</guid>
     <description><![CDATA[For the first time in life, Xorg is being used in a single platform and for a given device only (other devices have used an X11 implementation but using other non-canonical servers, such kdrive&rsquo;s based - Tiny-X).
 Previously Xorg was being packed to run in a huge amount of OSes - mostly Linux and Unix-like distributions - with the characteristic of be architecture portable and able to run on a huge set of video and input devices.]]></description>
 </item><item>
     <title>my dear diary... (some not-so-old memories)</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/my-dear-diary-some-not-so-old-memories/</link>
+    <link>https://vignatti.com/posts/my-dear-diary-some-not-so-old-memories/</link>
     <pubDate>Mon, 09 Nov 2009 01:47:17 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/my-dear-diary-some-not-so-old-memories/</guid>
+    <guid>https://vignatti.com/posts/my-dear-diary-some-not-so-old-memories/</guid>
     <description><![CDATA[Portland, OR
 I was so proud for the forth time be part of the X crew, this time in Portland. Really amazing the city. I had the opportunity to play tourist and visit some nice places.
 My X conferences
@@ -50,10 +50,10 @@ X on embedded
 The cool thing of the work that I&rsquo;m doing at Nokia is that I can publish and discuss mostly all X fun with the open source communities.]]></description>
 </item><item>
     <title>Nokia, FI...</title>
-    <link>https://tiagovignatti.github.io/my_website/posts/nokia-fi/</link>
+    <link>https://vignatti.com/posts/nokia-fi/</link>
     <pubDate>Fri, 12 Jun 2009 07:06:59 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://tiagovignatti.github.io/my_website/posts/nokia-fi/</guid>
+    <guid>https://vignatti.com/posts/nokia-fi/</guid>
     <description><![CDATA[&hellip; here I&rsquo;am :)]]></description>
 </item></channel>
 </rss>
