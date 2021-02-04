@@ -1,4 +1,4 @@
-baseURL = "https://tiagovignatti.github.io/my_website/"
+baseURL = "https://vignatti.com"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
 # language code
