@@ -1,4 +1,4 @@
-baseURL = "https://vignatti.com"
+baseURL = "https://vignatti.com/"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
 # language code
@@ -59,9 +59,9 @@ theme = "LoveIt"
 
 # Social config about the author
   [params.social]
-    GitHub = "tiagovignatti"
-    Linkedin = "tiagovignatti"
-    Twitter = "tiagovignatti"
+    # GitHub = "tiagovignatti"
+    # Linkedin = "tiagovignatti"
+    # Twitter = "tiagovignatti"
     Instagram = ""
     Facebook = ""
     Telegram = ""
