@@ -8,7 +8,7 @@ draft: false
 
 {{< style "text-align:justify; strong{color:#00b1ff;}" >}}
 
-In the midst of the worst health crisis, disturbing patriotism doctrines and a myriad of digital vices that became the gateway to the respect and love that we all crave, my brother recently gave us fulfilling reasons to celebrate The Great Life.
+In the midst of the worst health crisis, disturbing patriotism doctrines and a myriad of digital vices that became the gateway to the respect and love that we all crave, [my brother](https://www.inf.ufpr.br/vignatti/) recently gave us fulfilling reasons to celebrate The Great Life.
 
 Although the picture below is by itself mesmerizing, that unique moment captured requires a deeper explanation.
 
