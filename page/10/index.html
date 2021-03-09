@@ -10,7 +10,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://vignatti.com/" />
-<meta property="og:updated_time" content="2021-02-23T21:07:43-03:00" />
+<meta property="og:updated_time" content="2021-03-08T22:04:11-03:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tiago Vignatti"/>
 <meta name="twitter:description" content=""/>
@@ -73,6 +73,15 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/xorg-input-thread-summary-or-something/">Xorg input thread - summary or something</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-06">2007-07-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.
+ cut here -  Hi guys.
+As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse thread for the X server. Now, I&rsquo;m really stucked with it and I need some good ideas from you before go to the next steps.
+Today the cursor lags in two situations on Xorg:</div><div class="post-footer">
+        <a href="/posts/xorg-input-thread-summary-or-something/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/moving-the-mouse-handling-code-into-a-separate-thread/">Moving the mouse handling code into a separate thread</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-06-16">2007-06-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">(In a puny attempt to write my SoC project progress to my mentor, I decided to expand it and share my thoughts with you)
 Today, we have two methods to register the pointer devices on Xorg server: (1) under SIGIO and (2) put they fd on EnableDevices set. There is also the silken mouse concept, which means updates fired during sigio handler (in the case of hw cursor).
@@ -104,14 +113,6 @@ Possibly, for some time this blog will be filled with a lot of posts regarding t
         <a href="/posts/the-conception-and-the-future-of-multiseat/">The conception and the future of multiseat...</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-04-10">2007-04-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">&hellip;this is the subject of my talk which will be held at FISL (International Free Software Forum) on this saturday, April 14th. I&rsquo;ll post the feedbacks here.</div><div class="post-footer">
         <a href="/posts/the-conception-and-the-future-of-multiseat/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/x-server-semantics-number-of-users-per-server/">X server semantics - number of users per server</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-03-29">2007-03-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">Here is mail that I sent to xorg list a week ago. No one replied it :(
-On IRC I talked with some developers and asked why they didn&rsquo;t said nothing about my comments and the answer summarized was that no one is really interested on multiseat (well, at least on first world countries). Strangely, it really give me a good perspective and motivation to keep the work :)
-&ndash; cut here &ndash;</div><div class="post-footer">
-        <a href="/posts/x-server-semantics-number-of-users-per-server/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">
