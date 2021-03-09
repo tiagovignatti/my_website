@@ -9,10 +9,14 @@ snap install hugo --channel=extended
 hugo server
 ```
 
-## Publishing to GitHub Pages
-
+## Publishing new content
 
 ```bash
+
+# manually create content files
+hugo new content/posts/some-interesting-shortname.md
+
+# publishing to GitHub Pages
 ./publish_to_ghpages.sh
 ```
 
