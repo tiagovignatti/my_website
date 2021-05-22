@@ -57,33 +57,33 @@ At Imersys, I've directed teams of audiovisual editors, 3D artists, educational 
 
 ---
 
-## [Zero-Copy Texture Uploads in Chrome OS](https://software.intel.com/content/www/us/en/develop/articles/zero-copy-texture-uploads-in-chrome-os.html)
+## Zero-Copy Texture Uploads in Chrome OS
 
 {{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/zero-copy-texture-uploads-in-chrome-os-fig1-599269.png" class="float-right" >}}
 
-Performance and Optimization: In 2015, I've modified Chrome OS to make zero-copy texture uploads possible. In the best scenario the Web content now is loaded 38% faster, using 65% lower memory. This optimization is being shipped in millions of devices using Chrome OS on Intel Architecture.
+Performance and Optimization: In 2015, I've modified Chrome OS to make [zero-copy texture uploads](https://software.intel.com/content/www/us/en/develop/articles/zero-copy-texture-uploads-in-chrome-os.html) possible. In the best scenario the Web content now is loaded 38% faster, using 65% lower memory. This optimization is being shipped in millions of devices using Chrome OS on Intel Architecture.
 
 ---
 
-## [Sharing CPU and GPU buffers on Linux](https://software.intel.com/content/www/us/en/develop/blogs/sharing-cpu-and-gpu-buffers-on-linux.html)
+## Sharing CPU and GPU buffers on Linux
 
 {{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/203px-Tux.svg.png" class="float-left" >}}
 
-I've designed an architecture for systems with shared physical memory to exploit the advantages of heterogeneous computing, saving memory and boosting performance on graphics libraries. This innovative architecture and code are now (2016) fully-upstreamed on Linux and also in Chrome OS, which is largely being shipped within Chromebooks and other products.
+I've designed [an architecture for systems with shared physical memory to exploit the advantages of heterogeneous computing](https://software.intel.com/content/www/us/en/develop/blogs/sharing-cpu-and-gpu-buffers-on-linux.html), saving memory and boosting performance on graphics libraries. This innovative architecture and code are now (2016) fully-upstreamed on Linux and also in Chrome OS, which is largely being shipped within Chromebooks and other products.
 
 ---
 
-## [Chromium Ozone-GBM](https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html)
+## Chromium Ozone-GBM
 
 {{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/ozone-architecture-overview-534299.png" class="float-right" >}}
 
-My work on Ozone architecture and Ozone-Wayland implementation influenced Google to switch Chrome for Ozone, through Ozone-GBM, as well in 2014. Ozone-GBM is the native fullscreen-only platform that delegates the composition tasks of the root window to a new platform window based on KMS/DRM. It uses EGL/GLES2 for accelerated rendering. Besides, Ozone-GBM has an internal implementation of the Linux evdev subsystem.
+My work on Ozone architecture and Ozone-Wayland implementation influenced Google to switch Chrome for Ozone, through Ozone-GBM, as well in 2014. [Chromium Ozone-GBM](https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html) is the native fullscreen-only platform that delegates the composition tasks of the root window to a new platform window based on KMS/DRM. It uses EGL/GLES2 for accelerated rendering. Besides, Ozone-GBM has an internal implementation of the Linux evdev subsystem.
 
 ---
 
-## [Chromium Ozone-Wayland](https://news.slashdot.org/story/13/10/07/2212245/chromium-to-support-wayland)
+## Chromium Ozone-Wayland
 
-Web Browser development: When I've ported Chrome to run on Wayland (2013), it became obvious that a new abstraction for hosting different window systems in Chrome was needed. Together with Google I have developed Ozone and implemented its first backend, Ozone-Wayland. Commercial products have been using it, including a smart TVs' multi-billion corporation and a Digital Signage for a fast food chain installed in more than 6,500 stores.
+Web Browser development: When I've ported Chrome to run on Wayland (2013), it became obvious that a new abstraction for hosting different window systems in Chrome was needed. Together with Google [I have developed Ozone and implemented its first backend, Ozone-Wayland](https://news.slashdot.org/story/13/10/07/2212245/chromium-to-support-wayland). Commercial products have been using it, including a smart TVs' multi-billion corporation and a Digital Signage for a fast food chain installed in more than 6,500 stores.
 
 ---
 
@@ -117,9 +117,9 @@ Starting in 2007, I was pretty involved with a bunch of Open-Source communities.
 
 ---
 
-## [Linux kernel VGA Arbiter](https://www.kernel.org/doc/html/latest/gpu/vgaarbiter.html)
+## Linux kernel VGA Arbiter
 
-I have authored the VGA arbiter, deployed in the Linux kernel and a bunch of other operating systems as well.
+I have authored the [VGA arbiter](https://www.kernel.org/doc/html/latest/gpu/vgaarbiter.html), deployed in the Linux kernel and a bunch of other operating systems as well.
 
 ---
 
@@ -129,14 +129,20 @@ Back then I was responsible for the maintainership of the graphics stack and pac
 
 ---
 
-## [Xorg Input-Thread](https://www.phoronix.com/scan.php?page=news_item&px=ODU0MQ)
+## Xorg Input-Thread
 
-Google Summer of Code project to separate the mouse thread on the X Window System reference implementation, the X server.
+Google Summer of Code project to [separate the mouse thread on the X Window System reference implementation, the X server](https://www.phoronix.com/scan.php?page=news_item&px=ODU0MQ).
 
 ---
 
-## [Long-term digital archiving system](https://ieeexplore.ieee.org/document/5284519/)
+## vignatti.com
 
-P2P and Distributed Systems. Distributed Hash Table. This work was presented at the 2009 IEEE International Conference on Peer-to-Peer Computing, as "Long-term digital archiving based on selection of repositories over P2P networks"
+The [current website you're visiting](https://vignatti.com). This website is using Hugo framework (static website generator written in Go), with posts migrated [from WP](https://vignatti.wordpress.com/), and Google Analytics up. This website has been redone several times before but only the last couple sites were [open source](https://github.com/tiagovignatti/my_website).
+
+---
+
+## Long-term digital archiving system
+
+P2P and Distributed Systems. Distributed Hash Table. This work was presented at the 2009 IEEE International Conference on Peer-to-Peer Computing, as "[Long-term digital archiving based on selection of repositories over P2P networks](https://ieeexplore.ieee.org/document/5284519/)"
 
 ---
