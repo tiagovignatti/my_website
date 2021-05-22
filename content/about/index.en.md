@@ -1,6 +1,7 @@
 ---
 title: "About"
 draft: false
+toc: false
 
 ---
 
@@ -14,7 +15,7 @@ I'm thinking about distance learning and future technologies. I've co-founded **
 
 ### Open-source
 
-I've used to do a bunch of open-source software stuff. Some are living in [GitHub](https://github.com/tiagovignatti) now.
+I've used to do a bunch of open-source software stuff. Some are living in [GitHub](https://github.com/tiagovignatti) now. You can check out also some stuff I've worked on throughout my career in the [projects](/projects/) page.
 
 ### Career
 

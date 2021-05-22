@@ -4,6 +4,8 @@ title: "Stars Aligned"
 featuredImagePreview: /images/20210306_103829_2-preview.jpg
 date: 2021-03-08T22:04:11-03:00
 draft: false
+toc: false
+
 ---
 
 {{< style "text-align:justify; strong{color:#00b1ff;}" >}}
