@@ -7,7 +7,7 @@ toc:
 
 Below are some of the projects I've worked on throughout my career. Some are full-fledged products, and some are just libraries and small systems. Some I'm the primary developer and some I've just contributed to.
 
-Projects are listed (more less) in reverse chronological order:
+Listed (more less) in reverse chronological order:
 
 <!--
 ---
@@ -28,16 +28,15 @@ Technology: Vue.js. Vuetify. Node.js, MongoDB, Elastic Search.
 
 {{< figure src="https://desafiosdaeducacao.grupoa.com.br/wp-content/uploads/2021/03/GIF-corpo-humano.gif" class="float-right" >}}
 
-It's a viewer of 3D educational objects for the Web (.glTF / .glb). Most of frontend was done using JavaScript through Modelviewer. Vue.js and Vuetify. GraphQL and Apollo in the backend. We have now (2021) ~1000 of these 3D educational objects and over 1M students accessing it, where they can interact with objects using the desktop, a mobile device or augmented reality.
+It's a viewer of 3D educational objects for the Web (.glTF / .glb). Most of frontend was done using JavaScript using Modelviewer, Vue.js and Vuetify; GraphQL and Apollo in the backend. In the beginning of **2021** we were streaming about 1000 of these 3D objects to over 1M students accessing and able to interact with it using the desktop, mobile and augmented reality devices.
 
 ---
 
 ## 360 Video Player for the Web
 
-<!-- {{< figure src="/images/2021-05-22_18-14b.png" class="float-left" >}} -->
-{{< figure src="/images/avatar.png" class="float-left" >}}
+{{< figure src="/images/2021-05-22_18-14b.webp" class="float-left" >}}
 
-In 2018 I've designed an innovative video infrastructure for 360 videos playback. Frontend on JavaScript technologies, using A-Frame for rendering and Shaka-Player as its foundation for playing, networking buffering, UI controls and streaming 360 media (but also 2d "plane" media) with high quality. Google Closure Compiler for putting things together. Users can watch videos using desktop, mobile devices (Android and iOS -- this one was important) or in virtual reality.
+In **2019** I've designed an innovative video infrastructure for 360 videos playback. Frontend on JavaScript technologies, using A-Frame for rendering and Shaka-Player as its foundation for playing, networking buffering, UI controls and streaming 360 media (but also 2d "plane" media) with high quality. Google Closure Compiler for putting things together. Users can watch videos using desktop, mobile devices (Android and iOS -- this one was important) or in virtual reality.
 <!--
 ---
 
@@ -45,15 +44,21 @@ In 2018 I've designed an innovative video infrastructure for 360 videos playback
 
 Foz 360. -->
 
-<!-- ---
+---
 
-## Various customized projects on Unreal Engine 4
+## Various custom projects on Unreal Engine 4
 
+{{< figure src="/images/Unreal_Engine_Logo.webp" class="float-right" >}}
 
-Itaipu VR
+During **2017 - 2020**, I've directed teams of audiovisual editors, 3D artists, educational content creators and engineers. I have lead the development of Virtual Reality and Augmented Reality content such as games, training and specially a [complete learning platform for high-school students](https://youtu.be/d8NU1rbFoII). Most of the projects were based on Unreal Engine 4.
 
+---
 
-At Imersys, I've directed teams of audiovisual editors, 3D artists, educational content creators and engineers. Lead the development of Virtual Reality and Augmented Reality ("XR technologies") content such as games, training and learning platforms on Unreal Engine 4. -->
+## Itaipu VR App
+
+{{< figure src="/images/11162707_643090662565064_8268919639556227072_n.webp" class="float-left" >}}
+
+Built on Unity , coded with C#, and using spatial audio, photogrammetry and other techniques to run on Samsung Gear VR, [Itaipu VR](https://www.youtube.com/watch?v=xG9od30Lwmg) has been recognized worldwide including by Facebook's VP of Virtual Reality, when [he opened up his keynote](https://youtu.be/6WuzK1xKMR8) talking about this work at the Facebook F8 **2018**.
 
 ---
 
@@ -61,7 +66,7 @@ At Imersys, I've directed teams of audiovisual editors, 3D artists, educational 
 
 {{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/zero-copy-texture-uploads-in-chrome-os-fig1-599269.png" class="float-right" >}}
 
-Performance and Optimization: In 2015, I've modified Chrome OS to make [zero-copy texture uploads](https://software.intel.com/content/www/us/en/develop/articles/zero-copy-texture-uploads-in-chrome-os.html) possible. In the best scenario the Web content now is loaded 38% faster, using 65% lower memory. This optimization is being shipped in millions of devices using Chrome OS on Intel Architecture.
+Performance and Optimization: In **2015**, I've modified Chrome OS to make [zero-copy texture uploads](https://software.intel.com/content/www/us/en/develop/articles/zero-copy-texture-uploads-in-chrome-os.html) possible. In the best scenario the Web content now is loaded 38% faster, using 65% lower memory. This optimization is being shipped in millions of devices using Chrome OS on Intel Architecture.
 
 ---
 
@@ -99,9 +104,9 @@ R&D: In 2012 we released the first version of Wayland. This event was much expec
 
 ---
 
-## N900's graphics stack
+## Nokia N9's graphics stack
 
-Around 2010, I have made contributions throughout the graphics stack of N900: the X Window System implementation (Xorg), the PowerVR SGX driver, the OpenGL ES 2D/3D open-source driver and the Qt-based compositor manager. The architecture platform was OMAP / ARM. I have also developed and helped to build Wayland protocol and its reference compositor Weston, making sure that this (back then) innovative graphics system could run on different platform vendors.
+Around 2010, I have made contributions throughout the graphics stack of N9: the X Window System implementation (Xorg), the PowerVR SGX driver, the OpenGL ES 2D/3D open-source driver and the Qt-based compositor manager. The architecture platform was OMAP / ARM. I have also developed and helped to build Wayland protocol and its reference compositor Weston, making sure that this (back then) innovative graphics system could run on different platform vendors.
 
 ---
 
