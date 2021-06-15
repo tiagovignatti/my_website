@@ -10,47 +10,28 @@ Below are some of the projects I've worked on throughout my career. Some are ful
 Listed (more less) in reverse chronological order:
 
 <!--
----
-
-## The Captain API
-
----
 
 ## Content authoring tool and auth tracking mechanism
 
-Content authoring tool for 3D objects and 360 videos. Authentication mechanism for content sharing. License system for tracking.
+Content authoring tool for 3D objects and 360-degree videos. Mesh compression using Draco on client-side for 3D models. Authentication mechanism for content sharing. License system for tracking.
 Technology: Vue.js. Vuetify. Node.js, MongoDB, Elastic Search.
 -->
 
 ---
 
-## 3D Viewer for the Web
+## 3D viewer for the Web
 
 {{< figure src="https://desafiosdaeducacao.grupoa.com.br/wp-content/uploads/2021/03/GIF-corpo-humano.gif" class="float-right" >}}
 
-It's a viewer of 3D educational objects for the Web (.glTF / .glb). Most of frontend was done using JavaScript using Modelviewer, Vue.js and Vuetify; GraphQL and Apollo in the backend. In the beginning of **2021** we were streaming about 1000 of these 3D objects to over 1M students accessing and able to interact with it using the desktop, mobile and augmented reality devices.
+We've built a viewer of 3D educational models for the Web (.glTF / .glb). Most of frontend was done using JavaScript using `<model-viewer>` web component, Vue.js and Vuetify; GraphQL and Apollo in the backend. In the beginning of **2021** we were streaming about 1000 of these 3D models to over 1M students accessing and able to interact with it using the desktop, mobile and augmented reality devices.
 
 ---
 
-## 360 Video Player for the Web
+## 360-degree video infra for the Web
 
 {{< figure src="/images/2021-05-22_18-14b.webp" class="float-left" >}}
 
-In **2019** I've designed an innovative video infrastructure for 360 videos playback. Frontend on JavaScript technologies, using A-Frame for rendering and Shaka-Player as its foundation for playing, networking buffering, UI controls and streaming 360 media (but also 2d "plane" media) with high quality. Google Closure Compiler for putting things together. Users can watch videos using desktop, mobile devices (Android and iOS -- this one was important) or in virtual reality.
-<!--
----
-
-## Various customized projects for Web VR
-
-Foz 360. -->
-
----
-
-## Various custom projects on Unreal Engine 4
-
-{{< figure src="/images/Unreal_Engine_Logo.webp" class="float-right" >}}
-
-During **2017 - 2020**, I've directed teams of audiovisual editors, 3D artists, educational content creators and engineers. I have lead the development of Virtual Reality and Augmented Reality content such as games, training and specially a [complete learning platform for high-school students](https://youtu.be/d8NU1rbFoII). Most of the projects were based on Unreal Engine 4.
+In **2019** I've designed an innovative video infrastructure for video playback. Frontend was using A-Frame for handling user interaction (through Gamepad Web API) and also spherical rendering (with Three.js) the video content. Shaka-Player was used as the foundation for playing, UI controls, network buffering and streaming 360-degree media (but also 2d "plane" media) with high quality. Google Closure Compiler was used for putting things together. Most of backend was built on Node.js, served via Google App Engine. The streamed data was hosted and handled by Vimeo and Akamai CDN. Millions of users could watch and interact with 360-degree videos using desktop, Android, iOS (this one was rather important!) or in virtual reality devices.
 
 ---
 
@@ -58,15 +39,15 @@ During **2017 - 2020**, I've directed teams of audiovisual editors, 3D artists, 
 
 {{< figure src="/images/11162707_643090662565064_8268919639556227072_n.webp" class="float-left" >}}
 
-Built on Unity , coded with C#, and using spatial audio, photogrammetry and other techniques to run on Samsung Gear VR, [Itaipu VR](https://www.youtube.com/watch?v=xG9od30Lwmg) has been recognized worldwide including by Facebook's VP of Virtual Reality, when [he opened up his keynote](https://youtu.be/6WuzK1xKMR8) talking about this work at the Facebook F8 **2018**.
+Built on Unity, coded with C#, using spatial audio, photogrammetry and other hyper-realism digital techniques to run on Samsung Gear VR, [Itaipu VR](https://www.youtube.com/watch?v=xG9od30Lwmg) has been recognized worldwide. Facebook [opened their keynote](https://youtu.be/6WuzK1xKMR8) at F8 **2018** highlighting this work.
 
 ---
 
-## Zero-Copy Texture Uploads in Chrome OS
+## Various custom projects on Unreal Engine 4
 
-{{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/zero-copy-texture-uploads-in-chrome-os-fig1-599269.png" class="float-right" >}}
+{{< figure src="/images/Unreal_Engine_Logo.webp" class="float-right" >}}
 
-Performance and Optimization: In **2015**, I've modified Chrome OS to make [zero-copy texture uploads](https://software.intel.com/content/www/us/en/develop/articles/zero-copy-texture-uploads-in-chrome-os.html) possible. In the best scenario the Web content now is loaded 38% faster, using 65% lower memory. This optimization is being shipped in millions of devices using Chrome OS on Intel Architecture.
+During **2017 - 2020**, I've directed teams of audiovisual editors, 3D artists, educational content creators and engineers. I have lead the development of Virtual Reality and Augmented Reality content such as games, training and specially a [complete learning platform for high-school students](https://youtu.be/d8NU1rbFoII). Most of the projects were based on Unreal Engine 4 and C++.
 
 ---
 
@@ -74,7 +55,16 @@ Performance and Optimization: In **2015**, I've modified Chrome OS to make [zero
 
 {{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/203px-Tux.svg.png" class="float-left" >}}
 
-I've designed [an architecture for systems with shared physical memory to exploit the advantages of heterogeneous computing](https://software.intel.com/content/www/us/en/develop/blogs/sharing-cpu-and-gpu-buffers-on-linux.html), saving memory and boosting performance on graphics libraries. This innovative architecture and code are now (2016) fully-upstreamed on Linux and also in Chrome OS, which is largely being shipped within Chromebooks and other products.
+I've designed [an architecture for systems with shared physical memory to exploit the advantages of heterogeneous computing](https://software.intel.com/content/www/us/en/develop/blogs/sharing-cpu-and-gpu-buffers-on-linux.html), saving memory and boosting performance on graphics libraries. As of **2016**, this innovative architecture and code are fully-upstreamed on Linux and also in Chrome OS, and being largely shipped within Chromebooks and other products.
+
+---
+
+## Zero-Copy Texture Uploads in Chrome OS
+
+{{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/zero-copy-texture-uploads-in-chrome-os-fig1-599269.png" class="float-right" >}}
+
+In **2015**, I've worked on optimizing Chromium graphics rendering pipeline for Web applications running on Chrome OS. It used the parallelism between the CPU and GPU under Intel architecture by using a technique called [zero-copy texture upload](https://software.intel.com/content/www/us/en/develop/articles/zero-copy-texture-uploads-in-chrome-os.html). Web content could be loaded 38% faster, using 65% lower memory, extending battery life and therefore
+the user perceiving a smoother, less jank experience.
 
 ---
 
@@ -82,13 +72,13 @@ I've designed [an architecture for systems with shared physical memory to exploi
 
 {{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/ozone-architecture-overview-534299.png" class="float-right" >}}
 
-My work on Ozone architecture and Ozone-Wayland implementation influenced Google to switch Chrome for Ozone, through Ozone-GBM, as well in 2014. [Chromium Ozone-GBM](https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html) is the native fullscreen-only platform that delegates the composition tasks of the root window to a new platform window based on KMS/DRM. It uses EGL/GLES2 for accelerated rendering. Besides, Ozone-GBM has an internal implementation of the Linux evdev subsystem.
+My work on Ozone architecture and Ozone-Wayland implementation influenced Google to switch Chrome for Ozone, through Ozone-GBM, as well in **2014**. [Chromium Ozone-GBM](https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html) is the native platform, fullscreen-only, that delegates the composition tasks of the root window to a new platform based on KMS/DRM. It uses EGL/GLES2 for accelerated rendering and has an internal implementation of the Linux evdev subsystem.
 
 ---
 
 ## Chromium Ozone-Wayland
 
-Web Browser development: When I've ported Chrome to run on Wayland (2013), it became obvious that a new abstraction for hosting different window systems in Chrome was needed. Together with Google [I have developed Ozone and implemented its first backend, Ozone-Wayland](https://news.slashdot.org/story/13/10/07/2212245/chromium-to-support-wayland). Commercial products have been using it, including a smart TVs' multi-billion corporation and a Digital Signage for a fast food chain installed in more than 6,500 stores.
+When I've ported Chrome to run on Wayland in **2013**, it became obvious that a new abstraction for hosting different window systems in Chromium was needed. Together with Google [I have developed Ozone and implemented its first backend, Ozone-Wayland](https://news.slashdot.org/story/13/10/07/2212245/chromium-to-support-wayland). Commercial products have been using it, including a smart TVs' multi-billion corporation and a Digital Signage for a fast food chain installed in more than 6,500 stores.
 
 ---
 
@@ -151,3 +141,8 @@ The [current website you're visiting](https://vignatti.com). This website is usi
 P2P and Distributed Systems. Distributed Hash Table. This work was presented at the 2009 IEEE International Conference on Peer-to-Peer Computing, as "[Long-term digital archiving based on selection of repositories over P2P networks](https://ieeexplore.ieee.org/document/5284519/)"
 
 ---
+<!--
+## Zero-knowledge proof
+
+---
+-->
