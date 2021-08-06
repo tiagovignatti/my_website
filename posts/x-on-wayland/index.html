@@ -8,9 +8,10 @@
         <title>X on Wayland - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="X on Wayland" />
 <meta property="og:description" content="A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://vignatti.com/posts/x-on-wayland/" />
+<meta property="og:url" content="https://vignatti.com/posts/x-on-wayland/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2012-06-13T14:01:32+00:00" />
 <meta property="article:modified_time" content="2012-06-13T14:01:32+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="X on Wayland"/>
 <meta name="twitter:description" content="A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it."/>
@@ -105,7 +106,7 @@
 <p>Other tasks the Weston X window manager performs are embed a pretty decoration frame around windows and also make sure the client-to-client communication such as copy and paste (selection) and eventually drag and drop work nicely. Remark that the X protocol doesn&rsquo;t define policy but the WMs, and this is a challenge for Wayland, that does define. So the Weston X WM has to come up with the right amount of salt to fit perfectly the policies that were already straighten up by Wayland&rsquo;s desktop shell&hellip; hmm way too philosophical.</p>
 <p>All X windows created from now on will be redirected to offscreen pixmap and stored on a DRM buffer (via the <strong>xwayland video driver</strong>); that&rsquo;s how compositing works on Wayland. The idea is that a X client will behave very likely as a regular Wayland client. Therefore, there&rsquo;s no protocol calls or any major task involved on xwayland and all happens seamlessly, with the protocol &ldquo;conversion&rdquo; penalty close to nil.</p>
 <p>The architecture for input handling looks good already as well. At X init time, it&rsquo;s created fake devices, the keyboard and the pointer, and the concept goes the other way around of window creation: it gives the input devices capabilities from Weston to Xorg. We&rsquo;re still shaping the cursor settings, the complex logic of client and surface grabbing, among other features, but the basics are most definitely in place already.</p>
-<p><a href="http://www.youtube.com/watch?v=FLhMINYf3iE">http://www.youtube.com/watch?v=FLhMINYf3iE</a></p>
+<p><a href="http://www.youtube.com/watch?v=FLhMINYf3iE" target="_blank" rel="noopener noreffer">http://www.youtube.com/watch?v=FLhMINYf3iE</a></p>
 <p>So the video is there for demoing what we&rsquo;ve got until now. You can see in practice all these rather cool building blocks I mentioned. It&rsquo;s rather cool.. specially for developers; one has to have the know-how on X11 and Wayland protocols, Xorg and Weston internals, X Window Manager standards, etc. Lot of fun!!!</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -135,7 +136,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

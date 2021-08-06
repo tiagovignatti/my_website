@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.79.1" />
+	<meta name="generator" content="Hugo 0.87.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -10,7 +10,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://vignatti.com/" />
-<meta property="og:updated_time" content="2021-03-08T22:04:11-03:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tiago Vignatti"/>
 <meta name="twitter:description" content=""/>
@@ -73,6 +73,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/xorg-input-thread-summary-or-something-2/">Xorg input thread - summary or something #2</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-18">2007-07-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">In the last week, I did some cool experiments to see the effects of the D state acting on the X server process when I start it with and without the input thread and always mlock&rsquo;ing it.
+First I set the grub to start my machine with only 170 mb of physical memory. Then I put a &lsquo;mlockall(MCL_CURRENT)&rsquo; just before the call of Dispatch() function, on the main.c. So then I started the server.</div><div class="post-footer">
+        <a href="/posts/xorg-input-thread-summary-or-something-2/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/xorg-input-thread-summary-or-something/">Xorg input thread - summary or something</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-06">2007-07-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.
  cut here -  Hi guys.
@@ -109,12 +116,6 @@ Possibly, for some time this blog will be filled with a lot of posts regarding t
         <a href="/posts/fisl8/">Read More</a>
         
     </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/the-conception-and-the-future-of-multiseat/">The conception and the future of multiseat...</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-04-10">2007-04-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">&hellip;this is the subject of my talk which will be held at FISL (International Free Software Forum) on this saturday, April 14th. I&rsquo;ll post the feedbacks here.</div><div class="post-footer">
-        <a href="/posts/the-conception-and-the-future-of-multiseat/">Read More</a>
-        
-    </div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -139,7 +140,7 @@ Possibly, for some time this blog will be filled with a lot of posts regarding t
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

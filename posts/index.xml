@@ -3,7 +3,14 @@
         <title>All Posts - Tiago Vignatti</title>
         <link>https://vignatti.com/posts/</link>
         <description>All Posts | Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 08 Mar 2021 22:04:11 -0300</lastBuildDate><atom:link href="https://vignatti.com/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 06 Aug 2021 17:27:35 -0300</lastBuildDate><atom:link href="https://vignatti.com/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>My Startup Dream</title>
+    <link>https://vignatti.com/posts/my-startup-dream/</link>
+    <pubDate>Fri, 06 Aug 2021 17:27:35 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://vignatti.com/posts/my-startup-dream/</guid>
+    <description><![CDATA[Prototyping At the beginning of 2016, myself, Tuomas and João drafted out a skateboard business in Brazil. João, blasé about his electrical engineering endeavours, desperately wanted to practice skydiving and live abroad. He was down to whatever to accomplish his goals, and so he was alright with the much lower endorphin that skateboarding was proving also. That was great, because besides being a great and funny friend, he was also a truly handyman, and we needed that kind of person in our business.]]></description>
+</item><item>
     <title>Stars Aligned</title>
     <link>https://vignatti.com/posts/stars-aligned/</link>
     <pubDate>Mon, 08 Mar 2021 22:04:11 -0300</pubDate>
@@ -93,12 +100,5 @@ Today we are launching publicly Ozone-Wayland, which is the implementation of Ch
     <guid>https://vignatti.com/posts/the-damn-small-wayland-api/</guid>
     <description><![CDATA[Wayland 1.0 release is knocking the door and people keep asking &ldquo;why Wayland if we got X already&rdquo;, or things like performance, memory consumption, power savings and other kind of advantages on having Wayland instead X. Those are very important points to consider, of course, but for one individual actually programming the graphics system the answer should be straightforward: Wayland API is damn small.
 1. But who&rsquo;s going to program Wayland or X?]]></description>
-</item><item>
-    <title>X on Wayland</title>
-    <link>https://vignatti.com/posts/x-on-wayland/</link>
-    <pubDate>Wed, 13 Jun 2012 14:01:32 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://vignatti.com/posts/x-on-wayland/</guid>
-    <description><![CDATA[A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it.]]></description>
 </item></channel>
 </rss>

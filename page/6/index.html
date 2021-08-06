@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.79.1" />
+	<meta name="generator" content="Hugo 0.87.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -10,7 +10,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://vignatti.com/" />
-<meta property="og:updated_time" content="2021-03-08T22:04:11-03:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tiago Vignatti"/>
 <meta name="twitter:description" content=""/>
@@ -73,6 +73,12 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/multiseat-with-multiple-x-servers-or-the-right-way/">multiseat with multiple X servers (or &#34;the right way&#34;)</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2009-07-24">2009-07-24</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">So last week I posted on lkml an old patch that we were carrying for a long time in the Linux community. It basically brings the multiple (old) video cards functionally again on Linux and X server (and this time doing on the right and beauty way). For the people that was following multiseat implementations, this is a HUGE step: we will finally be able to discard the old and ugly hack (a mix of Xorg, several Xephyr servers + evdev) and and go to a clean way, starting multiple X servers in parallel.</div><div class="post-footer">
+        <a href="/posts/multiseat-with-multiple-x-servers-or-the-right-way/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/nokia-fi/">Nokia, FI...</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2009-06-12">2009-06-12</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">&hellip; here I&rsquo;am :)</div><div class="post-footer">
         <a href="/posts/nokia-fi/">Read More</a>
@@ -105,13 +111,6 @@ So if you are trying to setup or help in development, probably the foundation&r
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-09-23">2008-09-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">This week our laboratory at university released the MDM utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)
 But I would like to call attention here because we&rsquo;re still relying on the ugly Xephyr solution to build the multiseat on a simple PC machine (there are people selling this solution.</div><div class="post-footer">
         <a href="/posts/multiseat-roadmap/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/parallel-events-panic-with-x/">Parallel events (panic) with X</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-08-18">2008-08-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content">Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
-I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way.</div><div class="post-footer">
-        <a href="/posts/parallel-events-panic-with-x/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">
@@ -148,7 +147,7 @@ I started to implement all this but it showed a very boring task to grab all the
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.1">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
