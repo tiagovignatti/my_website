@@ -3,12 +3,20 @@
         <title>Tiago Vignatti</title>
         <link>https://vignatti.com/</link>
         <description>Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 06 Aug 2021 17:27:35 -0300</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 21 Jun 2022 00:34:34 &#43;0200</lastBuildDate>
             <atom:link href="https://vignatti.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Short blog post from Madrid&#39;s bus</title>
+    <link>https://vignatti.com/posts/from-madrid-bus/</link>
+    <pubDate>Tue, 21 Jun 2022 00:34:34 &#43;0200</pubDate>
+    <author>Author</author>
+    <guid>https://vignatti.com/posts/from-madrid-bus/</guid>
+    <description><![CDATA[The post was inspired by &ldquo;Short blog post from Madrid&rsquo;s hotel room&rdquo;, from my colleague Frédéric Wang. You should check his post instead! And to Fred: I&rsquo;m in for football in the next Summit, alright? :-)
+This week, I finally went to A Coruña for the Web Engines Hackfest and internal company meetings. These were my first on-site events since the COVID-19 pandemic. After two years of non-super-exciting virtual conferences I was so glad to finally be able to meet with colleagues and other people from the Web.]]></description>
+</item><item>
     <title>My Startup Dream</title>
     <link>https://vignatti.com/posts/my-startup-dream/</link>
-    <pubDate>Fri, 06 Aug 2021 17:27:35 -0300</pubDate>
+    <pubDate>Fri, 06 Aug 2021 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/my-startup-dream/</guid>
     <description><![CDATA[Prototyping At the beginning of 2016, myself, Tuomas and João drafted out a skateboard business in Brazil. João, blasé about his electrical engineering endeavours, desperately wanted to practice skydiving and live abroad. He was down to whatever to accomplish his goals, and so he was alright with the much lower endorphin that skateboarding was proving also. That was great, because besides being a great and funny friend, he was also a truly handyman, and we needed that kind of person in our business.]]></description>
@@ -94,13 +102,5 @@ Today we are launching publicly Ozone-Wayland, which is the implementation of Ch
                 <img src="https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png" referrerpolicy="no-referrer">
             </div>Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
 (I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2.]]></description>
-</item><item>
-    <title>the damn small Wayland API</title>
-    <link>https://vignatti.com/posts/the-damn-small-wayland-api/</link>
-    <pubDate>Wed, 17 Oct 2012 13:15:38 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://vignatti.com/posts/the-damn-small-wayland-api/</guid>
-    <description><![CDATA[Wayland 1.0 release is knocking the door and people keep asking &ldquo;why Wayland if we got X already&rdquo;, or things like performance, memory consumption, power savings and other kind of advantages on having Wayland instead X. Those are very important points to consider, of course, but for one individual actually programming the graphics system the answer should be straightforward: Wayland API is damn small.
-1. But who&rsquo;s going to program Wayland or X?]]></description>
 </item></channel>
 </rss>

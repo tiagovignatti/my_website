@@ -103,7 +103,7 @@ First I set the grub to start my machine with only 170 mb of physical memory. Th
 about 4080 kb of resident memory which decreases until about 304 kb.</p>
 <p>Now I&rsquo;m trying to figure out how exactly put all the data and functions inside a section of the ELF file. For this I&rsquo;m using the asm inline code to get the start and the end of the section which is responsible for the mouse and then locking it with mlock().</p>
 <p>It&rsquo;s very hard to &lsquo;automatically&rsquo; examine all data and text code [1] that deals with the mouse movements using -finstrument-functions just like Keith said (just to have an idea, until arriving in the Dispatch() we have about 240000 function calls!). What remains is try to examine the code &lsquo;statically&rsquo;, which IMHO is hard. Hard because even if we minutely trace the code, we&rsquo;ll forget some global data and simple functions (like xfree, for instance). Well, my attempt to do this statically failed. So yesterday I spent some time trying to figure out a better way to deal with this issue.</p>
-<p>I thought that a userspace tool that prints something when a page fault occurs is good enough. Google tells me that &lsquo;truss&rsquo; with &lsquo;-m fltpage&rsquo; arg does exactly what we need [2, 3]. But the problem is that it doesn&rsquo;t exists a port for Linux. Neither strace has the &lsquo;fltpage&rsquo; similar truss&rsquo;s option. Then I dig a little more and found Ulrich Drepper&rsquo;s pagein tool [4]. My simple tests here demonstrates that this tool does not print a page that isn&rsquo;t hit a twice in memory (I already mailed him to obtain more infos about it).</p>
+<p>I thought that a userspace tool that prints something when a page fault occurs is good enough. Google tells me that &rsquo;truss&rsquo; with &lsquo;-m fltpage&rsquo; arg does exactly what we need [2, 3]. But the problem is that it doesn&rsquo;t exists a port for Linux. Neither strace has the &lsquo;fltpage&rsquo; similar truss&rsquo;s option. Then I dig a little more and found Ulrich Drepper&rsquo;s pagein tool [4]. My simple tests here demonstrates that this tool does not print a page that isn&rsquo;t hit a twice in memory (I already mailed him to obtain more infos about it).</p>
 <p>So, you guys understand where we are? I really want to avoid the kernel traps which tells when a page fault occurs. Also, maybe someone here could point me mailing lists or someone to give tips about this kind of problem. And please, post your comments.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -133,8 +133,8 @@ about 4080 kb of resident memory which decreases until about 304 kb.</p>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

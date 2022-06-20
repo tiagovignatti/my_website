@@ -92,7 +92,7 @@
 <p>Now we&rsquo;re trying to do some experiments to see what&rsquo;s the performance difference using the RAC and the arbiter. We thought in two tests: (a) a multi-head X with RAC and other with the arbiter. And (b), test a  single-head X using the arbiter and other not using. In the (a), we can  evaluate if the usage of the arbiter overloads the X server and (b) if  there&rsquo;s some difference in use RAC or arbiter in a multi-head  environment. So we ran the x11perf tool and reported a very tiny  worthless gap in both tests (used with -comppixwin500, -move and  -rect500 options). All the experiments you can see here:
 <a href="http://people.freedesktop.org/%7Evignatti/logs-between-rac-arb_19Dez2007.tar.gz" target="_blank" rel="noopener noreffer">http://people.freedesktop.org/~vignatti/logs-between-rac-arb_19Dez2007.tar.gz</a></p>
 <p>Am I missing something about how I did these results or everything seems  fine?</p>
-<p>(I made the mistake to test this things using CFLAGS='-g3 -O0'. Anyone  knows if this will result in different conclusions between the two test  cases? I&rsquo;m using the git upstream code of server-1.4-branch and nv driver)</p>
+<p>(I made the mistake to test this things using CFLAGS=&rsquo;-g3 -O0&rsquo;. Anyone  knows if this will result in different conclusions between the two test  cases? I&rsquo;m using the git upstream code of server-1.4-branch and nv driver)</p>
 <p>Anyway, we will keep our working and the next challenge will be to think  about DRI, xv and GL.</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -122,8 +122,8 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

@@ -94,7 +94,7 @@ Given that I&rsquo;ll not work towards this cursor&rsquo;s shortcut idea soon, I
 <p>Given that I&rsquo;ll not work towards this cursor&rsquo;s shortcut idea soon, I&rsquo;m posting a mail that I <a href="http://www.mail-archive.com/dri-devel@lists.sourceforge.net/msg37437.html" target="_blank" rel="noopener noreffer">recently sent</a> to dri list and didn&rsquo;t see much excitement there. So the bits are preserved here for future references.</p>
 <hr>
 <p>Under KMS, we can build a feature to update the cursor directly to screen without the continuous intervention of the userspace application (X server, wayland, etc). It&rsquo;s a fastpath for DRM based cursors obtained by short-circuit the kernel input layer and DRM module. This would solve <a href="http://vignatti.wordpress.com/2008/07/29/improving-input-latency/" target="_blank" rel="noopener noreffer">all cursor&rsquo;s latency issues</a> that we have in our current model.</p>
-<p>This series of patches implement such feature using Xorg as the application. Through an ioctl, Xorg tells which devices are responsible for cursors' updates and the kernel evdev driver will spit the events to DRM. DRM will take care about the event informations and also screen limits, and then will draw the cursor on screen. Very intuitive.</p>
+<p>This series of patches implement such feature using Xorg as the application. Through an ioctl, Xorg tells which devices are responsible for cursors&rsquo; updates and the kernel evdev driver will spit the events to DRM. DRM will take care about the event informations and also screen limits, and then will draw the cursor on screen. Very intuitive.</p>
 <p>Right now a thing that is annoying me is how others cursors, sw rendered, could be implemented. I want to avoid two different sets of the same code in different contexts. IMHO conceptually all these cursor update things must be in-kernel. Painting a cursor image seems to be quite hard as we have to save/restore areas under the cursor. I remember that anholt had an idea concerning this, but I do not remember details.</p>
 <p>Well, the patches are far from ready to go upstream, but it deploys a system working on this way. So, for now, this mail has two goals:</p>
 <ul>
@@ -130,8 +130,8 @@ Given that I&rsquo;ll not work towards this cursor&rsquo;s shortcut idea soon, I
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

@@ -116,11 +116,11 @@
 <p><strong>Wayland clients</strong> use the Wayland core protocol and the protocol that shell plugin has defined. The corollary is that one client will always know the UI paradigm (due shell plugin) and will <em>not</em> work across different paradigms. Though, that doesn&rsquo;t mean applications will need to know their paradigm necessarily but only the middleware software is connecting to Wayland (like the graphics toolkits).</p>
 <h3 id="a-footnote-about-canonicals-mir">A footnote about Canonical&rsquo;s Mir</h3>
 <p>Canonical announced their <a href="https://wiki.ubuntu.com/MirSpec" target="_blank" rel="noopener noreffer">new display manager</a> yesterday. There&rsquo;s a section &ldquo;Why Not Wayland / Weston?&rdquo; where they claim:</p>
-<p><em>&ldquo;we consider the shell integration parts of the protocol as privileged and we&rsquo;d rather avoid having any sort of shell behavior defined in the client facing protocol.&quot;</em></p>
+<p><em>&ldquo;we consider the shell integration parts of the protocol as privileged and we&rsquo;d rather avoid having any sort of shell behavior defined in the client facing protocol.&rdquo;</em></p>
 <p>and something similar was <a href="http://samohtv.wordpress.com/2013/03/04/mir-an-outpost-envisioned-as-a-new-home/" target="_blank" rel="noopener noreffer">written here</a> also:</p>
-<p><em>&rdquo; Wayland .. exposes privileged sections like the shell integration that we planned to handle differently, both for security reasons and as we wanted to decouple the way the shell works on top of the display server from the application-facing protocol&quot;</em></p>
+<p><em>&quot; Wayland .. exposes privileged sections like the shell integration that we planned to handle differently, both for security reasons and as we wanted to decouple the way the shell works on top of the display server from the application-facing protocol&quot;</em></p>
 <p>so they would rather have:</p>
-<p><em>&ldquo;An outer-shell together with a frontend-firewall that allow us to port our display server to arbitrary graphics stacks and bind it to multiple protocols.&quot;</em></p>
+<p><em>&ldquo;An outer-shell together with a frontend-firewall that allow us to port our display server to arbitrary graphics stacks and bind it to multiple protocols.&rdquo;</em></p>
 <p>First of all, there&rsquo;s nothing privileged about the shell protocol Wayland is exposing. wl_shell and wl_shell_surface (the &ldquo;shell protocols&rdquo;) are part of the Wayland core protocol, yes, but as I&rsquo;ve explained on this post, it&rsquo;s all customizable for whatever UI needs. Nevertheless, their usage is completely optional and anyone can build a different shell and stack with the rest of Wayland, just like tablet-shell protocol for instance does. Still, this will be Wayland and use the shiny libwayland for IPC.</p>
 <p>Therefore I don&rsquo;t think Canonical should justify their new project because Wayland <em>&ldquo;does not fulfill .. requirements completely&rdquo;</em>. There are no technical reasons Ubuntu cannot use Wayland in principle. What they wrote there is a very very mean excuse instead.</p>
 </div><div class="post-footer" id="post-footer">
@@ -151,8 +151,8 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

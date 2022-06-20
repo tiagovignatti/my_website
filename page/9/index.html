@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.87.0" />
+	<meta name="generator" content="Hugo 0.96.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -73,6 +73,12 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/vga-arbiter-removing-rac/">VGA arbiter: removing RAC</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-12-20">2007-12-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">The Resource Access Control inside Xorg is the guy responsible to take care of the various resources of memory and to share them in a wise manner when two or more graphics devices are active (think multi-head). As an alternative from RAC we can rely on VGA arbiter. So me and Paulo Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the arbiter code with this purpose.</div><div class="post-footer">
+        <a href="/posts/vga-arbiter-removing-rac/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/the-vga-arbiter/">The VGA arbiter</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-11-23">2007-11-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">So we finally have a working code to do the arbitration of the VGA legacy instructions. The code is separated in three pieces: vgaarb module [0], which is the arbiter itself inside Linux; the libvgaaccess [1], a set of user space functions to access the arbiter; and xf86VGAarbiter [2], the implementation of the library inside Xorg.
 Basically we wrapped all the functions of the Xorg which deals with VGA (those wrapped by the RAC and few others) using the lock/unlock functions of the libvgaaccess.</div><div class="post-footer">
@@ -107,12 +113,6 @@ The page fault notifier does (almost) all that I need to trace exactly which pie
         <a href="/posts/mlocking-adventure/">Read More</a>
         
     </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/page-fault-notifier/">Page fault notifier</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-27">2007-07-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">This week I tried to lock in the physical memory the Xorg&rsquo;s input code using mlock(). To do this I traced the code minutely and locked all the text and data related to input. I didn&rsquo;t get success. The mouse still lags when the system is paging (you might remember that with mlockall() all worked wonderful except that it eats much memory). So what might be happening is that something is not locked yet.</div><div class="post-footer">
-        <a href="/posts/page-fault-notifier/">Read More</a>
-        
-    </div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -141,8 +141,8 @@ The page fault notifier does (almost) all that I need to trace exactly which pie
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

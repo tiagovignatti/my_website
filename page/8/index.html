@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.87.0" />
+	<meta name="generator" content="Hugo 0.96.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -73,6 +73,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/to-thread-the-x-server/">to thread the X server (?)</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-06-17">2008-06-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content">I really don&rsquo;t like to read large blog posts. Anyway&hellip;
+What I did so far is a separated thread that takes care only the injection stage on the X server queue. Who is interested with the results, please read some past posts in my blog. It is currently in a very good shape (synced with post-mpx merge, all input devices are inside the thread and etc). The implementation looks like this: thread #1 deals with - injection of input events from devices thread #2 deals with - processing of input events to clients - requests from known clients (rendering things) - new client that tries to connect (pretty easy to do)</div><div class="post-footer">
+        <a href="/posts/to-thread-the-x-server/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/fakemouse-a-driver-that-emulates-a-mouse/">fakemouse -- a driver that emulates a mouse</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-05-28">2008-05-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content">For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.</div><div class="post-footer">
         <a href="/posts/fakemouse-a-driver-that-emulates-a-mouse/">Read More</a>
@@ -103,12 +110,6 @@ We can imagine one big motivation to do this: a scenario where someone using his
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-21">2008-02-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.
 The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens.</div><div class="post-footer">
         <a href="/posts/benchmarking-it-all/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/vga-arbiter-removing-rac/">VGA arbiter: removing RAC</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-12-20">2007-12-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">The Resource Access Control inside Xorg is the guy responsible to take care of the various resources of memory and to share them in a wise manner when two or more graphics devices are active (think multi-head). As an alternative from RAC we can rely on VGA arbiter. So me and Paulo Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the arbiter code with this purpose.</div><div class="post-footer">
-        <a href="/posts/vga-arbiter-removing-rac/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">
@@ -143,8 +144,8 @@ The experiments consisted of two applications running at the same time in each X
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.96.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 
