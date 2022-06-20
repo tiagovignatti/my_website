@@ -32,7 +32,7 @@ Arriving at the hotel, the gentleman at the front desk said that he needed to ac
 
 Anyhow. I am immensely sorry for the many seniors on this train. Most of them were getting ready for their well-deserved holidays, wearing chill hats with cool t-shirts, but instead had to face this unfortunate situation. Just like Monica and Marco, some people from this train were coming back to "real life" after they had spiritually walked through and contemplated wholesomely the Camino de Santiago. Imagine how weird it was to face such brutal reality. So yes, I definitely have a different opinion about Renfe now. To be honest, for me it was not that bad because I was about to leave for a three-days of a short and unplanned vacation in Madrid. So no big deal really.
 
-But in no way I will remember this trip solely for the 3-chapters adventure I just told here. I will remember this by meeting my beloved colleagues and other friends as well (moikka Dom!), learning about the many eco-techno-social aspects with Igalians during this week, getting to know Galicia, the beautiful A Coruña and celebrating the **20th anniversary of Igalia**. Seriously, what a trip!
+But in no way I will remember this trip solely for the 3-chapters adventure I just told here. I will remember this by meeting my beloved colleagues and other friends as well (moikka Dom!), learning about the many techno-social aspects with Igalians during this week, getting to know Galicia, the beautiful A Coruña and celebrating the **20th anniversary of Igalia**. Seriously, what a trip!
 
 ![20th anniversary of Igalia](/images/20220617_212257.jpg)
 
