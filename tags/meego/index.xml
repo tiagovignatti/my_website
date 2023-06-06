@@ -17,9 +17,9 @@
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-characterization-for-meego/</guid>
     <description><![CDATA[Actually this is not a big news but it&rsquo;s nice to see on practice X being used on the advanced age :) Here I&rsquo;ve played with some UI configuration settings, browsed for while, toyed with facebook, opened some photos in the viewer and etc, all for about 5 minutes:
- x-meego-Apr2011
+x-meego-Apr2011
 and zooming in the X11 core slice we have:
- x-meego-x11only-Apr2011
+x-meego-x11only-Apr2011
 Moral of the story: as showed on the last figure, most of the traffic from the core protocol is related with window management, window state changes and notifications of positioning for clients.]]></description>
 </item><item>
     <title>X Census (for 1.10)</title>
@@ -37,7 +37,7 @@ Numbers for X implementation (xserver, proto, lib and xcb repositories):]]></des
     <guid>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
     <description><![CDATA[Moikka.
 If you follow here [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for MeeGo-Harmattan, where we target embedded systems only. Feel free to use it!
- At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
+At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
 </item><item>
     <title>Xorg server 1.9 minimal</title>
     <link>https://vignatti.com/posts/xorg-server-1-9-minimal/</link>

@@ -33,7 +33,7 @@ There are three main projects involved in here: Chromium, Wayland and Ozone-Way
     <description><![CDATA[<div class="featured-image">
                 <img src="https://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png" referrerpolicy="no-referrer">
             </div>The following message was sent out this morning &ndash; I&rsquo;m copying it here and attaching a cute screenshot of my desktop :)
- Ozone is a set of C++ classes in Chromium for abstracting different window systems on Linux. It provides abstraction for the construction of accelerated surfaces underlying Aura UI framework, input devices assignment and event handling.
+Ozone is a set of C++ classes in Chromium for abstracting different window systems on Linux. It provides abstraction for the construction of accelerated surfaces underlying Aura UI framework, input devices assignment and event handling.
 http://www.chromium.org/developers/design-documents/ozone
 Today we are launching publicly Ozone-Wayland, which is the implementation of Chromium&rsquo;s Ozone for supporting Wayland graphics system.]]></description>
 </item><item>
@@ -68,6 +68,6 @@ Today we are launching publicly Ozone-Wayland, which is the implementation of Ch
     <author>Author</author>
     <guid>https://vignatti.com/posts/starting-on-wayland-development/</guid>
     <description><![CDATA[Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!
- While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love.]]></description>
+While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love.]]></description>
 </item></channel>
 </rss>

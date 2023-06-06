@@ -19,7 +19,7 @@ Numbers for X implementation (xserver, proto, lib and xcb repositories):]]></des
     <guid>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
     <description><![CDATA[Moikka.
 If you follow here [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for MeeGo-Harmattan, where we target embedded systems only. Feel free to use it!
- At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
+At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
 </item><item>
     <title>X Census (for 1.9)</title>
     <link>https://vignatti.com/posts/x-census-for-1-9/</link>

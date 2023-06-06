@@ -55,10 +55,7 @@ Rift device runs tethered to a PC, which is a x86 architecture based machine. Th
     <pubDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/chromium-ozone-gbm-explained/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://01.org/sites/default/files/users/u18252/ozone_architecture_-_overview.png" referrerpolicy="no-referrer">
-            </div>I&rsquo;ve wrote an article about the new graphics platform for Chromium called Ozone-GBM. I particularly think that Ozone-GBM will play an important role next in Chromium and Linux graphics communities in general. I hope you enjoy the read :) Please share it.
-https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html]]></description>
+    <description><![CDATA[About a year ago Ozone platform abstraction layer started to take its shape in Chromium and we were excited how easily we could support Wayland platform using it. Everything went great and we helped a few Chromium targets like Crosswalk to debut in the Tizen ecosystem for example. More recently, different Ozone platforms have been implemented and only now it&rsquo;s becoming evident the significance of Ozone for Chromium Linux, generally speaking.]]></description>
 </item><item>
     <title>[video] Chromium Browser on Wayland</title>
     <link>https://vignatti.com/posts/video-chromium-browser-on-wayland/</link>
@@ -89,7 +86,7 @@ There are three main projects involved in here: Chromium, Wayland and Ozone-Way
     <description><![CDATA[<div class="featured-image">
                 <img src="https://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png" referrerpolicy="no-referrer">
             </div>The following message was sent out this morning &ndash; I&rsquo;m copying it here and attaching a cute screenshot of my desktop :)
- Ozone is a set of C++ classes in Chromium for abstracting different window systems on Linux. It provides abstraction for the construction of accelerated surfaces underlying Aura UI framework, input devices assignment and event handling.
+Ozone is a set of C++ classes in Chromium for abstracting different window systems on Linux. It provides abstraction for the construction of accelerated surfaces underlying Aura UI framework, input devices assignment and event handling.
 http://www.chromium.org/developers/design-documents/ozone
 Today we are launching publicly Ozone-Wayland, which is the implementation of Chromium&rsquo;s Ozone for supporting Wayland graphics system.]]></description>
 </item><item>

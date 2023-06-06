@@ -10,9 +10,9 @@
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-characterization-for-meego/</guid>
     <description><![CDATA[Actually this is not a big news but it&rsquo;s nice to see on practice X being used on the advanced age :) Here I&rsquo;ve played with some UI configuration settings, browsed for while, toyed with facebook, opened some photos in the viewer and etc, all for about 5 minutes:
- x-meego-Apr2011
+x-meego-Apr2011
 and zooming in the X11 core slice we have:
- x-meego-x11only-Apr2011
+x-meego-x11only-Apr2011
 Moral of the story: as showed on the last figure, most of the traffic from the core protocol is related with window management, window state changes and notifications of positioning for clients.]]></description>
 </item></channel>
 </rss>

@@ -10,7 +10,7 @@
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-input-thread-summary-or-something-3/</guid>
     <description><![CDATA[Not so much, but here are the news:
- * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.]]></description>
+* For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.]]></description>
 </item><item>
     <title>mlock()&#39;ing adventure</title>
     <link>https://vignatti.com/posts/mlocking-adventure/</link>
@@ -42,7 +42,7 @@ First I set the grub to start my machine with only 170 mb of physical memory. Th
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-input-thread-summary-or-something/</guid>
     <description><![CDATA[This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.
- cut here -  Hi guys.
+cut here - Hi guys.
 As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse thread for the X server. Now, I&rsquo;m really stucked with it and I need some good ideas from you before go to the next steps.
 Today the cursor lags in two situations on Xorg:]]></description>
 </item><item>
