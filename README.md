@@ -1,11 +1,29 @@
 # my website
 
-## Development
+## Downloading
 
+After cloning this repo, make sure to clone submodule dependencies also:
+```bash
+git submodule update --init --recursive
+
+```
+
+
+## Installing
+
+macOS
+```bash
+brew install hugo
+```
+
+Linux
 ```bash
 snap install hugo --channel=extended
 # or snap refresh hugo --channel=extended
+```
 
+## Running
+```bash
 hugo server
 ```
 
