@@ -9,49 +9,50 @@
     <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</guid>
-    <description><![CDATA[Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for freedesktopers though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow here.
-*actually, two nights in Porto Alegre and two nights in Curitiba.]]></description>
+    <description><![CDATA[<p>Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for <em>freedesktopers</em> though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow <a href="http://people.freedesktop.org/~vignatti/talks/FISL11-LinuxGraphicsForSmallDevices.pdf" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p>*actually, two nights in Porto Alegre and two nights in Curitiba. Was great to see most of my friends!</p>]]></description>
 </item><item>
     <title>Xorg: What is it, and what does it mean?</title>
     <link>https://vignatti.com/posts/xorg-what-is-it-and-what-does-it-mean/</link>
     <pubDate>Sat, 26 Dec 2009 18:36:49 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-what-is-it-and-what-does-it-mean/</guid>
-    <description><![CDATA[Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM
-I don&rsquo;t have words for it.]]></description>
+    <description><![CDATA[<p><a href="http://talk.maemo.org/showthread.php?p=440448#post440448" target="_blank" rel="noopener noreffer"> Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM</a></p>
+<p>I don&rsquo;t have words for it.</p>]]></description>
 </item><item>
     <title>my dear diary... (some not-so-old memories)</title>
     <link>https://vignatti.com/posts/my-dear-diary-some-not-so-old-memories/</link>
     <pubDate>Mon, 09 Nov 2009 01:47:17 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/my-dear-diary-some-not-so-old-memories/</guid>
-    <description><![CDATA[Portland, OR
-I was so proud for the forth time be part of the X crew, this time in Portland. Really amazing the city. I had the opportunity to play tourist and visit some nice places.
-My X conferences
-BTW, I just collect the photos of all four X conferences that I&rsquo;ve attended. It&rsquo;s not much photos but there&rsquo;s some funny things :)
-X on embedded
-The cool thing of the work that I&rsquo;m doing at Nokia is that I can publish and discuss mostly all X fun with the open source communities.]]></description>
+    <description><![CDATA[<p><strong><em>Portland, OR</em></strong></p>
+<p>I was so proud for the forth time be part of the X crew, this time in Portland. Really amazing the city. I had the opportunity to play tourist and visit <a href="http://www.flickr.com/photos/tiagovignatti/sets/72157622611218823/" target="_blank" rel="noopener noreffer">some nice places</a>.</p>
+<p><em><strong>My X conferences</strong></em></p>
+<p>BTW, I just collect the photos of all four <a href="http://www.flickr.com/photos/tiagovignatti/collections/72157622382815859/" target="_blank" rel="noopener noreffer">X conferences that I&rsquo;ve attended</a>. It&rsquo;s not much photos but there&rsquo;s some funny things :)</p>
+<p><strong><em>X on embedded</em></strong></p>
+<p>The cool thing of the work that I&rsquo;m doing at Nokia is that I can publish and discuss mostly all X fun with the open source communities. &ldquo;Mostly&rdquo; because, for the last device - the N-shiny-and-awesome-900 - for instance, the video driver is closed (provided by Imagination), so we cannot comment much regarding such driver stack :( C&rsquo;est la vie.</p>]]></description>
 </item><item>
     <title>Realistic :(</title>
     <link>https://vignatti.com/posts/realistic/</link>
     <pubDate>Fri, 09 Nov 2007 19:43:36 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/realistic/</guid>
-    <description><![CDATA[ ]]></description>
+    <description><![CDATA[<p><a href="http://vignatti.files.wordpress.com/2007/11/phd1029.gif" target="_blank" rel="noopener noreffer">
+</a></p>]]></description>
 </item><item>
     <title>MacOSX -&gt; GNU/Linux</title>
     <link>https://vignatti.com/posts/macosx-gnulinux/</link>
     <pubDate>Wed, 26 Sep 2007 04:06:33 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/macosx-gnulinux/</guid>
-    <description><![CDATA[I used a part of the money that I earned on the SoC 2007 to buy a laptop to me. My university friends found a good price of a MacBook and we went to the shop in a total of 6 people (!) to buy this laptop trying to get some discount. It cost R$ 3400 (about USD 1800), a very cheap value to the Brazil standards.
-Fine. My MacBook arrived one week ago.]]></description>
+    <description><![CDATA[<p>I used a part of the money that I earned on the SoC 2007 to buy a laptop to me. My university friends found a good price of a MacBook and we went to the shop in a total of 6 people (!) to buy this laptop trying to get some discount. It cost R$ 3400 (about USD 1800), a very cheap value to the Brazil standards.</p>
+<p>Fine. My MacBook arrived one week ago. The shiny laptop is cool, but the OS <strong>really</strong> <strong>not</strong>. I tried to accustom myself for at least one week with that OS and I failed. The reason why is better explained by these guys below:</p>]]></description>
 </item><item>
     <title>Hello world!</title>
     <link>https://vignatti.com/posts/hello-world/</link>
     <pubDate>Sun, 11 Feb 2007 04:12:56 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/hello-world/</guid>
-    <description><![CDATA[This is my first post and even my first blog. Well, the blog&rsquo;s intention is to bring in evidence my interests about linux (and maybe music).]]></description>
+    <description><![CDATA[<p>This is my first post and even my first blog. Well, the blog&rsquo;s intention is to bring in evidence my interests about linux (and maybe music).</p>]]></description>
 </item></channel>
 </rss>

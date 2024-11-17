@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>wayland - Tag - Tiago Vignatti</title>
+        <title>Wayland - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/wayland/</link>
-        <description>wayland - Tag - Tiago Vignatti</description>
+        <description>Wayland - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 07 Feb 2014 09:00:33 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/wayland/" rel="self" type="application/rss+xml" /><item>
     <title>[video] Chromium Browser on Wayland</title>
     <link>https://vignatti.com/posts/video-chromium-browser-on-wayland/</link>
@@ -11,8 +11,8 @@
     <guid>https://vignatti.com/posts/video-chromium-browser-on-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://img.youtube.com/vi/EJB2pznc6iY/0.jpg" referrerpolicy="no-referrer">
-            </div>Some state-of-the-art progress of the project we&rsquo;re proudly working with:
-https://www.youtube.com/watch?v=EJB2pznc6iY]]></description>
+            </div><p>Some state-of-the-art progress of the project we&rsquo;re proudly working with:</p>
+<p><a href="https://www.youtube.com/watch?v=EJB2pznc6iY" target="_blank" rel="noopener noreffer">https://www.youtube.com/watch?v=EJB2pznc6iY</a></p>]]></description>
 </item><item>
     <title>developing Chromium on Wayland</title>
     <link>https://vignatti.com/posts/developing-chromium-on-wayland/</link>
@@ -21,9 +21,9 @@ https://www.youtube.com/watch?v=EJB2pznc6iY]]></description>
     <guid>https://vignatti.com/posts/developing-chromium-on-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Chromium_78_running_on_GNOME_Shell_and_Ubuntu_Linux.png" referrerpolicy="no-referrer">
-            </div>A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.
-communities
-There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS.]]></description>
+            </div><p>A <a href="http://vignatti.com/2013/09/18/welcome-to-chromiums-ozone-wayland/" target="_blank" rel="noopener noreffer">few weeks ago</a> we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.</p>
+<p><strong>communities</strong></p>
+<p>There are three main projects involved in here: <em>Chromium</em>, <em>Wayland</em> and <em>Ozone-Wayland</em>. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS. Very near to that one there&rsquo;s Blink engine&rsquo;s community, which interacts (and overlaps) a lot with the Chromium&rsquo;s; I can&rsquo;t tell exactly in numbers but there&rsquo;s huge number of people, vendors and commercial involved in Chromium and, more important to us, there&rsquo;s a lot of quality code being cooked in there for leveraging Web technologies in general.</p>]]></description>
 </item><item>
     <title>Welcome to Chromium&#39;s Ozone-Wayland</title>
     <link>https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/</link>
@@ -32,10 +32,11 @@ There are three main projects involved in here: Chromium, Wayland and Ozone-Way
     <guid>https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png" referrerpolicy="no-referrer">
-            </div>The following message was sent out this morning &ndash; I&rsquo;m copying it here and attaching a cute screenshot of my desktop :)
-Ozone is a set of C++ classes in Chromium for abstracting different window systems on Linux. It provides abstraction for the construction of accelerated surfaces underlying Aura UI framework, input devices assignment and event handling.
-http://www.chromium.org/developers/design-documents/ozone
-Today we are launching publicly Ozone-Wayland, which is the implementation of Chromium&rsquo;s Ozone for supporting Wayland graphics system.]]></description>
+            </div><p>The following message was sent out this morning &ndash; I&rsquo;m copying it here and attaching a cute screenshot of my desktop :)</p>
+<hr>
+<p>Ozone is a set of C++ classes in Chromium for abstracting different window systems on Linux. It provides abstraction for the construction of accelerated surfaces underlying Aura UI framework, input devices assignment and event handling.</p>
+<p><a href="http://www.chromium.org/developers/design-documents/ozone" target="_blank" rel="noopener noreffer">http://www.chromium.org/developers/design-documents/ozone</a></p>
+<p>Today we are launching publicly Ozone-Wayland, which is the implementation of Chromium&rsquo;s Ozone for supporting Wayland graphics system. Different projects based on Chromium/Blink like the Chrome browser, ChromeOS, among others can be enabled now using Wayland.</p>]]></description>
 </item><item>
     <title>UI customization on Wayland</title>
     <link>https://vignatti.com/posts/ui-customization-on-wayland/</link>
@@ -44,30 +45,31 @@ Today we are launching publicly Ozone-Wayland, which is the implementation of Ch
     <guid>https://vignatti.com/posts/ui-customization-on-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png" referrerpolicy="no-referrer">
-            </div>Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
-(I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2.]]></description>
+            </div><p>Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is <a href="http://ppaalanen.blogspot.com/2012/11/on-supporting-wayland-gl-clients-and.html" target="_blank" rel="noopener noreffer">all solved</a>. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.</p>
+<p>(I&rsquo;ve made a <a href="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization-cheat-sheet.png" target="_blank" rel="noopener noreffer">cheat sheet here</a> also &ndash; Creative Commons Legal Code Attribution 2.0. for both figures)</p>]]></description>
 </item><item>
     <title>the damn small Wayland API</title>
     <link>https://vignatti.com/posts/the-damn-small-wayland-api/</link>
     <pubDate>Wed, 17 Oct 2012 13:15:38 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/the-damn-small-wayland-api/</guid>
-    <description><![CDATA[Wayland 1.0 release is knocking the door and people keep asking &ldquo;why Wayland if we got X already&rdquo;, or things like performance, memory consumption, power savings and other kind of advantages on having Wayland instead X. Those are very important points to consider, of course, but for one individual actually programming the graphics system the answer should be straightforward: Wayland API is damn small.
-1. But who&rsquo;s going to program Wayland or X?]]></description>
+    <description><![CDATA[<p><a href="http://lists.freedesktop.org/archives/wayland-devel/2012-October/005878.html" target="_blank" rel="noopener noreffer">Wayland 1.0 release is knocking the door</a> and people keep asking &ldquo;why Wayland if we got X already&rdquo;, or things like performance, memory consumption, power savings and other kind of advantages on having Wayland instead X. Those are very important points to consider, of course, but for one individual actually programming the graphics system the answer should be straightforward: Wayland API is damn small.</p>
+<p><em>1. But who&rsquo;s going to program Wayland or X?</em></p>]]></description>
 </item><item>
     <title>X on Wayland</title>
     <link>https://vignatti.com/posts/x-on-wayland/</link>
     <pubDate>Wed, 13 Jun 2012 14:01:32 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-on-wayland/</guid>
-    <description><![CDATA[A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it.]]></description>
+    <description><![CDATA[<p>A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it. Hence, X on Wayland fits pretty well with our overall transition plan.</p>]]></description>
 </item><item>
     <title>starting on Wayland development</title>
     <link>https://vignatti.com/posts/starting-on-wayland-development/</link>
     <pubDate>Wed, 18 Jan 2012 13:53:43 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/starting-on-wayland-development/</guid>
-    <description><![CDATA[Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!
-While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love.]]></description>
+    <description><![CDATA[<p>Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!</p>
+<hr>
+<p>While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love. And that mainly concern Weston compositor, which is becoming the de facto compositor on several systems targeting Wayland.</p>]]></description>
 </item></channel>
 </rss>

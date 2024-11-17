@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>ubuntu - Tag - Tiago Vignatti</title>
+        <title>Ubuntu - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/ubuntu/</link>
-        <description>ubuntu - Tag - Tiago Vignatti</description>
+        <description>Ubuntu - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 05 Mar 2013 15:00:00 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/ubuntu/" rel="self" type="application/rss+xml" /><item>
     <title>UI customization on Wayland</title>
     <link>https://vignatti.com/posts/ui-customization-on-wayland/</link>
@@ -11,7 +11,7 @@
     <guid>https://vignatti.com/posts/ui-customization-on-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://vignatti.files.wordpress.com/2013/03/wayland-ui-customization.png" referrerpolicy="no-referrer">
-            </div>Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is all solved. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.
-(I&rsquo;ve made a cheat sheet here also &ndash; Creative Commons Legal Code Attribution 2.]]></description>
+            </div><p>Let&rsquo;s forget for a second about video drivers, whether it has acceleration or not, and all the related issues with hardware support on Wayland. This is <a href="http://ppaalanen.blogspot.com/2012/11/on-supporting-wayland-gl-clients-and.html" target="_blank" rel="noopener noreffer">all solved</a>. Let&rsquo;s talk about the user interface (UI) and ways to customize it all over the computing continuum &ndash; from phones, tablets and TV box to desktop PCs, Invehicle Infotainment (IVI), aeroplane systems, among others.</p>
+<p>(I&rsquo;ve made a <a href="http://vignatti.files.wordpress.com/2013/03/wayland-ui-customization-cheat-sheet.png" target="_blank" rel="noopener noreffer">cheat sheet here</a> also &ndash; Creative Commons Legal Code Attribution 2.0. for both figures)</p>]]></description>
 </item></channel>
 </rss>

@@ -9,58 +9,72 @@
     <pubDate>Tue, 28 Aug 2007 02:32:41 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-input-thread-summary-or-something-3/</guid>
-    <description><![CDATA[Not so much, but here are the news:
-* For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.]]></description>
+    <description><![CDATA[<p>Not so much, but here are the news:</p>
+<pre><code>  * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.
+  * The last new regarding the thread implementation is that we're unfortunately dealing with **critical sections** inside the X event queue (mi/mieq.c), so mutex is needed there (just to note: currently, mutex is only implemented using pthread (X11/Xthreads.h), so we also need implement something that is pthread-independent). Probably can exist other pieces of code that might be in an unpredictable way resulting some race conditions (didn't note anything strange yet!).
+  * I finally managed how to implement the page fault notifier without any patch inside the kernel. The read_cr2() can be called directly since the page fault notifier runs with interrupts disabled. The implementation can be found [here](http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c).
+</code></pre>]]></description>
 </item><item>
     <title>mlock()&#39;ing adventure</title>
     <link>https://vignatti.com/posts/mlocking-adventure/</link>
     <pubDate>Fri, 10 Aug 2007 22:30:07 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/mlocking-adventure/</guid>
-    <description><![CDATA[It&rsquo;s being a great adventure to lock the X input thread on the memory. I&rsquo;m touching a lot of things that I&rsquo;d never imagined before :)
-To trace the pages that are faulting when I move the device pointer I&rsquo;m using my own ultra mega super kernel&rsquo;s page fault notifier. It&rsquo;s very simple, but as the things are not always perfect, it needs a little patch in the kernel.
-The page fault notifier does (almost) all that I need to trace exactly which piece of code inside X is causing the page faults.]]></description>
+    <description><![CDATA[<p>It&rsquo;s being a great adventure to lock the X input thread on the memory. I&rsquo;m touching a lot of things that I&rsquo;d never imagined before :)</p>
+<p>To trace the pages that are faulting when I move the device pointer I&rsquo;m using my own <a href="http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c" target="_blank" rel="noopener noreffer">ultra mega super kernel&rsquo;s page fault notifier</a>. It&rsquo;s very simple, but as the things are not always perfect, it needs a little <a href="http://lkml.org/lkml/diff/2007/7/26/512/1" target="_blank" rel="noopener noreffer">patch</a> in the kernel.</p>
+<p>The page fault notifier does (almost) all that I need to trace exactly which piece of code inside X is causing the page faults. So, as I said <a href="http://vignatti.wordpress.com/2007/07/27/page-fault-notifier/" target="_blank" rel="noopener noreffer">here</a>, I compare the notifier&rsquo;s output with the symbol table of X binary disassembled. Believe me, it works!</p>]]></description>
 </item><item>
     <title>Page fault notifier</title>
     <link>https://vignatti.com/posts/page-fault-notifier/</link>
     <pubDate>Fri, 27 Jul 2007 05:24:05 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/page-fault-notifier/</guid>
-    <description><![CDATA[This week I tried to lock in the physical memory the Xorg&rsquo;s input code using mlock(). To do this I traced the code minutely and locked all the text and data related to input. I didn&rsquo;t get success. The mouse still lags when the system is paging (you might remember that with mlockall() all worked wonderful except that it eats much memory). So what might be happening is that something is not locked yet.]]></description>
+    <description><![CDATA[<p>This week I tried to lock in the physical memory the Xorg&rsquo;s input code using mlock(). To do this I traced the code minutely and locked all the text and data related to input. I didn&rsquo;t get success. The mouse still lags when the system is paging (you might remember that with mlockall() all worked wonderful <em>except</em> that it eats much memory). So what might be happening is that something is not locked yet. To guarantee it I searched for a user-space tool that traces page fault. I only found the &rsquo;truss&rsquo; command on Solaris. Linux (my OS) doesn&rsquo;t provide no one (&lsquo;strace&rsquo; don&rsquo;t do this).</p>]]></description>
 </item><item>
     <title>Xorg input thread - summary or something #2</title>
     <link>https://vignatti.com/posts/xorg-input-thread-summary-or-something-2/</link>
     <pubDate>Wed, 18 Jul 2007 02:14:13 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-input-thread-summary-or-something-2/</guid>
-    <description><![CDATA[In the last week, I did some cool experiments to see the effects of the D state acting on the X server process when I start it with and without the input thread and always mlock&rsquo;ing it.
-First I set the grub to start my machine with only 170 mb of physical memory. Then I put a &lsquo;mlockall(MCL_CURRENT)&rsquo; just before the call of Dispatch() function, on the main.c. So then I started the server.]]></description>
+    <description><![CDATA[<p>In the last week, I did some cool experiments to see the effects of the D state acting on the X server process when I start it with and without the input thread and always mlock&rsquo;ing it.</p>
+<p>First I set the grub to start my machine with only 170 mb of physical memory. Then I put a &lsquo;mlockall(MCL_CURRENT)&rsquo; just before the call of Dispatch() function, on the main.c. So then I started the server. Well, I called a memory hog to eat all my physical memory and played with the mouse which never gets lagged using or not the separate thread. So the great notice comes when I started an X client (gnome-session) which turns the X process to the D state. The X server without the separate thread lags the cursor because it&rsquo;s using SIGIO to wake up the device. OTOH, the X with the input thread has a smooth movement anyway.</p>]]></description>
 </item><item>
     <title>Xorg input thread - summary or something</title>
     <link>https://vignatti.com/posts/xorg-input-thread-summary-or-something/</link>
     <pubDate>Fri, 06 Jul 2007 03:13:09 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-input-thread-summary-or-something/</guid>
-    <description><![CDATA[This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.
-cut here - Hi guys.
-As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse thread for the X server. Now, I&rsquo;m really stucked with it and I need some good ideas from you before go to the next steps.
-Today the cursor lags in two situations on Xorg:]]></description>
+    <description><![CDATA[<p>This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.</p>
+<ul>
+<li>cut here -</li>
+</ul>
+<p>Hi guys.</p>
+<p>As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse  thread for the X server. Now, I&rsquo;m really stucked with it and I need some  good ideas from you before go to the next steps.</p>
+<p>Today the cursor lags in two situations on Xorg:</p>]]></description>
 </item><item>
     <title>Moving the mouse handling code into a separate thread</title>
     <link>https://vignatti.com/posts/moving-the-mouse-handling-code-into-a-separate-thread/</link>
     <pubDate>Sat, 16 Jun 2007 19:12:23 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/moving-the-mouse-handling-code-into-a-separate-thread/</guid>
-    <description><![CDATA[(In a puny attempt to write my SoC project progress to my mentor, I decided to expand it and share my thoughts with you)
-Today, we have two methods to register the pointer devices on Xorg server: (1) under SIGIO and (2) put they fd on EnableDevices set. There is also the silken mouse concept, which means updates fired during sigio handler (in the case of hw cursor).
-We always try to prioritize silken - i.]]></description>
+    <description><![CDATA[<p>(In a puny attempt to write my SoC project progress to my mentor, I
+decided to expand it and share my thoughts with you)</p>
+<p>Today, we have two methods to register the pointer devices on <strong>Xorg
+server</strong>: (1) under SIGIO and (2) put they fd on EnableDevices set.
+There is also the silken mouse concept, which means updates fired during
+sigio handler (in the case of hw cursor).</p>
+<p>We always try to prioritize silken - i.e. when the device emits a move
+event, it will be &ldquo;painted&rdquo; on the screen and the WaitFor loop still
+continue sleeping on select() - But the problem with SIGIO is that it
+can blocks if the main thread is wedged doing kernel stuff (like
+paging). It can&rsquo;t interrupt a program in D state.</p>]]></description>
 </item><item>
     <title>Google Summer of Code 2007</title>
     <link>https://vignatti.com/posts/google-summer-of-code-2007/</link>
     <pubDate>Wed, 02 May 2007 04:11:17 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/google-summer-of-code-2007/</guid>
-    <description><![CDATA[Certainly, my great new is that I was accepted as a student of X.Org Foundation sponsored by Google, on Summer of Code 2007. The project&rsquo;s name is Moving the mouse handling code into a separate thread and in this link you can see what does this mean specifically.
-Possibly, for some time this blog will be filled with a lot of posts regarding this subject :D :D :D]]></description>
+    <description><![CDATA[<p>Certainly, my great new is that I was accepted as a student of <a href="http://www.x.org/" target="_blank" rel="noopener noreffer">X.Org Foundation</a> sponsored by Google, on <a href="http://en.wikipedia.org/wiki/Google_Summer_of_Code" target="_blank" rel="noopener noreffer">Summer of Code</a> 2007.  The project&rsquo;s name is <strong>Moving the mouse handling code into a separate thread</strong> and in this <a href="http://people.freedesktop.org/~vignatti/SoC_input-handling-proposal.html" target="_blank" rel="noopener noreffer">link </a>you can see what does this mean specifically.</p>
+<p>Possibly, for some time this blog will be filled with a lot of posts regarding this subject :D :D :D</p>]]></description>
 </item></channel>
 </rss>

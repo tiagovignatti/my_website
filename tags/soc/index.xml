@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>soc - Tag - Tiago Vignatti</title>
+        <title>Soc - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/soc/</link>
-        <description>soc - Tag - Tiago Vignatti</description>
+        <description>Soc - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Aug 2008 23:22:27 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/soc/" rel="self" type="application/rss+xml" /><item>
     <title>keep it going...</title>
     <link>https://vignatti.com/posts/keep-it-going/</link>
     <pubDate>Thu, 07 Aug 2008 23:22:27 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/keep-it-going/</guid>
-    <description><![CDATA[Given that GSoC &lsquo;08 is getting close to the end, strategy number 2 showed more feasible to proceed my work. Strategy #3 would be a lot of fun but would imply a hell massive codification as well (also a little out of our scope). Unfortunately no-no for now.]]></description>
+    <description><![CDATA[<p>Given that GSoC &lsquo;08 is getting close to the end, <a href="http://vignatti.wordpress.com/2008/07/29/improving-input-latency/" target="_blank" rel="noopener noreffer">strategy number 2</a> showed more feasible to proceed my work. Strategy #3 would be a lot of fun but would imply a hell massive codification as well (also a little out of <a href="http://vignatti.wordpress.com/2008/04/29/google-summer-of-code-2008/" target="_blank" rel="noopener noreffer">our scope</a>). Unfortunately no-no for now.</p>]]></description>
 </item></channel>
 </rss>

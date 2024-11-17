@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>scheduler - Tag - Tiago Vignatti</title>
+        <title>Scheduler - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/scheduler/</link>
-        <description>scheduler - Tag - Tiago Vignatti</description>
+        <description>Scheduler - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Aug 2008 23:33:57 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/scheduler/" rel="self" type="application/rss+xml" /><item>
     <title>Priorities and scheduling hints for X server threads</title>
     <link>https://vignatti.com/posts/priorities-and-scheduling-hints-for-x-server-threads/</link>
     <pubDate>Thu, 07 Aug 2008 23:33:57 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/priorities-and-scheduling-hints-for-x-server-threads/</guid>
-    <description><![CDATA[Input events routed through another thread/process can have bad effects on latency because we can&rsquo;t guarantee that it will get scheduled at the right moment. Although this is hard to see happening with the current X server threaded implementation, we must design something to avoid it. One way to improve the responsiveness is to give a high priority to the input thread and also adjust the CPU scheduling. (Note that this will not avoid problems related with page faults which usually happen in the X input flow.]]></description>
+    <description><![CDATA[<p>Input events routed through another thread/process can have bad effects on latency because we can&rsquo;t guarantee that it will get scheduled at the right moment. Although this is hard to see happening with the current X server threaded implementation, we must design something to avoid it. One way to improve the responsiveness is to give a high priority to the input thread and also adjust the CPU scheduling. (Note that this will not avoid problems related with <a href="http://vignatti.wordpress.com/2007/08/10/mlocking-adventure/" target="_blank" rel="noopener noreffer">page faults</a> which usually happen in the X input flow.)</p>]]></description>
 </item></channel>
 </rss>

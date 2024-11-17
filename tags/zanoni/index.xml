@@ -1,14 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>zanoni - Tag - Tiago Vignatti</title>
+        <title>Zanoni - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/zanoni/</link>
-        <description>zanoni - Tag - Tiago Vignatti</description>
+        <description>Zanoni - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Feb 2008 21:59:17 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/zanoni/" rel="self" type="application/rss+xml" /><item>
     <title>VgaArbiter wiki</title>
     <link>https://vignatti.com/posts/vgaarbiter-wiki/</link>
     <pubDate>Mon, 25 Feb 2008 21:59:17 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/vgaarbiter-wiki/</guid>
-    <description><![CDATA[Today, Paulo Zanoni help me to put in a shape the VgaArbiter wiki page. The primary intention of that page is to bring more developers in that project and some users++ who could also help testing. Feedback is very welcome. Here is the link.]]></description>
+    <description><![CDATA[<p>Today, <a href="http://przanoni.blogspot.com/" target="_blank" rel="noopener noreffer">Paulo Zanoni</a> help me to put in a shape the VgaArbiter wiki page.
+The primary intention of that page is to bring more developers in that
+project and some users++ who could also help testing. Feedback is very
+welcome. <a href="http://wiki.x.org/wiki/VgaArbiter" target="_blank" rel="noopener noreffer">Here</a> is the link.</p>]]></description>
 </item></channel>
 </rss>

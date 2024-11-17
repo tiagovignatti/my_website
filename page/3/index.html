@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.112.7">
+	<meta name="generator" content="Hugo 0.138.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Tiago Vignatti" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://vignatti.com/" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tiago Vignatti"/>
-<meta name="twitter:description" content=""/>
+        <title>Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Tiago Vignatti">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tiago Vignatti">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -70,49 +71,68 @@
         data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x"
         data-sizes="auto"
         alt="/images/avatar.png"
-        title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
+        title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/starting-on-wayland-development/">starting on Wayland development</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2012-01-18">2012-01-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!
-While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2012-01-18">2012-01-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!</p>
+<hr>
+<p>While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love. And that mainly concern Weston compositor, which is becoming the de facto compositor on several systems targeting Wayland.</p></div><div class="post-footer">
         <a href="/posts/starting-on-wayland-development/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/qt-on-wayland-howto/">Qt on wayland: howto</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-12-19">2011-12-19</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">To run Qt applications on Wayland is fairly simple nowadays. Thank to Qt developers, they are following up quite well our last changes on Wayland protocol and updating accordingly on Qt5 code base &ndash; by the way, the fresh and just released Qt 4.8 does not ship the latest protocol additions, so that&rsquo;s not the one I&rsquo;m referring.
-So, today I&rsquo;ve set up the last bits of Qt environment on my Intel Pine-Trail pretty easy (yeah, I compile on my tablet :-O).</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-12-19">2011-12-19</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>To run Qt applications on Wayland is fairly simple nowadays. Thank to Qt developers, they are following up quite well our last changes on Wayland protocol and updating accordingly on Qt5 code base &ndash; by the way, the fresh and just released Qt 4.8 <a href="https://qt.gitorious.org/qt/qt/blobs/4.8/src/plugins/platforms/wayland/wayland_sha1.txt" target="_blank" rel="noopener noreffer">does not ship the latest</a> protocol additions, so that&rsquo;s not the one I&rsquo;m referring.</p>
+<p>So, today I&rsquo;ve set up the last bits of Qt environment on my Intel Pine-Trail pretty easy (yeah, I compile on my tablet :-O). You don&rsquo;t need to clone the whole data base for starting hacking on it. Let&rsquo;s see.</p></div><div class="post-footer">
         <a href="/posts/qt-on-wayland-howto/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/if-i-didnt-say/">... if I didn&#39;t say</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-09-22">2011-09-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">Hello Intel Finland :) Here I am now; four months already at OTC big team.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-09-22">2011-09-22</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>Hello Intel Finland :) Here I am now; four months already at OTC big team.</p></div><div class="post-footer">
         <a href="/posts/if-i-didnt-say/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/x-characterization-for-meego/">X characterization for MeeGo</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-04-20">2011-04-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">Actually this is not a big news but it&rsquo;s nice to see on practice X being used on the advanced age :) Here I&rsquo;ve played with some UI configuration settings, browsed for while, toyed with facebook, opened some photos in the viewer and etc, all for about 5 minutes:
-x-meego-Apr2011
-and zooming in the X11 core slice we have:
-x-meego-x11only-Apr2011
-Moral of the story: as showed on the last figure, most of the traffic from the core protocol is related with window management, window state changes and notifications of positioning for clients.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-04-20">2011-04-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>Actually this is not a big news but it&rsquo;s nice to see on practice X being used on the advanced age :) Here I&rsquo;ve played with some UI configuration settings, browsed for while, toyed with facebook, opened some photos in the viewer and etc, all for about 5 minutes:</p>
+<p><a href="http://vignatti.files.wordpress.com/2011/04/x-meego-apr20111.png" target="_blank" rel="noopener noreffer"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://vignatti.files.wordpress.com/2011/04/x-meego-apr20111.png?w=300"
+        data-srcset="http://vignatti.files.wordpress.com/2011/04/x-meego-apr20111.png?w=300, http://vignatti.files.wordpress.com/2011/04/x-meego-apr20111.png?w=300 1.5x, http://vignatti.files.wordpress.com/2011/04/x-meego-apr20111.png?w=300 2x"
+        data-sizes="auto"
+        alt="http://vignatti.files.wordpress.com/2011/04/x-meego-apr20111.png?w=300"
+        title="http://vignatti.files.wordpress.com/2011/04/x-meego-apr20111.png?w=300" />
+</a>
+<a href="http://vignatti.files.wordpress.com/2011/04/x-meego-apr2011.pdf" target="_blank" rel="noopener noreffer">x-meego-Apr2011</a></p>
+<p>and zooming in the X11 core slice we have:</p>
+<p><a href="http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.png" target="_blank" rel="noopener noreffer"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.png?w=1024"
+        data-srcset="http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.png?w=1024, http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.png?w=1024 1.5x, http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.png?w=1024 2x"
+        data-sizes="auto"
+        alt="http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.png?w=1024"
+        title="http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.png?w=1024" />
+</a>
+<a href="http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.pdf" target="_blank" rel="noopener noreffer">x-meego-x11only-Apr2011</a></p></div><div class="post-footer">
         <a href="/posts/x-characterization-for-meego/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/x-census-for-1-10/">X Census (for 1.10)</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-02-28">2011-02-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">Following is the census of 1.10 window for all X infrastructure - raw numbers here. I did it in a similar way as the previous version. Worth to mention that there&rsquo;s almost no relation between the cycles of development from each of the components listed below, which can lead to some misunderstanding. Anyway, still a nice indicative to see and evaluate how the free desktop community behaved.
-Numbers for X implementation (xserver, proto, lib and xcb repositories):</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-02-28">2011-02-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>Following is the census of 1.10 window for all X infrastructure - raw numbers <a href="http://people.freedesktop.org/~vignatti/xdevelopment/" target="_blank" rel="noopener noreffer">here</a>. I did it in a similar way as the <a href="http://vignatti.wordpress.com/2010/09/02/x-census-for-1-9/" target="_blank" rel="noopener noreffer">previous version</a>. Worth to mention that there&rsquo;s almost no relation between the cycles of development from each of the components listed below, which can lead to some misunderstanding. Anyway, still a nice indicative to see and evaluate how the free desktop community behaved.</p>
+<p>Numbers for <strong>X implementation</strong> (xserver, proto, lib and xcb repositories):</p></div><div class="post-footer">
         <a href="/posts/x-census-for-1-10/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/x-org-foundation-elections/">X.Org Foundation elections</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-02-18">2011-02-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">I am a candidate for the elections 2011 of the board of directors :) Following are my answers based on the questionnaire formulated by the members. You can check other candidates answers here.
-1) In the last year, the membership gained a lot more insight in the activities of the board. What is your opinion on this new-gained transparency? Do you** see options for improvement?**
-What happened in the recent past when people started to demand logs and open meetings from X.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2011-02-18">2011-02-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>I am a candidate for the elections 2011 of the board of directors :) Following are my answers based on the questionnaire formulated by the members. You can check other candidates answers <a href="http://www.x.org/wiki/BoardOfDirectors/Elections/2011/qa" target="_blank" rel="noopener noreffer">here</a>.</p>
+<hr>
+<p><strong>1) In the last year, the membership gained a lot more insight in the activities of the board. What is your opinion on this new-gained transparency? Do you</strong>** see options for improvement?**</p>
+<p>What happened in the recent past when people started to demand logs and open meetings from X.Org was great and should be always supported. The board reacted relatively quickly which was nice also. As a open organization, the Foundation has to work to improve more this, specially regarding the financial aspects which is being subject of discussions lately.</p></div><div class="post-footer">
         <a href="/posts/x-org-foundation-elections/">Read More</a>
         
     </div>
@@ -144,8 +164,8 @@ What happened in the recent past when people started to demand logs and open mee
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

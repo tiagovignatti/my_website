@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>open source project - Tag - Tiago Vignatti</title>
+        <title>Open Source Project - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/open-source-project/</link>
-        <description>open source project - Tag - Tiago Vignatti</description>
+        <description>Open Source Project - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 18 Jan 2012 13:53:43 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/open-source-project/" rel="self" type="application/rss+xml" /><item>
     <title>starting on Wayland development</title>
     <link>https://vignatti.com/posts/starting-on-wayland-development/</link>
     <pubDate>Wed, 18 Jan 2012 13:53:43 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/starting-on-wayland-development/</guid>
-    <description><![CDATA[Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!
-While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love.]]></description>
+    <description><![CDATA[<p>Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!</p>
+<hr>
+<p>While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love. And that mainly concern Weston compositor, which is becoming the de facto compositor on several systems targeting Wayland.</p>]]></description>
 </item></channel>
 </rss>

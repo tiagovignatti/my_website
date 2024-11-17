@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>hack - Tag - Tiago Vignatti</title>
+        <title>Hack - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/hack/</link>
-        <description>hack - Tag - Tiago Vignatti</description>
+        <description>Hack - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 21 Feb 2008 23:53:39 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/hack/" rel="self" type="application/rss+xml" /><item>
     <title>Benchmarking it all</title>
     <link>https://vignatti.com/posts/benchmarking-it-all/</link>
     <pubDate>Thu, 21 Feb 2008 23:53:39 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/benchmarking-it-all/</guid>
-    <description><![CDATA[After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.
-The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens.]]></description>
+    <description><![CDATA[<p>After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.</p>
+<p>The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens. The experiments were performed ten times and the average result was picked.</p>]]></description>
 </item></channel>
 </rss>

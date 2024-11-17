@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>xwayland - Tag - Tiago Vignatti</title>
+        <title>Xwayland - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/xwayland/</link>
-        <description>xwayland - Tag - Tiago Vignatti</description>
+        <description>Xwayland - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 13 Jun 2012 14:01:32 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/xwayland/" rel="self" type="application/rss+xml" /><item>
     <title>X on Wayland</title>
     <link>https://vignatti.com/posts/x-on-wayland/</link>
     <pubDate>Wed, 13 Jun 2012 14:01:32 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-on-wayland/</guid>
-    <description><![CDATA[A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it.]]></description>
+    <description><![CDATA[<p>A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it. Hence, X on Wayland fits pretty well with our overall transition plan.</p>]]></description>
 </item></channel>
 </rss>

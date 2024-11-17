@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>modularization - Tag - Tiago Vignatti</title>
+        <title>Modularization - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/modularization/</link>
-        <description>modularization - Tag - Tiago Vignatti</description>
+        <description>Modularization - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 23 Jan 2010 17:20:25 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/modularization/" rel="self" type="application/rss+xml" /><item>
     <title>Customization and true modularization of Xorg</title>
     <link>https://vignatti.com/posts/xorg-customization-and-true-modularization/</link>
     <pubDate>Sat, 23 Jan 2010 17:20:25 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-customization-and-true-modularization/</guid>
-    <description><![CDATA[For the first time in life, Xorg is being used in a single platform and for a given device only (other devices have used an X11 implementation but using other non-canonical servers, such kdrive&rsquo;s based - Tiny-X).
-Previously Xorg was being packed to run in a huge amount of OSes - mostly Linux and Unix-like distributions - with the characteristic of be architecture portable and able to run on a huge set of video and input devices.]]></description>
+    <description><![CDATA[<p>For the first time in life, Xorg is being used in <a href="http://maemo.org/" target="_blank" rel="noopener noreffer">a single platform</a> and for <a href="http://maemo.nokia.com/n900/" target="_blank" rel="noopener noreffer">a given device</a> only (other devices have used an X11 implementation but using other non-canonical servers, such kdrive&rsquo;s based - Tiny-X).</p>
+<p>Previously Xorg was being packed to run in a huge amount of OSes - mostly Linux and Unix-like distributions - with the characteristic of be architecture portable and able to run on a huge set of video and input devices. In terms of software, this means an extensive amount of code able to cover all of this mentioned. But this is far from the needs of a small and single platform device.</p>]]></description>
 </item></channel>
 </rss>

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.112.7">
+	<meta name="generator" content="Hugo 0.138.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Tiago Vignatti" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://vignatti.com/" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tiago Vignatti"/>
-<meta name="twitter:description" content=""/>
+        <title>Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Tiago Vignatti">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tiago Vignatti">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -70,44 +71,48 @@
         data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x"
         data-sizes="auto"
         alt="/images/avatar.png"
-        title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
+        title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/to-thread-the-x-server/">to thread the X server (?)</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-06-17">2008-06-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content">I really don&rsquo;t like to read large blog posts. Anyway&hellip;
-What I did so far is a separated thread that takes care only the injection stage on the X server queue. Who is interested with the results, please read some past posts in my blog. It is currently in a very good shape (synced with post-mpx merge, all input devices are inside the thread and etc). The implementation looks like this: thread #1 deals with - injection of input events from devices thread #2 deals with - processing of input events to clients - requests from known clients (rendering things) - new client that tries to connect (pretty easy to do)</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-06-17">2008-06-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content"><p>I really don&rsquo;t like to read large blog posts. Anyway&hellip;</p>
+<p>What I did so far is a separated thread that takes care only the injection stage on the X server queue. Who is interested with the results, please read some past posts in my blog. It is currently in a very good shape (synced with post-mpx merge, all input devices are inside the thread and etc). The implementation looks like this:
+<code>thread #1 deals with - injection of input events from devices thread #2 deals with - processing of input events to clients - requests from known clients (rendering things) - new client that tries to connect (pretty easy to do)</code></p></div><div class="post-footer">
         <a href="/posts/to-thread-the-x-server/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/fakemouse-a-driver-that-emulates-a-mouse/">fakemouse -- a driver that emulates a mouse</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-05-28">2008-05-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content">For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-05-28">2008-05-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content"><p>For my SoC <a href="http://vignatti.wordpress.com/2008/04/29/google-summer-of-code-2008/" target="_blank" rel="noopener noreffer">project</a> I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.</p></div><div class="post-footer">
         <a href="/posts/fakemouse-a-driver-that-emulates-a-mouse/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/google-summer-of-code-2008/">Google Summer of Code 2008</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-04-29">2008-04-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content">I&rsquo;m very happy to say that I was selected again to work on Google Summer of Code with X.Org Foundation. Daniel will be my mentor again. Thanks Google. Thanks X.Org!
-In the last year we did a nice work separating the input event generation code of the X server into a different thread. We saw some performance improvement there specially because the implementation is not using signals anymore to wake up the server when some device emits an event.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-04-29">2008-04-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content"><p>I&rsquo;m very happy to say that I was selected <strong>again</strong> to work on Google Summer of Code with X.Org Foundation. <a href="http://www.fooishbar.org/blog" target="_blank" rel="noopener noreffer">Daniel</a> will be my mentor again. Thanks Google. Thanks X.Org!</p>
+<p>In the last year we did a nice work separating the input event generation code of the X server into a different thread. We saw some performance improvement there specially because the implementation is not using signals anymore to wake up the server when some device emits an event. The reason why is that when a process is in the uninterruptible sleep (D state) signals are delayed and the mouse cursor lags.</p></div><div class="post-footer">
         <a href="/posts/google-summer-of-code-2008/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/traversing-x11-clients-behind-nat-or-x11-end-to-end-connectivity/">Traversing X11 clients behind NAT (or X11 end-to-end connectivity)</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-03-21">2008-03-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">I was thinking how we could make remotely X clients totally connective with the server when both are behind a NAT/firewall.
-We can imagine one big motivation to do this: a scenario where someone using his thin and poor machine wants to use the resources of some &ldquo;fat&rdquo; machines which he simply doesn&rsquo;t know where they are seated. Those fat machines could be arranged through a P2P network of &ldquo;X11 pool of resources&rdquo; and the list of machines displayed to the user select his desired one (e.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-03-21">2008-03-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>I was thinking how we could make remotely X clients totally connective with the server when <strong>both</strong> are behind a NAT/firewall.</p>
+<p>We can imagine one big motivation to do this: a scenario where someone using his thin and poor machine wants to use the resources of some &ldquo;fat&rdquo; machines which he simply doesn&rsquo;t know where they are seated. Those fat machines could be arranged through a P2P network of &ldquo;X11 pool of resources&rdquo; and the list of machines displayed to the user select his desired one (e.g. with minor lag/load). Someone more capitalist than me could go further and imagine a provider selling X11 resources to mobile devices. Or just open your home machine&rsquo;s web browser in any place of the world. Well, the field of applications would be huge.</p></div><div class="post-footer">
         <a href="/posts/traversing-x11-clients-behind-nat-or-x11-end-to-end-connectivity/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/vgaarbiter-wiki/">VgaArbiter wiki</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-25">2008-02-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">Today, Paulo Zanoni help me to put in a shape the VgaArbiter wiki page. The primary intention of that page is to bring more developers in that project and some users++ who could also help testing. Feedback is very welcome. Here is the link.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-25">2008-02-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>Today, <a href="http://przanoni.blogspot.com/" target="_blank" rel="noopener noreffer">Paulo Zanoni</a> help me to put in a shape the VgaArbiter wiki page.
+The primary intention of that page is to bring more developers in that
+project and some users++ who could also help testing. Feedback is very
+welcome. <a href="http://wiki.x.org/wiki/VgaArbiter" target="_blank" rel="noopener noreffer">Here</a> is the link.</p></div><div class="post-footer">
         <a href="/posts/vgaarbiter-wiki/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/benchmarking-it-all/">Benchmarking it all</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-21">2008-02-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.
-The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-21">2008-02-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.</p>
+<p>The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens. The experiments were performed ten times and the average result was picked.</p></div><div class="post-footer">
         <a href="/posts/benchmarking-it-all/">Read More</a>
         
     </div>
@@ -143,8 +148,8 @@ The experiments consisted of two applications running at the same time in each X
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

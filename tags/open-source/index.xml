@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>open-source - Tag - Tiago Vignatti</title>
+        <title>Open-Source - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/open-source/</link>
-        <description>open-source - Tag - Tiago Vignatti</description>
+        <description>Open-Source - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 07 Oct 2013 14:42:17 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/open-source/" rel="self" type="application/rss+xml" /><item>
     <title>developing Chromium on Wayland</title>
     <link>https://vignatti.com/posts/developing-chromium-on-wayland/</link>
@@ -11,8 +11,8 @@
     <guid>https://vignatti.com/posts/developing-chromium-on-wayland/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Chromium_78_running_on_GNOME_Shell_and_Ubuntu_Linux.png" referrerpolicy="no-referrer">
-            </div>A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.
-communities
-There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS.]]></description>
+            </div><p>A <a href="http://vignatti.com/2013/09/18/welcome-to-chromiums-ozone-wayland/" target="_blank" rel="noopener noreffer">few weeks ago</a> we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.</p>
+<p><strong>communities</strong></p>
+<p>There are three main projects involved in here: <em>Chromium</em>, <em>Wayland</em> and <em>Ozone-Wayland</em>. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS. Very near to that one there&rsquo;s Blink engine&rsquo;s community, which interacts (and overlaps) a lot with the Chromium&rsquo;s; I can&rsquo;t tell exactly in numbers but there&rsquo;s huge number of people, vendors and commercial involved in Chromium and, more important to us, there&rsquo;s a lot of quality code being cooked in there for leveraging Web technologies in general.</p>]]></description>
 </item></channel>
 </rss>

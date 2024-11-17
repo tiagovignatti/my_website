@@ -1,92 +1,104 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>xorg - Tag - Tiago Vignatti</title>
+        <title>Xorg - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/xorg/</link>
-        <description>xorg - Tag - Tiago Vignatti</description>
+        <description>Xorg - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 13 Jun 2012 14:01:32 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/xorg/" rel="self" type="application/rss+xml" /><item>
     <title>X on Wayland</title>
     <link>https://vignatti.com/posts/x-on-wayland/</link>
     <pubDate>Wed, 13 Jun 2012 14:01:32 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-on-wayland/</guid>
-    <description><![CDATA[A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it.]]></description>
+    <description><![CDATA[<p>A rather cool feature on Weston compositor is xwayland, to support X11 native applications on Wayland. It&rsquo;s a quite important feature because gives the compatibility with the &ldquo;old&rdquo; windowing system, so say you have an application written on Motif/Xt or even something more &ldquo;fancy&rdquo; like a Web browser all tied with GTK2 and whatever dependency, then you better not bother yourself re-writing it to native Wayland or porting to a modern toolkit &ndash; it should just work seamlessly on it. Hence, X on Wayland fits pretty well with our overall transition plan.</p>]]></description>
 </item><item>
     <title>X characterization for MeeGo</title>
     <link>https://vignatti.com/posts/x-characterization-for-meego/</link>
     <pubDate>Wed, 20 Apr 2011 13:35:44 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-characterization-for-meego/</guid>
-    <description><![CDATA[Actually this is not a big news but it&rsquo;s nice to see on practice X being used on the advanced age :) Here I&rsquo;ve played with some UI configuration settings, browsed for while, toyed with facebook, opened some photos in the viewer and etc, all for about 5 minutes:
-x-meego-Apr2011
-and zooming in the X11 core slice we have:
-x-meego-x11only-Apr2011
-Moral of the story: as showed on the last figure, most of the traffic from the core protocol is related with window management, window state changes and notifications of positioning for clients.]]></description>
+    <description><![CDATA[<p>Actually this is not a big news but it&rsquo;s nice to see on practice X being used on the advanced age :) Here I&rsquo;ve played with some UI configuration settings, browsed for while, toyed with facebook, opened some photos in the viewer and etc, all for about 5 minutes:</p>
+<p><a href="http://vignatti.files.wordpress.com/2011/04/x-meego-apr20111.png" target="_blank" rel="noopener noreffer">
+</a>
+<a href="http://vignatti.files.wordpress.com/2011/04/x-meego-apr2011.pdf" target="_blank" rel="noopener noreffer">x-meego-Apr2011</a></p>
+<p>and zooming in the X11 core slice we have:</p>
+<p><a href="http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.png" target="_blank" rel="noopener noreffer">
+</a>
+<a href="http://vignatti.files.wordpress.com/2011/04/x-meego-x11only-apr2011.pdf" target="_blank" rel="noopener noreffer">x-meego-x11only-Apr2011</a></p>]]></description>
 </item><item>
     <title>X Census (for 1.10)</title>
     <link>https://vignatti.com/posts/x-census-for-1-10/</link>
     <pubDate>Mon, 28 Feb 2011 20:31:05 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-census-for-1-10/</guid>
-    <description><![CDATA[Following is the census of 1.10 window for all X infrastructure - raw numbers here. I did it in a similar way as the previous version. Worth to mention that there&rsquo;s almost no relation between the cycles of development from each of the components listed below, which can lead to some misunderstanding. Anyway, still a nice indicative to see and evaluate how the free desktop community behaved.
-Numbers for X implementation (xserver, proto, lib and xcb repositories):]]></description>
+    <description><![CDATA[<p>Following is the census of 1.10 window for all X infrastructure - raw numbers <a href="http://people.freedesktop.org/~vignatti/xdevelopment/" target="_blank" rel="noopener noreffer">here</a>. I did it in a similar way as the <a href="http://vignatti.wordpress.com/2010/09/02/x-census-for-1-9/" target="_blank" rel="noopener noreffer">previous version</a>. Worth to mention that there&rsquo;s almost no relation between the cycles of development from each of the components listed below, which can lead to some misunderstanding. Anyway, still a nice indicative to see and evaluate how the free desktop community behaved.</p>
+<p>Numbers for <strong>X implementation</strong> (xserver, proto, lib and xcb repositories):</p>]]></description>
 </item><item>
     <title>late Christmas gift: freedesktop&#39;s Xorg for MeeGo</title>
     <link>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
     <pubDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
-    <description><![CDATA[Moikka.
-If you follow here [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for MeeGo-Harmattan, where we target embedded systems only. Feel free to use it!
-At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
+    <description><![CDATA[<p>Moikka.</p>
+<p>If you follow <a href="http://gitorious.org/meego-w40" target="_blank" rel="noopener noreffer">here</a> [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for <a href="http://wiki.meego.com/Glossary#M" target="_blank" rel="noopener noreffer">MeeGo-Harmattan</a>, where we target embedded systems only. Feel free to use it!</p>
+<hr>
+<p>At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.org. More important, we are shaping freedesktop implementation for embedded devices. So at this moment, we are pretty much aligned with X version 1.9.2, plus a few of other commits from master branch; the rest of components, like client side libraries, are mostly what we have on freedesktop master also.</p>]]></description>
 </item><item>
     <title>X Census (for 1.9)</title>
     <link>https://vignatti.com/posts/x-census-for-1-9/</link>
     <pubDate>Thu, 02 Sep 2010 13:41:11 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-census-for-1-9/</guid>
-    <description><![CDATA[Topic&rsquo;s name is a funny (and friendly) devotion to GNOME Census. So let&rsquo;s take a look at some numbers from the time Xorg 1.9 was in development - raw data is here.
-Would be unfair to measure only the work that happened e.g. in X server or in the drivers being developed and come up with the statistics about &ldquo;who developed X&rdquo;. X and X development community are quite extensive and don&rsquo;t concern only &ldquo;graphics&rdquo; related, i.]]></description>
+    <description><![CDATA[<p>Topic&rsquo;s name is a funny (and friendly) devotion to <a href="http://blogs.gnome.org/bolsh/2010/07/28/gnome-census/" target="_blank" rel="noopener noreffer">GNOME Census</a>. So let&rsquo;s take a look at some numbers from the time <a href="http://wiki.x.org/wiki/Server19Branch" target="_blank" rel="noopener noreffer">Xorg 1.9 was in development</a> - raw data is <a href="http://people.freedesktop.org/~vignatti/xdevelopment/" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p>Would be unfair to measure only the work that happened e.g. in X server or in the drivers being developed and come up with the statistics about &ldquo;who developed X&rdquo;. X and X development community are quite extensive and don&rsquo;t concern only &ldquo;graphics&rdquo; related, i.e., pixel information that appears on your display screen. This is a very common mistake.</p>]]></description>
 </item><item>
     <title>Xorg server 1.9 minimal</title>
     <link>https://vignatti.com/posts/xorg-server-1-9-minimal/</link>
     <pubDate>Wed, 18 Aug 2010 15:22:26 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-server-1-9-minimal/</guid>
-    <description><![CDATA[That&rsquo;s what I&rsquo;m using for MeeGo now. Autoconf parameters, theeere we go:
-&ndash;disable-static &ndash;disable-aiglx &ndash;disable-config-dbus &ndash;disable-config-hal &ndash;disable-dbe &ndash;disable-dga &ndash;disable-dpms &ndash;disable-dri &ndash;disable-glx &ndash;disable-glx-tls &ndash;disable-int10-module &ndash;disable-ipv6 &ndash;disable-screensaver &ndash;disable-secure-rpc &ndash;disable-tcp-transport &ndash;disable-vbe &ndash;disable-vgahw &ndash;disable-xdm-auth-1 &ndash;disable-xinerama &ndash;disable-xwin &ndash;disable-xaa &ndash;disable-xace &ndash;disable-xdmcp &ndash;disable-xf86vidmode &ndash;disable-xfree86-utils &ndash;disable-xnest &ndash;disable-xvmc &ndash;disable-libdrm &ndash;enable-config-udev &ndash;enable-dri2 &ndash;enable-null-root-cursor &ndash;enable-record &ndash;enable-unit-tests &ndash;enable-visibility &ndash;enable-xorg &ndash;with-sha1=libsha1
-PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!]]></description>
+    <description><![CDATA[<p>That&rsquo;s what I&rsquo;m using for MeeGo now. Autoconf parameters, theeere we go:</p>
+<p>&ndash;disable-static &ndash;disable-aiglx &ndash;disable-config-dbus &ndash;disable-config-hal &ndash;disable-dbe &ndash;disable-dga &ndash;disable-dpms &ndash;disable-dri &ndash;disable-glx &ndash;disable-glx-tls &ndash;disable-int10-module &ndash;disable-ipv6 &ndash;disable-screensaver &ndash;disable-secure-rpc &ndash;disable-tcp-transport &ndash;disable-vbe &ndash;disable-vgahw &ndash;disable-xdm-auth-1 &ndash;disable-xinerama &ndash;disable-xwin &ndash;disable-xaa &ndash;disable-xace &ndash;disable-xdmcp &ndash;disable-xf86vidmode &ndash;disable-xfree86-utils &ndash;disable-xnest &ndash;disable-xvmc &ndash;disable-libdrm &ndash;enable-config-udev &ndash;enable-dri2 &ndash;enable-null-root-cursor &ndash;enable-record &ndash;enable-unit-tests &ndash;enable-visibility &ndash;enable-xorg &ndash;with-sha1=libsha1</p>
+<p>PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!</p>]]></description>
 </item><item>
     <title>Linux Graphics for Small Devices at FISL</title>
     <link>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</link>
     <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</guid>
-    <description><![CDATA[Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for freedesktopers though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow here.
-*actually, two nights in Porto Alegre and two nights in Curitiba.]]></description>
+    <description><![CDATA[<p>Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for <em>freedesktopers</em> though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow <a href="http://people.freedesktop.org/~vignatti/talks/FISL11-LinuxGraphicsForSmallDevices.pdf" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p>*actually, two nights in Porto Alegre and two nights in Curitiba. Was great to see most of my friends!</p>]]></description>
 </item><item>
     <title>adopt a child and make multi-card work on Linux</title>
     <link>https://vignatti.com/posts/adopt-a-child-and-make-multi-card-work-on-linux/</link>
     <pubDate>Wed, 23 Jun 2010 15:12:11 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/adopt-a-child-and-make-multi-card-work-on-linux/</guid>
-    <description><![CDATA[Previously, the message was for toolkit, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)
-I have started hacking on X due the laboratory at my university I was working was running an amazing project to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.]]></description>
+    <description><![CDATA[<p><em>Previously, the <a href="http://vignatti.wordpress.com/2010/06/15/toolkit-please-xlib-xcb/" target="_blank" rel="noopener noreffer">message was for toolkit</a>, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)</em></p>
+<hr>
+<p>I have started hacking on X due the <a href="http://www.c3sl.ufpr.br/" target="_blank" rel="noopener noreffer">laboratory at my university</a> I was working was running an <a href="http://pt.wikipedia.org/wiki/Paran%C3%A1_Digital" target="_blank" rel="noopener noreffer">amazing project</a> to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.100 schools used the <a href="http://en.wikipedia.org/wiki/Multiseat_configuration" target="_blank" rel="noopener noreffer">multiseat computing model</a>.</p>]]></description>
 </item><item>
     <title>Toolkit, please: Xlib -&gt; XCB</title>
     <link>https://vignatti.com/posts/toolkit-please-xlib-xcb/</link>
     <pubDate>Tue, 15 Jun 2010 15:24:11 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/toolkit-please-xlib-xcb/</guid>
-    <description><![CDATA[We all know since 2006 (?) that the world is turning to use XCB instead Xlib as the interface between X clients and the server. The advantages of using XCB is well know but, even so, it&rsquo;s being adopted very slowly for some reason - for instance no toolkits yet ported it. If this serves as a motivation, Alan got a really nice measurements porting a simple X app.
-Translate your toolkit and application now!]]></description>
+    <description><![CDATA[<p>We all know since 2006 (?) that the world is turning to use XCB instead Xlib as the interface between X clients and the server. The advantages of using XCB is <a href="http://xcb.freedesktop.org/Features/" target="_blank" rel="noopener noreffer">well know</a> but, even so, it&rsquo;s being adopted very slowly for some reason - for instance no toolkits yet ported it. If this serves as a motivation, <a href="http://blogs.sun.com/alanc/" target="_blank" rel="noopener noreffer">Alan</a> got a really <a href="http://lists.freedesktop.org/archives/xcb/2010-June/006111.html" target="_blank" rel="noopener noreffer">nice measurements</a> porting a simple X app.</p>
+<p>Translate your toolkit and application <strong>now</strong>! :)</p>]]></description>
 </item><item>
     <title>Scrutinizing X memory, part 2: what&#39;s taking all that memory?</title>
     <link>https://vignatti.com/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</link>
     <pubDate>Thu, 25 Mar 2010 18:01:10 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</guid>
-    <description><![CDATA[So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/pidof Xorg/{smaps, status}. I used also a script found on the Web to parse and organize these informations; Mikhail Gusarov has extended this script to show a very useful output.
-Xorg per se Running just one standalone Xorg -retro. In my system it represents: VmRSS: 5440 kB VmSize: 13620 kB
-from those 5440 kB of RSS: 3404 kB (63 %) come from code 1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) 228 kB (4 %) come from other data mapped in memory 180 kB (3 %) come from rodata]]></description>
+    <description><![CDATA[<p>So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/<code>pidof Xorg</code>/{smaps, status}. I used also a <a href="http://wingolog.org/pub/mem_usage.py" target="_blank" rel="noopener noreffer">script</a> found on the <a href="http://wingolog.org/archives/2007/11/27/reducing-the-footprint-of-python-applications" target="_blank" rel="noopener noreffer">Web</a> to parse and organize these informations; Mikhail Gusarov has <a href="http://github.com/dottedmag/mem-usage" target="_blank" rel="noopener noreffer">extended</a> this script to show a very useful <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/x-standalone-memory-per-libraries.txt" target="_blank" rel="noopener noreffer">output</a>.</p>
+<h3 id="xorg-per-se">Xorg per se</h3>
+<p>Running just one standalone <code>Xorg -retro</code>. In my system it represents:
+VmRSS:      5440 kB
+VmSize:    13620 kB</p>
+<p>from those 5440 kB of RSS:
+3404 kB (63 %) come from code
+1628 kB (30 %) come from malloc/mmap in anonymous memory (heap)
+228 kB  (4 %) come from other data mapped in memory
+180 kB  (3 %) come from rodata</p>]]></description>
 </item></channel>
 </rss>

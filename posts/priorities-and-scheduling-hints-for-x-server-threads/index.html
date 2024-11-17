@@ -5,15 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Priorities and scheduling hints for X server threads - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Priorities and scheduling hints for X server threads" />
-<meta property="og:description" content="Input events routed through another thread/process can have bad effects on latency because we can&rsquo;t guarantee that it will get scheduled at the right moment. Although this is hard to see happening with the current X server threaded implementation, we must design something to avoid it. One way to improve the responsiveness is to give a high priority to the input thread and also adjust the CPU scheduling. (Note that this will not avoid problems related with page faults which usually happen in the X input flow." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://vignatti.com/posts/priorities-and-scheduling-hints-for-x-server-threads/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2008-08-07T23:33:57+00:00" />
-<meta property="article:modified_time" content="2008-08-07T23:33:57+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Priorities and scheduling hints for X server threads"/>
-<meta name="twitter:description" content="Input events routed through another thread/process can have bad effects on latency because we can&rsquo;t guarantee that it will get scheduled at the right moment. Although this is hard to see happening with the current X server threaded implementation, we must design something to avoid it. One way to improve the responsiveness is to give a high priority to the input thread and also adjust the CPU scheduling. (Note that this will not avoid problems related with page faults which usually happen in the X input flow."/>
+        <title>Priorities and scheduling hints for X server threads - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/posts/priorities-and-scheduling-hints-for-x-server-threads/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Priorities and scheduling hints for X server threads">
+  <meta property="og:description" content="Input events routed through another thread/process can have bad effects on latency because we can’t guarantee that it will get scheduled at the right moment. Although this is hard to see happening with the current X server threaded implementation, we must design something to avoid it. One way to improve the responsiveness is to give a high priority to the input thread and also adjust the CPU scheduling. (Note that this will not avoid problems related with page faults which usually happen in the X input flow.)">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2008-08-07T23:33:57+00:00">
+    <meta property="article:modified_time" content="2008-08-07T23:33:57+00:00">
+    <meta property="article:tag" content="Input">
+    <meta property="article:tag" content="Policy">
+    <meta property="article:tag" content="Priority">
+    <meta property="article:tag" content="Scheduler">
+    <meta property="article:tag" content="SoC2008">
+    <meta property="article:tag" content="Thread">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Priorities and scheduling hints for X server threads">
+  <meta name="twitter:description" content="Input events routed through another thread/process can have bad effects on latency because we can’t guarantee that it will get scheduled at the right moment. Although this is hard to see happening with the current X server threaded implementation, we must design something to avoid it. One way to improve the responsiveness is to give a high priority to the input thread and also adjust the CPU scheduling. (Note that this will not avoid problems related with page faults which usually happen in the X input flow.)">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -109,7 +119,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/input/">input</a>,&nbsp;<a href="/tags/policy/">policy</a>,&nbsp;<a href="/tags/priority/">priority</a>,&nbsp;<a href="/tags/scheduler/">scheduler</a>,&nbsp;<a href="/tags/soc2008/">SoC2008</a>,&nbsp;<a href="/tags/thread/">thread</a>,&nbsp;<a href="/tags/vignatti/">vignatti</a>,&nbsp;<a href="/tags/x11/">x11</a>,&nbsp;<a href="/tags/xorg/">xorg</a>,&nbsp;<a href="/tags/xserver/">xserver</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/input/">Input</a>,&nbsp;<a href="/tags/policy/">Policy</a>,&nbsp;<a href="/tags/priority/">Priority</a>,&nbsp;<a href="/tags/scheduler/">Scheduler</a>,&nbsp;<a href="/tags/soc2008/">SoC2008</a>,&nbsp;<a href="/tags/thread/">Thread</a>,&nbsp;<a href="/tags/vignatti/">Vignatti</a>,&nbsp;<a href="/tags/x11/">X11</a>,&nbsp;<a href="/tags/xorg/">Xorg</a>,&nbsp;<a href="/tags/xserver/">Xserver</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -120,8 +130,8 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

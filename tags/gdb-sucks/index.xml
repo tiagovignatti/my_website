@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>gdb sucks - Tag - Tiago Vignatti</title>
+        <title>Gdb Sucks - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/gdb-sucks/</link>
-        <description>gdb sucks - Tag - Tiago Vignatti</description>
+        <description>Gdb Sucks - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/gdb-sucks/" rel="self" type="application/rss+xml" /><item>
     <title>Parallel events (panic) with X</title>
     <link>https://vignatti.com/posts/parallel-events-panic-with-x/</link>
     <pubDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/parallel-events-panic-with-x/</guid>
-    <description><![CDATA[Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
-I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way.]]></description>
+    <description><![CDATA[<p>Unfortunately that model which I <a href="http://vignatti.wordpress.com/2008/08/07/keep-it-going/" target="_blank" rel="noopener noreffer">described some weeks ago</a> to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(</p>
+<p>I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way. It&rsquo;s hard to program thinking in parallel. It&rsquo;s even harder to debug a program with severals flows. More, the tools don&rsquo;t help you (if you have lucky, gdb will work).</p>]]></description>
 </item></channel>
 </rss>

@@ -1,21 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>rac - Tag - Tiago Vignatti</title>
+        <title>Rac - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/rac/</link>
-        <description>rac - Tag - Tiago Vignatti</description>
+        <description>Rac - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 24 Jul 2009 13:56:33 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/rac/" rel="self" type="application/rss+xml" /><item>
     <title>multiseat with multiple X servers (or &#34;the right way&#34;)</title>
     <link>https://vignatti.com/posts/multiseat-with-multiple-x-servers-or-the-right-way/</link>
     <pubDate>Fri, 24 Jul 2009 13:56:33 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/multiseat-with-multiple-x-servers-or-the-right-way/</guid>
-    <description><![CDATA[So last week I posted on lkml an old patch that we were carrying for a long time in the Linux community. It basically brings the multiple (old) video cards functionally again on Linux and X server (and this time doing on the right and beauty way). For the people that was following multiseat implementations, this is a HUGE step: we will finally be able to discard the old and ugly hack (a mix of Xorg, several Xephyr servers + evdev) and and go to a clean way, starting multiple X servers in parallel.]]></description>
+    <description><![CDATA[<p>So last week I <a href="http://lkml.org/lkml/2009/7/16/243" target="_blank" rel="noopener noreffer">posted</a> on lkml an old patch that we were carrying for a long time in the Linux community. It basically brings the multiple (old) video cards functionally again on Linux and X server (and this time doing on the right and beauty way). For the people that was following multiseat implementations, this is a HUGE step: we will finally be able to discard the old and ugly hack (a mix of Xorg, several Xephyr servers + evdev) and and go to a clean way, starting multiple X servers in parallel. Cool! Well, not that much, because it might take some time to be in your beloved distribution :)</p>]]></description>
 </item><item>
     <title>VGA arbiter: removing RAC</title>
     <link>https://vignatti.com/posts/vga-arbiter-removing-rac/</link>
     <pubDate>Thu, 20 Dec 2007 01:18:39 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/vga-arbiter-removing-rac/</guid>
-    <description><![CDATA[The Resource Access Control inside Xorg is the guy responsible to take care of the various resources of memory and to share them in a wise manner when two or more graphics devices are active (think multi-head). As an alternative from RAC we can rely on VGA arbiter. So me and Paulo Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the arbiter code with this purpose.]]></description>
+    <description><![CDATA[<p>The Resource Access Control inside Xorg is the guy responsible to take  care of the various resources of memory and to share them in a wise  manner when two or more graphics devices are active (think multi-head).  As an alternative from RAC we can rely on <a href="http://vignatti.wordpress.com/2007/11/23/the-vga-arbiter/" target="_blank" rel="noopener noreffer">VGA arbiter</a>. So me and Paulo  Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the  arbiter code with this purpose.</p>]]></description>
 </item></channel>
 </rss>

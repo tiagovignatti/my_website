@@ -9,6 +9,6 @@
     <pubDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/chromium-ozone-gbm-explained/</guid>
-    <description><![CDATA[About a year ago Ozone platform abstraction layer started to take its shape in Chromium and we were excited how easily we could support Wayland platform using it. Everything went great and we helped a few Chromium targets like Crosswalk to debut in the Tizen ecosystem for example. More recently, different Ozone platforms have been implemented and only now it&rsquo;s becoming evident the significance of Ozone for Chromium Linux, generally speaking.]]></description>
+    <description><![CDATA[<div id="id-1"><p>About a year ago <a href="https://chromium.googlesource.com/chromium/src/&#43;/HEAD/docs/ozone_overview.md" target="_blank" rel="noopener noreffer">Ozone platform abstraction layer</a> started to take its shape in Chromium and we were excited how easily we could s<a href="https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/" target="_blank" rel="noopener noreffer">upport Wayland platform</a> using it. Everything went great and we helped a few Chromium targets like <a href="https://en.wikipedia.org/wiki/Crosswalk_Project" target="_blank" rel="noopener noreffer">Crosswalk</a> to debut in the Tizen ecosystem for example. More recently, different Ozone platforms have been implemented and only now it&rsquo;s becoming evident the significance of Ozone for Chromium Linux, generally speaking.</p>]]></description>
 </item></channel>
 </rss>

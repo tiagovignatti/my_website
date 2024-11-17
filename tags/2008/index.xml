@@ -9,7 +9,7 @@
     <pubDate>Tue, 29 Apr 2008 21:31:27 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/google-summer-of-code-2008/</guid>
-    <description><![CDATA[I&rsquo;m very happy to say that I was selected again to work on Google Summer of Code with X.Org Foundation. Daniel will be my mentor again. Thanks Google. Thanks X.Org!
-In the last year we did a nice work separating the input event generation code of the X server into a different thread. We saw some performance improvement there specially because the implementation is not using signals anymore to wake up the server when some device emits an event.]]></description>
+    <description><![CDATA[<p>I&rsquo;m very happy to say that I was selected <strong>again</strong> to work on Google Summer of Code with X.Org Foundation. <a href="http://www.fooishbar.org/blog" target="_blank" rel="noopener noreffer">Daniel</a> will be my mentor again. Thanks Google. Thanks X.Org!</p>
+<p>In the last year we did a nice work separating the input event generation code of the X server into a different thread. We saw some performance improvement there specially because the implementation is not using signals anymore to wake up the server when some device emits an event. The reason why is that when a process is in the uninterruptible sleep (D state) signals are delayed and the mouse cursor lags.</p>]]></description>
 </item></channel>
 </rss>

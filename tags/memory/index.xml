@@ -1,24 +1,32 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>memory - Tag - Tiago Vignatti</title>
+        <title>Memory - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/memory/</link>
-        <description>memory - Tag - Tiago Vignatti</description>
+        <description>Memory - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 25 Mar 2010 18:01:10 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/memory/" rel="self" type="application/rss+xml" /><item>
     <title>Scrutinizing X memory, part 2: what&#39;s taking all that memory?</title>
     <link>https://vignatti.com/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</link>
     <pubDate>Thu, 25 Mar 2010 18:01:10 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/</guid>
-    <description><![CDATA[So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/pidof Xorg/{smaps, status}. I used also a script found on the Web to parse and organize these informations; Mikhail Gusarov has extended this script to show a very useful output.
-Xorg per se Running just one standalone Xorg -retro. In my system it represents: VmRSS: 5440 kB VmSize: 13620 kB
-from those 5440 kB of RSS: 3404 kB (63 %) come from code 1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) 228 kB (4 %) come from other data mapped in memory 180 kB (3 %) come from rodata]]></description>
+    <description><![CDATA[<p>So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/<code>pidof Xorg</code>/{smaps, status}. I used also a <a href="http://wingolog.org/pub/mem_usage.py" target="_blank" rel="noopener noreffer">script</a> found on the <a href="http://wingolog.org/archives/2007/11/27/reducing-the-footprint-of-python-applications" target="_blank" rel="noopener noreffer">Web</a> to parse and organize these informations; Mikhail Gusarov has <a href="http://github.com/dottedmag/mem-usage" target="_blank" rel="noopener noreffer">extended</a> this script to show a very useful <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/x-standalone-memory-per-libraries.txt" target="_blank" rel="noopener noreffer">output</a>.</p>
+<h3 id="xorg-per-se">Xorg per se</h3>
+<p>Running just one standalone <code>Xorg -retro</code>. In my system it represents:
+VmRSS:      5440 kB
+VmSize:    13620 kB</p>
+<p>from those 5440 kB of RSS:
+3404 kB (63 %) come from code
+1628 kB (30 %) come from malloc/mmap in anonymous memory (heap)
+228 kB  (4 %) come from other data mapped in memory
+180 kB  (3 %) come from rodata</p>]]></description>
 </item><item>
     <title>Scrutinizing X Memory, part 1: overview</title>
     <link>https://vignatti.com/posts/scrutinizing-x-memory-part-1-overview/</link>
     <pubDate>Thu, 25 Mar 2010 17:58:47 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/scrutinizing-x-memory-part-1-overview/</guid>
-    <description><![CDATA[This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
-Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data.]]></description>
+    <description><![CDATA[<p>This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.</p>
+<h3 id="overview">Overview</h3>
+<p>One way to analyse aspects of memory usage of a given program is to scrutinize its object data. Object data contains executable code and static data. Both are of little interest from the process memory management point of view given their layout is determined by the compiler and does not change during process execution. However, we can deduce some nice informations about the object. For instance, from Xorg object we are able to get some statistics about the code, identify its structure and point out architectural mistakes just looking into.</p>]]></description>
 </item></channel>
 </rss>

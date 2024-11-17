@@ -9,7 +9,7 @@
     <pubDate>Thu, 02 Sep 2010 13:41:11 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/x-census-for-1-9/</guid>
-    <description><![CDATA[Topic&rsquo;s name is a funny (and friendly) devotion to GNOME Census. So let&rsquo;s take a look at some numbers from the time Xorg 1.9 was in development - raw data is here.
-Would be unfair to measure only the work that happened e.g. in X server or in the drivers being developed and come up with the statistics about &ldquo;who developed X&rdquo;. X and X development community are quite extensive and don&rsquo;t concern only &ldquo;graphics&rdquo; related, i.]]></description>
+    <description><![CDATA[<p>Topic&rsquo;s name is a funny (and friendly) devotion to <a href="http://blogs.gnome.org/bolsh/2010/07/28/gnome-census/" target="_blank" rel="noopener noreffer">GNOME Census</a>. So let&rsquo;s take a look at some numbers from the time <a href="http://wiki.x.org/wiki/Server19Branch" target="_blank" rel="noopener noreffer">Xorg 1.9 was in development</a> - raw data is <a href="http://people.freedesktop.org/~vignatti/xdevelopment/" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p>Would be unfair to measure only the work that happened e.g. in X server or in the drivers being developed and come up with the statistics about &ldquo;who developed X&rdquo;. X and X development community are quite extensive and don&rsquo;t concern only &ldquo;graphics&rdquo; related, i.e., pixel information that appears on your display screen. This is a very common mistake.</p>]]></description>
 </item></channel>
 </rss>

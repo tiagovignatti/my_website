@@ -5,17 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Parallel events (panic) with X - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Parallel events (panic) with X" />
-<meta property="og:description" content="Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
-I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://vignatti.com/posts/parallel-events-panic-with-x/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2008-08-18T22:02:16+00:00" />
-<meta property="article:modified_time" content="2008-08-18T22:02:16+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Parallel events (panic) with X"/>
-<meta name="twitter:description" content="Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
-I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way."/>
+        <title>Parallel events (panic) with X - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/posts/parallel-events-panic-with-x/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Parallel events (panic) with X">
+  <meta property="og:description" content="Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn’t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
+I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way. It’s hard to program thinking in parallel. It’s even harder to debug a program with severals flows. More, the tools don’t help you (if you have lucky, gdb will work).">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2008-08-18T22:02:16+00:00">
+    <meta property="article:modified_time" content="2008-08-18T22:02:16+00:00">
+    <meta property="article:tag" content="Event">
+    <meta property="article:tag" content="Gdb Sucks">
+    <meta property="article:tag" content="Input">
+    <meta property="article:tag" content="Thread">
+    <meta property="article:tag" content="X11">
+    <meta property="article:tag" content="Xorg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Parallel events (panic) with X">
+  <meta name="twitter:description" content="Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn’t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
+I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way. It’s hard to program thinking in parallel. It’s even harder to debug a program with severals flows. More, the tools don’t help you (if you have lucky, gdb will work).">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -113,7 +123,7 @@ I started to implement all this but it showed a very boring task to grab all the
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/event/">event</a>,&nbsp;<a href="/tags/gdb-sucks/">gdb sucks</a>,&nbsp;<a href="/tags/input/">input</a>,&nbsp;<a href="/tags/thread/">thread</a>,&nbsp;<a href="/tags/x11/">x11</a>,&nbsp;<a href="/tags/xorg/">xorg</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/event/">Event</a>,&nbsp;<a href="/tags/gdb-sucks/">Gdb Sucks</a>,&nbsp;<a href="/tags/input/">Input</a>,&nbsp;<a href="/tags/thread/">Thread</a>,&nbsp;<a href="/tags/x11/">X11</a>,&nbsp;<a href="/tags/xorg/">Xorg</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -124,8 +134,8 @@ I started to implement all this but it showed a very boring task to grab all the
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

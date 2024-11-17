@@ -1,31 +1,31 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>kernel - Tag - Tiago Vignatti</title>
+        <title>Kernel - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/kernel/</link>
-        <description>kernel - Tag - Tiago Vignatti</description>
+        <description>Kernel - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/kernel/" rel="self" type="application/rss+xml" /><item>
     <title>Improving input latency</title>
     <link>https://vignatti.com/posts/improving-input-latency/</link>
     <pubDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/improving-input-latency/</guid>
-    <description><![CDATA[GSoC summary #1 - July 29
-The current implementation of X Window System relies in a signal scheme to manage the input event coming from hardware devices. This scheme frequently get blocked when lot of IO is occurring (for instance, when the process is swapping in/out). Get blocked means for instance a jumping cursor on the screen and in GUI is always desirable to prioritize the system responsiveness for end users.]]></description>
+    <description><![CDATA[<p>GSoC summary #1 - July 29</p>
+<p>The current implementation of X Window System relies in a signal scheme  to manage the input event coming from hardware devices. This scheme  frequently get blocked when lot of IO is occurring (for instance, when  the process is swapping in/out). Get blocked means for instance a  jumping cursor on the screen and in GUI is always desirable to  prioritize the system responsiveness for end users. The human/computer  interface should be smooth and this is the most user visible aspect of a  system.</p>]]></description>
 </item><item>
     <title>cursor handling and updates inside DRM</title>
     <link>https://vignatti.com/posts/cursor-handling-and-updates-inside-drm/</link>
     <pubDate>Thu, 10 Jul 2008 07:03:49 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/cursor-handling-and-updates-inside-drm/</guid>
-    <description><![CDATA[The current DRM kernel modesetting tree is already taking care to update the cursor registers and paint it to the screen. Very cool [0].
-What I&rsquo;ve done today is a shortcut between the kernel input layer and DRM to update the cursor directly on screen without the X server be notified always. Of course, a lot of issues raised up together. So let&rsquo;s try to delegates the tasks again.
-userspace app (X server):]]></description>
+    <description><![CDATA[<p>The current DRM kernel modesetting tree is already taking care to update the cursor registers and paint it to the screen. Very cool [0].</p>
+<p>What I&rsquo;ve done today is a shortcut between the kernel input layer and DRM to update the cursor directly on screen without the X server be notified always. Of course, a lot of issues raised up together. So let&rsquo;s try to delegates the tasks again.</p>
+<p><strong>userspace app (X server):</strong></p>]]></description>
 </item><item>
     <title>fakemouse -- a driver that emulates a mouse</title>
     <link>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
     <pubDate>Wed, 28 May 2008 02:36:09 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
-    <description><![CDATA[For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.]]></description>
+    <description><![CDATA[<p>For my SoC <a href="http://vignatti.wordpress.com/2008/04/29/google-summer-of-code-2008/" target="_blank" rel="noopener noreffer">project</a> I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.</p>]]></description>
 </item></channel>
 </rss>

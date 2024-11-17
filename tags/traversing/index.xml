@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>traversing - Tag - Tiago Vignatti</title>
+        <title>Traversing - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/traversing/</link>
-        <description>traversing - Tag - Tiago Vignatti</description>
+        <description>Traversing - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 21 Mar 2008 20:29:33 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/traversing/" rel="self" type="application/rss+xml" /><item>
     <title>Traversing X11 clients behind NAT (or X11 end-to-end connectivity)</title>
     <link>https://vignatti.com/posts/traversing-x11-clients-behind-nat-or-x11-end-to-end-connectivity/</link>
     <pubDate>Fri, 21 Mar 2008 20:29:33 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/traversing-x11-clients-behind-nat-or-x11-end-to-end-connectivity/</guid>
-    <description><![CDATA[I was thinking how we could make remotely X clients totally connective with the server when both are behind a NAT/firewall.
-We can imagine one big motivation to do this: a scenario where someone using his thin and poor machine wants to use the resources of some &ldquo;fat&rdquo; machines which he simply doesn&rsquo;t know where they are seated. Those fat machines could be arranged through a P2P network of &ldquo;X11 pool of resources&rdquo; and the list of machines displayed to the user select his desired one (e.]]></description>
+    <description><![CDATA[<p>I was thinking how we could make remotely X clients totally connective with the server when <strong>both</strong> are behind a NAT/firewall.</p>
+<p>We can imagine one big motivation to do this: a scenario where someone using his thin and poor machine wants to use the resources of some &ldquo;fat&rdquo; machines which he simply doesn&rsquo;t know where they are seated. Those fat machines could be arranged through a P2P network of &ldquo;X11 pool of resources&rdquo; and the list of machines displayed to the user select his desired one (e.g. with minor lag/load). Someone more capitalist than me could go further and imagine a provider selling X11 resources to mobile devices. Or just open your home machine&rsquo;s web browser in any place of the world. Well, the field of applications would be huge.</p>]]></description>
 </item></channel>
 </rss>

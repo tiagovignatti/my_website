@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.112.7">
+	<meta name="generator" content="Hugo 0.138.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Tiago Vignatti" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://vignatti.com/" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tiago Vignatti"/>
-<meta name="twitter:description" content=""/>
+        <title>Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Tiago Vignatti">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tiago Vignatti">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -70,48 +71,56 @@
         data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x"
         data-sizes="auto"
         alt="/images/avatar.png"
-        title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
+        title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/toolkit-please-xlib-xcb/">Toolkit, please: Xlib -&gt; XCB</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-06-15">2010-06-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/links/"><i class="far fa-folder fa-fw"></i>Links</a></span></div><div class="content">We all know since 2006 (?) that the world is turning to use XCB instead Xlib as the interface between X clients and the server. The advantages of using XCB is well know but, even so, it&rsquo;s being adopted very slowly for some reason - for instance no toolkits yet ported it. If this serves as a motivation, Alan got a really nice measurements porting a simple X app.
-Translate your toolkit and application now!</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-06-15">2010-06-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/links/"><i class="far fa-folder fa-fw"></i>Links</a></span></div><div class="content"><p>We all know since 2006 (?) that the world is turning to use XCB instead Xlib as the interface between X clients and the server. The advantages of using XCB is <a href="http://xcb.freedesktop.org/Features/" target="_blank" rel="noopener noreffer">well know</a> but, even so, it&rsquo;s being adopted very slowly for some reason - for instance no toolkits yet ported it. If this serves as a motivation, <a href="http://blogs.sun.com/alanc/" target="_blank" rel="noopener noreffer">Alan</a> got a really <a href="http://lists.freedesktop.org/archives/xcb/2010-June/006111.html" target="_blank" rel="noopener noreffer">nice measurements</a> porting a simple X app.</p>
+<p>Translate your toolkit and application <strong>now</strong>! :)</p></div><div class="post-footer">
         <a href="/posts/toolkit-please-xlib-xcb/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/">Scrutinizing X memory, part 2: what&#39;s taking all that memory?</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-03-25">2010-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/pidof Xorg/{smaps, status}. I used also a script found on the Web to parse and organize these informations; Mikhail Gusarov has extended this script to show a very useful output.
-Xorg per se Running just one standalone Xorg -retro. In my system it represents: VmRSS: 5440 kB VmSize: 13620 kB
-from those 5440 kB of RSS: 3404 kB (63 %) come from code 1628 kB (30 %) come from malloc/mmap in anonymous memory (heap) 228 kB (4 %) come from other data mapped in memory 180 kB (3 %) come from rodata</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-03-25">2010-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/<code>pidof Xorg</code>/{smaps, status}. I used also a <a href="http://wingolog.org/pub/mem_usage.py" target="_blank" rel="noopener noreffer">script</a> found on the <a href="http://wingolog.org/archives/2007/11/27/reducing-the-footprint-of-python-applications" target="_blank" rel="noopener noreffer">Web</a> to parse and organize these informations; Mikhail Gusarov has <a href="http://github.com/dottedmag/mem-usage" target="_blank" rel="noopener noreffer">extended</a> this script to show a very useful <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/x-standalone-memory-per-libraries.txt" target="_blank" rel="noopener noreffer">output</a>.</p>
+<h3 id="xorg-per-se">Xorg per se</h3>
+<p>Running just one standalone <code>Xorg -retro</code>. In my system it represents:
+VmRSS:      5440 kB
+VmSize:    13620 kB</p>
+<p>from those 5440 kB of RSS:
+3404 kB (63 %) come from code
+1628 kB (30 %) come from malloc/mmap in anonymous memory (heap)
+228 kB  (4 %) come from other data mapped in memory
+180 kB  (3 %) come from rodata</p></div><div class="post-footer">
         <a href="/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/scrutinizing-x-memory-part-1-overview/">Scrutinizing X Memory, part 1: overview</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-03-25">2010-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
-Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-03-25">2010-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.</p>
+<h3 id="overview">Overview</h3>
+<p>One way to analyse aspects of memory usage of a given program is to scrutinize its object data. Object data contains executable code and static data. Both are of little interest from the process memory management point of view given their layout is determined by the compiler and does not change during process execution. However, we can deduce some nice informations about the object. For instance, from Xorg object we are able to get some statistics about the code, identify its structure and point out architectural mistakes just looking into.</p></div><div class="post-footer">
         <a href="/posts/scrutinizing-x-memory-part-1-overview/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/xorg-customization-and-true-modularization/">Customization and true modularization of Xorg</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-01-23">2010-01-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">For the first time in life, Xorg is being used in a single platform and for a given device only (other devices have used an X11 implementation but using other non-canonical servers, such kdrive&rsquo;s based - Tiny-X).
-Previously Xorg was being packed to run in a huge amount of OSes - mostly Linux and Unix-like distributions - with the characteristic of be architecture portable and able to run on a huge set of video and input devices.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-01-23">2010-01-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>For the first time in life, Xorg is being used in <a href="http://maemo.org/" target="_blank" rel="noopener noreffer">a single platform</a> and for <a href="http://maemo.nokia.com/n900/" target="_blank" rel="noopener noreffer">a given device</a> only (other devices have used an X11 implementation but using other non-canonical servers, such kdrive&rsquo;s based - Tiny-X).</p>
+<p>Previously Xorg was being packed to run in a huge amount of OSes - mostly Linux and Unix-like distributions - with the characteristic of be architecture portable and able to run on a huge set of video and input devices. In terms of software, this means an extensive amount of code able to cover all of this mentioned. But this is far from the needs of a small and single platform device.</p></div><div class="post-footer">
         <a href="/posts/xorg-customization-and-true-modularization/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/new-blog-ui-2/">New blog interface</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2009-12-29">2009-12-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">I like UI and I&rsquo;m not gay.
-Some time ago someone posted a comment, complaining about the white fonts over the dark background in my blog, which makes the read be difficult. The guy teased me, recommending an ironic page where shows how hard is to read texts like this. He was right&hellip;
-So now I changed wordpress to a totally opposite theme called &ldquo;White as Milk&rdquo;. Yay, total white and easy to read now!</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2009-12-29">2009-12-29</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>I like UI and I&rsquo;m not gay.</p>
+<p>Some time ago someone posted a <a href="http://vignatti.wordpress.com/2009/01/14/cursors-update-inside-kernel-only/#comment-1614" target="_blank" rel="noopener noreffer">comment</a>, complaining about the white fonts over the dark background in my blog, which makes the read be difficult. The guy teased me, recommending an <a href="http://www.ironicsans.com/owmyeyes/" target="_blank" rel="noopener noreffer">ironic page</a> where shows how hard is to read texts like this. He was right&hellip;</p>
+<p>So now I changed wordpress to a totally opposite theme called &ldquo;White as Milk&rdquo;. Yay, total white and easy to read now! Let&rsquo;s see how long I&rsquo;ll get sick of that interface.</p></div><div class="post-footer">
         <a href="/posts/new-blog-ui-2/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/xorg-what-is-it-and-what-does-it-mean/">Xorg: What is it, and what does it mean?</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2009-12-26">2009-12-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content">Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM
-I don&rsquo;t have words for it.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2009-12-26">2009-12-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"><p><a href="http://talk.maemo.org/showthread.php?p=440448#post440448" target="_blank" rel="noopener noreffer"> Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM</a></p>
+<p>I don&rsquo;t have words for it.</p></div><div class="post-footer">
         <a href="/posts/xorg-what-is-it-and-what-does-it-mean/">Read More</a>
         
     </div>
@@ -149,8 +158,8 @@ I don&rsquo;t have words for it.</div><div class="post-footer">
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

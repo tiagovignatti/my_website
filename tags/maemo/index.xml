@@ -1,31 +1,32 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>maemo - Tag - Tiago Vignatti</title>
+        <title>Maemo - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/maemo/</link>
-        <description>maemo - Tag - Tiago Vignatti</description>
+        <description>Maemo - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/maemo/" rel="self" type="application/rss+xml" /><item>
     <title>late Christmas gift: freedesktop&#39;s Xorg for MeeGo</title>
     <link>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</link>
     <pubDate>Wed, 29 Dec 2010 19:46:07 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/late-christmas-gift-freedesktops-xorg-for-meego/</guid>
-    <description><![CDATA[Moikka.
-If you follow here [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for MeeGo-Harmattan, where we target embedded systems only. Feel free to use it!
-At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.]]></description>
+    <description><![CDATA[<p>Moikka.</p>
+<p>If you follow <a href="http://gitorious.org/meego-w40" target="_blank" rel="noopener noreffer">here</a> [0] you will see a set of Debian packages that Graphics team at Nokia are continuously working to deploy a X11 implementation for <a href="http://wiki.meego.com/Glossary#M" target="_blank" rel="noopener noreffer">MeeGo-Harmattan</a>, where we target embedded systems only. Feel free to use it!</p>
+<hr>
+<p>At this point, we are very proud of ourselves because 99% of the content on these repositories are based on the ones at X main-stream of development. IWO we are directly fetching the X code-base from freedesktop.org. More important, we are shaping freedesktop implementation for embedded devices. So at this moment, we are pretty much aligned with X version 1.9.2, plus a few of other commits from master branch; the rest of components, like client side libraries, are mostly what we have on freedesktop master also.</p>]]></description>
 </item><item>
     <title>Xorg: What is it, and what does it mean?</title>
     <link>https://vignatti.com/posts/xorg-what-is-it-and-what-does-it-mean/</link>
     <pubDate>Sat, 26 Dec 2009 18:36:49 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-what-is-it-and-what-does-it-mean/</guid>
-    <description><![CDATA[Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM
-I don&rsquo;t have words for it.]]></description>
+    <description><![CDATA[<p><a href="http://talk.maemo.org/showthread.php?p=440448#post440448" target="_blank" rel="noopener noreffer"> Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM</a></p>
+<p>I don&rsquo;t have words for it.</p>]]></description>
 </item><item>
     <title>Nokia, FI...</title>
     <link>https://vignatti.com/posts/nokia-fi/</link>
     <pubDate>Fri, 12 Jun 2009 07:06:59 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/nokia-fi/</guid>
-    <description><![CDATA[&hellip; here I&rsquo;am :)]]></description>
+    <description><![CDATA[<p>&hellip; here I&rsquo;am :)</p>]]></description>
 </item></channel>
 </rss>

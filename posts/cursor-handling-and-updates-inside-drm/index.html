@@ -5,19 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>cursor handling and updates inside DRM - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="cursor handling and updates inside DRM" />
-<meta property="og:description" content="The current DRM kernel modesetting tree is already taking care to update the cursor registers and paint it to the screen. Very cool [0].
-What I&rsquo;ve done today is a shortcut between the kernel input layer and DRM to update the cursor directly on screen without the X server be notified always. Of course, a lot of issues raised up together. So let&rsquo;s try to delegates the tasks again.
-userspace app (X server):" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://vignatti.com/posts/cursor-handling-and-updates-inside-drm/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2008-07-10T07:03:49+00:00" />
-<meta property="article:modified_time" content="2008-07-10T07:03:49+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="cursor handling and updates inside DRM"/>
-<meta name="twitter:description" content="The current DRM kernel modesetting tree is already taking care to update the cursor registers and paint it to the screen. Very cool [0].
-What I&rsquo;ve done today is a shortcut between the kernel input layer and DRM to update the cursor directly on screen without the X server be notified always. Of course, a lot of issues raised up together. So let&rsquo;s try to delegates the tasks again.
-userspace app (X server):"/>
+        <title>cursor handling and updates inside DRM - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/posts/cursor-handling-and-updates-inside-drm/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="cursor handling and updates inside DRM">
+  <meta property="og:description" content="The current DRM kernel modesetting tree is already taking care to update the cursor registers and paint it to the screen. Very cool [0].
+What I’ve done today is a shortcut between the kernel input layer and DRM to update the cursor directly on screen without the X server be notified always. Of course, a lot of issues raised up together. So let’s try to delegates the tasks again.
+userspace app (X server):">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2008-07-10T07:03:49+00:00">
+    <meta property="article:modified_time" content="2008-07-10T07:03:49+00:00">
+    <meta property="article:tag" content="Cursor">
+    <meta property="article:tag" content="Drm">
+    <meta property="article:tag" content="Handling">
+    <meta property="article:tag" content="Kernel">
+    <meta property="article:tag" content="Mouse">
+    <meta property="article:tag" content="Update">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="cursor handling and updates inside DRM">
+  <meta name="twitter:description" content="The current DRM kernel modesetting tree is already taking care to update the cursor registers and paint it to the screen. Very cool [0].
+What I’ve done today is a shortcut between the kernel input layer and DRM to update the cursor directly on screen without the X server be notified always. Of course, a lot of issues raised up together. So let’s try to delegates the tasks again.
+userspace app (X server):">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -131,7 +141,7 @@ userspace app (X server):"/>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/cursor/">cursor</a>,&nbsp;<a href="/tags/drm/">drm</a>,&nbsp;<a href="/tags/handling/">handling</a>,&nbsp;<a href="/tags/kernel/">kernel</a>,&nbsp;<a href="/tags/mouse/">mouse</a>,&nbsp;<a href="/tags/update/">update</a>,&nbsp;<a href="/tags/x-server/">x server</a>,&nbsp;<a href="/tags/x11/">x11</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/cursor/">Cursor</a>,&nbsp;<a href="/tags/drm/">Drm</a>,&nbsp;<a href="/tags/handling/">Handling</a>,&nbsp;<a href="/tags/kernel/">Kernel</a>,&nbsp;<a href="/tags/mouse/">Mouse</a>,&nbsp;<a href="/tags/update/">Update</a>,&nbsp;<a href="/tags/x-server/">X Server</a>,&nbsp;<a href="/tags/x11/">X11</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -142,8 +152,8 @@ userspace app (X server):"/>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

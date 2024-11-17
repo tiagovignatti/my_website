@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>sigh - Tag - Tiago Vignatti</title>
+        <title>Sigh - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/sigh/</link>
-        <description>sigh - Tag - Tiago Vignatti</description>
+        <description>Sigh - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 26 Dec 2009 18:36:49 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/sigh/" rel="self" type="application/rss+xml" /><item>
     <title>Xorg: What is it, and what does it mean?</title>
     <link>https://vignatti.com/posts/xorg-what-is-it-and-what-does-it-mean/</link>
     <pubDate>Sat, 26 Dec 2009 18:36:49 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/xorg-what-is-it-and-what-does-it-mean/</guid>
-    <description><![CDATA[Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM
-I don&rsquo;t have words for it.]]></description>
+    <description><![CDATA[<p><a href="http://talk.maemo.org/showthread.php?p=440448#post440448" target="_blank" rel="noopener noreffer"> Just a thought is this something that should be deleted? This seems to be using about 7% of my RAM</a></p>
+<p>I don&rsquo;t have words for it.</p>]]></description>
 </item></channel>
 </rss>

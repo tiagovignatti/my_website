@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>vga arbiter - Tag - Tiago Vignatti</title>
+        <title>Vga Arbiter - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/vga-arbiter/</link>
-        <description>vga arbiter - Tag - Tiago Vignatti</description>
+        <description>Vga Arbiter - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Dec 2007 01:18:39 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/vga-arbiter/" rel="self" type="application/rss+xml" /><item>
     <title>VGA arbiter: removing RAC</title>
     <link>https://vignatti.com/posts/vga-arbiter-removing-rac/</link>
     <pubDate>Thu, 20 Dec 2007 01:18:39 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/vga-arbiter-removing-rac/</guid>
-    <description><![CDATA[The Resource Access Control inside Xorg is the guy responsible to take care of the various resources of memory and to share them in a wise manner when two or more graphics devices are active (think multi-head). As an alternative from RAC we can rely on VGA arbiter. So me and Paulo Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the arbiter code with this purpose.]]></description>
+    <description><![CDATA[<p>The Resource Access Control inside Xorg is the guy responsible to take  care of the various resources of memory and to share them in a wise  manner when two or more graphics devices are active (think multi-head).  As an alternative from RAC we can rely on <a href="http://vignatti.wordpress.com/2007/11/23/the-vga-arbiter/" target="_blank" rel="noopener noreffer">VGA arbiter</a>. So me and Paulo  Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the  arbiter code with this purpose.</p>]]></description>
 </item></channel>
 </rss>

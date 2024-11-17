@@ -1,61 +1,62 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>linux - Tag - Tiago Vignatti</title>
+        <title>Linux - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/linux/</link>
-        <description>linux - Tag - Tiago Vignatti</description>
+        <description>Linux - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Chromium Ozone-GBM explained</title>
     <link>https://vignatti.com/posts/chromium-ozone-gbm-explained/</link>
     <pubDate>Thu, 09 Oct 2014 16:46:29 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/chromium-ozone-gbm-explained/</guid>
-    <description><![CDATA[About a year ago Ozone platform abstraction layer started to take its shape in Chromium and we were excited how easily we could support Wayland platform using it. Everything went great and we helped a few Chromium targets like Crosswalk to debut in the Tizen ecosystem for example. More recently, different Ozone platforms have been implemented and only now it&rsquo;s becoming evident the significance of Ozone for Chromium Linux, generally speaking.]]></description>
+    <description><![CDATA[<div id="id-1"><p>About a year ago <a href="https://chromium.googlesource.com/chromium/src/&#43;/HEAD/docs/ozone_overview.md" target="_blank" rel="noopener noreffer">Ozone platform abstraction layer</a> started to take its shape in Chromium and we were excited how easily we could s<a href="https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/" target="_blank" rel="noopener noreffer">upport Wayland platform</a> using it. Everything went great and we helped a few Chromium targets like <a href="https://en.wikipedia.org/wiki/Crosswalk_Project" target="_blank" rel="noopener noreffer">Crosswalk</a> to debut in the Tizen ecosystem for example. More recently, different Ozone platforms have been implemented and only now it&rsquo;s becoming evident the significance of Ozone for Chromium Linux, generally speaking.</p>]]></description>
 </item><item>
     <title>Linux Graphics for Small Devices at FISL</title>
     <link>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</link>
     <pubDate>Fri, 30 Jul 2010 16:38:58 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/linux-graphics-for-small-devices-at-fisl/</guid>
-    <description><![CDATA[Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for freedesktopers though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow here.
-*actually, two nights in Porto Alegre and two nights in Curitiba.]]></description>
+    <description><![CDATA[<p>Last week I&rsquo;ve been in Brazil at 11th International Free Software Forum (FISL) talking about Linux Graphics for Small Devices*. I tried to cover a bit of everything that I learned in the world I&rsquo;ve been immersed in some near past - I guess there aren&rsquo;t many news for <em>freedesktopers</em> though. Anyway, everyone is very welcome to give any kind of feedback and comment on it. Just follow <a href="http://people.freedesktop.org/~vignatti/talks/FISL11-LinuxGraphicsForSmallDevices.pdf" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p>*actually, two nights in Porto Alegre and two nights in Curitiba. Was great to see most of my friends!</p>]]></description>
 </item><item>
     <title>adopt a child and make multi-card work on Linux</title>
     <link>https://vignatti.com/posts/adopt-a-child-and-make-multi-card-work-on-linux/</link>
     <pubDate>Wed, 23 Jun 2010 15:12:11 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/adopt-a-child-and-make-multi-card-work-on-linux/</guid>
-    <description><![CDATA[Previously, the message was for toolkit, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)
-I have started hacking on X due the laboratory at my university I was working was running an amazing project to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.]]></description>
+    <description><![CDATA[<p><em>Previously, the <a href="http://vignatti.wordpress.com/2010/06/15/toolkit-please-xlib-xcb/" target="_blank" rel="noopener noreffer">message was for toolkit</a>, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)</em></p>
+<hr>
+<p>I have started hacking on X due the <a href="http://www.c3sl.ufpr.br/" target="_blank" rel="noopener noreffer">laboratory at my university</a> I was working was running an <a href="http://pt.wikipedia.org/wiki/Paran%C3%A1_Digital" target="_blank" rel="noopener noreffer">amazing project</a> to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.100 schools used the <a href="http://en.wikipedia.org/wiki/Multiseat_configuration" target="_blank" rel="noopener noreffer">multiseat computing model</a>.</p>]]></description>
 </item><item>
     <title>multiseat - roadmap</title>
     <link>https://vignatti.com/posts/multiseat-roadmap/</link>
     <pubDate>Tue, 23 Sep 2008 04:52:08 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/multiseat-roadmap/</guid>
-    <description><![CDATA[This week our laboratory at university released the MDM utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)
-But I would like to call attention here because we&rsquo;re still relying on the ugly Xephyr solution to build the multiseat on a simple PC machine (there are people selling this solution.]]></description>
+    <description><![CDATA[<p>This week our laboratory at university <a href="http://lists.freedesktop.org/archives/xorg/2008-September/038674.html" target="_blank" rel="noopener noreffer">released</a> the <a href="http://cgit.freedesktop.org/xorg/app/mdm/" target="_blank" rel="noopener noreffer">MDM</a> utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)</p>
+<p>But I would like to call attention here because we&rsquo;re still relying on the <a href="http://www.c3sl.ufpr.br/multiterminal/howtos/howto-xephyr-en.htm" target="_blank" rel="noopener noreffer">ugly Xephyr solution</a> to build the multiseat on a simple PC machine (there are people selling this solution. Sigh). A lot of cool stuffs arriving in the linux graphics stack are lacking with this solution. So lets try trace the roadmap here that we can follow in the short/medium-term to build a good one solution:</p>]]></description>
 </item><item>
     <title>Improving input latency</title>
     <link>https://vignatti.com/posts/improving-input-latency/</link>
     <pubDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/improving-input-latency/</guid>
-    <description><![CDATA[GSoC summary #1 - July 29
-The current implementation of X Window System relies in a signal scheme to manage the input event coming from hardware devices. This scheme frequently get blocked when lot of IO is occurring (for instance, when the process is swapping in/out). Get blocked means for instance a jumping cursor on the screen and in GUI is always desirable to prioritize the system responsiveness for end users.]]></description>
+    <description><![CDATA[<p>GSoC summary #1 - July 29</p>
+<p>The current implementation of X Window System relies in a signal scheme  to manage the input event coming from hardware devices. This scheme  frequently get blocked when lot of IO is occurring (for instance, when  the process is swapping in/out). Get blocked means for instance a  jumping cursor on the screen and in GUI is always desirable to  prioritize the system responsiveness for end users. The human/computer  interface should be smooth and this is the most user visible aspect of a  system.</p>]]></description>
 </item><item>
     <title>fakemouse -- a driver that emulates a mouse</title>
     <link>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
     <pubDate>Wed, 28 May 2008 02:36:09 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
-    <description><![CDATA[For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.]]></description>
+    <description><![CDATA[<p>For my SoC <a href="http://vignatti.wordpress.com/2008/04/29/google-summer-of-code-2008/" target="_blank" rel="noopener noreffer">project</a> I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.</p>]]></description>
 </item><item>
     <title>Benchmarking it all</title>
     <link>https://vignatti.com/posts/benchmarking-it-all/</link>
     <pubDate>Thu, 21 Feb 2008 23:53:39 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/benchmarking-it-all/</guid>
-    <description><![CDATA[After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.
-The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens.]]></description>
+    <description><![CDATA[<p>After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.</p>
+<p>The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens. The experiments were performed ten times and the average result was picked.</p>]]></description>
 </item></channel>
 </rss>

@@ -5,17 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Scrutinizing X Memory, part 1: overview - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Scrutinizing X Memory, part 1: overview" />
-<meta property="og:description" content="This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
-Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://vignatti.com/posts/scrutinizing-x-memory-part-1-overview/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2010-03-25T17:58:47+00:00" />
-<meta property="article:modified_time" content="2010-03-25T17:58:47+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Scrutinizing X Memory, part 1: overview"/>
-<meta name="twitter:description" content="This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
-Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data."/>
+        <title>Scrutinizing X Memory, part 1: overview - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/posts/scrutinizing-x-memory-part-1-overview/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Scrutinizing X Memory, part 1: overview">
+  <meta property="og:description" content="This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
+Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data. Object data contains executable code and static data. Both are of little interest from the process memory management point of view given their layout is determined by the compiler and does not change during process execution. However, we can deduce some nice informations about the object. For instance, from Xorg object we are able to get some statistics about the code, identify its structure and point out architectural mistakes just looking into.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2010-03-25T17:58:47+00:00">
+    <meta property="article:modified_time" content="2010-03-25T17:58:47+00:00">
+    <meta property="article:tag" content="Embedded">
+    <meta property="article:tag" content="Footprint">
+    <meta property="article:tag" content="Memory">
+    <meta property="article:tag" content="N900">
+    <meta property="article:tag" content="X">
+    <meta property="article:tag" content="X11">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Scrutinizing X Memory, part 1: overview">
+  <meta name="twitter:description" content="This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.
+Overview One way to analyse aspects of memory usage of a given program is to scrutinize its object data. Object data contains executable code and static data. Both are of little interest from the process memory management point of view given their layout is determined by the compiler and does not change during process execution. However, we can deduce some nice informations about the object. For instance, from Xorg object we are able to get some statistics about the code, identify its structure and point out architectural mistakes just looking into.">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -136,7 +146,7 @@ Overview One way to analyse aspects of memory usage of a given program is to scr
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/embedded/">embedded</a>,&nbsp;<a href="/tags/footprint/">footprint</a>,&nbsp;<a href="/tags/memory/">memory</a>,&nbsp;<a href="/tags/n900/">n900</a>,&nbsp;<a href="/tags/x/">x</a>,&nbsp;<a href="/tags/x11/">x11</a>,&nbsp;<a href="/tags/xorg/">xorg</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/embedded/">Embedded</a>,&nbsp;<a href="/tags/footprint/">Footprint</a>,&nbsp;<a href="/tags/memory/">Memory</a>,&nbsp;<a href="/tags/n900/">N900</a>,&nbsp;<a href="/tags/x/">X</a>,&nbsp;<a href="/tags/x11/">X11</a>,&nbsp;<a href="/tags/xorg/">Xorg</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -147,8 +157,8 @@ Overview One way to analyse aspects of memory usage of a given program is to scr
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

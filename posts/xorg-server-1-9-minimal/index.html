@@ -5,19 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Xorg server 1.9 minimal - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Xorg server 1.9 minimal" />
-<meta property="og:description" content="That&rsquo;s what I&rsquo;m using for MeeGo now. Autoconf parameters, theeere we go:
-&ndash;disable-static &ndash;disable-aiglx &ndash;disable-config-dbus &ndash;disable-config-hal &ndash;disable-dbe &ndash;disable-dga &ndash;disable-dpms &ndash;disable-dri &ndash;disable-glx &ndash;disable-glx-tls &ndash;disable-int10-module &ndash;disable-ipv6 &ndash;disable-screensaver &ndash;disable-secure-rpc &ndash;disable-tcp-transport &ndash;disable-vbe &ndash;disable-vgahw &ndash;disable-xdm-auth-1 &ndash;disable-xinerama &ndash;disable-xwin &ndash;disable-xaa &ndash;disable-xace &ndash;disable-xdmcp &ndash;disable-xf86vidmode &ndash;disable-xfree86-utils &ndash;disable-xnest &ndash;disable-xvmc &ndash;disable-libdrm &ndash;enable-config-udev &ndash;enable-dri2 &ndash;enable-null-root-cursor &ndash;enable-record &ndash;enable-unit-tests &ndash;enable-visibility &ndash;enable-xorg &ndash;with-sha1=libsha1
-PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://vignatti.com/posts/xorg-server-1-9-minimal/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2010-08-18T15:22:26+00:00" />
-<meta property="article:modified_time" content="2010-08-18T15:22:26+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Xorg server 1.9 minimal"/>
-<meta name="twitter:description" content="That&rsquo;s what I&rsquo;m using for MeeGo now. Autoconf parameters, theeere we go:
-&ndash;disable-static &ndash;disable-aiglx &ndash;disable-config-dbus &ndash;disable-config-hal &ndash;disable-dbe &ndash;disable-dga &ndash;disable-dpms &ndash;disable-dri &ndash;disable-glx &ndash;disable-glx-tls &ndash;disable-int10-module &ndash;disable-ipv6 &ndash;disable-screensaver &ndash;disable-secure-rpc &ndash;disable-tcp-transport &ndash;disable-vbe &ndash;disable-vgahw &ndash;disable-xdm-auth-1 &ndash;disable-xinerama &ndash;disable-xwin &ndash;disable-xaa &ndash;disable-xace &ndash;disable-xdmcp &ndash;disable-xf86vidmode &ndash;disable-xfree86-utils &ndash;disable-xnest &ndash;disable-xvmc &ndash;disable-libdrm &ndash;enable-config-udev &ndash;enable-dri2 &ndash;enable-null-root-cursor &ndash;enable-record &ndash;enable-unit-tests &ndash;enable-visibility &ndash;enable-xorg &ndash;with-sha1=libsha1
-PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!"/>
+        <title>Xorg server 1.9 minimal - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/posts/xorg-server-1-9-minimal/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Xorg server 1.9 minimal">
+  <meta property="og:description" content="That’s what I’m using for MeeGo now. Autoconf parameters, theeere we go:
+–disable-static –disable-aiglx –disable-config-dbus –disable-config-hal –disable-dbe –disable-dga –disable-dpms –disable-dri –disable-glx –disable-glx-tls –disable-int10-module –disable-ipv6 –disable-screensaver –disable-secure-rpc –disable-tcp-transport –disable-vbe –disable-vgahw –disable-xdm-auth-1 –disable-xinerama –disable-xwin –disable-xaa –disable-xace –disable-xdmcp –disable-xf86vidmode –disable-xfree86-utils –disable-xnest –disable-xvmc –disable-libdrm –enable-config-udev –enable-dri2 –enable-null-root-cursor –enable-record –enable-unit-tests –enable-visibility –enable-xorg –with-sha1=libsha1
+PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2010-08-18T15:22:26+00:00">
+    <meta property="article:modified_time" content="2010-08-18T15:22:26+00:00">
+    <meta property="article:tag" content="Kdrive">
+    <meta property="article:tag" content="Meego">
+    <meta property="article:tag" content="Minimal">
+    <meta property="article:tag" content="Server">
+    <meta property="article:tag" content="Tiny X">
+    <meta property="article:tag" content="X11">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Xorg server 1.9 minimal">
+  <meta name="twitter:description" content="That’s what I’m using for MeeGo now. Autoconf parameters, theeere we go:
+–disable-static –disable-aiglx –disable-config-dbus –disable-config-hal –disable-dbe –disable-dga –disable-dpms –disable-dri –disable-glx –disable-glx-tls –disable-int10-module –disable-ipv6 –disable-screensaver –disable-secure-rpc –disable-tcp-transport –disable-vbe –disable-vgahw –disable-xdm-auth-1 –disable-xinerama –disable-xwin –disable-xaa –disable-xace –disable-xdmcp –disable-xf86vidmode –disable-xfree86-utils –disable-xnest –disable-xvmc –disable-libdrm –enable-config-udev –enable-dri2 –enable-null-root-cursor –enable-record –enable-unit-tests –enable-visibility –enable-xorg –with-sha1=libsha1
+PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -111,7 +121,7 @@ PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!"/>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/kdrive/">kdrive</a>,&nbsp;<a href="/tags/meego/">meego</a>,&nbsp;<a href="/tags/minimal/">minimal</a>,&nbsp;<a href="/tags/server/">server</a>,&nbsp;<a href="/tags/tiny-x/">tiny X</a>,&nbsp;<a href="/tags/x11/">x11</a>,&nbsp;<a href="/tags/xorg/">xorg</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/kdrive/">Kdrive</a>,&nbsp;<a href="/tags/meego/">Meego</a>,&nbsp;<a href="/tags/minimal/">Minimal</a>,&nbsp;<a href="/tags/server/">Server</a>,&nbsp;<a href="/tags/tiny-x/">Tiny X</a>,&nbsp;<a href="/tags/x11/">X11</a>,&nbsp;<a href="/tags/xorg/">Xorg</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -122,8 +132,8 @@ PS: stop use kdrive hardware servers (Xfbdev and variants). They are dead!"/>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

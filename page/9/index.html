@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.112.7">
+	<meta name="generator" content="Hugo 0.138.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="Tiago Vignatti" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://vignatti.com/" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tiago Vignatti"/>
-<meta name="twitter:description" content=""/>
+        <title>Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Tiago Vignatti">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tiago Vignatti">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -70,45 +71,56 @@
         data-srcset="/images/avatar.png, /images/avatar.png 1.5x, /images/avatar.png 2x"
         data-sizes="auto"
         alt="/images/avatar.png"
-        title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"></div></div>
+        title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/vga-arbiter-removing-rac/">VGA arbiter: removing RAC</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-12-20">2007-12-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">The Resource Access Control inside Xorg is the guy responsible to take care of the various resources of memory and to share them in a wise manner when two or more graphics devices are active (think multi-head). As an alternative from RAC we can rely on VGA arbiter. So me and Paulo Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the arbiter code with this purpose.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-12-20">2007-12-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>The Resource Access Control inside Xorg is the guy responsible to take  care of the various resources of memory and to share them in a wise  manner when two or more graphics devices are active (think multi-head).  As an alternative from RAC we can rely on <a href="http://vignatti.wordpress.com/2007/11/23/the-vga-arbiter/" target="_blank" rel="noopener noreffer">VGA arbiter</a>. So me and Paulo  Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the  arbiter code with this purpose.</p></div><div class="post-footer">
         <a href="/posts/vga-arbiter-removing-rac/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/the-vga-arbiter/">The VGA arbiter</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-11-23">2007-11-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content">So we finally have a working code to do the arbitration of the VGA legacy instructions. The code is separated in three pieces: vgaarb module [0], which is the arbiter itself inside Linux; the libvgaaccess [1], a set of user space functions to access the arbiter; and xf86VGAarbiter [2], the implementation of the library inside Xorg.
-Basically we wrapped all the functions of the Xorg which deals with VGA (those wrapped by the RAC and few others) using the lock/unlock functions of the libvgaaccess.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-11-23">2007-11-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>So we finally have a working code to do the arbitration of the VGA legacy instructions. The code is separated in three pieces: vgaarb module [0], which is the arbiter itself inside Linux; the libvgaaccess [1], a set of user space functions to access the arbiter; and xf86VGAarbiter [2], the implementation of the library inside Xorg.</p>
+<p>Basically we wrapped all the functions of the Xorg which deals with VGA (those wrapped by the RAC and few others) using the lock/unlock functions of the libvgaaccess. Really ugly.</p></div><div class="post-footer">
         <a href="/posts/the-vga-arbiter/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/realistic/">Realistic :(</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-11-09">2007-11-09</time></span>&nbsp;<span class="post-category">included in <a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"> </div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-11-09">2007-11-09</time></span>&nbsp;<span class="post-category">included in <a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"><p><a href="http://vignatti.files.wordpress.com/2007/11/phd1029.gif" target="_blank" rel="noopener noreffer"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://vignatti.files.wordpress.com/2007/11/phd1029.gif"
+        data-srcset="http://vignatti.files.wordpress.com/2007/11/phd1029.gif, http://vignatti.files.wordpress.com/2007/11/phd1029.gif 1.5x, http://vignatti.files.wordpress.com/2007/11/phd1029.gif 2x"
+        data-sizes="auto"
+        alt="http://vignatti.files.wordpress.com/2007/11/phd1029.gif"
+        title="whyarewedoingthis" />
+</a></p></div><div class="post-footer">
         <a href="/posts/realistic/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/macosx-gnulinux/">MacOSX -&gt; GNU/Linux</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-09-26">2007-09-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content">I used a part of the money that I earned on the SoC 2007 to buy a laptop to me. My university friends found a good price of a MacBook and we went to the shop in a total of 6 people (!) to buy this laptop trying to get some discount. It cost R$ 3400 (about USD 1800), a very cheap value to the Brazil standards.
-Fine. My MacBook arrived one week ago.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-09-26">2007-09-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"><p>I used a part of the money that I earned on the SoC 2007 to buy a laptop to me. My university friends found a good price of a MacBook and we went to the shop in a total of 6 people (!) to buy this laptop trying to get some discount. It cost R$ 3400 (about USD 1800), a very cheap value to the Brazil standards.</p>
+<p>Fine. My MacBook arrived one week ago. The shiny laptop is cool, but the OS <strong>really</strong> <strong>not</strong>. I tried to accustom myself for at least one week with that OS and I failed. The reason why is better explained by these guys below:</p></div><div class="post-footer">
         <a href="/posts/macosx-gnulinux/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/xorg-input-thread-summary-or-something-3/">Xorg input thread - summary or something #3</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-28">2007-08-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">Not so much, but here are the news:
-* For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-28">2007-08-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>Not so much, but here are the news:</p>
+<pre><code>  * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.
+  * The last new regarding the thread implementation is that we're unfortunately dealing with **critical sections** inside the X event queue (mi/mieq.c), so mutex is needed there (just to note: currently, mutex is only implemented using pthread (X11/Xthreads.h), so we also need implement something that is pthread-independent). Probably can exist other pieces of code that might be in an unpredictable way resulting some race conditions (didn't note anything strange yet!).
+  * I finally managed how to implement the page fault notifier without any patch inside the kernel. The read_cr2() can be called directly since the page fault notifier runs with interrupts disabled. The implementation can be found [here](http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c).
+</code></pre></div><div class="post-footer">
         <a href="/posts/xorg-input-thread-summary-or-something-3/">Read More</a>
         
     </div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/mlocking-adventure/">mlock()&#39;ing adventure</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-10">2007-08-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content">It&rsquo;s being a great adventure to lock the X input thread on the memory. I&rsquo;m touching a lot of things that I&rsquo;d never imagined before :)
-To trace the pages that are faulting when I move the device pointer I&rsquo;m using my own ultra mega super kernel&rsquo;s page fault notifier. It&rsquo;s very simple, but as the things are not always perfect, it needs a little patch in the kernel.
-The page fault notifier does (almost) all that I need to trace exactly which piece of code inside X is causing the page faults.</div><div class="post-footer">
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-10">2007-08-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>It&rsquo;s being a great adventure to lock the X input thread on the memory. I&rsquo;m touching a lot of things that I&rsquo;d never imagined before :)</p>
+<p>To trace the pages that are faulting when I move the device pointer I&rsquo;m using my own <a href="http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c" target="_blank" rel="noopener noreffer">ultra mega super kernel&rsquo;s page fault notifier</a>. It&rsquo;s very simple, but as the things are not always perfect, it needs a little <a href="http://lkml.org/lkml/diff/2007/7/26/512/1" target="_blank" rel="noopener noreffer">patch</a> in the kernel.</p>
+<p>The page fault notifier does (almost) all that I need to trace exactly which piece of code inside X is causing the page faults. So, as I said <a href="http://vignatti.wordpress.com/2007/07/27/page-fault-notifier/" target="_blank" rel="noopener noreffer">here</a>, I compare the notifier&rsquo;s output with the symbol table of X binary disassembled. Believe me, it works!</p></div><div class="post-footer">
         <a href="/posts/mlocking-adventure/">Read More</a>
         
     </div>
@@ -140,8 +152,8 @@ The page fault notifier does (almost) all that I need to trace exactly which pie
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

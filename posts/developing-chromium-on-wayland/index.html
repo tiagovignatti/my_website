@@ -5,19 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>developing Chromium on Wayland - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:title" content="developing Chromium on Wayland" />
-<meta property="og:description" content="A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.
+        <title>developing Chromium on Wayland - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/posts/developing-chromium-on-wayland/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="developing Chromium on Wayland">
+  <meta property="og:description" content="A few weeks ago we released Ozone-Wayland and now we’d like to detail for you the development process and strategy behind it… ah, and the title is not developing Chromium, the browser; it’s developing Chromium,** the project**! You will understand why next.
 communities
-There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://vignatti.com/posts/developing-chromium-on-wayland/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2013-10-07T14:42:17+00:00" />
-<meta property="article:modified_time" content="2013-10-07T14:42:17+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="developing Chromium on Wayland"/>
-<meta name="twitter:description" content="A few weeks ago we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.
+There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS. Very near to that one there’s Blink engine’s community, which interacts (and overlaps) a lot with the Chromium’s; I can’t tell exactly in numbers but there’s huge number of people, vendors and commercial involved in Chromium and, more important to us, there’s a lot of quality code being cooked in there for leveraging Web technologies in general.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2013-10-07T14:42:17+00:00">
+    <meta property="article:modified_time" content="2013-10-07T14:42:17+00:00">
+    <meta property="article:tag" content="Browser">
+    <meta property="article:tag" content="Chrome">
+    <meta property="article:tag" content="Chromium">
+    <meta property="article:tag" content="Content Shell">
+    <meta property="article:tag" content="Open-Source">
+    <meta property="article:tag" content="Ozone">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="developing Chromium on Wayland">
+  <meta name="twitter:description" content="A few weeks ago we released Ozone-Wayland and now we’d like to detail for you the development process and strategy behind it… ah, and the title is not developing Chromium, the browser; it’s developing Chromium,** the project**! You will understand why next.
 communities
-There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS."/>
+There are three main projects involved in here: Chromium, Wayland and Ozone-Wayland. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS. Very near to that one there’s Blink engine’s community, which interacts (and overlaps) a lot with the Chromium’s; I can’t tell exactly in numbers but there’s huge number of people, vendors and commercial involved in Chromium and, more important to us, there’s a lot of quality code being cooked in there for leveraging Web technologies in general.">
 <meta name="application-name" content="Tiago Vignatti">
 <meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
@@ -140,7 +150,7 @@ There are three main projects involved in here: Chromium, Wayland and Ozone-Way
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/browser/">Browser</a>,&nbsp;<a href="/tags/chrome/">Chrome</a>,&nbsp;<a href="/tags/chromium/">Chromium</a>,&nbsp;<a href="/tags/content-shell/">Content Shell</a>,&nbsp;<a href="/tags/open-source/">open-source</a>,&nbsp;<a href="/tags/ozone/">Ozone</a>,&nbsp;<a href="/tags/ozone-wayland/">Ozone-Wayland</a>,&nbsp;<a href="/tags/wayland/">wayland</a>,&nbsp;<a href="/tags/web/">Web</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/browser/">Browser</a>,&nbsp;<a href="/tags/chrome/">Chrome</a>,&nbsp;<a href="/tags/chromium/">Chromium</a>,&nbsp;<a href="/tags/content-shell/">Content Shell</a>,&nbsp;<a href="/tags/open-source/">Open-Source</a>,&nbsp;<a href="/tags/ozone/">Ozone</a>,&nbsp;<a href="/tags/ozone-wayland/">Ozone-Wayland</a>,&nbsp;<a href="/tags/wayland/">Wayland</a>,&nbsp;<a href="/tags/web/">Web</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
@@ -151,8 +161,8 @@ There are three main projects involved in here: Chromium, Wayland and Ozone-Way
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 

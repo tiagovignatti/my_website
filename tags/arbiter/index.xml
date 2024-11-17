@@ -1,22 +1,25 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>arbiter - Tag - Tiago Vignatti</title>
+        <title>Arbiter - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/arbiter/</link>
-        <description>arbiter - Tag - Tiago Vignatti</description>
+        <description>Arbiter - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Feb 2008 21:59:17 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/arbiter/" rel="self" type="application/rss+xml" /><item>
     <title>VgaArbiter wiki</title>
     <link>https://vignatti.com/posts/vgaarbiter-wiki/</link>
     <pubDate>Mon, 25 Feb 2008 21:59:17 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/vgaarbiter-wiki/</guid>
-    <description><![CDATA[Today, Paulo Zanoni help me to put in a shape the VgaArbiter wiki page. The primary intention of that page is to bring more developers in that project and some users++ who could also help testing. Feedback is very welcome. Here is the link.]]></description>
+    <description><![CDATA[<p>Today, <a href="http://przanoni.blogspot.com/" target="_blank" rel="noopener noreffer">Paulo Zanoni</a> help me to put in a shape the VgaArbiter wiki page.
+The primary intention of that page is to bring more developers in that
+project and some users++ who could also help testing. Feedback is very
+welcome. <a href="http://wiki.x.org/wiki/VgaArbiter" target="_blank" rel="noopener noreffer">Here</a> is the link.</p>]]></description>
 </item><item>
     <title>Benchmarking it all</title>
     <link>https://vignatti.com/posts/benchmarking-it-all/</link>
     <pubDate>Thu, 21 Feb 2008 23:53:39 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/benchmarking-it-all/</guid>
-    <description><![CDATA[After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.
-The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens.]]></description>
+    <description><![CDATA[<p>After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.</p>
+<p>The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens. The experiments were performed ten times and the average result was picked.</p>]]></description>
 </item></channel>
 </rss>

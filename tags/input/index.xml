@@ -1,52 +1,52 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>input - Tag - Tiago Vignatti</title>
+        <title>Input - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/input/</link>
-        <description>input - Tag - Tiago Vignatti</description>
+        <description>Input - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/input/" rel="self" type="application/rss+xml" /><item>
     <title>Parallel events (panic) with X</title>
     <link>https://vignatti.com/posts/parallel-events-panic-with-x/</link>
     <pubDate>Mon, 18 Aug 2008 22:02:16 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/parallel-events-panic-with-x/</guid>
-    <description><![CDATA[Unfortunately that model which I described some weeks ago to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(
-I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way.]]></description>
+    <description><![CDATA[<p>Unfortunately that model which I <a href="http://vignatti.wordpress.com/2008/08/07/keep-it-going/" target="_blank" rel="noopener noreffer">described some weeks ago</a> to put the input event delivery of the X server in a separate thread wouldn&rsquo;t be an advantage. I precipitated myself thinking that it could be feasible. Sorry :(</p>
+<p>I started to implement all this but it showed a very boring task to grab all the globals variables which both threads touch and to lock it. So I decided to stop going in this way. It&rsquo;s hard to program thinking in parallel. It&rsquo;s even harder to debug a program with severals flows. More, the tools don&rsquo;t help you (if you have lucky, gdb will work).</p>]]></description>
 </item><item>
     <title>Priorities and scheduling hints for X server threads</title>
     <link>https://vignatti.com/posts/priorities-and-scheduling-hints-for-x-server-threads/</link>
     <pubDate>Thu, 07 Aug 2008 23:33:57 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/priorities-and-scheduling-hints-for-x-server-threads/</guid>
-    <description><![CDATA[Input events routed through another thread/process can have bad effects on latency because we can&rsquo;t guarantee that it will get scheduled at the right moment. Although this is hard to see happening with the current X server threaded implementation, we must design something to avoid it. One way to improve the responsiveness is to give a high priority to the input thread and also adjust the CPU scheduling. (Note that this will not avoid problems related with page faults which usually happen in the X input flow.]]></description>
+    <description><![CDATA[<p>Input events routed through another thread/process can have bad effects on latency because we can&rsquo;t guarantee that it will get scheduled at the right moment. Although this is hard to see happening with the current X server threaded implementation, we must design something to avoid it. One way to improve the responsiveness is to give a high priority to the input thread and also adjust the CPU scheduling. (Note that this will not avoid problems related with <a href="http://vignatti.wordpress.com/2007/08/10/mlocking-adventure/" target="_blank" rel="noopener noreffer">page faults</a> which usually happen in the X input flow.)</p>]]></description>
 </item><item>
     <title>keep it going...</title>
     <link>https://vignatti.com/posts/keep-it-going/</link>
     <pubDate>Thu, 07 Aug 2008 23:22:27 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/keep-it-going/</guid>
-    <description><![CDATA[Given that GSoC &lsquo;08 is getting close to the end, strategy number 2 showed more feasible to proceed my work. Strategy #3 would be a lot of fun but would imply a hell massive codification as well (also a little out of our scope). Unfortunately no-no for now.]]></description>
+    <description><![CDATA[<p>Given that GSoC &lsquo;08 is getting close to the end, <a href="http://vignatti.wordpress.com/2008/07/29/improving-input-latency/" target="_blank" rel="noopener noreffer">strategy number 2</a> showed more feasible to proceed my work. Strategy #3 would be a lot of fun but would imply a hell massive codification as well (also a little out of <a href="http://vignatti.wordpress.com/2008/04/29/google-summer-of-code-2008/" target="_blank" rel="noopener noreffer">our scope</a>). Unfortunately no-no for now.</p>]]></description>
 </item><item>
     <title>Improving input latency</title>
     <link>https://vignatti.com/posts/improving-input-latency/</link>
     <pubDate>Wed, 30 Jul 2008 01:09:31 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/improving-input-latency/</guid>
-    <description><![CDATA[GSoC summary #1 - July 29
-The current implementation of X Window System relies in a signal scheme to manage the input event coming from hardware devices. This scheme frequently get blocked when lot of IO is occurring (for instance, when the process is swapping in/out). Get blocked means for instance a jumping cursor on the screen and in GUI is always desirable to prioritize the system responsiveness for end users.]]></description>
+    <description><![CDATA[<p>GSoC summary #1 - July 29</p>
+<p>The current implementation of X Window System relies in a signal scheme  to manage the input event coming from hardware devices. This scheme  frequently get blocked when lot of IO is occurring (for instance, when  the process is swapping in/out). Get blocked means for instance a  jumping cursor on the screen and in GUI is always desirable to  prioritize the system responsiveness for end users. The human/computer  interface should be smooth and this is the most user visible aspect of a  system.</p>]]></description>
 </item><item>
     <title>fakemouse -- a driver that emulates a mouse</title>
     <link>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</link>
     <pubDate>Wed, 28 May 2008 02:36:09 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/fakemouse-a-driver-that-emulates-a-mouse/</guid>
-    <description><![CDATA[For my SoC project I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.]]></description>
+    <description><![CDATA[<p>For my SoC <a href="http://vignatti.wordpress.com/2008/04/29/google-summer-of-code-2008/" target="_blank" rel="noopener noreffer">project</a> I need some mechanism to evaluate the improvement of the input thread inside X. So I wrote a simple kernel driver that emulates the mouse device moving and emitting bits of a simple pattern. I don&rsquo;t know if something like this already exists or if there are other ways to do it, but the fact is that the solution I thought took me only few hours between the moment that I imagined, collected some ideas on the Web and implemented it.</p>]]></description>
 </item><item>
     <title>Google Summer of Code 2008</title>
     <link>https://vignatti.com/posts/google-summer-of-code-2008/</link>
     <pubDate>Tue, 29 Apr 2008 21:31:27 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/google-summer-of-code-2008/</guid>
-    <description><![CDATA[I&rsquo;m very happy to say that I was selected again to work on Google Summer of Code with X.Org Foundation. Daniel will be my mentor again. Thanks Google. Thanks X.Org!
-In the last year we did a nice work separating the input event generation code of the X server into a different thread. We saw some performance improvement there specially because the implementation is not using signals anymore to wake up the server when some device emits an event.]]></description>
+    <description><![CDATA[<p>I&rsquo;m very happy to say that I was selected <strong>again</strong> to work on Google Summer of Code with X.Org Foundation. <a href="http://www.fooishbar.org/blog" target="_blank" rel="noopener noreffer">Daniel</a> will be my mentor again. Thanks Google. Thanks X.Org!</p>
+<p>In the last year we did a nice work separating the input event generation code of the X server into a different thread. We saw some performance improvement there specially because the implementation is not using signals anymore to wake up the server when some device emits an event. The reason why is that when a process is in the uninterruptible sleep (D state) signals are delayed and the mouse cursor lags.</p>]]></description>
 </item></channel>
 </rss>

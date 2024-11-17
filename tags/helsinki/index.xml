@@ -1,26 +1,26 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>helsinki - Tag - Tiago Vignatti</title>
+        <title>Helsinki - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/helsinki/</link>
-        <description>helsinki - Tag - Tiago Vignatti</description>
+        <description>Helsinki - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 09 Nov 2009 01:47:17 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/helsinki/" rel="self" type="application/rss+xml" /><item>
     <title>my dear diary... (some not-so-old memories)</title>
     <link>https://vignatti.com/posts/my-dear-diary-some-not-so-old-memories/</link>
     <pubDate>Mon, 09 Nov 2009 01:47:17 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/my-dear-diary-some-not-so-old-memories/</guid>
-    <description><![CDATA[Portland, OR
-I was so proud for the forth time be part of the X crew, this time in Portland. Really amazing the city. I had the opportunity to play tourist and visit some nice places.
-My X conferences
-BTW, I just collect the photos of all four X conferences that I&rsquo;ve attended. It&rsquo;s not much photos but there&rsquo;s some funny things :)
-X on embedded
-The cool thing of the work that I&rsquo;m doing at Nokia is that I can publish and discuss mostly all X fun with the open source communities.]]></description>
+    <description><![CDATA[<p><strong><em>Portland, OR</em></strong></p>
+<p>I was so proud for the forth time be part of the X crew, this time in Portland. Really amazing the city. I had the opportunity to play tourist and visit <a href="http://www.flickr.com/photos/tiagovignatti/sets/72157622611218823/" target="_blank" rel="noopener noreffer">some nice places</a>.</p>
+<p><em><strong>My X conferences</strong></em></p>
+<p>BTW, I just collect the photos of all four <a href="http://www.flickr.com/photos/tiagovignatti/collections/72157622382815859/" target="_blank" rel="noopener noreffer">X conferences that I&rsquo;ve attended</a>. It&rsquo;s not much photos but there&rsquo;s some funny things :)</p>
+<p><strong><em>X on embedded</em></strong></p>
+<p>The cool thing of the work that I&rsquo;m doing at Nokia is that I can publish and discuss mostly all X fun with the open source communities. &ldquo;Mostly&rdquo; because, for the last device - the N-shiny-and-awesome-900 - for instance, the video driver is closed (provided by Imagination), so we cannot comment much regarding such driver stack :( C&rsquo;est la vie.</p>]]></description>
 </item><item>
     <title>Nokia, FI...</title>
     <link>https://vignatti.com/posts/nokia-fi/</link>
     <pubDate>Fri, 12 Jun 2009 07:06:59 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/nokia-fi/</guid>
-    <description><![CDATA[&hellip; here I&rsquo;am :)]]></description>
+    <description><![CDATA[<p>&hellip; here I&rsquo;am :)</p>]]></description>
 </item></channel>
 </rss>

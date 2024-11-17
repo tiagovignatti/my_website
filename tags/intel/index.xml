@@ -9,14 +9,15 @@
     <pubDate>Wed, 18 Jan 2012 13:53:43 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/starting-on-wayland-development/</guid>
-    <description><![CDATA[Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!
-While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love.]]></description>
+    <description><![CDATA[<p>Do you wanna contribute to a funky open-source project? Are you tired of your nerdy and boring community of developers? Are you the one that wants to get rid of X because it&rsquo;s a giant, old and fat dinosaur in your system? :) Cool, I have a project to solve your problems!</p>
+<hr>
+<p>While there&rsquo;s still lot of churn in the protocol, and yet our goal is soon to wrap up all we&rsquo;ve been doing to a steady and settle-on-the-stone one description, there&rsquo;s a lot on the implementation side that needs love. And that mainly concern Weston compositor, which is becoming the de facto compositor on several systems targeting Wayland.</p>]]></description>
 </item><item>
     <title>... if I didn&#39;t say</title>
     <link>https://vignatti.com/posts/if-i-didnt-say/</link>
     <pubDate>Thu, 22 Sep 2011 15:55:54 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/if-i-didnt-say/</guid>
-    <description><![CDATA[Hello Intel Finland :) Here I am now; four months already at OTC big team.]]></description>
+    <description><![CDATA[<p>Hello Intel Finland :) Here I am now; four months already at OTC big team.</p>]]></description>
 </item></channel>
 </rss>

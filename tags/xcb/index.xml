@@ -1,23 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>xcb - Tag - Tiago Vignatti</title>
+        <title>Xcb - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/xcb/</link>
-        <description>xcb - Tag - Tiago Vignatti</description>
+        <description>Xcb - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 17 Oct 2012 13:15:38 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/xcb/" rel="self" type="application/rss+xml" /><item>
     <title>the damn small Wayland API</title>
     <link>https://vignatti.com/posts/the-damn-small-wayland-api/</link>
     <pubDate>Wed, 17 Oct 2012 13:15:38 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/the-damn-small-wayland-api/</guid>
-    <description><![CDATA[Wayland 1.0 release is knocking the door and people keep asking &ldquo;why Wayland if we got X already&rdquo;, or things like performance, memory consumption, power savings and other kind of advantages on having Wayland instead X. Those are very important points to consider, of course, but for one individual actually programming the graphics system the answer should be straightforward: Wayland API is damn small.
-1. But who&rsquo;s going to program Wayland or X?]]></description>
+    <description><![CDATA[<p><a href="http://lists.freedesktop.org/archives/wayland-devel/2012-October/005878.html" target="_blank" rel="noopener noreffer">Wayland 1.0 release is knocking the door</a> and people keep asking &ldquo;why Wayland if we got X already&rdquo;, or things like performance, memory consumption, power savings and other kind of advantages on having Wayland instead X. Those are very important points to consider, of course, but for one individual actually programming the graphics system the answer should be straightforward: Wayland API is damn small.</p>
+<p><em>1. But who&rsquo;s going to program Wayland or X?</em></p>]]></description>
 </item><item>
     <title>Toolkit, please: Xlib -&gt; XCB</title>
     <link>https://vignatti.com/posts/toolkit-please-xlib-xcb/</link>
     <pubDate>Tue, 15 Jun 2010 15:24:11 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/toolkit-please-xlib-xcb/</guid>
-    <description><![CDATA[We all know since 2006 (?) that the world is turning to use XCB instead Xlib as the interface between X clients and the server. The advantages of using XCB is well know but, even so, it&rsquo;s being adopted very slowly for some reason - for instance no toolkits yet ported it. If this serves as a motivation, Alan got a really nice measurements porting a simple X app.
-Translate your toolkit and application now!]]></description>
+    <description><![CDATA[<p>We all know since 2006 (?) that the world is turning to use XCB instead Xlib as the interface between X clients and the server. The advantages of using XCB is <a href="http://xcb.freedesktop.org/Features/" target="_blank" rel="noopener noreffer">well know</a> but, even so, it&rsquo;s being adopted very slowly for some reason - for instance no toolkits yet ported it. If this serves as a motivation, <a href="http://blogs.sun.com/alanc/" target="_blank" rel="noopener noreffer">Alan</a> got a really <a href="http://lists.freedesktop.org/archives/xcb/2010-June/006111.html" target="_blank" rel="noopener noreffer">nice measurements</a> porting a simple X app.</p>
+<p>Translate your toolkit and application <strong>now</strong>! :)</p>]]></description>
 </item></channel>
 </rss>

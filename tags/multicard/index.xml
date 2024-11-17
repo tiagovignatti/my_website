@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>multicard - Tag - Tiago Vignatti</title>
+        <title>Multicard - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/multicard/</link>
-        <description>multicard - Tag - Tiago Vignatti</description>
+        <description>Multicard - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Jun 2010 15:12:11 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/multicard/" rel="self" type="application/rss+xml" /><item>
     <title>adopt a child and make multi-card work on Linux</title>
     <link>https://vignatti.com/posts/adopt-a-child-and-make-multi-card-work-on-linux/</link>
     <pubDate>Wed, 23 Jun 2010 15:12:11 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/adopt-a-child-and-make-multi-card-work-on-linux/</guid>
-    <description><![CDATA[Previously, the message was for toolkit, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)
-I have started hacking on X due the laboratory at my university I was working was running an amazing project to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.]]></description>
+    <description><![CDATA[<p><em>Previously, the <a href="http://vignatti.wordpress.com/2010/06/15/toolkit-please-xlib-xcb/" target="_blank" rel="noopener noreffer">message was for toolkit</a>, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)</em></p>
+<hr>
+<p>I have started hacking on X due the <a href="http://www.c3sl.ufpr.br/" target="_blank" rel="noopener noreffer">laboratory at my university</a> I was working was running an <a href="http://pt.wikipedia.org/wiki/Paran%C3%A1_Digital" target="_blank" rel="noopener noreffer">amazing project</a> to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.100 schools used the <a href="http://en.wikipedia.org/wiki/Multiseat_configuration" target="_blank" rel="noopener noreffer">multiseat computing model</a>.</p>]]></description>
 </item></channel>
 </rss>

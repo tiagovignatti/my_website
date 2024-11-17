@@ -1,45 +1,49 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>multiseat - Tag - Tiago Vignatti</title>
+        <title>Multiseat - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/multiseat/</link>
-        <description>multiseat - Tag - Tiago Vignatti</description>
+        <description>Multiseat - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 23 Jun 2010 15:12:11 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/multiseat/" rel="self" type="application/rss+xml" /><item>
     <title>adopt a child and make multi-card work on Linux</title>
     <link>https://vignatti.com/posts/adopt-a-child-and-make-multi-card-work-on-linux/</link>
     <pubDate>Wed, 23 Jun 2010 15:12:11 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/adopt-a-child-and-make-multi-card-work-on-linux/</guid>
-    <description><![CDATA[Previously, the message was for toolkit, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)
-I have started hacking on X due the laboratory at my university I was working was running an amazing project to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.]]></description>
+    <description><![CDATA[<p><em>Previously, the <a href="http://vignatti.wordpress.com/2010/06/15/toolkit-please-xlib-xcb/" target="_blank" rel="noopener noreffer">message was for toolkit</a>, now it targets new upcoming developers&hellip; okay, if I&rsquo;d be offensive I could say it targets vendor distributions which care for desktop on Linux :)</em></p>
+<hr>
+<p>I have started hacking on X due the <a href="http://www.c3sl.ufpr.br/" target="_blank" rel="noopener noreffer">laboratory at my university</a> I was working was running an <a href="http://pt.wikipedia.org/wiki/Paran%C3%A1_Digital" target="_blank" rel="noopener noreffer">amazing project</a> to employ computer labs in all high-schools of the state I was living, in Brazil. It was a successful and all 2.100 schools used the <a href="http://en.wikipedia.org/wiki/Multiseat_configuration" target="_blank" rel="noopener noreffer">multiseat computing model</a>.</p>]]></description>
 </item><item>
     <title>multiseat with multiple X servers (or &#34;the right way&#34;)</title>
     <link>https://vignatti.com/posts/multiseat-with-multiple-x-servers-or-the-right-way/</link>
     <pubDate>Fri, 24 Jul 2009 13:56:33 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/multiseat-with-multiple-x-servers-or-the-right-way/</guid>
-    <description><![CDATA[So last week I posted on lkml an old patch that we were carrying for a long time in the Linux community. It basically brings the multiple (old) video cards functionally again on Linux and X server (and this time doing on the right and beauty way). For the people that was following multiseat implementations, this is a HUGE step: we will finally be able to discard the old and ugly hack (a mix of Xorg, several Xephyr servers + evdev) and and go to a clean way, starting multiple X servers in parallel.]]></description>
+    <description><![CDATA[<p>So last week I <a href="http://lkml.org/lkml/2009/7/16/243" target="_blank" rel="noopener noreffer">posted</a> on lkml an old patch that we were carrying for a long time in the Linux community. It basically brings the multiple (old) video cards functionally again on Linux and X server (and this time doing on the right and beauty way). For the people that was following multiseat implementations, this is a HUGE step: we will finally be able to discard the old and ugly hack (a mix of Xorg, several Xephyr servers + evdev) and and go to a clean way, starting multiple X servers in parallel. Cool! Well, not that much, because it might take some time to be in your beloved distribution :)</p>]]></description>
 </item><item>
     <title>multiseat - roadmap</title>
     <link>https://vignatti.com/posts/multiseat-roadmap/</link>
     <pubDate>Tue, 23 Sep 2008 04:52:08 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/multiseat-roadmap/</guid>
-    <description><![CDATA[This week our laboratory at university released the MDM utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)
-But I would like to call attention here because we&rsquo;re still relying on the ugly Xephyr solution to build the multiseat on a simple PC machine (there are people selling this solution.]]></description>
+    <description><![CDATA[<p>This week our laboratory at university <a href="http://lists.freedesktop.org/archives/xorg/2008-September/038674.html" target="_blank" rel="noopener noreffer">released</a> the <a href="http://cgit.freedesktop.org/xorg/app/mdm/" target="_blank" rel="noopener noreffer">MDM</a> utility to ease the process of installation and configuration of a multiseat box. The idea is that the end-user should not use some boring and hard howtos anymore to deploy it. Just installing a distro package must be enough now. Try it, use it, report the bugs and send the patches! :)</p>
+<p>But I would like to call attention here because we&rsquo;re still relying on the <a href="http://www.c3sl.ufpr.br/multiterminal/howtos/howto-xephyr-en.htm" target="_blank" rel="noopener noreffer">ugly Xephyr solution</a> to build the multiseat on a simple PC machine (there are people selling this solution. Sigh). A lot of cool stuffs arriving in the linux graphics stack are lacking with this solution. So lets try trace the roadmap here that we can follow in the short/medium-term to build a good one solution:</p>]]></description>
 </item><item>
     <title>VgaArbiter wiki</title>
     <link>https://vignatti.com/posts/vgaarbiter-wiki/</link>
     <pubDate>Mon, 25 Feb 2008 21:59:17 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/vgaarbiter-wiki/</guid>
-    <description><![CDATA[Today, Paulo Zanoni help me to put in a shape the VgaArbiter wiki page. The primary intention of that page is to bring more developers in that project and some users++ who could also help testing. Feedback is very welcome. Here is the link.]]></description>
+    <description><![CDATA[<p>Today, <a href="http://przanoni.blogspot.com/" target="_blank" rel="noopener noreffer">Paulo Zanoni</a> help me to put in a shape the VgaArbiter wiki page.
+The primary intention of that page is to bring more developers in that
+project and some users++ who could also help testing. Feedback is very
+welcome. <a href="http://wiki.x.org/wiki/VgaArbiter" target="_blank" rel="noopener noreffer">Here</a> is the link.</p>]]></description>
 </item><item>
     <title>Benchmarking it all</title>
     <link>https://vignatti.com/posts/benchmarking-it-all/</link>
     <pubDate>Thu, 21 Feb 2008 23:53:39 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/benchmarking-it-all/</guid>
-    <description><![CDATA[After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.
-The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens.]]></description>
+    <description><![CDATA[<p>After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.</p>
+<p>The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens. The experiments were performed ten times and the average result was picked.</p>]]></description>
 </item></channel>
 </rss>

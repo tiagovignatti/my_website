@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>vga, arbiter, xorg, xserver, x11 - Tag - Tiago Vignatti</title>
+        <title>Vga, Arbiter, Xorg, Xserver, X11 - Tag - Tiago Vignatti</title>
         <link>https://vignatti.com/tags/vga-arbiter-xorg-xserver-x11/</link>
-        <description>vga, arbiter, xorg, xserver, x11 - Tag - Tiago Vignatti</description>
+        <description>Vga, Arbiter, Xorg, Xserver, X11 - Tag - Tiago Vignatti</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 23 Nov 2007 15:26:39 &#43;0000</lastBuildDate><atom:link href="https://vignatti.com/tags/vga-arbiter-xorg-xserver-x11/" rel="self" type="application/rss+xml" /><item>
     <title>The VGA arbiter</title>
     <link>https://vignatti.com/posts/the-vga-arbiter/</link>
     <pubDate>Fri, 23 Nov 2007 15:26:39 &#43;0000</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/the-vga-arbiter/</guid>
-    <description><![CDATA[So we finally have a working code to do the arbitration of the VGA legacy instructions. The code is separated in three pieces: vgaarb module [0], which is the arbiter itself inside Linux; the libvgaaccess [1], a set of user space functions to access the arbiter; and xf86VGAarbiter [2], the implementation of the library inside Xorg.
-Basically we wrapped all the functions of the Xorg which deals with VGA (those wrapped by the RAC and few others) using the lock/unlock functions of the libvgaaccess.]]></description>
+    <description><![CDATA[<p>So we finally have a working code to do the arbitration of the VGA legacy instructions. The code is separated in three pieces: vgaarb module [0], which is the arbiter itself inside Linux; the libvgaaccess [1], a set of user space functions to access the arbiter; and xf86VGAarbiter [2], the implementation of the library inside Xorg.</p>
+<p>Basically we wrapped all the functions of the Xorg which deals with VGA (those wrapped by the RAC and few others) using the lock/unlock functions of the libvgaaccess. Really ugly.</p>]]></description>
 </item></channel>
 </rss>
