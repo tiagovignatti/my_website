@@ -59,10 +59,10 @@ theme = "LoveIt"
 
 # Social config about the author
   [params.social]
-    # GitHub = "tiagovignatti"
+    GitHub = "tiagovignatti"
     # Linkedin = "tiagovignatti"
     # Twitter = "tiagovignatti"
-    Instagram = ""
+    Instagram = "tiagovignatti"
     Facebook = ""
     Telegram = ""
     Medium = ""
