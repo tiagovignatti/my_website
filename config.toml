@@ -6,7 +6,7 @@ languageCode = "en"
 title = "Tiago Vignatti"
 
 # Change the default theme to be use when building the site with Hugo
-theme = "LoveIt"
+theme = ["LoveIt", "hugo-shortcode-gallery"]
 
 [params]
   # LoveIt theme version
