@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.138.0">
+	<meta name="generator" content="Hugo 0.139.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -73,6 +73,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/benchmarking-it-all/">Benchmarking it all</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-21">2008-02-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.</p>
+<p>The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens. The experiments were performed ten times and the average result was picked.</p></div><div class="post-footer">
+        <a href="/posts/benchmarking-it-all/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/vga-arbiter-removing-rac/">VGA arbiter: removing RAC</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-12-20">2007-12-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>The Resource Access Control inside Xorg is the guy responsible to take  care of the various resources of memory and to share them in a wise  manner when two or more graphics devices are active (think multi-head).  As an alternative from RAC we can rely on <a href="http://vignatti.wordpress.com/2007/11/23/the-vga-arbiter/" target="_blank" rel="noopener noreffer">VGA arbiter</a>. So me and Paulo  Zanoni spent the last days implementing &ldquo;the glue&rdquo; of Xorg to use the  arbiter code with this purpose.</p></div><div class="post-footer">
         <a href="/posts/vga-arbiter-removing-rac/">Read More</a>
@@ -116,14 +123,6 @@
         <a href="/posts/xorg-input-thread-summary-or-something-3/">Read More</a>
         
     </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/mlocking-adventure/">mlock()&#39;ing adventure</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-10">2007-08-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>It&rsquo;s being a great adventure to lock the X input thread on the memory. I&rsquo;m touching a lot of things that I&rsquo;d never imagined before :)</p>
-<p>To trace the pages that are faulting when I move the device pointer I&rsquo;m using my own <a href="http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c" target="_blank" rel="noopener noreffer">ultra mega super kernel&rsquo;s page fault notifier</a>. It&rsquo;s very simple, but as the things are not always perfect, it needs a little <a href="http://lkml.org/lkml/diff/2007/7/26/512/1" target="_blank" rel="noopener noreffer">patch</a> in the kernel.</p>
-<p>The page fault notifier does (almost) all that I need to trace exactly which piece of code inside X is causing the page faults. So, as I said <a href="http://vignatti.wordpress.com/2007/07/27/page-fault-notifier/" target="_blank" rel="noopener noreffer">here</a>, I compare the notifier&rsquo;s output with the symbol table of X binary disassembled. Believe me, it works!</p></div><div class="post-footer">
-        <a href="/posts/mlocking-adventure/">Read More</a>
-        
-    </div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -150,9 +149,13 @@
                     <span class="page-link">
                         <a href="/page/11/">11</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/12/">12</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

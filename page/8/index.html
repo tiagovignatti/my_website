@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.138.0">
+	<meta name="generator" content="Hugo 0.139.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
@@ -73,6 +73,14 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/cursor-handling-and-updates-inside-drm/">cursor handling and updates inside DRM</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-07-10">2008-07-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content"><p>The current DRM kernel modesetting tree is already taking care to update the cursor registers and paint it to the screen. Very cool [0].</p>
+<p>What I&rsquo;ve done today is a shortcut between the kernel input layer and DRM to update the cursor directly on screen without the X server be notified always. Of course, a lot of issues raised up together. So let&rsquo;s try to delegates the tasks again.</p>
+<p><strong>userspace app (X server):</strong></p></div><div class="post-footer">
+        <a href="/posts/cursor-handling-and-updates-inside-drm/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/to-thread-the-x-server/">to thread the X server (?)</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-06-17">2008-06-17</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2008/"><i class="far fa-folder fa-fw"></i>SoC2008</a></span></div><div class="content"><p>I really don&rsquo;t like to read large blog posts. Anyway&hellip;</p>
 <p>What I did so far is a separated thread that takes care only the injection stage on the X server queue. Who is interested with the results, please read some past posts in my blog. It is currently in a very good shape (synced with post-mpx merge, all input devices are inside the thread and etc). The implementation looks like this:
@@ -109,13 +117,6 @@ welcome. <a href="http://wiki.x.org/wiki/VgaArbiter" target="_blank" rel="noopen
         <a href="/posts/vgaarbiter-wiki/">Read More</a>
         
     </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/benchmarking-it-all/">Benchmarking it all</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-21">2008-02-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.</p>
-<p>The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens. The experiments were performed ten times and the average result was picked.</p></div><div class="post-footer">
-        <a href="/posts/benchmarking-it-all/">Read More</a>
-        
-    </div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -143,12 +144,14 @@ welcome. <a href="http://wiki.x.org/wiki/VgaArbiter" target="_blank" rel="noopen
                         <a href="/page/10/">10</a>
                     </span>
                 </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/11/">11</a>
+                        <a href="/page/12/">12</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.138.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
