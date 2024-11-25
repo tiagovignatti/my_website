@@ -2,7 +2,7 @@
 title: "Good fortune 복"
 featuredImagePreview: /images/2024-korea/IMG_2806.jpg
 date: 2024-11-19T12:00:28-03:00
-draft: true
+draft: false
 toc: false
 
 ---
