@@ -73,6 +73,16 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/xorg-input-thread-summary-or-something-3/">Xorg input thread - summary or something #3</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-28">2007-08-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>Not so much, but here are the news:</p>
+<pre><code>  * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.
+  * The last new regarding the thread implementation is that we're unfortunately dealing with **critical sections** inside the X event queue (mi/mieq.c), so mutex is needed there (just to note: currently, mutex is only implemented using pthread (X11/Xthreads.h), so we also need implement something that is pthread-independent). Probably can exist other pieces of code that might be in an unpredictable way resulting some race conditions (didn't note anything strange yet!).
+  * I finally managed how to implement the page fault notifier without any patch inside the kernel. The read_cr2() can be called directly since the page fault notifier runs with interrupts disabled. The implementation can be found [here](http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c).
+</code></pre></div><div class="post-footer">
+        <a href="/posts/xorg-input-thread-summary-or-something-3/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/mlocking-adventure/">mlock()&#39;ing adventure</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-10">2007-08-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>It&rsquo;s being a great adventure to lock the X input thread on the memory. I&rsquo;m touching a lot of things that I&rsquo;d never imagined before :)</p>
 <p>To trace the pages that are faulting when I move the device pointer I&rsquo;m using my own <a href="http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c" target="_blank" rel="noopener noreffer">ultra mega super kernel&rsquo;s page fault notifier</a>. It&rsquo;s very simple, but as the things are not always perfect, it needs a little <a href="http://lkml.org/lkml/diff/2007/7/26/512/1" target="_blank" rel="noopener noreffer">patch</a> in the kernel.</p>
@@ -119,13 +129,6 @@ continue sleeping on select() - But the problem with SIGIO is that it
 can blocks if the main thread is wedged doing kernel stuff (like
 paging). It can&rsquo;t interrupt a program in D state.</p></div><div class="post-footer">
         <a href="/posts/moving-the-mouse-handling-code-into-a-separate-thread/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/multiseat-input-hotplug/">multiseat input hotplug</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-06-02">2007-06-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>This week I spent a good time trying to understand the new input hotplug of devices on X and liked a lot. With this new subsystem the multiseat&rsquo;s life will becomes easier. I&rsquo;ll briefly explain here to you.</p>
-<p>Before the hotplug sweetness, to add a new mouse/keyboad on X was only possibly on initialization time. Both of Xorg drivers, &ldquo;evdev&rdquo; and &ldquo;mouse&rdquo;, made a hack to try initializations &ldquo;on the run&rdquo;. This all was a mess and difficult a lot the configuration of the multiseats. But this world has changed.</p></div><div class="post-footer">
-        <a href="/posts/multiseat-input-hotplug/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">

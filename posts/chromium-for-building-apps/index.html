@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Using Chromium for Building Apps (2025) - Tiago Vignatti</title><meta name="Description" content=""><meta property="og:url" content="https://vignatti.com/posts/chromium-for-building-apps/">
+  <meta property="og:site_name" content="Tiago Vignatti">
+  <meta property="og:title" content="Using Chromium for Building Apps (2025)">
+  <meta property="og:description" content="Instead of using Chromium for browsing the Web, let’s explore how to use it for building applications.
+Chromium is open-source and its codebase is organized in components which can be used for many different purposes. For example, Chromium is used for building browsers other than Chrome like Edge, Brave, Vivaldi, among others. You may also be familiarized with V8, the Chromium JavaScript engine that may be used to power scripting on server-side, like Node.js and Deno.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-04T10:36:37-03:00">
+    <meta property="article:modified_time" content="2024-12-04T10:36:37-03:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using Chromium for Building Apps (2025)">
+  <meta name="twitter:description" content="Instead of using Chromium for browsing the Web, let’s explore how to use it for building applications.
+Chromium is open-source and its codebase is organized in components which can be used for many different purposes. For example, Chromium is used for building browsers other than Chrome like Edge, Brave, Vivaldi, among others. You may also be familiarized with V8, the Chromium JavaScript engine that may be used to power scripting on server-side, like Node.js and Deno.">
+<meta name="application-name" content="Tiago Vignatti">
+<meta name="apple-mobile-web-app-title" content="Tiago Vignatti"><link rel="shortcut icon" type="image/x-icon" href="https://vignatti.com/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://vignatti.com/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://vignatti.com/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="https://vignatti.com/apple-touch-icon.png"><link rel="manifest" href="https://vignatti.com/site.webmanifest"><link rel="canonical" href="https://vignatti.com/posts/chromium-for-building-apps/" /><link rel="prev" href="https://vignatti.com/posts/good-fortune/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Using Chromium for Building Apps (2025)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/vignatti.com\/posts\/chromium-for-building-apps\/"
+        },"genre": "posts","wordcount":  934 ,
+        "url": "https:\/\/vignatti.com\/posts\/chromium-for-building-apps\/","datePublished": "2024-12-04T10:36:37-03:00","dateModified": "2024-12-04T10:36:37-03:00","publisher": {
+            "@type": "Organization",
+            "name": "Author"},"author": {
+                "@type": "Person",
+                "name": "Author"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Tiago Vignatti">
+                
+            </a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> Blog </a><a class="menu-item" href="/projects/"> Projects </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                .
+                
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="">Blog</a><a class="menu-item" href="/projects/" title="">Projects</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Using Chromium for Building Apps (2025)</h1><div class="post-meta">
+            <div class="post-meta-line"></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-12-04">2024-12-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;934 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="content" id="content"><div id="id-1"><p><em>Instead of using Chromium for browsing the Web, let&rsquo;s explore how to use it for building applications.</em></p>
+<p><a href="https://www.chromium.org/Home/" target="_blank" rel="noopener noreffer">Chromium</a> is open-source and its codebase is organized in components which can be used for many different purposes. For example, Chromium is used for building browsers other than <strong>Chrome</strong> like <strong>Edge</strong>, <strong>Brave</strong>, <strong>Vivaldi</strong>, among others. You may also be familiarized with <a href="https://v8.dev/" target="_blank" rel="noopener noreffer">V8</a>, the Chromium JavaScript engine that may be used to power scripting on server-side, like <strong>Node.js</strong> and <strong>Deno</strong>.</p>
+<p>But in other non-browser scenarios, a powerful approach is leveraging Chromium to build application software. Using Chromium for apps is giving a different perspective for the Chromium project and is being used on products serving millions of users.</p>
+<p>Let’s delve together to understand this idea further!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/dall-e-chromium.webp"
+        data-srcset="/images/dall-e-chromium.webp, /images/dall-e-chromium.webp 1.5x, /images/dall-e-chromium.webp 2x"
+        data-sizes="auto"
+        alt="/images/dall-e-chromium.webp"
+        title="DALL·E - A futuristic illustration with the Chromium, symbolizing its innovative applications beyond web\ browser" /></p>
+<p>An outstanding feature of the Web is the &ldquo;write once, run everywhere&rdquo; concept. It means that developers usually want to use a single language &amp; framework to build an application that will run on a variety of platforms.</p>
+<p>For example, if a developer needs to build a traditional App to reach the widest range of users, they would have to develop it with Kotlin for Android, Swift for iPhone, .NET for Windows, and so forth—essentially, a separate app for each platform. The Web solves that because the App can be built using a common set of languages instead, like HTML, CSS, and JavaScript, and the App content would just run beautifully on each platform&rsquo;s Web browser.</p>
+<p>Beautifully, usually, but not always complete.</p>
+<p>Sometimes it is not possible to bring native functionalities to the Web. For example, copying an image content from a Web app into another Web app was only possible recently. Sharing an image with a native client also was recently implemented. In terms of performance, getting parity with the native application is difficult too.</p>
+<p>It is quite common to encounter applications seeking deeper modifications to the underlying platform to unlock features that Web technology APIs either don&rsquo;t offer or are not yet supported by browsers.</p>
+<blockquote>
+<p>It is important to highlight the <a href="https://developer.chrome.com/docs/capabilities" target="_blank" rel="noopener noreffer">Fugu Project</a>, a hard-working group of developers who are influencing upstream Chromium with specs, standards and the Progressive Web Applications (PWAs) initiative to close this gap between native and Web apps. Their journey is not simple though, as we can see in the list of capabilities on the <a href="https://issues.chromium.org/issues?q=customfield1223031:proj-fugu%20-customfield1223031:proj-fugu-efforts%20-is:obsolete" target="_blank" rel="noopener noreffer">Fugu API Tracker</a>.</p>
+</blockquote>
+<p>Creating true web applications that mimic native behavior and function seamlessly across platforms is no easy task therefore. This is where <strong>cross-platform application frameworks built using Chromium</strong> come into play. These frameworks offer tools to embed Web technologies into applications and simplify the use of Chromium through higher-level APIs.</p>
+<p>Here is a curated list of these projects and frameworks:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th>Language bindings</th>
+          <th>Mobile platform</th>
+          <th>Desktop platform</th>
+          <th>Chromium Extensions</th>
+          <th>Maintainability</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">WebView-based frameworks</td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Electron</td>
+          <td>❌</td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CEF</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>✅</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Chromium’s Content</td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Chromium’s WebLayer</td>
+          <td>❌</td>
+          <td>✅</td>
+          <td>✅</td>
+          <td>❌</td>
+          <td>❌</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>- WebView</strong> is a component that allows developers to display Web content within a native app. WebView is particularly useful in hybrid applications, for example, when certain parts of the app—such as login screens, documentation, or user guides—are created using Web technologies but need to be presented within the native environment. There is a growing list of frameworks here relying on WebView e.g. Tauri and Ionic allowing the developers to deploy the application across a variety of platforms.</p>
+<p>However, using WebView comes with well-known challenges, such as the inconsistency across implementations, where behavior can vary between platforms (e.g., Android’s WebView versus iOS’s WKWebView versus Windows’ WebView2). Additionally, there is limited native integration, making it more complex to work with device-specific APIs like AR, advanced sensors, or system-level interactions.</p>
+<p>- <strong>Electron</strong> is a framework that has Chromium and Node.s combined into one runtime and is used for building well known apps like Slack, VS Code, Discord’s desktop client and others. A developer needs to write in JavaScript to use it and it&rsquo;s meant for desktop only. Once the Electron version is updated, the app gets it “for free” usually without much maintenance intervention. There are <a href="https://www.electronjs.org/docs/latest/tutorial/security" target="_blank" rel="noopener noreffer">known issues with security</a> when, say, a remote Web app can have full access to Node and potentially it could do anything with the system.</p>
+<p>- <strong>CEF</strong>, the Chromium Embedded Framework, is widely used for building desktop applications like Spotify, Valve&rsquo;s Steam, and the Epic Games Launcher. CEF is highly versatile, offering bindings for several programming languages such as C++, Python, and Java, making it accessible for a variety of development environments. Like Electron, CEF excels in terms of maintainability because it provides a consistent, cross-platform framework that simplifies updating and managing the browser engine.</p>
+<p>- <strong>Chromium Content</strong> is the <a href="https://chromium.googlesource.com/chromium/src/&#43;/HEAD/content/README.md" target="_blank" rel="noopener noreffer">de facto Chromium API for the Web platform</a> and is used for browser-like apps: Vivaldi, Brave and other full-fledged Web browsers use it. It&rsquo;s essentially used for those who want to do a Chromium fork. An application using it has to deal with the downstream related issues, which can be a real challenge for maintaining.</p>
+<p>- And, just for completeness, we list here <a href="https://source.chromium.org/chromium/chromium/src/&#43;/refs/tags/118.0.5993.96:weblayer/public/README.md" target="_blank" rel="noopener noreffer"><strong>WebLayer</strong></a>, which is a deprecated but very interesting abstraction layer in Chromium. It&rsquo;s also meant for building full-fledged Web browsers.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/20230403_165217.jpg"
+        data-srcset="/images/20230403_165217.jpg, /images/20230403_165217.jpg 1.5x, /images/20230403_165217.jpg 2x"
+        data-sizes="auto"
+        alt="/images/20230403_165217.jpg"
+        title="Igalia - Chromium team" /></p>
+<p>Instead of using Chromium for browsing we understand now that developers are relying on the project for building applications. This technical post has also reviewed some of the existent cross-platform application frameworks built using Chromium.</p>
+<p>A developer wanting to build a cross-platform app will need to fully understand its requirements to only then embrace the solution. There is no one-size-fits-all here, unfortunately. <strong><a href="https://www.igalia.com" target="_blank" rel="noopener noreffer">Igalia</a></strong> is always happy to assist you here!</p>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-12-04</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/good-fortune/" class="prev" rel="prev" title="Good fortune 복"><i class="fas fa-angle-left fa-fw"></i>Good fortune 복</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'G-C1XH4SJP6N', { 'anonymize_ip': true });
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-C1XH4SJP6N" async></script></body>
+</html>

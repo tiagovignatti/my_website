@@ -73,6 +73,15 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/vgaarbiter-wiki/">VgaArbiter wiki</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-25">2008-02-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>Today, <a href="http://przanoni.blogspot.com/" target="_blank" rel="noopener noreffer">Paulo Zanoni</a> help me to put in a shape the VgaArbiter wiki page.
+The primary intention of that page is to bring more developers in that
+project and some users++ who could also help testing. Feedback is very
+welcome. <a href="http://wiki.x.org/wiki/VgaArbiter" target="_blank" rel="noopener noreffer">Here</a> is the link.</p></div><div class="post-footer">
+        <a href="/posts/vgaarbiter-wiki/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/benchmarking-it-all/">Benchmarking it all</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2008-02-21">2008-02-21</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>After a long journey I come back in this&hellip; So I did a set of benchmarks to evaluate the VGA arbitration versus the RAC usage. My goal is to evaluate the performance difference of a multi-head/multi-card environment, i.e., an Xorg using the RAC to another using the arbitration.</p>
 <p>The experiments consisted of two applications running at the same time in each Xorg server, one at each screen. This is interesting because it stress the semaphore task of the arbiter inside kernel, creating race conditions between the screens. The experiments were performed ten times and the average result was picked.</p></div><div class="post-footer">
@@ -111,16 +120,6 @@
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-09-26">2007-09-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"><p>I used a part of the money that I earned on the SoC 2007 to buy a laptop to me. My university friends found a good price of a MacBook and we went to the shop in a total of 6 people (!) to buy this laptop trying to get some discount. It cost R$ 3400 (about USD 1800), a very cheap value to the Brazil standards.</p>
 <p>Fine. My MacBook arrived one week ago. The shiny laptop is cool, but the OS <strong>really</strong> <strong>not</strong>. I tried to accustom myself for at least one week with that OS and I failed. The reason why is better explained by these guys below:</p></div><div class="post-footer">
         <a href="/posts/macosx-gnulinux/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/xorg-input-thread-summary-or-something-3/">Xorg input thread - summary or something #3</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-28">2007-08-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>Not so much, but here are the news:</p>
-<pre><code>  * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.
-  * The last new regarding the thread implementation is that we're unfortunately dealing with **critical sections** inside the X event queue (mi/mieq.c), so mutex is needed there (just to note: currently, mutex is only implemented using pthread (X11/Xthreads.h), so we also need implement something that is pthread-independent). Probably can exist other pieces of code that might be in an unpredictable way resulting some race conditions (didn't note anything strange yet!).
-  * I finally managed how to implement the page fault notifier without any patch inside the kernel. The read_cr2() can be called directly since the page fault notifier runs with interrupts disabled. The implementation can be found [here](http://web.inf.ufpr.br/vignatti/code/page_fault_notifier.c).
-</code></pre></div><div class="post-footer">
-        <a href="/posts/xorg-input-thread-summary-or-something-3/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">

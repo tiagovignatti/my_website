@@ -3,9 +3,17 @@
         <title>Tiago Vignatti</title>
         <link>https://vignatti.com/</link>
         <description>Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 19 Nov 2024 12:00:28 -0300</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 04 Dec 2024 10:36:37 -0300</lastBuildDate>
             <atom:link href="https://vignatti.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Using Chromium for Building Apps (2025)</title>
+    <link>https://vignatti.com/posts/chromium-for-building-apps/</link>
+    <pubDate>Wed, 04 Dec 2024 10:36:37 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://vignatti.com/posts/chromium-for-building-apps/</guid>
+    <description><![CDATA[<div id="id-1"><p><em>Instead of using Chromium for browsing the Web, let&rsquo;s explore how to use it for building applications.</em></p>
+<p><a href="https://www.chromium.org/Home/" target="_blank" rel="noopener noreffer">Chromium</a> is open-source and its codebase is organized in components which can be used for many different purposes. For example, Chromium is used for building browsers other than <strong>Chrome</strong> like <strong>Edge</strong>, <strong>Brave</strong>, <strong>Vivaldi</strong>, among others. You may also be familiarized with <a href="https://v8.dev/" target="_blank" rel="noopener noreffer">V8</a>, the Chromium JavaScript engine that may be used to power scripting on server-side, like <strong>Node.js</strong> and <strong>Deno</strong>.</p>]]></description>
+</item><item>
     <title>Good fortune 복</title>
     <link>https://vignatti.com/posts/good-fortune/</link>
     <pubDate>Tue, 19 Nov 2024 12:00:28 -0300</pubDate>
@@ -1139,18 +1147,5 @@
             </div><p>A <a href="http://vignatti.com/2013/09/18/welcome-to-chromiums-ozone-wayland/" target="_blank" rel="noopener noreffer">few weeks ago</a> we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.</p>
 <p><strong>communities</strong></p>
 <p>There are three main projects involved in here: <em>Chromium</em>, <em>Wayland</em> and <em>Ozone-Wayland</em>. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS. Very near to that one there&rsquo;s Blink engine&rsquo;s community, which interacts (and overlaps) a lot with the Chromium&rsquo;s; I can&rsquo;t tell exactly in numbers but there&rsquo;s huge number of people, vendors and commercial involved in Chromium and, more important to us, there&rsquo;s a lot of quality code being cooked in there for leveraging Web technologies in general.</p>]]></description>
-</item><item>
-    <title>Welcome to Chromium&#39;s Ozone-Wayland</title>
-    <link>https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/</link>
-    <pubDate>Wed, 18 Sep 2013 13:34:24 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://vignatti.files.wordpress.com/2013/09/screenshot_2013-09-17.png" referrerpolicy="no-referrer">
-            </div><p>The following message was sent out this morning &ndash; I&rsquo;m copying it here and attaching a cute screenshot of my desktop :)</p>
-<hr>
-<p>Ozone is a set of C++ classes in Chromium for abstracting different window systems on Linux. It provides abstraction for the construction of accelerated surfaces underlying Aura UI framework, input devices assignment and event handling.</p>
-<p><a href="http://www.chromium.org/developers/design-documents/ozone" target="_blank" rel="noopener noreffer">http://www.chromium.org/developers/design-documents/ozone</a></p>
-<p>Today we are launching publicly Ozone-Wayland, which is the implementation of Chromium&rsquo;s Ozone for supporting Wayland graphics system. Different projects based on Chromium/Blink like the Chrome browser, ChromeOS, among others can be enabled now using Wayland.</p>]]></description>
 </item></channel>
 </rss>
