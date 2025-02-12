@@ -63,8 +63,7 @@ I've designed [an architecture for systems with shared physical memory to exploi
 
 {{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/zero-copy-texture-uploads-in-chrome-os-fig1-599269.png" class="float-right" >}}
 
-In **2015**, I've worked on optimizing Chromium graphics rendering pipeline for Web applications running on Chrome OS. It used the parallelism between the CPU and GPU under Intel architecture by using a technique called [zero-copy texture upload](https://software.intel.com/content/www/us/en/develop/articles/zero-copy-texture-uploads-in-chrome-os.html). Web content could be loaded 38% faster, using 65% lower memory, extending battery life and therefore
-the user perceiving a smoother, less jank experience.
+In **2015**, I've worked on optimizing Chromium graphics rendering pipeline for Web applications running on Chrome OS. It used the parallelism between the CPU and GPU under Intel architecture by using a technique called [zero-copy texture upload](https://web.archive.org/web/20210616140223/https://01.org/chromium/blogs/zero-copy-texture-uploads-chrome-os). Web content could be loaded 38% faster, using 65% lower memory, extending battery life and therefore the user perceiving a smoother, less jank experience.
 
 ---
 
