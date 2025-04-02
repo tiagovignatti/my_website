@@ -73,6 +73,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/macosx-gnulinux/">MacOSX -&gt; GNU/Linux</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-09-26">2007-09-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"><p>I used a part of the money that I earned on the SoC 2007 to buy a laptop to me. My university friends found a good price of a MacBook and we went to the shop in a total of 6 people (!) to buy this laptop trying to get some discount. It cost R$ 3400 (about USD 1800), a very cheap value to the Brazil standards.</p>
+<p>Fine. My MacBook arrived one week ago. The shiny laptop is cool, but the OS <strong>really</strong> <strong>not</strong>. I tried to accustom myself for at least one week with that OS and I failed. The reason why is better explained by these guys below:</p></div><div class="post-footer">
+        <a href="/posts/macosx-gnulinux/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/xorg-input-thread-summary-or-something-3/">Xorg input thread - summary or something #3</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-08-28">2007-08-28</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>Not so much, but here are the news:</p>
 <pre><code>  * For the final evaluation period on the Summer of Code, Daniel suggest me to start my [own X server tree](http://gitweb.freedesktop.org/?p=users/vignatti/xserver.git;a=summary). So I'm maintaining this one with the last bits of the X server input thread implementation and always trying to keep all the things up to date with the upstream tree. Everyone is very welcome to test it and report me the few - I expect - bugs.
@@ -113,22 +120,6 @@
 <p>As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse  thread for the X server. Now, I&rsquo;m really stucked with it and I need some  good ideas from you before go to the next steps.</p>
 <p>Today the cursor lags in two situations on Xorg:</p></div><div class="post-footer">
         <a href="/posts/xorg-input-thread-summary-or-something/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/moving-the-mouse-handling-code-into-a-separate-thread/">Moving the mouse handling code into a separate thread</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-06-16">2007-06-16</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>(In a puny attempt to write my SoC project progress to my mentor, I
-decided to expand it and share my thoughts with you)</p>
-<p>Today, we have two methods to register the pointer devices on <strong>Xorg
-server</strong>: (1) under SIGIO and (2) put they fd on EnableDevices set.
-There is also the silken mouse concept, which means updates fired during
-sigio handler (in the case of hw cursor).</p>
-<p>We always try to prioritize silken - i.e. when the device emits a move
-event, it will be &ldquo;painted&rdquo; on the screen and the WaitFor loop still
-continue sleeping on select() - But the problem with SIGIO is that it
-can blocks if the main thread is wedged doing kernel stuff (like
-paging). It can&rsquo;t interrupt a program in D state.</p></div><div class="post-footer">
-        <a href="/posts/moving-the-mouse-handling-code-into-a-separate-thread/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">

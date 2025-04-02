@@ -6,6 +6,14 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 02 Apr 2025 14:52:37 -0300</lastBuildDate>
             <atom:link href="https://vignatti.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>A Vision for Sustainable Organizations: Lessons from Igalia</title>
+    <link>https://vignatti.com/posts/sustainable-organizations/</link>
+    <pubDate>Wed, 02 Apr 2025 14:52:37 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://vignatti.com/posts/sustainable-organizations/</guid>
+    <description><![CDATA[<div id="id-1"><p>At Igalia we help make the Internet work better by improving web browsers like Chrome and Safari. We also work with the underlying technologies that make websites look and function properly, like HTML, CSS, and JavaScript—the building blocks of every web application.</p>
+<p>In everything we do, we try to place a strong emphasis on <strong><a href="https://www.igalia.com/about/social-responsibility" target="_blank" rel="noopener noreffer">social responsibility</a></strong>. This means that our focus extends beyond profit to making a positive impact on society. Igalia is built on values of <strong>equality</strong> and <strong>transparency</strong>, which are deeply embedded in our organizational structure. These commitments to social responsibility shape the core principles that guide our work.</p>]]></description>
+</item><item>
     <title>Using Chromium for Building Apps (2025)</title>
     <link>https://vignatti.com/posts/chromium-for-building-apps/</link>
     <pubDate>Wed, 04 Dec 2024 10:36:37 -0300</pubDate>
@@ -1136,16 +1144,5 @@
                 <img src="https://img.youtube.com/vi/EJB2pznc6iY/0.jpg" referrerpolicy="no-referrer">
             </div><p>Some state-of-the-art progress of the project we&rsquo;re proudly working with:</p>
 <p><a href="https://www.youtube.com/watch?v=EJB2pznc6iY" target="_blank" rel="noopener noreffer">https://www.youtube.com/watch?v=EJB2pznc6iY</a></p>]]></description>
-</item><item>
-    <title>developing Chromium on Wayland</title>
-    <link>https://vignatti.com/posts/developing-chromium-on-wayland/</link>
-    <pubDate>Mon, 07 Oct 2013 14:42:17 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://vignatti.com/posts/developing-chromium-on-wayland/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Chromium_78_running_on_GNOME_Shell_and_Ubuntu_Linux.png" referrerpolicy="no-referrer">
-            </div><p>A <a href="http://vignatti.com/2013/09/18/welcome-to-chromiums-ozone-wayland/" target="_blank" rel="noopener noreffer">few weeks ago</a> we released Ozone-Wayland and now we&rsquo;d like to detail for you the development process and strategy behind it&hellip; ah, and the title is not developing Chromium, the browser; it&rsquo;s developing Chromium,** the project**! You will understand why next.</p>
-<p><strong>communities</strong></p>
-<p>There are three main projects involved in here: <em>Chromium</em>, <em>Wayland</em> and <em>Ozone-Wayland</em>. In Chromium, there is a very big and geek community that mainly produces Chrome browser and Chrome-OS. Very near to that one there&rsquo;s Blink engine&rsquo;s community, which interacts (and overlaps) a lot with the Chromium&rsquo;s; I can&rsquo;t tell exactly in numbers but there&rsquo;s huge number of people, vendors and commercial involved in Chromium and, more important to us, there&rsquo;s a lot of quality code being cooked in there for leveraging Web technologies in general.</p>]]></description>
 </item></channel>
 </rss>
