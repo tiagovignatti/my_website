@@ -2,7 +2,7 @@
 title: "A Vision for Sustainable Organizations: Lessons from Igalia"
 featuredImagePreview: /images/bacia-da-vovo_2025-preview.jpg
 date: 2025-04-02T14:52:37-03:00
-draft: true
+draft: false
 toc: false
 
 ---
