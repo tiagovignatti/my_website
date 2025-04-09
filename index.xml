@@ -3,15 +3,25 @@
         <title>Tiago Vignatti</title>
         <link>https://vignatti.com/</link>
         <description>Tiago Vignatti</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 02 Apr 2025 14:52:37 -0300</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 09 Apr 2025 11:05:16 -0300</lastBuildDate>
             <atom:link href="https://vignatti.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>A Vision for Sustainable Organizations: Lessons from Igalia</title>
+    <title>Organizações Sustentáveis: Lições da Igalia</title>
+    <link>https://vignatti.com/posts/organizacoes-sustentaveis/</link>
+    <pubDate>Wed, 09 Apr 2025 11:05:16 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://vignatti.com/posts/organizacoes-sustentaveis/</guid>
+    <description><![CDATA[<div id="id-1"><p><em>Esta é uma versão traduzida para o português do <a href="https://vignatti.com/posts/sustainable-organizations/" target="_blank" rel="noopener noreffer">texto original publicado em inglês</a>.</em></p>
+<p>&ndash;</p>
+<p>Na <a href="https://www.igalia.com/" target="_blank" rel="noopener noreffer">Igalia</a>, trabalhamos com o aperfeiçoamento da Internet desenvolvendo navegadores Web, tais como Chrome e Safari. Nós trabalhamos principalmente com as tecnologias por detrás destes navegadores que fazem com que os sites tenham um look e funcionamento adequados, como HTML, CSS e JavaScript—os blocos de construção de todas as aplicações Web.</p>
+<p>Em tudo o que fazemos, tentamos dar grande ênfase à <strong><a href="https://www.igalia.com/about/social-responsibility" target="_blank" rel="noopener noreffer">responsabilidade social</a></strong>. Isto significa que o nosso foco vai além do lucro, em benfeitorias que geram um impacto positivo na sociedade. Além disso, a Igalia é construída com base em valores de <strong><a href="https://www.youtube.com/watch?v=du7fC8VCbXg" target="_blank" rel="noopener noreffer">igualdade</a></strong> e <strong><a href="https://www.igalia.com/chats/val" target="_blank" rel="noopener noreffer">transparência</a></strong>, profundamente enraizados na nossa estrutura organizacional. Estes compromissos com valores e responsabilidade social moldam os princípios fundamentais que orientam o nosso trabalho.</p>]]></description>
+</item><item>
+    <title>Sustainable Organizations: Lessons from Igalia</title>
     <link>https://vignatti.com/posts/sustainable-organizations/</link>
     <pubDate>Wed, 02 Apr 2025 14:52:37 -0300</pubDate>
     <author>Author</author>
     <guid>https://vignatti.com/posts/sustainable-organizations/</guid>
-    <description><![CDATA[<div id="id-1"><p>At Igalia we help make the Internet work better by improving web browsers like Chrome and Safari. We also work with the underlying technologies that make websites look and function properly, like HTML, CSS, and JavaScript—the building blocks of every web application.</p>
+    <description><![CDATA[<div id="id-1"><p>At <a href="https://www.igalia.com/" target="_blank" rel="noopener noreffer">Igalia</a> we help make the Internet work better by improving web browsers like Chrome and Safari. We also work with the underlying technologies that make websites look and function properly, like HTML, CSS, and JavaScript—the building blocks of every web application.</p>
 <p>In everything we do, we try to place a strong emphasis on <strong><a href="https://www.igalia.com/about/social-responsibility" target="_blank" rel="noopener noreffer">social responsibility</a></strong>. This means that our focus extends beyond profit to making a positive impact on society. Igalia is built on values of <strong><a href="https://www.youtube.com/watch?v=du7fC8VCbXg" target="_blank" rel="noopener noreffer">equality</a></strong> and <strong><a href="https://www.igalia.com/chats/val" target="_blank" rel="noopener noreffer">transparency</a></strong>, which are deeply embedded in our organizational structure. These commitments to social responsibility shape the core principles that guide our work.</p>]]></description>
 </item><item>
     <title>Using Chromium for Building Apps (2025)</title>
@@ -1134,15 +1144,5 @@
     <author>Author</author>
     <guid>https://vignatti.com/posts/chromium-ozone-gbm-explained/</guid>
     <description><![CDATA[<div id="id-1"><p>About a year ago <a href="https://chromium.googlesource.com/chromium/src/&#43;/HEAD/docs/ozone_overview.md" target="_blank" rel="noopener noreffer">Ozone platform abstraction layer</a> started to take its shape in Chromium and we were excited how easily we could s<a href="https://vignatti.com/posts/welcome-to-chromiums-ozone-wayland/" target="_blank" rel="noopener noreffer">upport Wayland platform</a> using it. Everything went great and we helped a few Chromium targets like <a href="https://en.wikipedia.org/wiki/Crosswalk_Project" target="_blank" rel="noopener noreffer">Crosswalk</a> to debut in the Tizen ecosystem for example. More recently, different Ozone platforms have been implemented and only now it&rsquo;s becoming evident the significance of Ozone for Chromium Linux, generally speaking.</p>]]></description>
-</item><item>
-    <title>[video] Chromium Browser on Wayland</title>
-    <link>https://vignatti.com/posts/video-chromium-browser-on-wayland/</link>
-    <pubDate>Fri, 07 Feb 2014 09:00:33 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://vignatti.com/posts/video-chromium-browser-on-wayland/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://img.youtube.com/vi/EJB2pznc6iY/0.jpg" referrerpolicy="no-referrer">
-            </div><p>Some state-of-the-art progress of the project we&rsquo;re proudly working with:</p>
-<p><a href="https://www.youtube.com/watch?v=EJB2pznc6iY" target="_blank" rel="noopener noreffer">https://www.youtube.com/watch?v=EJB2pznc6iY</a></p>]]></description>
 </item></channel>
 </rss>

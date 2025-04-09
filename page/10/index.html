@@ -73,6 +73,20 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/realistic/">Realistic :(</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-11-09">2007-11-09</time></span>&nbsp;<span class="post-category">included in <a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"><p><a href="http://vignatti.files.wordpress.com/2007/11/phd1029.gif" target="_blank" rel="noopener noreffer"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://vignatti.files.wordpress.com/2007/11/phd1029.gif"
+        data-srcset="http://vignatti.files.wordpress.com/2007/11/phd1029.gif, http://vignatti.files.wordpress.com/2007/11/phd1029.gif 1.5x, http://vignatti.files.wordpress.com/2007/11/phd1029.gif 2x"
+        data-sizes="auto"
+        alt="http://vignatti.files.wordpress.com/2007/11/phd1029.gif"
+        title="whyarewedoingthis" />
+</a></p></div><div class="post-footer">
+        <a href="/posts/realistic/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/macosx-gnulinux/">MacOSX -&gt; GNU/Linux</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-09-26">2007-09-26</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"><p>I used a part of the money that I earned on the SoC 2007 to buy a laptop to me. My university friends found a good price of a MacBook and we went to the shop in a total of 6 people (!) to buy this laptop trying to get some discount. It cost R$ 3400 (about USD 1800), a very cheap value to the Brazil standards.</p>
 <p>Fine. My MacBook arrived one week ago. The shiny laptop is cool, but the OS <strong>really</strong> <strong>not</strong>. I tried to accustom myself for at least one week with that OS and I failed. The reason why is better explained by these guys below:</p></div><div class="post-footer">
@@ -108,18 +122,6 @@
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-18">2007-07-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>In the last week, I did some cool experiments to see the effects of the D state acting on the X server process when I start it with and without the input thread and always mlock&rsquo;ing it.</p>
 <p>First I set the grub to start my machine with only 170 mb of physical memory. Then I put a &lsquo;mlockall(MCL_CURRENT)&rsquo; just before the call of Dispatch() function, on the main.c. So then I started the server. Well, I called a memory hog to eat all my physical memory and played with the mouse which never gets lagged using or not the separate thread. So the great notice comes when I started an X client (gnome-session) which turns the X process to the D state. The X server without the separate thread lags the cursor because it&rsquo;s using SIGIO to wake up the device. OTOH, the X with the input thread has a smooth movement anyway.</p></div><div class="post-footer">
         <a href="/posts/xorg-input-thread-summary-or-something-2/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/xorg-input-thread-summary-or-something/">Xorg input thread - summary or something</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-06">2007-07-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.</p>
-<ul>
-<li>cut here -</li>
-</ul>
-<p>Hi guys.</p>
-<p>As you might noted here [1], my GSoC&rsquo;s project is to do a separate mouse  thread for the X server. Now, I&rsquo;m really stucked with it and I need some  good ideas from you before go to the next steps.</p>
-<p>Today the cursor lags in two situations on Xorg:</p></div><div class="post-footer">
-        <a href="/posts/xorg-input-thread-summary-or-something/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">
