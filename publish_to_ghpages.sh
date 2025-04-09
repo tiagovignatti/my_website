@@ -1,5 +1,10 @@
 #!/bin/sh
 
+echo "Deleting lock file"
+if [ -f .hugo_build.lock ]; then
+    rm .hugo_build.lock
+fi
+
 if [ "`git status -s`" ]
 then
     echo "The working directory is dirty. Please commit any pending changes."
