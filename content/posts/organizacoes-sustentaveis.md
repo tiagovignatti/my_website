@@ -13,9 +13,9 @@ _Esta é uma versão traduzida para o português do [texto original publicado em
 
 --
 
-Na [Igalia](https://www.igalia.com/), trabalhamos com o aperfeiçoamento da Internet desenvolvendo navegadores Web, tais como Chrome e Safari. Nós trabalhamos principalmente com as tecnologias por detrás destes navegadores que fazem com que os sites tenham um look e funcionamento adequados, como HTML, CSS e JavaScript—os blocos de construção de todas as aplicações Web.
+Na [Igalia](https://www.igalia.com/), a gente trabalha com o desenvolvimento de navegadores da Internet, tipo Chrome e Safari. Na verdade, atuamos com as tecnologias por trás desses navegadores, que permitem que os _sites_ tenham uma boa aparência e funcionem corretamente, como HTML, CSS e JavaScript—os blocos de construção de todas as aplicações da Internet.
 
-Em tudo o que fazemos, tentamos dar grande ênfase à **[responsabilidade social](https://www.igalia.com/about/social-responsibility)**. Isto significa que o nosso foco vai além do lucro, em benfeitorias que geram um impacto positivo na sociedade. Além disso, a Igalia é construída com base em valores de **[igualdade](https://www.youtube.com/watch?v=du7fC8VCbXg)** e **[transparência](https://www.igalia.com/chats/val)**, profundamente enraizados na nossa estrutura organizacional. Estes compromissos com valores e responsabilidade social moldam os princípios fundamentais que orientam o nosso trabalho.
+Em tudo o que fazemos, tentamos dar grande ênfase à **[responsabilidade social](https://www.igalia.com/about/social-responsibility)**. Isso significa que o nosso foco vai além do lucro, priorizando ações que geram um impacto positivo nasociedade. Além disso, a Igalia é construída com base em valores de **[igualdade](https://www.youtube.com/watch?v=du7fC8VCbXg)** e **[transparência](https://www.igalia.com/chats/val)**, profundamente enraizados em nossa estrutura organizacional. Estes compromissos com valores e responsabilidade social moldam os princípios fundamentais que orientam o nosso trabalho.
 
 ![Praia Bacia da Vovó, Penha SC. 2025.](/images/bacia-da-vovo_2025.jpg)
 
