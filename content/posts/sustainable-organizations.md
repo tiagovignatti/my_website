@@ -9,9 +9,9 @@ toc: false
 
 {{< style "text-align:justify; strong{color:#00b1ff;}" >}}
 
-At [Igalia](https://www.igalia.com/) we help make the Internet work better by improving web browsers like Chrome and Safari. We also work with the underlying technologies that make websites look and function properly, like HTML, CSS, and JavaScript—the building blocks of every web application.
+At [Igalia](https://www.igalia.com/), we work on developing Internet browsers such as Chrome and Safari. In fact, we work with the technologies behind these browsers that allow websites to look good and function correctly, such as HTML, CSS, and JavaScript—the building blocks of all Internet applications.
 
-In everything we do, we try to place a strong emphasis on **[social responsibility](https://www.igalia.com/about/social-responsibility)**. This means that our focus extends beyond profit to making a positive impact on society. Igalia is built on values of **[equality](https://www.youtube.com/watch?v=du7fC8VCbXg)** and **[transparency](https://www.igalia.com/chats/val)**, which are deeply embedded in our organizational structure. These commitments to social responsibility shape the core principles that guide our work.
+In everything we do, we try to place a strong emphasis on **[social responsibility](https://www.igalia.com/about/social-responsibility)**. This means that our focus goes beyond profit, prioritizing actions that generate a positive impact on society. Igalia is built on values of **[equality](https://www.youtube.com/watch?v=du7fC8VCbXg)** and **[transparency](https://www.igalia.com/chats/val)**, which are deeply embedded in our organizational structure. These commitments to values ​​and social responsibility shape the fundamental principles that guide our work.
 
 ![Praia Bacia da Vovó, Penha SC. 2025.](/images/bacia-da-vovo_2025.jpg)
 
