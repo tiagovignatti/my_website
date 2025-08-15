@@ -73,6 +73,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/the-vga-arbiter/">The VGA arbiter</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-11-23">2007-11-23</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>So we finally have a working code to do the arbitration of the VGA legacy instructions. The code is separated in three pieces: vgaarb module [0], which is the arbiter itself inside Linux; the libvgaaccess [1], a set of user space functions to access the arbiter; and xf86VGAarbiter [2], the implementation of the library inside Xorg.</p>
+<p>Basically we wrapped all the functions of the Xorg which deals with VGA (those wrapped by the RAC and few others) using the lock/unlock functions of the libvgaaccess. Really ugly.</p></div><div class="post-footer">
+        <a href="/posts/the-vga-arbiter/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/realistic/">Realistic :(</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-11-09">2007-11-09</time></span>&nbsp;<span class="post-category">included in <a href="/categories/life/"><i class="far fa-folder fa-fw"></i>Life</a></span></div><div class="content"><p><a href="http://vignatti.files.wordpress.com/2007/11/phd1029.gif" target="_blank" rel="noopener noreffer"><img
         class="lazyload"
@@ -115,13 +122,6 @@
         <a href="/posts/page-fault-notifier/">Page fault notifier</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-27">2007-07-27</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>This week I tried to lock in the physical memory the Xorg&rsquo;s input code using mlock(). To do this I traced the code minutely and locked all the text and data related to input. I didn&rsquo;t get success. The mouse still lags when the system is paging (you might remember that with mlockall() all worked wonderful <em>except</em> that it eats much memory). So what might be happening is that something is not locked yet. To guarantee it I searched for a user-space tool that traces page fault. I only found the &rsquo;truss&rsquo; command on Solaris. Linux (my OS) doesn&rsquo;t provide no one (&lsquo;strace&rsquo; don&rsquo;t do this).</p></div><div class="post-footer">
         <a href="/posts/page-fault-notifier/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/xorg-input-thread-summary-or-something-2/">Xorg input thread - summary or something #2</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-18">2007-07-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>In the last week, I did some cool experiments to see the effects of the D state acting on the X server process when I start it with and without the input thread and always mlock&rsquo;ing it.</p>
-<p>First I set the grub to start my machine with only 170 mb of physical memory. Then I put a &lsquo;mlockall(MCL_CURRENT)&rsquo; just before the call of Dispatch() function, on the main.c. So then I started the server. Well, I called a memory hog to eat all my physical memory and played with the mouse which never gets lagged using or not the separate thread. So the great notice comes when I started an X client (gnome-session) which turns the X process to the D state. The X server without the separate thread lags the cursor because it&rsquo;s using SIGIO to wake up the device. OTOH, the X with the input thread has a smooth movement anyway.</p></div><div class="post-footer">
-        <a href="/posts/xorg-input-thread-summary-or-something-2/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">

@@ -73,6 +73,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/x-census-for-1-9/">X Census (for 1.9)</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-09-02">2010-09-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>Topic&rsquo;s name is a funny (and friendly) devotion to <a href="http://blogs.gnome.org/bolsh/2010/07/28/gnome-census/" target="_blank" rel="noopener noreffer">GNOME Census</a>. So let&rsquo;s take a look at some numbers from the time <a href="http://wiki.x.org/wiki/Server19Branch" target="_blank" rel="noopener noreffer">Xorg 1.9 was in development</a> - raw data is <a href="http://people.freedesktop.org/~vignatti/xdevelopment/" target="_blank" rel="noopener noreffer">here</a>.</p>
+<p>Would be unfair to measure only the work that happened e.g. in X server or in the drivers being developed and come up with the statistics about &ldquo;who developed X&rdquo;. X and X development community are quite extensive and don&rsquo;t concern only &ldquo;graphics&rdquo; related, i.e., pixel information that appears on your display screen. This is a very common mistake.</p></div><div class="post-footer">
+        <a href="/posts/x-census-for-1-9/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/xorg-server-1-9-minimal/">Xorg server 1.9 minimal</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-08-18">2010-08-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>That&rsquo;s what I&rsquo;m using for MeeGo now. Autoconf parameters, theeere we go:</p>
 <p>&ndash;disable-static &ndash;disable-aiglx &ndash;disable-config-dbus &ndash;disable-config-hal &ndash;disable-dbe &ndash;disable-dga &ndash;disable-dpms &ndash;disable-dri &ndash;disable-glx &ndash;disable-glx-tls &ndash;disable-int10-module &ndash;disable-ipv6 &ndash;disable-screensaver &ndash;disable-secure-rpc &ndash;disable-tcp-transport &ndash;disable-vbe &ndash;disable-vgahw &ndash;disable-xdm-auth-1 &ndash;disable-xinerama &ndash;disable-xwin &ndash;disable-xaa &ndash;disable-xace &ndash;disable-xdmcp &ndash;disable-xf86vidmode &ndash;disable-xfree86-utils &ndash;disable-xnest &ndash;disable-xvmc &ndash;disable-libdrm &ndash;enable-config-udev &ndash;enable-dri2 &ndash;enable-null-root-cursor &ndash;enable-record &ndash;enable-unit-tests &ndash;enable-visibility &ndash;enable-xorg &ndash;with-sha1=libsha1</p>
@@ -110,21 +117,6 @@
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-06-15">2010-06-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/links/"><i class="far fa-folder fa-fw"></i>Links</a></span></div><div class="content"><p>We all know since 2006 (?) that the world is turning to use XCB instead Xlib as the interface between X clients and the server. The advantages of using XCB is <a href="http://xcb.freedesktop.org/Features/" target="_blank" rel="noopener noreffer">well know</a> but, even so, it&rsquo;s being adopted very slowly for some reason - for instance no toolkits yet ported it. If this serves as a motivation, <a href="http://blogs.sun.com/alanc/" target="_blank" rel="noopener noreffer">Alan</a> got a really <a href="http://lists.freedesktop.org/archives/xcb/2010-June/006111.html" target="_blank" rel="noopener noreffer">nice measurements</a> porting a simple X app.</p>
 <p>Translate your toolkit and application <strong>now</strong>! :)</p></div><div class="post-footer">
         <a href="/posts/toolkit-please-xlib-xcb/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/">Scrutinizing X memory, part 2: what&#39;s taking all that memory?</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-03-25">2010-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/<code>pidof Xorg</code>/{smaps, status}. I used also a <a href="http://wingolog.org/pub/mem_usage.py" target="_blank" rel="noopener noreffer">script</a> found on the <a href="http://wingolog.org/archives/2007/11/27/reducing-the-footprint-of-python-applications" target="_blank" rel="noopener noreffer">Web</a> to parse and organize these informations; Mikhail Gusarov has <a href="http://github.com/dottedmag/mem-usage" target="_blank" rel="noopener noreffer">extended</a> this script to show a very useful <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/x-standalone-memory-per-libraries.txt" target="_blank" rel="noopener noreffer">output</a>.</p>
-<h3 id="xorg-per-se">Xorg per se</h3>
-<p>Running just one standalone <code>Xorg -retro</code>. In my system it represents:
-VmRSS:      5440 kB
-VmSize:    13620 kB</p>
-<p>from those 5440 kB of RSS:
-3404 kB (63 %) come from code
-1628 kB (30 %) come from malloc/mmap in anonymous memory (heap)
-228 kB  (4 %) come from other data mapped in memory
-180 kB  (3 %) come from rodata</p></div><div class="post-footer">
-        <a href="/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">

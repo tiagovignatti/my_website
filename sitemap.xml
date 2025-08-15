@@ -2,9 +2,10 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://vignatti.com/posts/from-chromium-to-community/</loc><lastmod>2025-08-15T11:28:03-03:00</lastmod></url><url>
+            <loc>https://vignatti.com/posts/</loc><lastmod>2025-08-15T11:28:03-03:00</lastmod></url><url>
+            <loc>https://vignatti.com/</loc><lastmod>2025-08-15T11:28:03-03:00</lastmod></url><url>
             <loc>https://vignatti.com/posts/organizacoes-sustentaveis/</loc><lastmod>2025-04-09T11:05:16-03:00</lastmod></url><url>
-            <loc>https://vignatti.com/posts/</loc><lastmod>2025-04-09T11:05:16-03:00</lastmod></url><url>
-            <loc>https://vignatti.com/</loc><lastmod>2025-04-09T11:05:16-03:00</lastmod></url><url>
             <loc>https://vignatti.com/posts/sustainable-organizations/</loc><lastmod>2025-04-02T14:52:37-03:00</lastmod></url><url>
             <loc>https://vignatti.com/posts/chromium-for-building-apps/</loc><lastmod>2024-12-04T10:36:37-03:00</lastmod></url><url>
             <loc>https://vignatti.com/posts/good-fortune/</loc><lastmod>2024-11-19T12:00:28-03:00</lastmod></url><url>

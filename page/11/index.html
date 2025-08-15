@@ -73,6 +73,13 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/xorg-input-thread-summary-or-something-2/">Xorg input thread - summary or something #2</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-18">2007-07-18</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>In the last week, I did some cool experiments to see the effects of the D state acting on the X server process when I start it with and without the input thread and always mlock&rsquo;ing it.</p>
+<p>First I set the grub to start my machine with only 170 mb of physical memory. Then I put a &lsquo;mlockall(MCL_CURRENT)&rsquo; just before the call of Dispatch() function, on the main.c. So then I started the server. Well, I called a memory hog to eat all my physical memory and played with the mouse which never gets lagged using or not the separate thread. So the great notice comes when I started an X client (gnome-session) which turns the X process to the D state. The X server without the separate thread lags the cursor because it&rsquo;s using SIGIO to wake up the device. OTOH, the X with the input thread has a smooth movement anyway.</p></div><div class="post-footer">
+        <a href="/posts/xorg-input-thread-summary-or-something-2/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/xorg-input-thread-summary-or-something/">Xorg input thread - summary or something</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-07-06">2007-07-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a>&nbsp;<a href="/categories/soc2007/"><i class="far fa-folder fa-fw"></i>Soc2007</a></span></div><div class="content"><p>This mail that I&rsquo;ve sent to xorg mailing list tells the current state of my project.</p>
 <ul>
@@ -118,12 +125,6 @@ paging). It can&rsquo;t interrupt a program in D state.</p></div><div class="pos
         <a href="/posts/fisl8/">FISL8</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-05-02">2007-05-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p><a href="http://web.inf.ufpr.br/vignatti/talks/apresentacao-fisl2007.pdf" target="_blank" rel="noopener noreffer">Here</a> is the presentation I&rsquo;ve given on 8th International Free Software Forum, at Porto Alegre. My first (really) public talk was really cool and I&rsquo;ll show to you the video/photos when the organizers get it done.</p></div><div class="post-footer">
         <a href="/posts/fisl8/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/the-conception-and-the-future-of-multiseat/">The conception and the future of multiseat...</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2007-04-10">2007-04-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>&hellip;this is the subject of my talk which will be held at FISL (International Free Software Forum)  on this saturday, April 14th. I&rsquo;ll post the feedbacks here.</p></div><div class="post-footer">
-        <a href="/posts/the-conception-and-the-future-of-multiseat/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">

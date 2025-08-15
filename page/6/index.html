@@ -73,6 +73,21 @@
         alt="/images/avatar.png"
         title="/images/avatar.png" /></a></div><h2 class="home-subtitle">art – computer science – play</h2><div class="links"><a href="https://github.com/tiagovignatti" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://www.instagram.com/tiagovignatti" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/">Scrutinizing X memory, part 2: what&#39;s taking all that memory?</a>
+    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-03-25">2010-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>So here goes some statistics of the Xorg process running. All the informations were fetch from /proc/<code>pidof Xorg</code>/{smaps, status}. I used also a <a href="http://wingolog.org/pub/mem_usage.py" target="_blank" rel="noopener noreffer">script</a> found on the <a href="http://wingolog.org/archives/2007/11/27/reducing-the-footprint-of-python-applications" target="_blank" rel="noopener noreffer">Web</a> to parse and organize these informations; Mikhail Gusarov has <a href="http://github.com/dottedmag/mem-usage" target="_blank" rel="noopener noreffer">extended</a> this script to show a very useful <a href="http://people.freedesktop.org/~vignatti/scrutinizing-x-mem/x-standalone-memory-per-libraries.txt" target="_blank" rel="noopener noreffer">output</a>.</p>
+<h3 id="xorg-per-se">Xorg per se</h3>
+<p>Running just one standalone <code>Xorg -retro</code>. In my system it represents:
+VmRSS:      5440 kB
+VmSize:    13620 kB</p>
+<p>from those 5440 kB of RSS:
+3404 kB (63 %) come from code
+1628 kB (30 %) come from malloc/mmap in anonymous memory (heap)
+228 kB  (4 %) come from other data mapped in memory
+180 kB  (3 %) come from rodata</p></div><div class="post-footer">
+        <a href="/posts/scrutinizing-x-memory-part-2-whats-taking-all-that-memory/">Read More</a>
+        
+    </div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/scrutinizing-x-memory-part-1-overview/">Scrutinizing X Memory, part 1: overview</a>
     </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2010-03-25">2010-03-25</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>This series of documents explore how the memory is used by the Xorg server. They aim to eventually shrinks the memory footprint of the server and its related components, like X clients, modules being loaded and drivers. Embedded devices with constrained resources are the main focus here. All texts are mostly based on x86 and ARM architectures, under Linux 2.6.33 with Xorg from upstream.</p>
 <h3 id="overview">Overview</h3>
@@ -111,12 +126,6 @@
 <p><strong><em>X on embedded</em></strong></p>
 <p>The cool thing of the work that I&rsquo;m doing at Nokia is that I can publish and discuss mostly all X fun with the open source communities. &ldquo;Mostly&rdquo; because, for the last device - the N-shiny-and-awesome-900 - for instance, the video driver is closed (provided by Imagination), so we cannot comment much regarding such driver stack :( C&rsquo;est la vie.</p></div><div class="post-footer">
         <a href="/posts/my-dear-diary-some-not-so-old-memories/">Read More</a>
-        
-    </div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/multiseat-with-multiple-x-servers-or-the-right-way/">multiseat with multiple X servers (or &#34;the right way&#34;)</a>
-    </h1><div class="post-meta"><span class="post-publish">published on <time datetime="2009-07-24">2009-07-24</time></span>&nbsp;<span class="post-category">included in <a href="/categories/computing/"><i class="far fa-folder fa-fw"></i>Computing</a></span></div><div class="content"><p>So last week I <a href="http://lkml.org/lkml/2009/7/16/243" target="_blank" rel="noopener noreffer">posted</a> on lkml an old patch that we were carrying for a long time in the Linux community. It basically brings the multiple (old) video cards functionally again on Linux and X server (and this time doing on the right and beauty way). For the people that was following multiseat implementations, this is a HUGE step: we will finally be able to discard the old and ugly hack (a mix of Xorg, several Xephyr servers + evdev) and and go to a clean way, starting multiple X servers in parallel. Cool! Well, not that much, because it might take some time to be in your beloved distribution :)</p></div><div class="post-footer">
-        <a href="/posts/multiseat-with-multiple-x-servers-or-the-right-way/">Read More</a>
         
     </div>
 </article><ul class="pagination"><li class="page-item ">
