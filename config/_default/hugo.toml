@@ -1,0 +1,19 @@
+baseURL = "https://vignatti.com/"
+defaultContentLanguage = "en"
+languageCode = "en"
+title = "Tiago Vignatti"
+
+theme = ["blowfish", "hugo-shortcode-gallery"]
+
+enableRobotsTXT = true
+summaryLength = 30
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    noClasses = false

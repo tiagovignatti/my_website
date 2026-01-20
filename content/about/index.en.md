@@ -2,7 +2,8 @@
 title: "About"
 draft: false
 toc: false
-
+showDate: false
+showReadingTime: false
 ---
 
 ### Igalia

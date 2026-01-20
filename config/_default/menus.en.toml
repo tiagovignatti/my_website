@@ -1,0 +1,16 @@
+# Blowfish Menu Configuration
+
+[[main]]
+  name = "Texts"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "Projects"
+  pageRef = "projects"
+  weight = 20
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 30

@@ -2,6 +2,6 @@
 	path = themes/hugo-shortcode-gallery
 	url = git@github.com:mfg92/hugo-shortcode-gallery.git
 
-[submodule "themes/LoveIt"]
-	path = themes/LoveIt
-	url = git@github.com:tiagovignatti/LoveIt.git
+[submodule "themes/blowfish"]
+	path = themes/blowfish
+	url = https://github.com/nunocoracao/blowfish.git

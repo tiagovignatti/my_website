@@ -3,6 +3,8 @@ title: "Projects"
 draft: false
 toc:
   auto: false
+showDate: false
+showReadingTime: false
 ---
 
 Below are some of the projects I've worked on throughout my career. Some are full-fledged products, and some are just libraries and small systems. Some I'm the primary developer and some I've just contributed to.

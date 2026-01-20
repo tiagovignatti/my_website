@@ -1,0 +1,5 @@
+# Hugo Services Configuration
+
+[googleAnalytics]
+  id = "G-C1XH4SJP6N"
+  anonymizeIP = true

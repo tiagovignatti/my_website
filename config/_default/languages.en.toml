@@ -1,0 +1,14 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Tiago Vignatti"
+
+[author]
+  name = ""
+  image = "/images/avatar.png"
+  headline = "art - computer science - play"
+  bio = ""
+  links = [
+    { github = "https://github.com/tiagovignatti" },
+    { instagram = "https://instagram.com/tiagovignatti" },
+  ]

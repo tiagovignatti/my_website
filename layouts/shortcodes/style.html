@@ -1,0 +1,4 @@
+{{ $style := .Get 0 }}
+<div style="{{ $style | safeCSS }}">
+  {{ .Inner | markdownify }}
+</div>

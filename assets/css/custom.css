@@ -1,0 +1,23 @@
+/* Custom CSS for Blowfish theme */
+
+/* Active menu item styling */
+.main-menu a.active span,
+.main-menu span.active {
+    font-weight: 700 !important;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-right img {
+    height: 96px !important;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-left img {
+    height: 96px !important;
+}
