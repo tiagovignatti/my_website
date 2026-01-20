@@ -14,3 +14,15 @@
   name = "About"
   pageRef = "about"
   weight = 30
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/tiagovignatti"
+  weight = 40
+
+[[main]]
+  identifier = "instagram"
+  pre = "instagram"
+  url = "https://instagram.com/tiagovignatti"
+  weight = 50

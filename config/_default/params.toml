@@ -7,7 +7,7 @@ autoSwitchAppearance = false
 Logo = "images/avatar.png"
 disableTextInHeader = true
 
-enableSearch = true
+enableSearch = false
 enableCodeCopy = true
 highlightCurrentMenuArea = true
 
