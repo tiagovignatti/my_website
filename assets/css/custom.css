@@ -1,5 +1,29 @@
 /* Custom CSS for Blowfish theme */
 
+/* ===== TOP BAR ENHANCEMENTS ===== */
+
+/* Logo hover animation */
+.main-menu .logo {
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.main-menu a:hover .logo {
+    transform: scale(1.08) rotate(5deg);
+}
+
+/* Navigation spacing and transitions */
+.main-menu nav {
+    gap: 2rem !important;
+}
+
+.main-menu nav a {
+    transition: color 0.18s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.main-menu nav a:hover span {
+    color: rgb(var(--color-primary-500));
+}
+
 /* Active menu item styling */
 .main-menu a.active span,
 .main-menu span.active {

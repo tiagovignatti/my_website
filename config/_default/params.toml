@@ -41,7 +41,7 @@ mainSections = ["posts"]
   showReadingTime = true
   showTableOfContents = true
   showRelatedContent = false
-  showTaxonomies = true
+  showTaxonomies = false
   showWordCount = false
   sharingLinks = ["email"]
 
@@ -50,15 +50,16 @@ mainSections = ["posts"]
   heroStyle = "background"
   layoutBackgroundBlur = true
   showBreadcrumbs = false
-  showSummary = true
+  showSummary = false
   showViews = false
   showLikes = false
   showTableOfContents = false
   showCards = false
   groupByYear = false
-  cardView = true
+  cardView = false
   cardViewScreenWidth = false
   constrainItemsWidth = false
+  showTaxonomies = false
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
