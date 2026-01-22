@@ -11,10 +11,13 @@ enableSearch = false
 enableCodeCopy = true
 highlightCurrentMenuArea = true
 
+[footer]
+  showAppearanceSwitcher = false
+
 mainSections = ["posts"]
 
 [homepage]
-  layout = "profile"
+  layout = "custom"
   homepageImage = ""
   showRecent = true
   showRecentItems = 6

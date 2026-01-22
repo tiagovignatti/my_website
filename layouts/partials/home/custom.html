@@ -1,0 +1,45 @@
+<article class="homepage-content">
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1 class="hero-title">
+      <strong>Tiago</strong> likes to live where code and creativity collide.
+    </h1>
+    <p class="hero-subtitle">
+      Working with software, media, and social systems as paths to empower nature.
+    </p>
+    <p class="hero-subtitle">
+      Currently building web browsers at <a href="https://www.igalia.com" target="_blank">Igalia</a>.
+    </p>
+  </header>
+
+  <!-- Recent Texts Section -->
+  <section class="recent-texts">
+    <div class="texts-grid">
+      {{ $pages := where site.RegularPages "Section" "posts" }}
+      {{ range first 6 $pages }}
+        <a href="{{ .RelPermalink }}" class="text-card">
+          {{ $featured := "" }}
+          {{ $featuredURL := "" }}
+          {{ with .Params.featuredImagePreview }}
+            {{ $featuredURL = . | relURL }}
+          {{ end }}
+          {{ with .Params.featureimage }}
+            {{ $featuredURL = . | relURL }}
+          {{ end }}
+          {{ if $featuredURL }}
+            <div class="text-card-image">
+              <img src="{{ $featuredURL }}" alt="{{ .Title }}" loading="lazy">
+            </div>
+          {{ end }}
+          <div class="text-card-content">
+            <h3 class="text-card-title">{{ .Title }}</h3>
+            <time class="text-card-date">{{ .Date.Format "January 2006" }}</time>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+    <div class="see-all">
+      <a href="/posts/">See all texts →</a>
+    </div>
+  </section>
+</article>
