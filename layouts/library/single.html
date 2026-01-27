@@ -1,12 +1,17 @@
 {{ define "main" }}
-<article class="library-page">
-  <header class="library-page-header">
-    <h1 class="library-page-title">Library</h1>
-    <p class="library-page-subtitle">Books I've read, that I'm reading or about to read.</p>
-    <p class="library-page-count">{{ len site.Data.library }} books</p>
+<article>
+  <header id="single_header">
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      Library
+    </h1>
   </header>
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    <div class="min-w-0 min-h-0 max-w-prose">
+      <p>Books I've read, that I'm reading or about to read.</p>
+    </div>
+  </section>
 
-  <div class="library-page-grid">
+  <div class="library-page-grid mt-8">
     {{ range site.Data.library }}
       <a href="{{ .goodreadsUrl }}" target="_blank" class="book-card">
         <div class="book-cover">
