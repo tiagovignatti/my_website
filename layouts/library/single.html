@@ -7,7 +7,7 @@
   </header>
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     <div class="min-w-0 min-h-0 max-w-prose">
-      <p>Books I've read, that I'm reading or about to read.</p>
+      <p>Books I've read or that I'm currently reading.</p>
     </div>
   </section>
 
@@ -15,7 +15,11 @@
     {{ range site.Data.library }}
       <a href="{{ .goodreadsUrl }}" target="_blank" class="book-card">
         <div class="book-cover">
-          <img src="{{ .cover }}" alt="{{ .title }}" class="nozoom" loading="lazy">
+          {{ if .cover }}
+            <img src="{{ .cover }}" alt="{{ .title }}" class="nozoom" loading="lazy">
+          {{ else }}
+            <div class="book-cover-placeholder"><span>{{ .title }}</span></div>
+          {{ end }}
           <span class="book-overlay">View on Goodreads <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Zm7.97-2.03a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 .53.22.75.75 0 0 1 .22.53v5a.75.75 0 0 1-1.5 0V5.56l-6.22 6.22a.75.75 0 1 1-1.06-1.06l6.22-6.22H12.97a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg></span>
         </div>
         <div class="book-info">

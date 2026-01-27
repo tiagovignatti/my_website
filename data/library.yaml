@@ -1,19 +1,275 @@
 - title: "Kitchen Confidential"
   author: "Anthony Bourdain"
   cover: "https://covers.openlibrary.org/b/isbn/9780060899226-L.jpg"
-  goodreadsUrl: "https://www.goodreads.com/book/show/33313.Kitchen_Confidential"
+  goodreadsUrl: "https://www.goodreads.com/book/show/33313"
 
-- title: "Tomara Que Você Seja Deportado: Uma Viagem pela Distopia Americana"
+- title: "Muito Além Do Nosso Eu"
+  author: "Miguel Nicolelis"
+  cover: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1351143572i/16108163.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/16108163"
+
+- title: "The Brothers Karamazov"
+  author: "Fyodor Dostoevsky"
+  cover: "https://covers.openlibrary.org/b/isbn/9780374528379-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/4934"
+
+- title: "Tomara Que Você Seja Deportado"
   author: "Jamil Chade"
   cover: "https://editoranos.com.br/wp-content/uploads/2025/09/IMG-20251201-WA0024.jpg"
   goodreadsUrl: "https://editoranos.com.br/produto/tomara-que-voce-seja-deportado-uma-viagem-pela-distopia-americana/"
 
-- title: "O Sentido das Águas: Histórias do Rio Negro"
-  author: "Drauzio Varella"
-  cover: "https://cdl-static.s3-sa-east-1.amazonaws.com/covers/gg/9788535940558/o-sentido-das-aguas.jpg"
-  goodreadsUrl: "https://www.goodreads.com/book/show/227902527-o-sentido-das-guas"
-
 - title: "Einstein: His Life and Universe"
   author: "Walter Isaacson"
   cover: "https://covers.openlibrary.org/b/isbn/9780743264730-L.jpg"
-  goodreadsUrl: "https://www.goodreads.com/book/show/10884.Einstein"
+  goodreadsUrl: "https://www.goodreads.com/book/show/10884"
+
+- title: "O Sentido das Águas"
+  author: "Drauzio Varella"
+  cover: "https://cdl-static.s3-sa-east-1.amazonaws.com/covers/gg/9788535940558/o-sentido-das-aguas.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/227902527"
+
+- title: "A Máquina da Natureza"
+  author: "André L. Vignatti"
+  cover: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1759504278i/242365130.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/242365130"
+
+- title: "Parto Ativo"
+  author: "Janet Balaskas"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/8507360"
+
+- title: "New Natural Pregnancy"
+  author: "Janet Balaskas"
+  cover: "https://covers.openlibrary.org/b/isbn/9781566563116-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/1156732"
+
+- title: "Guia da Gestação ao Puerpério"
+  author: "Jéssica Scipioni Vasconcelos"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/40203229"
+
+- title: "How Google Works"
+  author: "Eric Schmidt"
+  cover: "https://covers.openlibrary.org/b/id/7898991-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/23158207"
+
+- title: "The Lean Startup"
+  author: "Eric Ries"
+  cover: "https://covers.openlibrary.org/b/isbn/9780307887894-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/10127019"
+
+- title: "C++ Primer Plus"
+  author: "Stephen Prata"
+  cover: "https://covers.openlibrary.org/b/isbn/9780672326974-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/853178"
+
+- title: "A Incrível Viagem de Shackleton"
+  author: "Alfred Lansing"
+  cover: "https://covers.openlibrary.org/b/isbn/9788575421383-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/21538699"
+
+- title: "21 Lessons for the 21st Century"
+  author: "Yuval Noah Harari"
+  cover: "https://covers.openlibrary.org/b/isbn/9780525512172-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/38820046"
+
+- title: "Thinking, Fast and Slow"
+  author: "Daniel Kahneman"
+  cover: "https://covers.openlibrary.org/b/isbn/9780374275631-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/11468377"
+
+- title: "O Pacifista"
+  author: "John Boyne"
+  cover: "https://covers.openlibrary.org/b/isbn/9788535921939-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/17155797"
+
+- title: "Steve Jobs"
+  author: "Walter Isaacson"
+  cover: "https://covers.openlibrary.org/b/isbn/9781451648539-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/11084145"
+
+- title: "Leonardo da Vinci"
+  author: "Walter Isaacson"
+  cover: "https://covers.openlibrary.org/b/isbn/9781501139154-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/34684622"
+
+- title: "Mutiny on the Bounty"
+  author: "John Boyne"
+  cover: "https://covers.openlibrary.org/b/isbn/9780385666350-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/3279529"
+
+- title: "Homo Deus"
+  author: "Yuval Noah Harari"
+  cover: "https://covers.openlibrary.org/b/id/7914168-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/31138556"
+
+- title: "Incansáveis"
+  author: "Maurício Benvenutti"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/32876589"
+
+- title: "O Povo Brasileiro"
+  author: "Darcy Ribeiro"
+  cover: "https://covers.openlibrary.org/b/id/8294099-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/28594857"
+
+- title: "Minhas lembranças de Leminski"
+  author: "Domingos Pellegrini"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/22304181"
+
+- title: "Ana Terra"
+  author: "Erico Verissimo"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/2336849"
+
+- title: "Paratii"
+  author: "Amyr Klink"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/1575428"
+
+- title: "How Proust Can Change Your Life"
+  author: "Alain de Botton"
+  cover: "https://covers.openlibrary.org/b/isbn/9780679779155-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/23420"
+
+- title: "Memories of My Melancholy Whores"
+  author: "Gabriel García Márquez"
+  cover: "https://covers.openlibrary.org/b/isbn/9781400095940-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/5947099"
+
+- title: "Hackers & Painters"
+  author: "Paul Graham"
+  cover: "https://covers.openlibrary.org/b/isbn/9780596006624-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/41793"
+
+- title: "How to Think More About Sex"
+  author: "Alain de Botton"
+  cover: "https://covers.openlibrary.org/b/isbn/9781447202271-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/13696016"
+
+- title: "Dr. Atkins' New Diet Revolution"
+  author: "Robert C. Atkins"
+  cover: "https://covers.openlibrary.org/b/isbn/9780380727292-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/1906987"
+
+- title: "Linha D'Água"
+  author: "Amyr Klink"
+  cover: "https://covers.openlibrary.org/b/isbn/9788535909401-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/4536381"
+
+- title: "Zappa: Detritos Cósmicos"
+  author: "Fabio Massari"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/13179913"
+
+- title: "Producing Open Source Software"
+  author: "Karl Fogel"
+  cover: "https://covers.openlibrary.org/b/isbn/9780596007591-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/305248"
+
+- title: "The Art of Travel"
+  author: "Alain de Botton"
+  cover: "https://covers.openlibrary.org/b/isbn/9780375725340-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/23422"
+
+- title: "Neuromancer"
+  author: "William Gibson"
+  cover: "https://covers.openlibrary.org/b/id/283860-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/22328"
+
+- title: "The Consolations of Philosophy"
+  author: "Alain de Botton"
+  cover: "https://covers.openlibrary.org/b/id/10124965-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/23419"
+
+- title: "The Problems of Philosophy"
+  author: "Bertrand Russell"
+  cover: "https://covers.openlibrary.org/b/isbn/9781421903675-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/31799"
+
+- title: "WikiLeaks"
+  author: "David Leigh"
+  cover: "https://covers.openlibrary.org/b/isbn/9781610390620-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/10598592"
+
+- title: "Logicomix"
+  author: "Apostolos Doxiadis"
+  cover: "https://covers.openlibrary.org/b/isbn/9781596914520-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/6493321"
+
+- title: "Straw Dogs"
+  author: "John Gray"
+  cover: "https://covers.openlibrary.org/b/isbn/9781862075962-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/230733"
+
+- title: "The Facebook Effect"
+  author: "David Kirkpatrick"
+  cover: "https://covers.openlibrary.org/b/isbn/9781439102114-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/7518289"
+
+- title: "How to Marry a Finnish Girl"
+  author: "Phil Schwarzmann"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/12753543"
+
+- title: "Criatividade e Grupos Criativos"
+  author: "Domenico de Masi"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/624195"
+
+- title: "The Demon-Haunted World"
+  author: "Carl Sagan"
+  cover: "https://covers.openlibrary.org/b/isbn/9780345409461-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/17349"
+
+- title: "The Fellowship of the Ring"
+  author: "J.R.R. Tolkien"
+  cover: "https://covers.openlibrary.org/b/isbn/9780618346257-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/34"
+
+- title: "Freakonomics"
+  author: "Steven D. Levitt"
+  cover: "https://covers.openlibrary.org/b/isbn/9780061234002-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/1202"
+
+- title: "Billions & Billions"
+  author: "Carl Sagan"
+  cover: "https://covers.openlibrary.org/b/isbn/9780345379184-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/61665"
+
+- title: "Sophie’s World"
+  author: "Jostein Gaarder"
+  cover: "https://covers.openlibrary.org/b/isbn/9781857993288-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/10959"
+
+- title: "O Ócio Criativo"
+  author: "Domenico de Masi"
+  cover: ""
+  goodreadsUrl: "https://www.goodreads.com/book/show/2499476"
+
+- title: "One Hundred Years of Solitude"
+  author: "Gabriel García Márquez"
+  cover: "https://covers.openlibrary.org/b/id/10864222-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/320"
+
+- title: "A Brief History of Time"
+  author: "Stephen W. Hawking"
+  cover: "https://covers.openlibrary.org/b/isbn/9780553380163-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/3869"
+
+- title: "The Universe in a Nutshell"
+  author: "Stephen W. Hawking"
+  cover: "https://covers.openlibrary.org/b/isbn/9780553802023-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/2095"
+
+- title: "On Love"
+  author: "Alain de Botton"
+  cover: "https://covers.openlibrary.org/b/isbn/9780802142405-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/23426"
+
+- title: "Cem Dias Entre Céu e Mar"
+  author: "Amyr Klink"
+  cover: "https://covers.openlibrary.org/b/isbn/9788503000369-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/1575430"
+
