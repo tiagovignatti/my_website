@@ -42,4 +42,24 @@
       <a href="/posts/">See all texts →</a>
     </div>
   </section>
+
+  <!-- Library Section -->
+  <section class="library">
+    <h2 class="library-title">Library</h2>
+    <p class="library-subtitle">Books I've read, that I'm reading or about to read.</p>
+    <div class="library-grid">
+      {{ range first 6 site.Data.library }}
+        <a href="{{ .goodreadsUrl }}" target="_blank" class="book-card">
+          <img src="{{ .cover }}" alt="{{ .title }}" loading="lazy">
+          <div class="book-info">
+            <span class="book-title">{{ .title }}</span>
+            <span class="book-author">{{ .author }}</span>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+    <div class="see-all">
+      <a href="/library/">See all books →</a>
+    </div>
+  </section>
 </article>

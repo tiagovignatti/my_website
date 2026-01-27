@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="library-page">
+  <header class="library-page-header">
+    <h1 class="library-page-title">Library</h1>
+    <p class="library-page-subtitle">Books I've read, that I'm reading or about to read.</p>
+    <p class="library-page-count">{{ len site.Data.library }} books</p>
+  </header>
+
+  <div class="library-page-grid">
+    {{ range site.Data.library }}
+      <a href="{{ .goodreadsUrl }}" target="_blank" class="book-card">
+        <img src="{{ .cover }}" alt="{{ .title }}" loading="lazy">
+        <div class="book-info">
+          <span class="book-title">{{ .title }}</span>
+          <span class="book-author">{{ .author }}</span>
+        </div>
+      </a>
+    {{ end }}
+  </div>
+</article>
+{{ end }}
