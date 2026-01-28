@@ -150,6 +150,13 @@ body {
     color: rgb(var(--color-neutral-100));
 }
 
+.text-card-summary {
+    font-size: 0.8rem;
+    color: rgb(var(--color-neutral-500));
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
 .text-card-date {
     font-size: 0.85rem;
     color: rgb(var(--color-neutral-500));

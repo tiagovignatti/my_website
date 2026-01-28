@@ -2,6 +2,7 @@
 date: 2018-10-15 17:21:23+00:00
 draft: false
 title: Oculus Quest
+summary: "It won't run Rift apps."
 featuredImage: "/images/oculus-2018.png"
 
 categories:

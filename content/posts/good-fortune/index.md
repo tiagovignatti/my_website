@@ -1,5 +1,6 @@
 ---
 title: "Good fortune 복"
+summary: "Chromium and friends in Seoul."
 featuredImagePreview: /images/IMG_2806-preview.jpg
 date: 2024-11-19T12:00:28-03:00
 draft: false

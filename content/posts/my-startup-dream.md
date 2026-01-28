@@ -1,6 +1,6 @@
 ---
 title: "My Startup Dream"
-
+summary: "Skateboards to VR."
 featuredImagePreview: /images/20160625_021323_Pano-preview.jpg
 date: 2021-08-06
 draft: false

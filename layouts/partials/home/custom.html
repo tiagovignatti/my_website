@@ -33,6 +33,7 @@
           {{ end }}
           <div class="text-card-content">
             <h3 class="text-card-title">{{ .Title }}</h3>
+            {{ with .Params.summary }}<p class="text-card-summary">{{ . }}</p>{{ end }}
             <time class="text-card-date">{{ .Date.Format "January 2006" }}</time>
           </div>
         </a>

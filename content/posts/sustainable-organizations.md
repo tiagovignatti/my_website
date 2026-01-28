@@ -1,5 +1,6 @@
 ---
 title: "Sustainable Organizations: Lessons from Igalia"
+summary: "Principles for any organization."
 featuredImagePreview: /images/bacia-da-vovo_2025-preview.jpg
 date: 2025-04-02T14:52:37-03:00
 draft: false

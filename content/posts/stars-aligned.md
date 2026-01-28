@@ -1,6 +1,6 @@
 ---
 title: "Stars Aligned"
-
+summary: "Wedding, baby, and grandma's birthday."
 featuredImagePreview: /images/20210306_103829_2-preview.jpg
 date: 2021-03-08T22:04:11-03:00
 draft: false

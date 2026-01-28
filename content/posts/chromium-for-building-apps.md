@@ -1,5 +1,6 @@
 ---
 title: "Using Chromium for Building Apps (2025)"
+summary: "Beyond the browser."
 featuredImagePreview: /images/dall-e-chromium-preview.webp
 date: 2024-12-04T10:36:37-03:00
 draft: false

@@ -1,5 +1,6 @@
 ---
 title: "Short blog post from Madrid's bus"
+summary: "Wildfires and Igalia's 20th."
 featuredImagePreview: /images/20220617_212257-preview.jpg
 date: 2022-06-21T00:34:34+02:00
 draft: false
