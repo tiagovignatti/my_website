@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+description: "A collection of projects I've worked on throughout my career."
 draft: false
 toc:
   auto: false

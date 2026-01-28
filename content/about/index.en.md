@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "Partner at Igalia, open-source developer, and creative technologist."
 draft: false
 toc: false
 showDate: false
