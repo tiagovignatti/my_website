@@ -353,6 +353,61 @@ body {
     gap: clamp(1.25rem, 0.75rem + 2vw, 2rem);
 }
 
+/* ===== ABOUT PAGE ===== */
+
+.about-header {
+    margin-bottom: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+    padding: clamp(1rem, 0.5rem + 2vw, 2rem) 0 0;
+}
+
+.about-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    color: rgb(var(--color-neutral-500));
+}
+
+.about-name {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.2rem, 1.6rem + 3vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0.25rem 0 0.5rem;
+    color: rgb(var(--color-neutral-900));
+}
+
+.dark .about-name {
+    color: rgb(var(--color-neutral-100));
+}
+
+.about-subtitle {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+    font-weight: 300;
+    color: rgb(var(--color-neutral-600));
+    margin: 0;
+}
+
+.dark .about-subtitle {
+    color: rgb(var(--color-neutral-400));
+}
+
+.about-photo img {
+    max-width: 420px;
+    border-radius: 12px;
+    float: right;
+    margin: 0 0 1.5rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .about-photo img {
+        float: none;
+        max-width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
+}
+
 /* ===== TOP BAR ENHANCEMENTS ===== */
 
 /* Logo hover animation */

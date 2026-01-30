@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article>
+  <header class="about-header">
+    <span class="about-label">About</span>
+    <h1 class="about-name">Tiago Vignatti</h1>
+    <p class="about-subtitle">Software engineer and open-source technologist.</p>
+  </header>
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert">
+    <div class="min-w-0 min-h-0 max-w-full">
+      {{ .Content }}
+    </div>
+  </section>
+</article>
+{{ end }}

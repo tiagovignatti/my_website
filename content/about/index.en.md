@@ -1,11 +1,14 @@
 ---
 title: "About"
 description: "Partner at Igalia, open-source developer, and creative technologist."
+layout: "about"
 draft: false
-toc: false
+showTableOfContents: false
 showDate: false
 showReadingTime: false
 ---
+
+{{< figure src="/images/tiago-igalia-summit-2022.jpg" alt="Tiago Vignatti" class="about-photo nozoom" >}}
 
 ### Igalia
 
