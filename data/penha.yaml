@@ -1,15 +1,17 @@
-- regiao: "Bananal"
-  ultima_limpeza: "2026-02-03"
-  fotos:
-    - /images/penha/bananal-01.jpg
-    - /images/penha/bananal-02.jpg
-    - /images/penha/bananal-03.jpg
+- local: "Bananal"
+  limpezas:
+    - data: "2026-02-03"
+      fotos:
+        - /images/penha/bananal-01.jpg
+        - /images/penha/bananal-02.jpg
+        - /images/penha/bananal-03.jpg
 
-- regiao: "Praia da Saudade"
-  ultima_limpeza: "2026-02-03"
-  fotos:
-    - /images/penha/saudade-01.jpg
-    - /images/penha/saudade-02.jpg
-    - /images/penha/saudade-03.jpg
-    - /images/penha/saudade-04.jpg
-    - /images/penha/saudade-05.jpg
+- local: "Praia da Saudade"
+  limpezas:
+    - data: "2026-02-03"
+      fotos:
+        - /images/penha/saudade-01.jpg
+        - /images/penha/saudade-02.jpg
+        - /images/penha/saudade-03.jpg
+        - /images/penha/saudade-04.jpg
+        - /images/penha/saudade-05.jpg

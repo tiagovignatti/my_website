@@ -4,7 +4,7 @@
   <header class="servurb-header">
     <span class="servurb-label">SERVURB Penha SC</span>
     <h1 class="servurb-title">Registro de Limpeza Urbana</h1>
-    <p class="servurb-subtitle">Última ocorrência de limpeza por região em Penha, SC.</p>
+    <p class="servurb-subtitle">Última ocorrência de limpeza por local em Penha, SC.</p>
   </header>
 
   <div class="servurb-table-container">
@@ -13,30 +13,48 @@
         <tr>
           <th>Local</th>
           <th>Última Limpeza</th>
-          <th>Fotos</th>
+          <th>Registros</th>
         </tr>
       </thead>
       <tbody>
         {{ range site.Data.penha }}
         <tr>
-          <td class="servurb-regiao">{{ .regiao }}</td>
+          <td class="servurb-local">{{ .local }}</td>
           <td class="servurb-data">
-            {{ if .ultima_limpeza }}
-              {{ $date := time .ultima_limpeza }}
-              {{ $day := $date.Format "02" }}
-              {{ $month := index $meses ($date.Format "January") }}
-              {{ $year := $date.Format "2006" }}
-              {{ printf "%s %s %s" $day $month $year }}
+            {{ if .limpezas }}
+              {{ $ultima := index .limpezas 0 }}
+              {{ $dataLimpeza := time $ultima.data }}
+              {{ $hoje := now }}
+              {{ $diff := $hoje.Sub $dataLimpeza }}
+              {{ $dias := int (div $diff.Hours 24) }}
+              {{ if eq $dias 0 }}
+                <span class="servurb-dias">Hoje</span>
+              {{ else if eq $dias 1 }}
+                <span class="servurb-dias">Há 1 dia</span>
+              {{ else }}
+                <span class="servurb-dias">Há {{ $dias }} dias</span>
+              {{ end }}
             {{ else }}
               <span class="servurb-sem-registro">Sem registro</span>
             {{ end }}
           </td>
-          <td class="servurb-fotos">
-            {{ if .fotos }}
-              {{ range .fotos }}
-                <a href="{{ . }}" target="_blank" class="servurb-foto-link">
-                  <img src="{{ . }}" alt="Foto de limpeza" class="servurb-foto-thumb nozoom">
-                </a>
+          <td class="servurb-registros">
+            {{ if .limpezas }}
+              {{ range .limpezas }}
+                <div class="servurb-registro">
+                  <div class="servurb-registro-data">
+                    {{ $date := time .data }}
+                    {{ $day := $date.Format "02" }}
+                    {{ $month := index $meses ($date.Format "January") }}
+                    {{ $year := $date.Format "2006" }}
+                    {{ printf "%s %s %s" $day $month $year }}
+                  </div>
+                  <div class="servurb-fotos" data-gallery>
+                    {{ range .fotos }}
+                      <img src="{{ . }}" alt="Foto de limpeza" class="servurb-foto-thumb nozoom" data-lightbox>
+                    {{ end }}
+                  </div>
+                </div>
               {{ end }}
             {{ else }}
               <span class="servurb-sem-foto">—</span>
@@ -56,4 +74,94 @@
     <p>Dados mantidos por <a href="/">Tiago</a>. Última atualização: {{ printf "%s %s %s" $day $month $year }}.</p>
   </footer>
 </article>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-overlay"></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close" aria-label="Fechar">&times;</button>
+    <button class="lightbox-prev" aria-label="Anterior">&#10094;</button>
+    <img class="lightbox-img" src="" alt="Foto ampliada">
+    <button class="lightbox-next" aria-label="Próxima">&#10095;</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('.lightbox-img');
+  const overlay = lightbox.querySelector('.lightbox-overlay');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+  const prevBtn = lightbox.querySelector('.lightbox-prev');
+  const nextBtn = lightbox.querySelector('.lightbox-next');
+
+  let currentGallery = [];
+  let currentIndex = 0;
+
+  // Open lightbox
+  document.querySelectorAll('[data-lightbox]').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+      const gallery = this.closest('[data-gallery]');
+      currentGallery = Array.from(gallery.querySelectorAll('[data-lightbox]')).map(i => i.src);
+      currentIndex = currentGallery.indexOf(this.src);
+      showImage();
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function showImage() {
+    lightboxImg.src = currentGallery[currentIndex];
+    prevBtn.style.display = currentGallery.length > 1 ? 'block' : 'none';
+    nextBtn.style.display = currentGallery.length > 1 ? 'block' : 'none';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    showImage();
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % currentGallery.length;
+    showImage();
+  }
+
+  // Event listeners
+  closeBtn.addEventListener('click', closeLightbox);
+  overlay.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', prevImage);
+  nextBtn.addEventListener('click', nextImage);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+  });
+
+  // Swipe support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) nextImage();
+      else prevImage();
+    }
+  }, { passive: true });
+})();
+</script>
 {{ end }}

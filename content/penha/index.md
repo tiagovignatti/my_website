@@ -1,6 +1,6 @@
 ---
-title: "SERVURB Penha SC"
-description: "Registro de limpeza urbana por região em Penha, SC."
+title: "Penha SC"
+description: "Registro de limpeza urbana da SERVURB."
 layout: "penha"
 showTableOfContents: false
 showDate: false
