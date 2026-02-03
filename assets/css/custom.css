@@ -408,6 +408,149 @@ body {
     }
 }
 
+/* ===== SERVURB PAGE ===== */
+
+.servurb-page {
+    padding: clamp(1rem, 0.5rem + 2vw, 2rem) 0;
+}
+
+.servurb-header {
+    margin-bottom: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+
+.servurb-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    color: rgb(var(--color-neutral-500));
+}
+
+.servurb-title {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.8rem, 1.4rem + 2vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0.25rem 0 0.5rem;
+    color: rgb(var(--color-neutral-900));
+}
+
+.dark .servurb-title {
+    color: rgb(var(--color-neutral-100));
+}
+
+.servurb-subtitle {
+    font-size: clamp(1rem, 0.9rem + 0.3vw, 1.15rem);
+    color: rgb(var(--color-neutral-500));
+    margin: 0;
+}
+
+.servurb-table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.servurb-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1rem);
+}
+
+.servurb-table th,
+.servurb-table td {
+    padding: clamp(0.75rem, 0.5rem + 0.5vw, 1rem);
+    text-align: left;
+    border-bottom: 1px solid rgb(var(--color-neutral-200));
+}
+
+.dark .servurb-table th,
+.dark .servurb-table td {
+    border-bottom-color: rgb(var(--color-neutral-700));
+}
+
+.servurb-table th {
+    font-weight: 600;
+    color: rgb(var(--color-neutral-600));
+    background: rgb(var(--color-neutral-100));
+}
+
+.dark .servurb-table th {
+    color: rgb(var(--color-neutral-300));
+    background: rgb(var(--color-neutral-800));
+}
+
+.servurb-regiao {
+    font-weight: 600;
+    color: rgb(var(--color-neutral-800));
+}
+
+.dark .servurb-regiao {
+    color: rgb(var(--color-neutral-100));
+}
+
+.servurb-data {
+    color: rgb(var(--color-neutral-700));
+}
+
+.dark .servurb-data {
+    color: rgb(var(--color-neutral-300));
+}
+
+.servurb-sem-registro {
+    color: rgb(var(--color-neutral-400));
+    font-style: italic;
+}
+
+.servurb-sem-foto {
+    color: rgb(var(--color-neutral-400));
+}
+
+.servurb-fotos {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.servurb-foto-thumb {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgb(var(--color-neutral-200));
+    transition: transform 0.2s ease;
+}
+
+.dark .servurb-foto-thumb {
+    border-color: rgb(var(--color-neutral-600));
+}
+
+.servurb-foto-link:hover .servurb-foto-thumb {
+    transform: scale(1.1);
+}
+
+.servurb-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgb(var(--color-neutral-200));
+    font-size: 0.85rem;
+    color: rgb(var(--color-neutral-500));
+}
+
+.servurb-footer a {
+    font-weight: 700;
+}
+
+.dark .servurb-footer {
+    border-top-color: rgb(var(--color-neutral-700));
+}
+
+@media (max-width: 480px) {
+    .servurb-foto-thumb {
+        width: 70px;
+        height: 70px;
+    }
+}
+
 /* ===== TOP BAR ENHANCEMENTS ===== */
 
 /* Logo hover animation */

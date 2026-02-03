@@ -1,0 +1,59 @@
+{{ define "main" }}
+{{ $meses := dict "January" "Jan" "February" "Fev" "March" "Mar" "April" "Abr" "May" "Mai" "June" "Jun" "July" "Jul" "August" "Ago" "September" "Set" "October" "Out" "November" "Nov" "December" "Dez" }}
+<article class="servurb-page">
+  <header class="servurb-header">
+    <span class="servurb-label">SERVURB Penha SC</span>
+    <h1 class="servurb-title">Registro de Limpeza Urbana</h1>
+    <p class="servurb-subtitle">Última ocorrência de limpeza por região em Penha, SC.</p>
+  </header>
+
+  <div class="servurb-table-container">
+    <table class="servurb-table">
+      <thead>
+        <tr>
+          <th>Local</th>
+          <th>Última Limpeza</th>
+          <th>Fotos</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range site.Data.penha }}
+        <tr>
+          <td class="servurb-regiao">{{ .regiao }}</td>
+          <td class="servurb-data">
+            {{ if .ultima_limpeza }}
+              {{ $date := time .ultima_limpeza }}
+              {{ $day := $date.Format "02" }}
+              {{ $month := index $meses ($date.Format "January") }}
+              {{ $year := $date.Format "2006" }}
+              {{ printf "%s %s %s" $day $month $year }}
+            {{ else }}
+              <span class="servurb-sem-registro">Sem registro</span>
+            {{ end }}
+          </td>
+          <td class="servurb-fotos">
+            {{ if .fotos }}
+              {{ range .fotos }}
+                <a href="{{ . }}" target="_blank" class="servurb-foto-link">
+                  <img src="{{ . }}" alt="Foto de limpeza" class="servurb-foto-thumb nozoom">
+                </a>
+              {{ end }}
+            {{ else }}
+              <span class="servurb-sem-foto">—</span>
+            {{ end }}
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="servurb-footer">
+    {{ $hoje := now }}
+    {{ $day := $hoje.Format "02" }}
+    {{ $month := index $meses ($hoje.Format "January") }}
+    {{ $year := $hoje.Format "2006" }}
+    <p>Dados mantidos por <a href="/">Tiago</a>. Última atualização: {{ printf "%s %s %s" $day $month $year }}.</p>
+  </footer>
+</article>
+{{ end }}

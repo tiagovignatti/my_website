@@ -1,0 +1,20 @@
+<!doctype html>
+<html
+  lang="pt-BR"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="{{ site.Params.defaultAppearance | default `light` }}"
+  data-auto-appearance="{{ site.Params.autoSwitchAppearance | default `true` }}">
+  {{- partial "head.html" . -}}
+  {{- partialCached "init.html" . -}}
+
+  {{ $bodyLayout := "flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32" }}
+  {{ $bodyColor := "text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral" }}
+  <body class="{{ $bodyLayout }} {{ $bodyColor }} {{ if site.Params.enableStyledScrollbar | default true }}bf-scrollbar{{ end }}">
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+  </body>
+</html>
