@@ -463,6 +463,10 @@ body {
     border-bottom: 1px solid rgb(var(--color-neutral-200));
 }
 
+.servurb-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
 .dark .servurb-table th,
 .dark .servurb-table td {
     border-bottom-color: rgb(var(--color-neutral-700));
