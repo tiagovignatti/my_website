@@ -13,10 +13,11 @@ enableSearch = false
 enableCodeCopy = true
 highlightCurrentMenuArea = true
 
+copyright = "© { year } Tiago Vignatti"
+
 [footer]
   showAppearanceSwitcher = false
   showThemeAttribution = false
-  copyright = "© { year } Tiago Vignatti"
 
 mainSections = ["posts"]
 
