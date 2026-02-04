@@ -5,6 +5,11 @@
         - /images/penha/bananal-01.jpg
         - /images/penha/bananal-02.jpg
         - /images/penha/bananal-03.jpg
+    - data: "2025-02-03"
+      fotos:
+        - /images/penha/bananal-2025-01.jpg
+        - /images/penha/bananal-2025-02.jpg
+        - /images/penha/bananal-2025-03.jpg
 
 - local: "Praia da Saudade"
   limpezas:
