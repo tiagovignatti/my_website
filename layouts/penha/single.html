@@ -23,17 +23,7 @@
           <td class="servurb-data">
             {{ if .limpezas }}
               {{ $ultima := index .limpezas 0 }}
-              {{ $dataLimpeza := time $ultima.data }}
-              {{ $hoje := now }}
-              {{ $diff := $hoje.Sub $dataLimpeza }}
-              {{ $dias := int (div $diff.Hours 24) }}
-              {{ if eq $dias 0 }}
-                <span class="servurb-dias">Hoje</span>
-              {{ else if eq $dias 1 }}
-                <span class="servurb-dias">Há 1 dia</span>
-              {{ else }}
-                <span class="servurb-dias">Há {{ $dias }} dias</span>
-              {{ end }}
+              <span class="servurb-dias" data-date="{{ $ultima.data }}"></span>
             {{ else }}
               <span class="servurb-sem-registro">Sem registro</span>
             {{ end }}
@@ -84,6 +74,24 @@
 
 <script>
 (function() {
+  // Dynamic "days ago" calculation
+  document.querySelectorAll('.servurb-dias[data-date]').forEach(el => {
+    const dateStr = el.dataset.date;
+    const cleaningDate = new Date(dateStr + 'T00:00:00');
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const diffTime = today - cleaningDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) {
+      el.textContent = 'Hoje';
+    } else if (diffDays === 1) {
+      el.textContent = 'Há 1 dia';
+    } else {
+      el.textContent = 'Há ' + diffDays + ' dias';
+    }
+  });
+
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = lightbox.querySelector('.lightbox-img');
   const overlay = lightbox.querySelector('.lightbox-overlay');
