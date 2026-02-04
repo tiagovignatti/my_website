@@ -20,3 +20,9 @@
         - /images/penha/saudade-03.jpg
         - /images/penha/saudade-04.jpg
         - /images/penha/saudade-05.jpg
+    - data: "2025-02-03"
+      fotos:
+        - /images/penha/saudade-2025-01.jpg
+        - /images/penha/saudade-2025-02.jpg
+        - /images/penha/saudade-2025-03.jpg
+        - /images/penha/saudade-2025-04.jpg
