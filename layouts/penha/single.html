@@ -30,22 +30,42 @@
           </td>
           <td class="servurb-registros">
             {{ if .limpezas }}
-              {{ range .limpezas }}
-                <div class="servurb-registro">
-                  <div class="servurb-registro-data">
-                    {{ $date := time .data }}
-                    {{ $day := $date.Format "02" }}
-                    {{ $month := index $meses ($date.Format "January") }}
-                    {{ $year := $date.Format "2006" }}
-                    {{ printf "%s %s %s" $day $month $year }}
+              {{ $limpezas := .limpezas }}
+              <div class="timeline">
+                {{ range $i, $limpeza := $limpezas }}
+                <div class="timeline-item"
+                     data-date="{{ $limpeza.data }}"
+                     {{ if gt $i 0 }}data-prev-date="{{ (index $limpezas (sub $i 1)).data }}"{{ end }}>
+
+                  <!-- Gap indicator (except for first item) -->
+                  {{ if gt $i 0 }}
+                  <div class="timeline-gap">
+                    <span class="timeline-gap-line"></span>
+                    <span class="timeline-gap-text"></span>
+                    <span class="timeline-gap-line"></span>
                   </div>
-                  <div class="servurb-fotos" data-gallery>
-                    {{ range .fotos }}
-                      <img src="{{ . }}" alt="Foto de limpeza" class="servurb-foto-thumb nozoom" data-lightbox>
-                    {{ end }}
+                  {{ end }}
+
+                  <!-- Timeline content -->
+                  <div class="timeline-event">
+                    <div class="timeline-content">
+                      <div class="timeline-date">
+                        {{ $date := time $limpeza.data }}
+                        {{ $day := $date.Format "02" }}
+                        {{ $month := index $meses ($date.Format "January") }}
+                        {{ $year := $date.Format "2006" }}
+                        {{ printf "%s %s %s" $day $month $year }}
+                      </div>
+                      <div class="timeline-photos" data-gallery>
+                        {{ range $limpeza.fotos }}
+                          <img src="{{ . }}" alt="Foto de limpeza" class="servurb-foto-thumb nozoom" data-lightbox>
+                        {{ end }}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              {{ end }}
+                {{ end }}
+              </div>
             {{ else }}
               <span class="servurb-sem-foto">—</span>
             {{ end }}
@@ -89,6 +109,19 @@
       el.textContent = 'Há 1 dia';
     } else {
       el.textContent = 'Há ' + diffDays + ' dias';
+    }
+  });
+
+  // Calculate gaps between consecutive cleaning dates
+  document.querySelectorAll('.timeline-item[data-prev-date]').forEach(el => {
+    const currentDate = new Date(el.dataset.date + 'T00:00:00');
+    const prevDate = new Date(el.dataset.prevDate + 'T00:00:00');
+    const diffTime = prevDate - currentDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    const gapText = el.querySelector('.timeline-gap-text');
+    if (gapText && diffDays > 0) {
+      gapText.textContent = diffDays + ' dias';
     }
   });
 
