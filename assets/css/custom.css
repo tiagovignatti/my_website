@@ -68,19 +68,101 @@ body {
     text-decoration: underline;
 }
 
-/* Recent Texts Grid */
+/* Recent Texts Section */
 .recent-texts {
     margin-bottom: clamp(1.5rem, 1rem + 3vw, 3rem);
 }
 
-.texts-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(0.75rem, 0.5rem + 1.5vw, 1.5rem);
+/* Desktop: cards + sidebar side by side */
+.texts-layout {
+    display: flex;
+    gap: 2rem;
     margin-bottom: clamp(1rem, 0.5rem + 2vw, 2rem);
 }
 
+.texts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.75rem, 0.5rem + 1.5vw, 1.5rem);
+    flex: 1;
+    min-width: 0;
+}
+
+/* Sidebar: visible on desktop only */
+.texts-sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+}
+
+.texts-sidebar-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04rem;
+    color: rgb(var(--color-neutral-500));
+    margin: 0 0 0.75rem;
+}
+
+.texts-sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.texts-sidebar-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+}
+
+.texts-sidebar-list a {
+    font-size: 0.85rem;
+    color: rgb(var(--color-neutral-700));
+    text-decoration: none;
+    transition: color 0.18s ease;
+}
+
+.texts-sidebar-list a:hover {
+    color: rgb(var(--color-primary-500));
+}
+
+.dark .texts-sidebar-list a {
+    color: rgb(var(--color-neutral-300));
+}
+
+.dark .texts-sidebar-list a:hover {
+    color: rgb(var(--color-primary-400));
+}
+
+.texts-sidebar-all {
+    font-size: 0.85rem;
+    color: rgb(var(--color-primary-500));
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.texts-sidebar-all:hover {
+    color: rgb(var(--color-primary-600));
+}
+
+/* "See all" below cards: only visible on mobile */
+.see-all-mobile {
+    display: none;
+}
+
 @media (max-width: 768px) {
+    .texts-layout {
+        flex-direction: column;
+    }
+
+    .texts-sidebar {
+        display: none;
+    }
+
+    .see-all-mobile {
+        display: block;
+    }
+
     .texts-grid {
         grid-template-columns: repeat(2, 1fr);
     }

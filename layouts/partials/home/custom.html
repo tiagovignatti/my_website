@@ -13,33 +13,60 @@
   </header>
 
   <!-- Recent Texts Section -->
+  {{ $allPosts := where site.RegularPages "Section" "posts" }}
+  {{ $recentTwo := first 2 $allPosts }}
+  {{ $picked1 := site.GetPage "/posts/my-startup-dream" }}
+  {{ $picked2 := site.GetPage "/posts/from-madrid-bus" }}
+  {{ $cardPages := $recentTwo | append $picked1 | append $picked2 }}
+
+  {{/* Collect card permalinks to exclude from sidebar */}}
+  {{ $cardLinks := slice }}
+  {{ range $cardPages }}
+    {{ $cardLinks = $cardLinks | append .RelPermalink }}
+  {{ end }}
+
   <section class="recent-texts">
-    <div class="texts-grid">
-      {{ $pages := where site.RegularPages "Section" "posts" }}
-      {{ range first 6 $pages }}
-        <a href="{{ .RelPermalink }}" class="text-card">
-          {{ $featured := "" }}
-          {{ $featuredURL := "" }}
-          {{ with .Params.featuredImagePreview }}
-            {{ $featuredURL = . | relURL }}
-          {{ end }}
-          {{ with .Params.featureimage }}
-            {{ $featuredURL = . | relURL }}
-          {{ end }}
-          {{ if $featuredURL }}
-            <div class="text-card-image">
-              <img src="{{ $featuredURL }}" alt="{{ .Title }}" loading="lazy">
+    <div class="texts-layout">
+      <div class="texts-grid">
+        {{ range $cardPages }}
+          <a href="{{ .RelPermalink }}" class="text-card">
+            {{ $featuredURL := "" }}
+            {{ with .Params.featuredImagePreview }}
+              {{ $featuredURL = . | relURL }}
+            {{ end }}
+            {{ with .Params.featureimage }}
+              {{ $featuredURL = . | relURL }}
+            {{ end }}
+            {{ if $featuredURL }}
+              <div class="text-card-image">
+                <img src="{{ $featuredURL }}" alt="{{ .Title }}" loading="lazy">
+              </div>
+            {{ end }}
+            <div class="text-card-content">
+              <h3 class="text-card-title">{{ .Title }}</h3>
+              {{ with .Params.summary }}<p class="text-card-summary">{{ . }}</p>{{ end }}
+              <time class="text-card-date">{{ .Date.Format "January 2006" }}</time>
             </div>
+          </a>
+        {{ end }}
+      </div>
+
+      <aside class="texts-sidebar">
+        <h4 class="texts-sidebar-title">More texts</h4>
+        <ul class="texts-sidebar-list">
+          {{ $count := 0 }}
+          {{ range $allPosts }}
+            {{ if and (lt $count 10) (not (in $cardLinks .RelPermalink)) }}
+              <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+              {{ $count = add $count 1 }}
+            {{ end }}
           {{ end }}
-          <div class="text-card-content">
-            <h3 class="text-card-title">{{ .Title }}</h3>
-            {{ with .Params.summary }}<p class="text-card-summary">{{ . }}</p>{{ end }}
-            <time class="text-card-date">{{ .Date.Format "January 2006" }}</time>
-          </div>
-        </a>
-      {{ end }}
+        </ul>
+        <a href="/posts/" class="texts-sidebar-all">See all texts →</a>
+      </aside>
     </div>
-    <div class="see-all">
+
+    <div class="see-all see-all-mobile">
       <a href="/posts/">See all texts →</a>
     </div>
   </section>
