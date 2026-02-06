@@ -95,7 +95,21 @@
     <h2 class="library-title">Library</h2>
     <p class="library-subtitle">Books I've read or that I'm currently reading.</p>
     <div class="library-grid">
-      {{ range first 4 site.Data.library }}
+      {{ $pinnedBook := "A Máquina da Natureza" }}
+      {{ $libraryBooks := slice }}
+      {{ range site.Data.library }}
+        {{ if eq .title $pinnedBook }}
+          {{ $libraryBooks = $libraryBooks | append . }}
+        {{ end }}
+      {{ end }}
+      {{ $count := 0 }}
+      {{ range site.Data.library }}
+        {{ if and (ne .title $pinnedBook) (lt $count 3) }}
+          {{ $libraryBooks = $libraryBooks | append . }}
+          {{ $count = add $count 1 }}
+        {{ end }}
+      {{ end }}
+      {{ range $libraryBooks }}
         <a href="{{ .goodreadsUrl }}" target="_blank" class="book-card">
           <div class="book-cover">
             {{ if .cover }}
