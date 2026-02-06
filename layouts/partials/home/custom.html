@@ -39,7 +39,7 @@
             {{ end }}
             {{ if $featuredURL }}
               <div class="text-card-image">
-                <img src="{{ $featuredURL }}" alt="{{ .Title }}" loading="lazy">
+                <img src="{{ $featuredURL }}" alt="{{ .Title }}" class="nozoom" loading="lazy">
               </div>
             {{ end }}
             <div class="text-card-content">
@@ -52,7 +52,8 @@
       </div>
 
       <aside class="texts-sidebar">
-        <h4 class="texts-sidebar-title">More texts</h4>
+        <h4 class="texts-sidebar-title">Texts</h4>
+        <p class="texts-sidebar-desc">Loose, unopinionated writings on things I don't entirely understand yet.</p>
         <ul class="texts-sidebar-list">
           {{ $count := 0 }}
           {{ range $allPosts }}
