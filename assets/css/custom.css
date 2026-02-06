@@ -208,7 +208,7 @@ body {
 }
 
 .text-card-image {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 18;
     overflow: hidden;
 }
 
@@ -228,7 +228,7 @@ body {
 }
 
 .text-card-title {
-    font-size: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+    font-size: clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: rgb(var(--color-neutral-800));
@@ -240,7 +240,7 @@ body {
 }
 
 .text-card-summary {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     color: rgb(var(--color-neutral-500));
     margin-bottom: 0.5rem;
     line-height: 1.4;
