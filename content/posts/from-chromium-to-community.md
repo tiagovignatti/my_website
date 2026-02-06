@@ -1,5 +1,5 @@
 ---
-title: "From Chromium to Community (2025)"
+title: "From Chromium to Community"
 summary: "Co-op principles for everyone."
 featuredImagePreview: /images/IMG_4509-preview.jpg
 date: 2025-08-15T11:28:03-03:00

@@ -807,6 +807,20 @@ body {
     font-weight: 700 !important;
 }
 
+/* ===== POSTS LIST: overreacted.io-style bold titles ===== */
+
+.article-link--simple header a {
+    font-size: 1.75rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.article-link--simple header a h2 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
 .float-right {
     float: right;
 }
