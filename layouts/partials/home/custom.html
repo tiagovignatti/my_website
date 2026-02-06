@@ -14,10 +14,10 @@
 
   <!-- Recent Texts Section -->
   {{ $allPosts := where site.RegularPages "Section" "posts" }}
-  {{ $recentTwo := first 2 $allPosts }}
+  {{ $recentOne := first 1 $allPosts }}
   {{ $picked1 := site.GetPage "/posts/my-startup-dream" }}
   {{ $picked2 := site.GetPage "/posts/from-madrid-bus" }}
-  {{ $cardPages := $recentTwo | append $picked1 | append $picked2 }}
+  {{ $cardPages := $recentOne | append $picked1 | append $picked2 }}
 
   {{/* Collect card permalinks to exclude from sidebar */}}
   {{ $cardLinks := slice }}
@@ -50,8 +50,8 @@
           </a>
         {{ end }}
 
-        <!-- Video card spanning full width -->
-        <div class="text-card text-card-wide">
+        <!-- Video card -->
+        <div class="text-card">
           <div class="text-card-image text-card-video">
             <iframe
               src="https://www.youtube.com/embed/igkTbuLzJwQ"

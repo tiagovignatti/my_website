@@ -251,15 +251,10 @@ body {
     color: rgb(var(--color-neutral-500));
 }
 
-/* Wide card (spans both columns) */
-.text-card-wide {
-    grid-column: 1 / -1;
-}
-
 /* Video embed inside a card */
 .text-card-video {
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 18;
 }
 
 .text-card-video iframe {
