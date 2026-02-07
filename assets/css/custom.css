@@ -76,6 +76,7 @@ body {
 /* Desktop: cards + sidebar side by side */
 .texts-layout {
     display: flex;
+    align-items: flex-start;
     gap: 2rem;
     margin-bottom: clamp(1rem, 0.5rem + 2vw, 2rem);
 }
@@ -266,9 +267,70 @@ body {
     border-radius: 8px 8px 0 0;
 }
 
+/* ===== BLUESKY FEED (sidebar) ===== */
+
+.sidebar-bsky {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgb(var(--color-neutral-200));
+}
+
+.dark .sidebar-bsky {
+    border-top-color: rgb(var(--color-neutral-700));
+}
+
+.bsky-post {
+    display: block;
+    text-decoration: none;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgb(var(--color-neutral-200));
+}
+
+.bsky-post:last-child {
+    border-bottom: none;
+}
+
+.bsky-post-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+    object-fit: cover;
+    max-height: 120px;
+}
+
+.bsky-post-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: rgb(var(--color-neutral-700));
+    margin: 0 0 0.25rem;
+    font-style: italic;
+}
+
+.bsky-post-date {
+    font-size: 0.75rem;
+    color: rgb(var(--color-neutral-400));
+}
+
+.bsky-post:hover .bsky-post-text {
+    color: rgb(var(--color-primary-500));
+}
+
+.dark .bsky-post {
+    border-bottom-color: rgb(var(--color-neutral-700));
+}
+
+.dark .bsky-post-text {
+    color: rgb(var(--color-neutral-300));
+}
+
+.dark .bsky-post:hover .bsky-post-text {
+    color: rgb(var(--color-primary-400));
+}
+
 /* See All Link */
 .see-all {
     text-align: center;
+    margin-top: 1.5rem;
 }
 
 .see-all a {

@@ -3,16 +3,6 @@
   cover: "https://covers.openlibrary.org/b/isbn/9780060899226-L.jpg"
   goodreadsUrl: "https://www.goodreads.com/book/show/33313"
 
-- title: "Muito Além Do Nosso Eu"
-  author: "Miguel Nicolelis"
-  cover: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1351143572i/16108163.jpg"
-  goodreadsUrl: "https://www.goodreads.com/book/show/16108163"
-
-- title: "The Brothers Karamazov"
-  author: "Fyodor Dostoevsky"
-  cover: "https://covers.openlibrary.org/b/isbn/9780374528379-L.jpg"
-  goodreadsUrl: "https://www.goodreads.com/book/show/4934"
-
 - title: "Tomara Que Você Seja Deportado"
   author: "Jamil Chade"
   cover: "https://editoranos.com.br/wp-content/uploads/2025/09/IMG-20251201-WA0024.jpg"
@@ -32,6 +22,16 @@
   author: "André L. Vignatti"
   cover: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1759504278i/242365130.jpg"
   goodreadsUrl: "https://www.goodreads.com/book/show/242365130"
+
+- title: "Muito Além Do Nosso Eu"
+  author: "Miguel Nicolelis"
+  cover: "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1351143572i/16108163.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/16108163"
+
+- title: "The Brothers Karamazov"
+  author: "Fyodor Dostoevsky"
+  cover: "https://covers.openlibrary.org/b/isbn/9780374528379-L.jpg"
+  goodreadsUrl: "https://www.goodreads.com/book/show/4934"
 
 - title: "Parto Ativo"
   author: "Janet Balaskas"
