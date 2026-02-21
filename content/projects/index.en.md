@@ -24,7 +24,18 @@ Technology: Vue.js. Vuetify. Node.js, MongoDB, Elastic Search.
 
 ## 3D viewer for the Web
 
-{{< figure src="https://desafiosdaeducacao.grupoa.com.br/wp-content/uploads/2021/03/GIF-corpo-humano.gif" class="float-right" >}}
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
+<div class="not-prose float-right" style="margin: 0 0 1em 1em;">
+  <model-viewer
+    src="casa-penha.glb"
+    camera-controls
+    auto-rotate
+    ar
+    shadow-intensity="1"
+    style="width: 300px; height: 300px;"
+  ></model-viewer>
+</div>
 
 We've built a viewer of 3D educational models for the Web (.glTF / .glb). Most of frontend was done using JavaScript using `<model-viewer>` web component, Vue.js and Vuetify; GraphQL and Apollo in the backend. In the beginning of **2021** we were streaming about 1000 of these 3D models to over 1M students accessing and able to interact with it using the desktop, mobile and augmented reality devices.
 
