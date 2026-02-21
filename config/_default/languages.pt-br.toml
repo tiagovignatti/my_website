@@ -1,16 +1,17 @@
-languageCode = "en"
-languageName = "English"
-weight = 1
+languageCode = "pt-BR"
+languageName = "Português"
+weight = 2
 title = "Tiago Vignatti"
 
 [params]
-  displayName = "English"
-  isoCode = "en"
+  displayName = "Português"
+  isoCode = "pt-BR"
+  dateFormat = "2 de January de 2006"
 
 [author]
   name = ""
   image = "/images/avatar.png"
-  headline = "art - computer science - play"
+  headline = "arte - ciência da computação - brincar"
   bio = ""
   links = [
     { github = "https://github.com/tiagovignatti" },

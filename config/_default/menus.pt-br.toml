@@ -1,0 +1,22 @@
+# Blowfish Menu Configuration (pt-BR)
+# Mirror the English menu so pt-br post pages have working navigation.
+
+[[main]]
+  name = "Texts"
+  url = "/posts/"
+  weight = 10
+
+[[main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 20
+
+[[main]]
+  name = "Library"
+  url = "/library/"
+  weight = 25
+
+[[main]]
+  name = "About"
+  url = "/about/"
+  weight = 30

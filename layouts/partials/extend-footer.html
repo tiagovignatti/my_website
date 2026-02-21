@@ -1,0 +1,50 @@
+{{/* Browser language suggestion banner for pt-BR users.
+     This partial is called via partialCached (no variant args), so it renders
+     identically for every page. All per-page logic lives in JavaScript,
+     which discovers the pt-br translation URL from the language-switcher
+     links that Blowfish already renders in the header. */}}
+<div id="lang-banner"
+     style="display:none; position:fixed; top:0; left:0; right:0; z-index:9999;
+            background:#1d4ed8; color:#fff; padding:0.75rem 1rem;
+            font-size:0.95rem; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+  <span>Esta página está disponível em Português.</span>
+  <a id="lang-banner-link" href="#"
+     style="color:#fff; font-weight:600; text-decoration:underline; margin-left:0.5rem;">
+    Ler em Português
+  </a>
+  <button id="lang-banner-close"
+          aria-label="Fechar"
+          style="background:none; border:none; color:#fff; font-size:1.25rem;
+                 cursor:pointer; margin-left:1rem; vertical-align:middle; line-height:1;">
+    &#10005;
+  </button>
+</div>
+<script>
+(function() {
+  /* Skip if already viewing the pt-br version */
+  if (/^\/pt-br\//i.test(window.location.pathname)) return;
+
+  var lang = navigator.language || navigator.userLanguage || '';
+  if (!/^pt\b/i.test(lang)) return;
+
+  var dismissed = false;
+  try { dismissed = localStorage.getItem('lang-banner-dismissed') === '1'; } catch(e) {}
+  if (dismissed) return;
+
+  /* Find the pt-br translation URL from the inline article language link */
+  var ptLink = document.querySelector('#single_header a[href*="/pt-br/"]');
+  if (!ptLink) return;
+
+  var banner = document.getElementById('lang-banner');
+  var link = document.getElementById('lang-banner-link');
+  link.href = ptLink.getAttribute('href');
+  banner.style.display = 'block';
+  document.body.style.paddingTop = banner.offsetHeight + 'px';
+
+  document.getElementById('lang-banner-close').addEventListener('click', function() {
+    banner.style.display = 'none';
+    document.body.style.paddingTop = '';
+    try { localStorage.setItem('lang-banner-dismissed', '1'); } catch(e) {}
+  });
+})();
+</script>
