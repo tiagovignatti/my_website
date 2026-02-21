@@ -14,7 +14,7 @@
 
   <!-- Recent Texts Section -->
   {{ $allPosts := where site.RegularPages "Section" "posts" }}
-  {{ $recentOne := first 1 $allPosts }}
+  {{ $recentOne := first 2 $allPosts }}
   {{ $picked1 := site.GetPage "/posts/my-startup-dream" }}
   {{ $picked2 := site.GetPage "/posts/from-madrid-bus" }}
   {{ $cardPages := $recentOne | append $picked1 | append $picked2 }}
@@ -50,7 +50,7 @@
           </a>
         {{ end }}
 
-        <!-- Video card -->
+        <!-- Video cards -->
         <div class="text-card">
           <div class="text-card-image text-card-video">
             <iframe
@@ -65,6 +65,23 @@
           <div class="text-card-content">
             <h3 class="text-card-title">O canto sincronizado dos aracuãs</h3>
             <p class="text-card-summary">Os aracuãs têm entre 42 e 53 centímetros de comprimento. O seu aspecto geral é semelhante a um faisão...</p>
+          </div>
+        </div>
+
+        <div class="text-card">
+          <div class="text-card-image text-card-video">
+            <iframe
+              src="https://www.youtube.com/embed/oD7mNzQxDIU"
+              title="Turbina 3D da Itaipu"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="text-card-content">
+            <h3 class="text-card-title">Turbina 3D da Itaipu</h3>
+            <p class="text-card-summary">O eixo da turbina em 3D. Usina Hidrelétrica de Itaipu, Foz do Iguaçu, PR.</p>
           </div>
         </div>
       </div>
@@ -89,7 +106,7 @@
           <script>
             (async function() {
               try {
-                const res = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=tvignatti.bsky.social&limit=3&filter=posts_no_replies');
+                const res = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=tvignatti.bsky.social&limit=5&filter=posts_no_replies');
                 const data = await res.json();
                 const container = document.getElementById('bsky-feed');
                 data.feed.forEach(item => {
