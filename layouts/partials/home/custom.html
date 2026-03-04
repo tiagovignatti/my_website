@@ -106,7 +106,7 @@
           <script>
             (async function() {
               try {
-                const res = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=tvignatti.bsky.social&limit=5&filter=posts_no_replies');
+                const res = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=tvignatti.bsky.social&limit=4&filter=posts_no_replies');
                 const data = await res.json();
                 const container = document.getElementById('bsky-feed');
                 data.feed.forEach(item => {
