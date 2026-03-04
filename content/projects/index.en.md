@@ -26,7 +26,7 @@ Technology: Vue.js. Vuetify. Node.js, MongoDB, Elastic Search.
 
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
-<div id="mv-container" class="not-prose float-right" style="margin: 0 0 1em 1em; position: relative;">
+<div class="not-prose float-right" style="margin: 0 0 1em 1em;">
   <model-viewer
     src="casa-penha.glb"
     camera-controls
@@ -35,8 +35,6 @@ Technology: Vue.js. Vuetify. Node.js, MongoDB, Elastic Search.
     shadow-intensity="1"
     style="width: 300px; height: 300px;"
   ></model-viewer>
-  <button onclick="let c=document.getElementById('mv-container');if(document.fullscreenElement){document.exitFullscreen()}else{c.requestFullscreen()}" style="position:absolute;top:8px;right:8px;background:rgba(255,255,255,0.8);border:none;border-radius:4px;padding:4px 6px;cursor:pointer;z-index:10;line-height:1" title="Toggle fullscreen">&#x26F6;</button>
-  <style>#mv-container:fullscreen{background:#fff;display:flex;align-items:center;justify-content:center}#mv-container:fullscreen model-viewer{width:100vw!important;height:100vh!important}</style>
 </div>
 
 We've built a viewer of 3D educational models for the Web (.glTF / .glb). Most of frontend was done using JavaScript using `<model-viewer>` web component, Vue.js and Vuetify; GraphQL and Apollo in the backend. In the beginning of **2021** we were streaming about 1000 of these 3D models to over 1M students accessing and able to interact with it using the desktop, mobile and augmented reality devices.

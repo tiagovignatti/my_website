@@ -106,7 +106,7 @@
           <script>
             (async function() {
               try {
-                const res = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=tvignatti.bsky.social&limit=4&filter=posts_no_replies');
+                const res = await fetch('https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=tvignatti.bsky.social&limit=5&filter=posts_no_replies');
                 const data = await res.json();
                 const container = document.getElementById('bsky-feed');
                 data.feed.forEach(item => {
@@ -139,22 +139,6 @@
             })();
           </script>
           <a href="https://bsky.app/profile/tvignatti.bsky.social" target="_blank" class="texts-sidebar-all">See all feed →</a>
-        </div>
-
-        <div class="sidebar-projects">
-          <h4 class="texts-sidebar-title">Projects</h4>
-          <a href="/projects/#3d-viewer-for-the-web" class="sidebar-projects-viewer">
-            <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-            <model-viewer
-              src="/projects/casa-penha.glb"
-              camera-controls
-              auto-rotate
-              shadow-intensity="1"
-              interaction-prompt="none"
-              style="width: 100%; height: 200px; pointer-events: none;"
-            ></model-viewer>
-          </a>
-          <a href="/projects/" class="texts-sidebar-all">See all projects →</a>
         </div>
       </aside>
 

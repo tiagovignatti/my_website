@@ -204,25 +204,6 @@ body {
         color: rgb(var(--color-neutral-100));
     }
 
-    .sidebar-projects {
-        border-top: none;
-        margin-top: 0;
-        padding-top: 0;
-    }
-
-    .sidebar-projects .texts-sidebar-title {
-        font-family: 'Lora', Georgia, 'Times New Roman', serif;
-        font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
-        font-weight: 400;
-        text-transform: none;
-        letter-spacing: normal;
-        color: rgb(var(--color-neutral-900));
-    }
-
-    .dark .sidebar-projects .texts-sidebar-title {
-        color: rgb(var(--color-neutral-100));
-    }
-
     .texts-grid {
         order: 1;
         grid-template-columns: repeat(2, 1fr);
@@ -378,24 +359,6 @@ body {
 
 .dark .bsky-post:hover .bsky-post-text {
     color: rgb(var(--color-primary-400));
-}
-
-/* ===== PROJECTS (sidebar) ===== */
-
-.sidebar-projects {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgb(var(--color-neutral-200));
-}
-
-.dark .sidebar-projects {
-    border-top-color: rgb(var(--color-neutral-700));
-}
-
-.sidebar-projects-viewer {
-    display: block;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /* See All Link */
