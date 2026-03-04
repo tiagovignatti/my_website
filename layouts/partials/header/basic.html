@@ -3,7 +3,7 @@
     {{ $logo := resources.Get .Site.Params.Logo }}
     {{ if $logo }}
       <div>
-        <a href="{{ "" | relLangURL }}" class="flex">
+        <a href="/" class="flex">
           <span class="sr-only">{{ .Site.Title | markdownify }}</span>
           {{ if eq $logo.MediaType.SubType "svg" }}
             <span class="logo object-scale-down object-left nozoom">
@@ -22,7 +22,7 @@
     {{ end }}
   {{ end }}
   {{ if not .Site.Params.disableTextInHeader | default true }}
-    <a href="{{ "" | relLangURL }}" class="text-base font-medium truncate min-w-0 shrink">
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
       {{ .Site.Title | markdownify }}
     </a>
   {{ end }}
