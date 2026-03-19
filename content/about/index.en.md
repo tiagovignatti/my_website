@@ -12,7 +12,7 @@ showReadingTime: false
 
 ### Igalia
 
-I am partner and co-owner of **[Igalia](https://www.igalia.com)**, open-source consultancy. As a cooperative, we prioritize long-term sustainability and collective growth, which aligns with our commitment to open-source development.
+I am partner and co-owner of **[Igalia](https://www.igalia.com)**, open-source consultancy. Igalia is a leading open source consultancy with 25 years of experience, headquartered in Europe but operating with a global reach. As an organization deeply committed to the open source philosophy, Igalia has built its reputation on technical excellence and collaborative development, working with clients and partners across the world.
 
 ### A quote
 
@@ -20,7 +20,7 @@ I am partner and co-owner of **[Igalia](https://www.igalia.com)**, open-source c
 
 ### Open-source
 
-I've used to do a bunch of open-source software stuff. Some are living in [GitHub](https://github.com/tiagovignatti) now. You can check out also some stuff I've worked on throughout my career in the [projects](/projects/) page.
+Open-source development has been at the core of my career. You can find my work on [GitHub](https://github.com/tiagovignatti) and explore some highlights in the [projects](/projects/) page.
 
 ### Career
 
