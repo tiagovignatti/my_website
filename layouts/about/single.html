@@ -11,4 +11,33 @@
     </div>
   </section>
 </article>
+
+<script>
+(function() {
+  var quotes = {{ site.Data.quotes | jsonify | safeJS }};
+  var anchor = document.getElementById('a-quote');
+  if (!anchor || !quotes || quotes.length < 2) return;
+
+  var heading = anchor.closest('h3');
+  if (!heading) return;
+
+  heading.style.cursor = 'pointer';
+
+  var quoteEl = heading.nextElementSibling;
+  if (!quoteEl) return;
+
+  var currentIndex = 0;
+
+  heading.addEventListener('click', function(e) {
+    e.preventDefault();
+    var newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * quotes.length);
+    } while (newIndex === currentIndex);
+    currentIndex = newIndex;
+    var q = quotes[currentIndex];
+    quoteEl.textContent = '\u201C' + q.text + '\u201D, ' + q.author;
+  });
+})();
+</script>
 {{ end }}

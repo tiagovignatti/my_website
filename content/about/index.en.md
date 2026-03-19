@@ -18,7 +18,7 @@ Igalia is a leading open source consultancy with 25 years of experience, headqua
 
 ### A quote
 
-"The more seriously you take yourself, the unhappier you’re going to be.", Naval Ravikant
+"The idea is to die young as late as possible.", Ashley Montagu
 
 ### Open-source
 
