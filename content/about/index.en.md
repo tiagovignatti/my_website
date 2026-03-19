@@ -12,7 +12,9 @@ showReadingTime: false
 
 ### Igalia
 
-I am partner and co-owner of **[Igalia](https://www.igalia.com)**, open-source consultancy. Igalia is a leading open source consultancy with 25 years of experience, headquartered in Europe but operating with a global reach. As an organization deeply committed to the open source philosophy, Igalia has built its reputation on technical excellence and collaborative development, working with clients and partners across the world.
+I am partner and co-owner of **[Igalia](https://www.igalia.com)**, open-source consultancy.
+
+Igalia is a leading open source consultancy with 25 years of experience, headquartered in Europe but operating with a global reach. As an organization deeply committed to the open source philosophy, Igalia has built its reputation on technical excellence and collaborative development, working with clients and partners across the world.
 
 ### A quote
 
@@ -24,7 +26,7 @@ Open-source development has been at the core of my career. You can find my work 
 
 ### Career
 
-In the past, I spent considerable time exploring distance learning and future technologies involving Virtual and Augmented Reality, co-founding **[Imersys](https://www.crunchbase.com/organization/imersys)**.
+I co-founded **[Imersys](https://www.crunchbase.com/organization/imersys)**, where we built Virtual and Augmented Reality solutions for distance learning.
 
 Prior to that, I lived in Helsinki, Finland, where I worked at **Intel** and earlier at **Nokia** as a Linux Graphics Engineer. You can find more details on my [LinkedIn profile](https://www.linkedin.com/in/tiagovignatti/).
 
