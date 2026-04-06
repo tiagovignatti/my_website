@@ -44,14 +44,16 @@ mainSections = ["posts"]
   showDraftLabel = true
   showEdit = false
   showHeadingAnchors = true
-  showPagination = true
+  showPagination = false
   invertPagination = false
   showReadingTime = false
   showTableOfContents = true
-  showRelatedContent = false
+  showRelatedContent = true
+  relatedContentLimit = 3
   showTaxonomies = false
   showWordCount = false
-  sharingLinks = ["email"]
+  sharingLinks = ["linkedin", "bluesky", "twitter"]
+  showComments = false
 
 [list]
   showHero = false
@@ -92,6 +94,13 @@ mainSections = ["posts"]
   groupByYear = false
   cardView = false
   cardViewScreenWidth = false
+
+[giscus]
+  repo = "tiagovignatti/my_website"
+  repoId = "MDEwOlJlcG9zaXRvcnkzMTQ0MzYxNjM="
+  category = "General"
+  categoryId = "DIC_kwDOEr3qQ84C6L1e"
+  mapping = "pathname"
 
 [firebase]
   # Your Firebase config here if needed

@@ -1,0 +1,18 @@
+{{ with site.Params.giscus.repoId }}
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ site.Params.giscus.repo }}"
+    data-repo-id="{{ site.Params.giscus.repoId }}"
+    data-category="{{ site.Params.giscus.category | default "Announcements" }}"
+    data-category-id="{{ site.Params.giscus.categoryId }}"
+    data-mapping="{{ site.Params.giscus.mapping | default "pathname" }}"
+    data-strict="0"
+    data-reactions-enabled="0"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="{{ site.Language.Lang | default "en" }}"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+  </script>
+{{ end }}

@@ -1,0 +1,110 @@
+{{/* Unified post footer: Related Texts (65%) | Share + Comments (35%) */}}
+{{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
+
+{{/* Resolve related posts: manual selection > Hugo related > recent from section */}}
+{{ $related := slice }}
+{{ with .Params.relatedPosts }}
+  {{ range . }}
+    {{ with site.GetPage . }}
+      {{ $related = $related | append . }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ if .Site.RegularPages.Related . }}
+    {{ $related = .Site.RegularPages.Related . | first 3 }}
+  {{ end }}
+  {{ if not $related }}
+    {{ $related = first 3 (where (where .Site.RegularPages "Section" .Section) "Permalink" "ne" .Permalink) }}
+  {{ end }}
+{{ end }}
+
+<div class="post-footer">
+  {{/* Left column: Related Texts */}}
+  <div class="post-footer-left">
+    {{ with $related }}
+      <h3 class="post-footer-heading">Related Texts</h3>
+      <div class="post-footer-related-grid">
+        {{ range . }}
+          {{/* Resolve featured image: check featuredImagePreview, featuredImage, featureimage, then page resources */}}
+          {{ $featuredURL := "" }}
+          {{ $featured := "" }}
+          {{ $imgParam := .Params.featuredImagePreview | default .Params.featuredImage | default .Params.featureimage }}
+
+          {{ with $imgParam }}
+            {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+              {{ $featuredURL = . }}
+            {{ else if strings.HasPrefix . "/" }}
+              {{/* Static file path like /images/foo.jpg */}}
+              {{ $featuredURL = . }}
+            {{ else }}
+              {{ $featured = resources.Get . }}
+            {{ end }}
+          {{ end }}
+
+          {{ if not (or $featured $featuredURL) }}
+            {{ $images := .Resources.ByType "image" }}
+            {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+              {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ if not $featuredURL }}
+            {{ with $featured }}
+              {{ $featuredURL = .RelPermalink }}
+              {{ if not (or $disableImageOptimization (eq .MediaType.SubType "svg")) }}
+                {{ $featuredURL = (.Resize "400x").RelPermalink }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          <a href="{{ .RelPermalink }}" class="post-footer-card">
+            {{ with $featuredURL }}
+              <div class="post-footer-card-image">
+                <img src="{{ . }}" alt="" loading="lazy" decoding="async">
+              </div>
+            {{ end }}
+            <div class="post-footer-card-content">
+              <span class="post-footer-card-title">{{ .Title }}</span>
+              {{ with .Summary }}
+                <p class="post-footer-card-summary">{{ . | plainify | truncate 80 }}</p>
+              {{ end }}
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+
+  {{/* Right column: Share + Comments */}}
+  <div class="post-footer-right">
+    {{/* Share this */}}
+    <div class="post-footer-share">
+      <h3 class="post-footer-heading">Share this</h3>
+      <div class="post-footer-share-icons">
+        {{ $links := site.Data.sharing }}
+        {{ range (slice "linkedin" "bluesky" "twitter") }}
+          {{ with index $links . }}
+            <a target="_blank"
+               rel="noopener noreferrer"
+               class="post-footer-share-btn"
+               href="{{ printf .url $.Permalink $.Title }}"
+               title="{{ i18n .title }}"
+               aria-label="{{ i18n .title }}">
+              {{ partial "icon.html" .icon }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    {{/* Comments */}}
+    {{ if .Params.showComments | default (site.Params.article.showComments | default false) }}
+      {{ if templates.Exists "partials/comments.html" }}
+        <div class="post-footer-comments">
+          <h3 class="post-footer-heading">Comment</h3>
+          {{ partial "comments.html" . }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
