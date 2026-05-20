@@ -35,4 +35,4 @@ Before graduating, I worked at **C3SL** at the **Federal University of Paraná**
 
 ### Say hello
 
-Say hello on Bluesky: [@tvignatti.bsky.social](https://bsky.app/profile/tvignatti.bsky.social/).
+Say hello on Bluesky: [@tvignatti.bsky.social](https://bsky.app/profile/tvignatti.bsky.social).
