@@ -1,0 +1,16 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="{{ site.Params.defaultAppearance | default `light` }}"
+  data-auto-appearance="{{ site.Params.autoSwitchAppearance | default `true` }}">
+  {{- partial "head.html" . -}}
+  {{- partialCached "init.html" . -}}
+
+  <body class="book-body {{ if site.Params.enableStyledScrollbar | default true }}bf-scrollbar{{ end }}">
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </body>
+</html>
