@@ -1,16 +1,31 @@
 {{ define "main" }}
 {{/*
-  The Machine of Nature — a self-contained book page.
-  Everything (markup + CSS) lives in this single file so the page can be
-  lifted out and dropped onto another site with minimal effort.
-  Drop-in images (rendered only if present):
-    static/images/andre/cover.jpg   — book cover, shown in the hero
-    static/images/andre/andre.jpg   — author photo, shown in "About the author"
+  The Machine of Nature — book page (product-page style, inspired by Sextante).
+  Self-contained: all CSS/JS inline so the page can be lifted onto another site.
+  Layout: two defined columns (left = cover + author; right = title, "The book",
+  "Details", "Share"), then full-width "What you'll explore" + "Get the book".
+  Drop-in images (optional; remote fallbacks used otherwise):
+    static/images/andre/cover.jpg  — book cover
+    static/images/andre/andre.jpg  — author photo
 */}}
+{{ $title := "The Machine of Nature" }}
+
+{{ $coverLocal := "images/andre/cover.jpg" }}
+{{ $coverRemote := "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1759504278i/242365130.jpg" }}
+{{ $coverSrc := $coverRemote }}
+{{ if os.FileExists (printf "static/%s" $coverLocal) }}{{ $coverSrc = printf "/%s" $coverLocal }}{{ end }}
+
+{{ $photoLocal := "images/andre/andre.jpg" }}
+{{ $photoRemote := "https://www.inf.ufpr.br/vignatti/authors/admin/avatar_huf34f250c46b93b802c766402df61bb4c_1031026_270x270_fill_q75_lanczos_center.jpg" }}
+{{ $photoSrc := $photoRemote }}
+{{ if os.FileExists (printf "static/%s" $photoLocal) }}{{ $photoSrc = printf "/%s" $photoLocal }}{{ end }}
+
+{{ $buy := "https://clubedeautores.com.br/livros/autores/andre-luis-vignatti" }}
+
 <style>
-  /* ---- Tokens ---------------------------------------------------------- */
   .book {
     --paper: #fffff8;
+    --card: #fbfaf1;
     --ink: #1a1915;
     --ink-soft: #55524a;
     --ink-faint: #8a8578;
@@ -21,20 +36,16 @@
     --serif: 'Lora', Georgia, 'Times New Roman', serif;
     --sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 
-    /* text column + margin (sidenote) column */
-    --col-text: 34rem;
-    --col-margin: 14rem;
-    --col-gap: 2.75rem;
-
     background: var(--paper);
     color: var(--ink);
     font-family: var(--serif);
-    font-size: clamp(1.05rem, 1rem + 0.25vw, 1.15rem);
+    font-size: clamp(1.02rem, 0.98rem + 0.2vw, 1.12rem);
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
   .dark .book {
     --paper: #1b1a16;
+    --card: #211f1a;
     --ink: #ece7d9;
     --ink-soft: #b3ad9c;
     --ink-faint: #837d6f;
@@ -42,443 +53,399 @@
     --accent: #9fb8c9;
     --gold: #c9a54e;
   }
-
-  /* let this page own the full viewport width (overrides the site's global
-     body { max-width: 1000px } so the margin column has room) */
   body.book-body { max-width: none !important; padding: 0 !important; background: var(--paper); }
   .dark body.book-body { background: #1b1a16; }
 
   .book * { box-sizing: border-box; }
-  .book a { color: inherit; }
-
   .book-wrap {
-    max-width: calc(var(--col-text) + var(--col-gap) + var(--col-margin));
+    max-width: 72rem;
     margin: 0 auto;
-    padding: clamp(2.5rem, 1.5rem + 4vw, 5rem) clamp(1.25rem, 0.5rem + 4vw, 2.5rem) 4rem;
+    padding: clamp(2rem, 1.25rem + 3vw, 4rem) clamp(1.1rem, 0.5rem + 3vw, 2.5rem) 4rem;
   }
 
-  /* ---- Section grid: text column + right margin for sidenotes ---------- */
-  .section {
+  /* ---- Two-column product region -------------------------------------- */
+  .product {
     display: grid;
-    grid-template-columns: minmax(0, var(--col-text)) var(--col-margin);
-    column-gap: var(--col-gap);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2rem, 1rem + 3vw, 3.5rem);
     align-items: start;
-    padding: clamp(2rem, 1.25rem + 2.5vw, 3.25rem) 0;
-    border-top: 1px solid var(--rule);
   }
-  .section > .body { grid-column: 1; min-width: 0; }
-  .sidenote { grid-column: 2; }
+  .col-right { min-width: 0; }
 
-  /* Sidenote: the signature element — quiet annotations in the margin */
-  .sidenote {
-    font-size: 0.82rem;
-    line-height: 1.55;
-    color: var(--ink-soft);
-    padding-top: 0.35rem;
-    position: relative;
-  }
-  .sidenote::before {
-    content: "";
-    display: block;
-    width: 1.5rem;
-    height: 1px;
-    background: var(--accent);
-    opacity: 0.5;
-    margin-bottom: 0.6rem;
-  }
-  .sidenote b { font-weight: 600; color: var(--ink); font-variant: normal; }
+  .section { padding: clamp(1.5rem, 1.1rem + 1.5vw, 2.3rem) 0; border-top: 1px solid var(--rule); }
+  .section > *:last-child { margin-bottom: 0; }
 
-  /* ---- Type ------------------------------------------------------------ */
-  .eyebrow {
-    font-family: var(--sans);
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin: 0 0 1.1rem;
-  }
   .book h2 {
     font-family: var(--serif);
-    font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
-    font-weight: 600;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-    margin: 0 0 1.1rem;
+    font-size: clamp(1.3rem, 1.12rem + 0.9vw, 1.6rem);
+    font-weight: 600; line-height: 1.25; margin: 0 0 1rem;
   }
-  .book p { margin: 0 0 1.1rem; }
-  .book p:last-child { margin-bottom: 0; }
+  .book p { margin: 0 0 1rem; max-width: 40rem; }
   .book em { font-style: italic; }
   .book strong { font-weight: 600; }
 
-  /* ---- Hero ------------------------------------------------------------ */
-  .hero {
-    border-top: none;
-    padding-top: 0;
-    grid-template-columns: minmax(0, var(--col-text)) var(--col-margin);
-  }
-  .hero .body { grid-column: 1; }
-  .award {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: var(--sans);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid var(--gold);
-    border-radius: 999px;
-    padding: 0.4rem 0.8rem;
-    margin-bottom: 1.75rem;
-  }
-  .award::before { content: "\2726"; font-size: 0.85em; line-height: 1; }
-  .questions {
-    font-family: var(--serif);
-    font-size: clamp(1.45rem, 1.1rem + 1.8vw, 2.25rem);
-    font-weight: 500;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-    margin: 0 0 2rem;
-    text-wrap: balance;
-  }
-  .questions span { display: block; }
-  .questions span + span { margin-top: 0.35rem; }
-  .questions .q-last { font-style: italic; color: var(--accent); }
-
-  .title {
-    font-family: var(--serif);
-    font-size: clamp(2.3rem, 1.7rem + 3vw, 3.5rem);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin: 0;
-  }
-  .subtitle {
-    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
-    color: var(--ink-soft);
-    margin: 0.6rem 0 0;
-  }
-  .cover-col {
-    grid-column: 2;
-    align-self: start;
-    margin: 0;
-  }
+  /* ---- Cover ----------------------------------------------------------- */
+  .cover-figure { position: relative; margin: 0; max-width: 20rem; }
   .cover {
-    width: 100%;
-    border-radius: 3px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 12px 32px rgba(0,0,0,0.18);
+    display: block; width: 100%; border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 14px 36px rgba(0,0,0,0.2);
   }
+  .zoom-btn {
+    position: absolute; right: 0.6rem; bottom: 0.6rem;
+    width: 2.4rem; height: 2.4rem;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(26,25,21,0.72); color: #fffff8;
+    border: none; border-radius: 999px; cursor: pointer;
+    backdrop-filter: blur(2px);
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .zoom-btn:hover { background: rgba(26,25,21,0.92); transform: scale(1.06); }
+  .zoom-btn svg { width: 1.2rem; height: 1.2rem; }
 
-  /* ---- Three acts ------------------------------------------------------ */
-  .act {
-    display: grid;
-    grid-template-columns: 3rem 1fr;
-    column-gap: 1.5rem;
-    align-items: baseline;
-    padding: 1.15rem 0;
-    border-top: 1px solid var(--rule);
-  }
-  .act:first-of-type { border-top: none; }
-  .act .num {
+  /* ---- Right-column head ---------------------------------------------- */
+  .hero-title {
     font-family: var(--serif);
-    font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.2rem);
-    font-weight: 500;
+    font-size: clamp(2rem, 1.5rem + 2.6vw, 3rem);
+    font-weight: 700; line-height: 1.08; letter-spacing: -0.02em;
+    margin: 0.2rem 0 0;
+  }
+  .hero-subtitle {
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.25rem);
+    color: var(--ink-soft); margin: 0.6rem 0 0; max-width: 34rem;
+  }
+  .author-line {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    font-family: var(--sans); font-size: 0.95rem; color: var(--ink-soft);
+    margin: 0.8rem 0 1.5rem;
+  }
+  .author-line svg { width: 1.05rem; height: 1.05rem; color: var(--ink-faint); flex-shrink: 0; }
+  .author-line a { color: var(--accent); text-decoration: none; font-weight: 600; border-bottom: 1px solid transparent; }
+  .author-line a:hover { border-bottom-color: currentColor; }
+
+  /* ---- Badges (static, no tooltip) ------------------------------------ */
+  .badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.4rem; }
+  .badge {
+    font-family: var(--sans); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.4rem 0.8rem; border-radius: 999px;
     color: var(--accent);
-    line-height: 1;
-  }
-  .act .when {
-    font-family: var(--sans);
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    display: block;
-    margin-bottom: 0.2rem;
-  }
-  .act .what { font-size: 1.1rem; font-weight: 600; margin: 0 0 0.2rem; }
-  .act .desc { color: var(--ink-soft); font-size: 0.95rem; margin: 0; }
-
-  /* ---- Explore list ---------------------------------------------------- */
-  .explore { list-style: none; padding: 0; margin: 0; }
-  .explore li {
-    padding: 0.7rem 0 0.7rem 1.5rem;
-    border-top: 1px solid var(--rule);
-    position: relative;
-  }
-  .explore li:first-child { border-top: none; }
-  .explore li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 1.35rem;
-    width: 0.4rem;
-    height: 0.4rem;
-    border: 1px solid var(--accent);
-    transform: rotate(45deg);
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--rule));
   }
 
-  /* ---- Preface (deep dive) --------------------------------------------- */
-  .preface { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
-  .preface summary {
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    padding: 1rem 1.25rem;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--ink);
-  }
-  .preface summary::-webkit-details-marker { display: none; }
-  .preface summary::after {
-    content: "\002B";
-    font-size: 1.2rem;
-    color: var(--ink-faint);
-    transition: transform 0.2s ease;
-  }
-  .preface[open] summary::after { content: "\2212"; }
-  .preface summary:hover { color: var(--accent); }
-  .preface .prose {
-    padding: 0.25rem 1.25rem 1.5rem;
-    font-size: 1rem;
-    color: var(--ink-soft);
-  }
-  .preface .prose p { margin-bottom: 1rem; }
-  .preface .prose .sign { text-align: right; font-style: italic; color: var(--ink); }
-  .preface + .preface { margin-top: 0.75rem; }
-
-  /* ---- Author ---------------------------------------------------------- */
-  .author-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-  .author-photo {
-    width: 8rem;
-    height: 8rem;
-    object-fit: cover;
-    border-radius: 4px;
-    flex-shrink: 0;
-  }
-  .author-head { display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap; }
-
-  /* ---- Get the book ---------------------------------------------------- */
-  .buy .btn {
-    display: inline-block;
-    font-family: var(--sans);
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: var(--paper);
-    background: var(--accent);
-    padding: 0.75rem 1.5rem;
-    border-radius: 3px;
-    margin: 0.5rem 0 1rem;
+  /* ---- Buttons --------------------------------------------------------- */
+  .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+  .btn {
+    display: inline-block; font-family: var(--sans);
+    font-size: 0.9rem; font-weight: 600; letter-spacing: 0.02em;
+    text-decoration: none; color: var(--paper); background: var(--accent);
+    padding: 0.75rem 1.4rem; border-radius: 3px;
     transition: opacity 0.15s ease;
   }
-  .dark .buy .btn { color: #1b1a16; }
-  .buy .btn:hover { opacity: 0.85; }
-  .editions { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+  .dark .btn { color: #1b1a16; }
+  .btn:hover { opacity: 0.85; }
 
-  /* ---- Footer ---------------------------------------------------------- */
-  .book-footer {
-    grid-template-columns: 1fr;
-    font-family: var(--sans);
-    font-size: 0.82rem;
-    color: var(--ink-faint);
+  /* ---- Type selector (edition variant) -------------------------------- */
+  .type-select { margin: 0 0 1.4rem; }
+  .type-label { display: block; font-family: var(--sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.5rem; }
+  .type-options { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .type-opt { cursor: pointer; }
+  .type-opt input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .type-opt span { display: inline-block; font-family: var(--sans); font-size: 0.85rem; font-weight: 600; padding: 0.5rem 0.9rem; border: 1px solid var(--rule); border-radius: 3px; color: var(--ink-soft); transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease; }
+  .type-opt input:checked + span { color: var(--paper); background: var(--accent); border-color: var(--accent); }
+  .dark .type-opt input:checked + span { color: #1b1a16; }
+  .type-opt input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---- "Read full description" ---------------------------------------- */
+  .more { margin-top: 0.25rem; }
+  .more summary {
+    list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: var(--sans); font-size: 0.9rem; font-weight: 700; color: var(--gold);
+    text-decoration: underline; text-underline-offset: 3px;
   }
-  .book-footer a { font-weight: 600; color: var(--ink-soft); }
-  .book-footer p { margin: 0 0 0.4rem; }
+  .more summary:hover { color: color-mix(in srgb, var(--gold) 78%, var(--ink)); }
+  .more summary::-webkit-details-marker { display: none; }
+  .more summary .caret { width: 1rem; height: 1rem; transition: transform 0.2s ease; }
+  .more[open] summary .caret { transform: rotate(180deg); }
+  .more summary .lbl-open { display: none; }
+  .more[open] summary .lbl-closed { display: none; }
+  .more[open] summary .lbl-open { display: inline; }
+  .more .more-body { padding-top: 1rem; }
+  .more .more-body p:last-child { margin-bottom: 0; }
 
+  /* ---- Share ----------------------------------------------------------- */
+  .share { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
+  .share a, .share button {
+    width: 2.1rem; height: 2.1rem; border-radius: 999px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--ink-soft); background: transparent;
+    border: 1px solid var(--rule); cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .share a:hover, .share button:hover { color: var(--accent); border-color: var(--accent); }
+  .share svg { width: 1.05rem; height: 1.05rem; }
+  .copied-note { font-family: var(--sans); font-size: 0.78rem; color: var(--gold); opacity: 0; transition: opacity 0.2s ease; }
+  .copied-note.show { opacity: 1; }
+
+  /* ---- Details accordion ---------------------------------------------- */
+  .accordion summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .accordion summary::-webkit-details-marker { display: none; }
+  .accordion summary h2 { margin: 0; }
+  .accordion .caret { width: 1.4rem; height: 1.4rem; color: var(--ink-faint); flex-shrink: 0; transition: transform 0.2s ease; }
+  .accordion[open] .caret { transform: rotate(180deg); }
+  .accordion summary:hover h2, .accordion summary:hover .caret { color: var(--accent); }
+  .accordion .accordion-body { padding-top: 1.1rem; }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 0 2rem; margin: 0; }
+  .fact { display: flex; justify-content: space-between; gap: 1rem; padding: 0.65rem 0; border-bottom: 1px solid var(--rule); }
+  .fact dt { font-family: var(--sans); font-size: 0.8rem; color: var(--ink-faint); margin: 0; }
+  .fact dd { margin: 0; font-size: 0.95rem; text-align: right; }
+
+  /* ---- Author section (left column) ----------------------------------- */
+  .author-section { scroll-margin-top: 2rem; }
+  .author-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.1rem; }
+  .author-head h2 { margin: 0; }
+  .author-photo { width: 4rem; height: 4rem; object-fit: cover; border-radius: 999px; border: 1px solid var(--rule); flex-shrink: 0; }
+  .author-section p { max-width: none; }
   .book a.link { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--rule); }
   .book a.link:hover { border-bottom-color: var(--accent); }
 
-  /* ---- Responsive: collapse the margin column into inline sidenotes ---- */
-  @media (max-width: 56rem) {
-    .section, .hero { grid-template-columns: 1fr; row-gap: 0; }
-    .section > .body, .hero .body { grid-column: 1; }
-    .sidenote {
-      grid-column: 1;
-      margin-top: 1.5rem;
-      padding: 0.9rem 0 0.2rem 1rem;
-      border-left: 2px solid var(--rule);
-    }
-    .sidenote::before { display: none; }
-    .cover-col {
-      grid-column: 1;
-      grid-row: 1;
-      max-width: 12rem;
-      margin: 0 auto 2rem;
-    }
+  /* ---- What you'll explore (full width) ------------------------------- */
+  .explore { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 3rem; }
+  .explore li { break-inside: avoid; }
+  .explore li strong { display: block; font-weight: 600; margin-bottom: 0.2rem; }
+  .explore li span { display: block; color: var(--ink-soft); font-size: 0.95rem; }
+
+  /* ---- Final buy band + footer ---------------------------------------- */
+  .buy-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 1.4rem 1.5rem; }
+  .buy-band p { margin: 0; font-weight: 600; max-width: none; }
+  .buy-band .editions { font-size: 0.85rem; font-weight: 400; color: var(--ink-soft); }
+  .book-footer { border-top: 1px solid var(--rule); padding: 1.5rem 0 0; font-family: var(--sans); font-size: 0.82rem; color: var(--ink-faint); }
+  .book-footer a { font-weight: 600; color: var(--ink-soft); }
+
+  /* ---- Lightbox -------------------------------------------------------- */
+  .lightbox { position: fixed; inset: 0; z-index: 60; display: none; align-items: center; justify-content: center; padding: 5vh 5vw; }
+  .lightbox.open { display: flex; }
+  .lightbox-overlay { position: absolute; inset: 0; background: rgba(12,11,9,0.86); backdrop-filter: blur(3px); }
+  .lightbox img { position: relative; width: min(92vw, 34rem); height: auto; max-height: 90vh; border-radius: 4px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+  .lightbox-close { position: absolute; top: 1.2rem; right: 1.4rem; width: 2.6rem; height: 2.6rem; border-radius: 999px; border: none; background: rgba(255,255,255,0.12); color: #fff; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+  .lightbox-close:hover { background: rgba(255,255,255,0.24); }
+
+  /* ---- Responsive: collapse to a single, well-ordered column ---------- */
+  @media (max-width: 48rem) {
+    .product { display: flex; flex-direction: column; gap: 0; }
+    .col-left, .col-right { display: contents; }
+    .cover-figure { order: 1; max-width: 15rem; margin: 0 auto 1.5rem; }
+    .right-head { order: 2; }
+    #sec-book { order: 3; }
+    #sec-details { order: 4; }
+    #sec-share { order: 5; }
+    .right-head { border-top: none; }
+    #sec-book { border-top: 1px solid var(--rule); }
+    .explore { grid-template-columns: 1fr; gap: 1.3rem; }
   }
 
-  /* ---- Motion: one restrained page-load reveal ------------------------- */
   @media (prefers-reduced-motion: no-preference) {
-    .reveal { opacity: 0; transform: translateY(0.6rem); animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
-    .reveal.d1 { animation-delay: 0.05s; }
-    .reveal.d2 { animation-delay: 0.18s; }
-    .reveal.d3 { animation-delay: 0.31s; }
-    .reveal.d4 { animation-delay: 0.44s; }
+    .reveal { opacity: 0; transform: translateY(0.5rem); animation: rise 0.6s cubic-bezier(0.2,0.7,0.2,1) forwards; }
+    .reveal.d1 { animation-delay: 0.04s; } .reveal.d2 { animation-delay: 0.14s; } .reveal.d3 { animation-delay: 0.24s; }
     @keyframes rise { to { opacity: 1; transform: none; } }
   }
 </style>
 
-{{/* Cover: prefer a local file (best quality, no external dependency if the
-     page is ever moved); otherwise fall back to the shared library cover URL. */}}
-{{ $coverLocal := "images/andre/cover.jpg" }}
-{{ $coverRemote := "https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1759504278i/242365130.jpg" }}
-{{ $coverSrc := $coverRemote }}
-{{ if os.FileExists (printf "static/%s" $coverLocal) }}{{ $coverSrc = printf "/%s" $coverLocal }}{{ end }}
-{{ $photo := "images/andre/andre.jpg" }}
-
 <article class="book">
   <div class="book-wrap">
 
-    <!-- ===== Hero ===== -->
-    <header class="section hero">
-      <div class="body">
-        <span class="award reveal d1">Winner · Prêmio Jabuti Acadêmico 2025</span>
-        <p class="questions reveal d2">
-          <span>What are the limits of rational thought?</span>
-          <span>How did that question give birth to the computer?</span>
-          <span class="q-last">And what does computation really mean?</span>
-        </p>
-        <h1 class="title reveal d3">The Machine of Nature</h1>
-        <p class="subtitle reveal d3">A chronological journey through theoretical computer science.</p>
+    <div class="product">
+
+      <!-- ===== Left column: cover + author ===== -->
+      <div class="col-left">
+        <figure class="cover-figure reveal d1">
+          <img class="cover" src="{{ $coverSrc }}" alt="Cover of The Machine of Nature" id="book-cover">
+          <button class="zoom-btn" type="button" aria-label="Enlarge cover" data-zoom>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </button>
+        </figure>
       </div>
-      <figure class="cover-col reveal d2">
-        <a href="https://clubedeautores.com.br/livro/a-maquina-da-natureza-2" rel="noopener" aria-label="Get the book on Clube de Autores">
-          <img class="cover" src="{{ $coverSrc }}" alt="Cover of The Machine of Nature">
-        </a>
-      </figure>
-    </header>
 
-    <!-- ===== Synopsis ===== -->
-    <section class="section">
-      <div class="body">
-        <p class="eyebrow">The book</p>
-        <p><em>The Machine of Nature</em> introduces the field of theoretical computer science in an unusual way — not as a branch of engineering, but as a discipline that reaches into philosophy and the natural sciences.</p>
-        <p>Told in three parts — past, present, and future — it explores the limits of manipulating information, the connection between computation and human thought, the parallels between the abstract and physical worlds, the tension between determinism and randomness, and much more.</p>
-        <p>Written entirely without technical jargon and structured as a story that follows the history of the field, it is made for everyone: the enthusiast, the expert, and the simply curious.</p>
-      </div>
-      <aside class="sidenote">
-        <b>Theoretical computer science</b> — the study of what can be computed, how efficiently, and what lies permanently beyond reach. The mathematics behind the machine.
-      </aside>
-    </section>
+      <!-- ===== Right column: title + The book / Details / Share ===== -->
+      <div class="col-right">
 
-    <!-- ===== Three acts ===== -->
-    <section class="section">
-      <div class="body">
-        <h2>Three acts: past, present, future</h2>
-        <p>The story is told in order — chronology is the book's spine. Reading the parts in sequence is the point; skipping ahead is like reading spoilers.</p>
+        <div class="right-head">
+          <div class="badges reveal d1">
+            <span class="badge">&#9733; Jabuti 2025</span>
+            <span class="badge">Theoretical Computer Science</span>
+          </div>
+          <h1 class="hero-title reveal d2">The Machine of Nature</h1>
+          <p class="hero-subtitle reveal d2">A chronological journey through theoretical computer science.</p>
+          <p class="author-line reveal d2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/><line x1="17.5" y1="15" x2="9" y2="15"/></svg>
+            <a href="https://www.inf.ufpr.br/vignatti/" target="_blank" rel="noopener">André Vignatti</a>
+          </p>
 
-        <div class="act">
-          <span class="num">I</span>
-          <div>
-            <span class="when">The past</span>
-            <p class="what">How and why computer science was born.</p>
-            <p class="desc">From the search for truth in Ancient Greece to the limits of formal reasoning.</p>
+          <div class="type-select reveal d2">
+            <span class="type-label">Type</span>
+            <div class="type-options">
+              <label class="type-opt">
+                <input type="radio" name="edition" value="bw" checked>
+                <span>Black-and-white · Portuguese</span>
+              </label>
+              <label class="type-opt">
+                <input type="radio" name="edition" value="color">
+                <span>Color · Portuguese</span>
+              </label>
+            </div>
           </div>
         </div>
 
-        <div class="act">
-          <span class="num">II</span>
-          <div>
-            <span class="when">The present</span>
-            <p class="what">The classical era of deterministic computation.</p>
-            <p class="desc">The machine as a precise, predictable engine of logic.</p>
-          </div>
-        </div>
+        <!-- The book -->
+        <section class="section" id="sec-book">
+          <h2>The book</h2>
+          <p><em>The Machine of Nature</em> introduces the field of theoretical computer science in an unusual way — not as a branch of engineering, but as a discipline that reaches into philosophy and the natural sciences.</p>
+          <p>In 2025 it won the <strong>Prêmio Jabuti Acadêmico</strong>. The Jabuti is Brazil's oldest and most prestigious literary award — running since 1958 — and its academic branch honors the finest scholarly books of the year, so the prize marks this as a standout work of its kind.</p>
+          <details class="more">
+            <summary>
+              <span class="lbl-closed">Read full description</span><span class="lbl-open">Show less</span>
+              <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="more-body">
+              <p>Written entirely without technical jargon and structured as a story, it is made for everyone — the enthusiast, the expert, and the simply curious.</p>
+              <p>The story unfolds in three chronological parts. The first traces how and why computer science was born, from the search for truth in Ancient Greece to the limits of formal reasoning. The second covers the classical era of deterministic computation — the machine as a precise, predictable engine of logic. The third enters the modern era, where determinism gives way to randomness, and chance becomes a tool of computation. It is meant to be read in order; skipping ahead is like reading spoilers.</p>
+              <p>Along the way it explores the limits of manipulating information, the connection between computation and human thought, the parallels between the abstract and physical worlds, and much more.</p>
+            </div>
+          </details>
+        </section>
 
-        <div class="act">
-          <span class="num">III</span>
-          <div>
-            <span class="when">The future</span>
-            <p class="what">The modern era, where determinism gives way to randomness.</p>
-            <p class="desc">Chance and probability enter computation, and it no longer marches in a straight line.</p>
+        <!-- Details -->
+        <section class="section" id="sec-details">
+          <details class="accordion">
+            <summary>
+              <h2>Details</h2>
+              <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="accordion-body">
+              <dl class="facts">
+                <div class="fact"><dt>ISBN</dt><dd>978-65-01-07245-6</dd></div>
+                <div class="fact"><dt>Number of pages</dt><dd>423</dd></div>
+                <div class="fact"><dt>Original title</dt><dd>A Máquina da Natureza</dd></div>
+                <div class="fact"><dt>Publishing date</dt><dd>2025</dd></div>
+                <div class="fact"><dt>Award</dt><dd>Prêmio Jabuti Acadêmico 2025</dd></div>
+                <div class="fact"><dt>Publisher</dt><dd>Independent</dd></div>
+              </dl>
+            </div>
+          </details>
+        </section>
+
+        <!-- Share -->
+        <section class="section" id="sec-share">
+          <h2>Share</h2>
+          <div class="share">
+            <a href="{{ printf "https://wa.me/?%s" (querify "text" (printf "%s — %s" $title .Permalink)) | safeURL }}" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2z"/></svg>
+            </a>
+            <a href="{{ printf "https://twitter.com/intent/tweet?%s" (querify "text" $title "url" .Permalink) | safeURL }}" target="_blank" rel="noopener" aria-label="Share on X" title="X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2h3.3l-7.2 8.3L23 22h-6.6l-5.2-6.8L5.3 22H2l7.7-8.8L1.5 2h6.8l4.7 6.2L18.2 2zm-1.2 18h1.8L7.1 3.9H5.2L17 20z"/></svg>
+            </a>
+            <a href="{{ printf "https://www.facebook.com/sharer/sharer.php?%s" (querify "u" .Permalink) | safeURL }}" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.3H7.8V13h2.7v8h3z"/></svg>
+            </a>
+            <a href="{{ printf "https://www.linkedin.com/sharing/share-offsite/?%s" (querify "url" .Permalink) | safeURL }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.8v11.2H3.2V8.8h3.7zM5 3.2A2.1 2.1 0 1 0 5 7.4a2.1 2.1 0 0 0 0-4.2zM20.8 20H17v-5.9c0-1.4-.5-2.4-1.8-2.4-1 0-1.5.7-1.8 1.3-.1.2-.1.5-.1.8V20H9.6V8.8h3.6v1.5c.5-.7 1.3-1.8 3.3-1.8 2.4 0 4.3 1.6 4.3 5V20z"/></svg>
+            </a>
+            <a href="{{ printf "mailto:?%s" (querify "subject" $title "body" (printf "%s — %s" $title .Permalink)) | safeURL }}" aria-label="Share by email" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </a>
+            <button type="button" data-copy="{{ .Permalink }}" aria-label="Copy link" title="Copy link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+            </button>
+            <span class="copied-note" data-copied>Copied</span>
           </div>
-        </div>
+        </section>
+
       </div>
-      <aside class="sidenote">
-        Depending on where you stand, the three parts are also the <b>distant past</b>, the <b>recent past</b>, and the <b>present</b> of the field.
-      </aside>
+    </div>
+
+    <!-- ===== Full-width: What you'll explore ===== -->
+    <section class="section" id="sec-explore">
+      <h2>What you'll explore</h2>
+      <ul class="explore">
+        <li>
+          <strong>The limits of manipulating information</strong>
+          <span>Some questions no machine can ever answer, and others would take longer than the age of the universe to solve. Where exactly is the line?</span>
+        </li>
+        <li>
+          <strong>The connection with human consciousness and thought</strong>
+          <span>If thinking is itself a kind of computation, what does that reveal about the mind — and about what machines might one day do?</span>
+        </li>
+        <li>
+          <strong>Parallels between the abstract and physical worlds</strong>
+          <span>Why does pure mathematics describe the physical universe so well, and where does computation sit between the two?</span>
+        </li>
+        <li>
+          <strong>The theory of biological evolution</strong>
+          <span>Evolution read as an algorithm: how blind variation and selection "compute" the staggering complexity of life.</span>
+        </li>
+        <li>
+          <strong>Determinism and randomness</strong>
+          <span>What happens when a machine is allowed to flip coins? Chance turns out to be a surprisingly powerful tool for solving problems.</span>
+        </li>
+        <li>
+          <strong>The limits of formal science</strong>
+          <span>Can every true statement be proved? A century ago, logic ran into walls it could never cross — and those walls turned out to define the field.</span>
+        </li>
+      </ul>
     </section>
 
-    <!-- ===== What you'll explore ===== -->
+    <!-- ===== Full-width: André Vignatti ===== -->
+    <section class="section author-section" id="sec-author">
+      <div class="author-head">
+        <img class="author-photo" src="{{ $photoSrc }}" alt="André Vignatti">
+        <h2>André Vignatti</h2>
+      </div>
+      <p>Associate Professor of Computer Science at the <a class="link" href="https://www.inf.ufpr.br/vignatti/">Federal University of Paraná (UFPR)</a>, in Curitiba, Brazil, where he has taught since 2011. He holds a PhD in Computer Science from the University of Campinas (UNICAMP).</p>
+      <p>His research spans the design and analysis of algorithms, randomized computation, complex networks, and machine learning. <em>The Machine of Nature</em> grew out of his course "Great Ideas in Theoretical Computer Science."</p>
+    </section>
+
+    <!-- ===== Full-width: Get the book ===== -->
     <section class="section">
-      <div class="body">
-        <h2>What you'll explore</h2>
-        <ul class="explore">
-          <li>The limits of formal science</li>
-          <li>The limits of manipulating information</li>
-          <li>The connection with human consciousness and thought</li>
-          <li>Parallels between the abstract and physical worlds</li>
-          <li>The theory of biological evolution</li>
-          <li>Determinism and randomness</li>
-        </ul>
+      <div class="buy-band">
+        <p>Get the book<br><span class="editions">Available in black-and-white and color editions · in Portuguese</span></p>
+        <a class="btn" href="{{ $buy }}" rel="noopener">Buy on Clube de Autores</a>
       </div>
-      <aside class="sidenote">
-        The author calls this the <b>transcendence</b> of the field: computing as more than an applied science — a lens on truth, mind, and nature.
-      </aside>
-    </section>
-
-    <!-- ===== About the author ===== -->
-    <section class="section">
-      <div class="body">
-        <h2>About the author</h2>
-        <div class="author-head">
-          {{ if os.FileExists (printf "static/%s" $photo) }}
-          <img class="author-photo" src="/{{ $photo }}" alt="André Vignatti">
-          {{ end }}
-          <div>
-            <p><strong>André Vignatti</strong> is an Associate Professor of Computer Science at the <a class="link" href="https://www.inf.ufpr.br/vignatti/">Federal University of Paraná (UFPR)</a>, in Curitiba, Brazil, where he has taught since 2011. He holds a PhD in Computer Science from the University of Campinas (UNICAMP).</p>
-            <p>His research spans the design and analysis of algorithms, randomized computation, complex networks, and machine learning. <em>The Machine of Nature</em> grew out of his course "Great Ideas in Theoretical Computer Science."</p>
-          </div>
-        </div>
-      </div>
-      <aside class="sidenote">
-        In 2025 the book won the <b>Prêmio Jabuti Acadêmico</b>, one of Brazil's most prestigious book awards.
-      </aside>
-    </section>
-
-    <!-- ===== Get the book ===== -->
-    <section class="section buy">
-      <div class="body">
-        <h2>Get the book</h2>
-        <a class="btn" href="https://clubedeautores.com.br/livro/a-maquina-da-natureza-2" rel="noopener">Get the book on Clube de Autores</a>
-        <p class="editions">Available in a black-and-white edition and a color edition.</p>
-
-        <details class="preface">
-          <summary>Read the author's preface</summary>
-          <div class="prose">
-            <p>The purpose of this book is to introduce the fascinating field of <strong>theoretical computer science</strong>. My main intention was to highlight the philosophical and natural-scientific interpretation of the field. Although this interpretation is, in my view, the essence of the field, texts that make it explicit are rare. To that end I decided <strong>(1) to write without technical language</strong> and <strong>(2) to narrate the story chronologically</strong>. I believe these two choices set this book apart.</p>
-            <p>Within the university, theoretical computer science is usually presented with formal rigor, ordered by prerequisites. I don't disagree with that if the goal is to maximize the absorption of technical content. But it poses problems: excessive formalism hides the big ideas, and a non-linear story makes the "big picture" hard to see. Few texts make a real effort to convey the intuition behind the formalism — yet a complete understanding, with all its rigor, is only reached once the intuition is assimilated. So this book abandons technical language completely. The trade-off: it does not offer a formal understanding of its subjects. If that's your goal, read it alongside a technical text.</p>
-            <p>The subjects are presented in chronological order and can be read as a story. Understanding the historical context of an idea offers a perspective you'd never get from the order these topics normally appear in a course. The recommendation follows naturally: read the book in sequence, because skipping chapters is like receiving spoilers. That said, the text is long and dense, so as far as possible the chapters are self-contained, with side notes pointing back to earlier material where there's a dependency.</p>
-            <p>The story is divided into three parts, representing the past, present, and future of the field. The first discusses how and why computer science was created; the second presents the "classical" era of deterministic computation; the final part deals with the modern era, marked by the abandonment of determinism.</p>
-            <p>From those two design decisions I realized it was possible to go further — to challenge the prevailing technical view and show that computer science transcends its use as an isolated, applied science. Not its everyday use to solve problems in other fields, but its philosophical and natural-scientific interpretation. That idea of "transcendence" is present from the very beginning, when the philosophical motivation for the "search for truth" in Ancient Greece is introduced. Along the way many topics connect back to it: the limits of formal science, the limits of manipulating information, the link with human consciousness and thought, the parallels between the abstract and physical worlds, the theory of biological evolution, determinism and randomness, among others.</p>
-            <p>This book was conceived as a work of scientific communication, accessible to the general public. But theoretical computer science isn't as popular as, say, theoretical physics, so I expect those most interested will be computer science students and professionals — and people from related fields such as mathematics, physics, and biology, who can use it to get acquainted with the field without resorting to complex texts.</p>
-            <p>Finally, even after enormous effort to review it, the book may still contain errors, omissions, and inaccuracies. If you spot any — in content, grammar, or formatting — or have suggestions, please get in touch.</p>
-            <p>Make yourselves comfortable and enjoy the trip!</p>
-            <p class="sign">— André</p>
-          </div>
-        </details>
-      </div>
-      <aside class="sidenote">
-        The book is written in <b>Portuguese</b>. An English edition does not exist yet — this page is a preview for readers who'd like to know what it's about.
-      </aside>
     </section>
 
     <!-- ===== Footer ===== -->
-    <footer class="section book-footer">
-      <div class="body">
-        <p>Page shared by <a href="/about/">Tiago Vignatti</a>.</p>
-      </div>
+    <footer class="book-footer">
+      <p>Page shared by <a href="/about/">Tiago Vignatti</a>.</p>
     </footer>
 
   </div>
 </article>
+
+<!-- Cover lightbox -->
+<div class="lightbox" id="cover-lightbox" aria-hidden="true">
+  <div class="lightbox-overlay" data-close></div>
+  <button class="lightbox-close" type="button" aria-label="Close" data-close>&times;</button>
+  <img src="{{ $coverSrc }}" alt="Cover of The Machine of Nature, enlarged">
+</div>
+
+<script>
+(function () {
+  var lb = document.getElementById('cover-lightbox');
+  function open() { lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+  function close() { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+  document.querySelectorAll('[data-zoom]').forEach(function (b) { b.addEventListener('click', open); });
+  var cover = document.getElementById('book-cover');
+  if (cover) { cover.style.cursor = 'zoom-in'; cover.addEventListener('click', open); }
+  lb.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', close); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
+
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var url = btn.getAttribute('data-copy');
+      var note = document.querySelector('[data-copied]');
+      var done = function () { if (note) { note.classList.add('show'); setTimeout(function () { note.classList.remove('show'); }, 1600); } };
+      if (navigator.clipboard) { navigator.clipboard.writeText(url).then(done, done); }
+      else { var t = document.createElement('textarea'); t.value = url; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); } catch (e) {} document.body.removeChild(t); done(); }
+    });
+  });
+})();
+</script>
 {{ end }}
