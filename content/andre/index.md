@@ -6,5 +6,4 @@ showTableOfContents: false
 showDate: false
 showReadingTime: false
 showAuthor: false
-robots: "noindex, nofollow"
 ---
