@@ -21,6 +21,8 @@
 {{ if os.FileExists (printf "static/%s" $photoLocal) }}{{ $photoSrc = printf "/%s" $photoLocal }}{{ end }}
 
 {{ $buy := "https://clubedeautores.com.br/livros/autores/andre-luis-vignatti" }}
+{{ $buyBw := "https://clubedeautores.com.br/livro/a-maquina-da-natureza-2" }}
+{{ $buyColor := "https://clubedeautores.com.br/livro/a-maquina-da-natureza-edicao-luxo-colorida" }}
 
 <style>
   .book {
@@ -144,17 +146,6 @@
   .dark .btn { color: #1b1a16; }
   .btn:hover { opacity: 0.85; }
 
-  /* ---- Type selector (edition variant) -------------------------------- */
-  .type-select { margin: 0 0 1.4rem; }
-  .type-label { display: block; font-family: var(--sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.5rem; }
-  .type-options { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-  .type-opt { cursor: pointer; }
-  .type-opt input { position: absolute; opacity: 0; width: 0; height: 0; }
-  .type-opt span { display: inline-block; font-family: var(--sans); font-size: 0.85rem; font-weight: 600; padding: 0.5rem 0.9rem; border: 1px solid var(--rule); border-radius: 3px; color: var(--ink-soft); transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease; }
-  .type-opt input:checked + span { color: var(--paper); background: var(--accent); border-color: var(--accent); }
-  .dark .type-opt input:checked + span { color: #1b1a16; }
-  .type-opt input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
-
   /* ---- "Read full description" ---------------------------------------- */
   .more { margin-top: 0.25rem; }
   .more summary {
@@ -215,9 +206,20 @@
   .explore li span { display: block; color: var(--ink-soft); font-size: 0.95rem; }
 
   /* ---- Final buy band + footer ---------------------------------------- */
-  .buy-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 1.4rem 1.5rem; }
-  .buy-band p { margin: 0; font-weight: 600; max-width: none; }
-  .buy-band .editions { font-size: 0.85rem; font-weight: 400; color: var(--ink-soft); }
+  .buy-band {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem 2rem;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 13%, var(--card)), var(--card) 70%);
+    border: 1px solid color-mix(in srgb, var(--accent) 38%, var(--rule));
+    border-radius: 10px;
+    padding: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), 0 18px 36px -20px color-mix(in srgb, var(--accent) 60%, transparent);
+  }
+  .buy-band .buy-copy { max-width: 34rem; }
+  .buy-band h2 { margin: 0 0 0.45rem; }
+  .buy-band .editions { display: block; font-family: var(--sans); font-size: 0.9rem; color: var(--ink-soft); }
+  .buy-band .editions a { color: var(--accent); font-weight: 600; text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); transition: border-color 0.15s ease; }
+  .buy-band .editions a:hover { border-bottom-color: var(--accent); }
+  .buy-band .btn { font-size: 0.98rem; padding: 0.9rem 1.9rem; white-space: nowrap; box-shadow: 0 10px 22px -10px color-mix(in srgb, var(--accent) 70%, transparent); }
   .book-footer { border-top: 1px solid var(--rule); padding: 1.5rem 0 0; font-family: var(--sans); font-size: 0.82rem; color: var(--ink-faint); }
   .book-footer a { font-weight: 600; color: var(--ink-soft); }
 
@@ -280,19 +282,6 @@
             <a href="https://www.inf.ufpr.br/vignatti/" target="_blank" rel="noopener">André Vignatti</a>
           </p>
 
-          <div class="type-select reveal d2">
-            <span class="type-label">Type</span>
-            <div class="type-options">
-              <label class="type-opt">
-                <input type="radio" name="edition" value="bw" checked>
-                <span>Black-and-white · Portuguese</span>
-              </label>
-              <label class="type-opt">
-                <input type="radio" name="edition" value="color">
-                <span>Color · Portuguese</span>
-              </label>
-            </div>
-          </div>
         </div>
 
         <!-- The book -->
@@ -406,14 +395,17 @@
     <!-- ===== Full-width: Get the book ===== -->
     <section class="section">
       <div class="buy-band">
-        <p>Get the book<br><span class="editions">Available in black-and-white and color editions · in Portuguese</span></p>
+        <div class="buy-copy">
+          <h2>Get the book</h2>
+          <span class="editions">Available in <a href="{{ $buyBw }}" rel="noopener">black-and-white</a> and <a href="{{ $buyColor }}" rel="noopener">color</a> editions · in Portuguese only at the moment</span>
+        </div>
         <a class="btn" href="{{ $buy }}" rel="noopener">Buy on Clube de Autores</a>
       </div>
     </section>
 
     <!-- ===== Footer ===== -->
     <footer class="book-footer">
-      <p>Page shared by <a href="/about/">Tiago Vignatti</a>.</p>
+      <p>Page shared by <a href="/about/">Tiago Vignatti</a>. For publishing and rights inquiries, contact <a href="mailto:vignatti@inf.ufpr.br">vignatti@inf.ufpr.br</a>.</p>
     </footer>
 
   </div>
