@@ -1,6 +1,6 @@
 ---
 title: "Accessibility and PDF documents"
-summary: ""
+summary: "Making PDFs readable for everyone."
 featuredImagePreview: /images/accessibility-pdfs-cover-preview.jpg
 date: 2026-03-04T10:00:00-03:00
 draft: false
