@@ -19,6 +19,12 @@ introduces computer science in an unusual way — not as a branch of engineering
 
 Ok, but what actually "exploring the connection with human consciousness and thought" even mean? That's it, you got to check it 😀 But at the moment the book has only been published in Portuguese. That's why I decided to put together a page about it in English to help spread the word. Go there now: [www.vignatti.com/andre/](/andre/)
 
+{{< /style >}}
+
+{{< figure src="images/andre-page.png" alt="Screenshot of the English page for The Machine of Nature at vignatti.com/andre/" href="/andre/" target="_self" nozoom="true" >}}
+
+{{< style "text-align:justify; strong{color:#00b1ff;}" >}}
+
 --
 
 One more thing: you know what's even more crazy? I helped review this book, and it won the Prêmio Jabuti, **Brazil's most prestigious book award**. Still can't quite believe it. *Excuse me while I kiss the sky*. What an honor!
