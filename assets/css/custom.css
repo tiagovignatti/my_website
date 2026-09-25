@@ -1203,3 +1203,30 @@ body {
 .float-left img {
     height: 96px !important;
 }
+
+/* Drop cap: put {.dropcap} on the line right after a paragraph.
+   Igalia blue with an Igalia orange offset; sunk three lines, with the top
+   of the letter level with the top of the first line. */
+.dropcap::first-letter {
+    float: left;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 6em;
+    line-height: 0.7;
+    margin: 0.09em 0.1em 0 0;
+    color: #0067b1;
+    text-shadow: 0.045em 0.045em 0 #ff9900;
+}
+
+.dark .dropcap::first-letter {
+    color: #bfe7e5;
+}
+
+@supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+    .dropcap::first-letter {
+        float: none;
+        -webkit-initial-letter: 3;
+        initial-letter: 3;
+        margin: 0 0.12em 0 0;
+    }
+}

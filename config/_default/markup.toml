@@ -1,3 +1,5 @@
 [goldmark]
   [goldmark.renderer]
     unsafe = true
+  [goldmark.parser.attribute]
+    block = true
