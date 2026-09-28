@@ -1,0 +1,20 @@
+{{- /*
+  Interactive canvas sketch driven by a page-bundle script.
+  Usage: {{< sketch src="no-hierarchy.js" label="Accessible description" caption="Optional caption" >}}
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $res := .Page.Resources.GetMatch $src -}}
+{{- if not $res -}}
+  {{- errorf "sketch shortcode: unable to find %q: %s" $src .Position -}}
+{{- end -}}
+{{- $js := $res | minify | fingerprint -}}
+{{- $id := printf "sketch-%d" .Ordinal -}}
+<figure class="sketch" id="{{ $id }}">
+  <div class="sketch-stage">
+    <canvas role="img" aria-label="{{ .Get "label" }}"></canvas>
+  </div>
+  {{- with .Get "caption" }}
+  <figcaption class="sketch-caption">{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" data-figure="{{ $id }}" defer></script>

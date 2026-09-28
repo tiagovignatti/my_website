@@ -1,4 +1,4 @@
 {{/* Optional per-post hero image opacity, e.g. heroImageOpacity: 0.8 */}}
 {{ with .Params.heroImageOpacity }}
-<style>#background-image { opacity: {{ printf "%.2f" (float .) | safeCSS }}; }</style>
+<style>#background-image { opacity: {{ printf "%g" (float .) | safeCSS }}; }</style>
 {{ end }}
