@@ -2,9 +2,16 @@
 title: "It is possible to build organizations without hierarchy"
 summary: "Igalia turns 25."
 featuredImage: "background.jpg"
-featuredImagePreview: "/images/organizations-without-hierarchy-preview.jpg"
+featuredImagePreview: "/posts/organizations-without-hierarchy/preview.jpg"
 date: 2026-10-02T14:18:22-03:00
-draft: true
+# Unlisted preview: built at its URL but kept out of every list, feed,
+# sitemap and search engine. To publish, delete these lines (draft too).
+draft: false
+build:
+  list: never
+sitemap:
+  disable: true
+robots: "noindex, nofollow"
 toc: false
 showHero: true
 heroStyle: "background"
@@ -34,10 +41,10 @@ Perhaps most interestingly, everyone is treated equally in this group. **There a
 
 {{< sketch src="no-hierarchy.js" audio="guitar.js" label="Animation: an org chart with a crowned boss on top loses its crown; the boxes melt into ten equal watercolour circles, all connected to each other, which grow into a network of nearly 200 people where ideas spread from anyone to everyone." >}}
 
-Organizations that are able to be built without hierarchy leads to more trust and collaboration among the peers. Human aspects like social interaction and communication happen more harmoniously when we leave behind the noise caused by the constant pursuit of power.
+Organizations that are able to be built without hierarchy leads to more trust and collaboration among the peers. Human aspects like social interaction and communication happen more harmoniously when we leave behind the noise caused by the constant pursuit of power. Refocusing on people will be even more important now in the AI era.
 
-{{< style "text-align:right; font-style:italic; font-size:1.05em; margin-bottom:2.5rem;" >}}
+{{< style "text-align:right; font-style:italic; font-size:0.95em; margin-bottom:2.5rem;" >}}
 As pessoas são como as palavras\
 Só tem sentido se junto das outras\
-<span style="display:inline-block; margin-top:0.6rem; font-style:normal; font-size:0.85em; opacity:0.7;">— Emicida, “Yasuke (Bendito, Louvado Seja)”</span>
+<span style="display:inline-block; margin-top:0.6rem; font-style:normal; font-size:0.85em; opacity:0.7;">— Emicida, “Yasuke (Bendito, Louvado Seja)” <a href="https://open.spotify.com/track/1jRSkkv872U6AYK7c6rcek" target="_blank" rel="noreferrer" aria-label="Listen on Spotify" title="Listen on Spotify" style="color:inherit; text-decoration:none;">{{< icon "spotify" >}}</a></span>
 {{< /style >}}
