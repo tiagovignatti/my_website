@@ -1,5 +1,5 @@
 ---
-title: "It's possible to build organizations without hierarchy"
+title: "It is possible to build organizations without hierarchy"
 summary: "Igalia turns 25."
 featuredImage: "background.jpg"
 featuredImagePreview: "/images/organizations-without-hierarchy-preview.jpg"
@@ -11,16 +11,30 @@ heroStyle: "background"
 heroImageOpacity: 0.3
 ---
 
+{{< style "text-align:right; font-style:italic; font-size:1.05em; margin-bottom:2.5rem;" >}}
+As pessoas são como as palavras\
+Só tem sentido se junto das outras\
+<span style="display:inline-block; margin-top:0.6rem; font-style:normal; font-size:0.85em; opacity:0.7;">— Emicida, “Yasuke (Bendito, Louvado Seja)”</span>
+{{< /style >}}
+
+<!--
+{{< style "opacity:0.65; font-size:0.95em;" >}}
+*Someone asked me who I write for in my posts. It was a simple question that made me think. Now I have the answer: I write to have fun. I like to write mostly to myself. I write about things usually that I'd like to have them in my head for a long time, digesting and thinking about them slowly. <p>Anyhow, to the point now.*
+{{< /style >}}
+
+---
+-->
+
 {{< style "text-align:justify; strong{color:#00b1ff;}" >}}
 
-Twenty-five years ago, a group of ten engineers in Galicia, Spain, started [a project](https://www.igalia.com/2026/09/21/Twenty-Five-Years-Upstream.html). They wanted to do something impactful and work with technology, but they wanted to do it their own way. They wanted the freedom to make the decisions they believed were right. They also wanted to shape the way technology would evolve, instead of simply accepting decisions made by others.
+Twenty-five years ago, a group of ten engineers in Galicia, Spain, started [a project](https://www.igalia.com/2026/09/21/Twenty-Five-Years-Upstream.html). They wanted to do something impactful and work with technology.
 {.dropcap}
 
-In other words, these engineers wanted to hold the future in their own hands, on their own terms, and change the world for the better.
+But they wanted to do it their own way i.e. wanted the freedom to make the decisions they believed were right and also wanted to shape the way technology would evolve, instead of simply accepting decisions made by others. Those ten engineers wanted to hold the future in their own hands, on their own terms, and change the world for the better.
 
-Today, that group has grown to nearly 200 people, working on web browsers, graphics drivers, operating systems and components that the software industry runs on.
+Today, that group has grown to nearly 200 people, working on web browsers, programs that talk to the hardware and many components that all software industry runs on.
 
-But perhaps the most interesting part is the way the group is structured: 1. everyone earns the same; 2. from the very beginning, they chose not to have investors, and perhaps most importantly; 3. there are no bosses and no hierarchy. Everyone is treated as an equal.
+Perhaps most interestingly, everyone is treated equally in this group. **There are no bosses and no hierarchy.**
 
 {{< /style >}}
 

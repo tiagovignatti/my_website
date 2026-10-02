@@ -28,6 +28,12 @@
     INK = dark ? '#e5e7eb' : '#232838';
     CARD = dark ? '#2f3542' : '#f1ece2';
   };
+  // The caption is real text laid over the canvas, so it reads, selects and
+  // styles like the post's body text. The canvas only keeps room for it.
+  const capEl = document.createElement('div');
+  capEl.className = 'sketch-live-caption';
+  stage.appendChild(capEl);
+  let capPx = 16;
   const TAU = Math.PI * 2, DT = 1 / 60, HOP = 0.11, FINAL_N = 200;
 
   // Timeline, in seconds.
@@ -200,7 +206,9 @@
   const spacing = n => Math.sqrt(W * H * 0.52 / Math.max(n, 24));
   const R0 = () => Math.min(W, H) * 0.045;
   const radius = () => lerp(R0(), spacing(FINAL_N) * 0.21, Math.pow(seg(nodes.length, 10, FINAL_N), 0.6));
-  const capSize = () => 15 / scale;
+  const capSize = () => capPx / scale;
+  // Height kept free under the dots for the caption, with breathing room above it.
+  const capBand = () => capSize() * 4.6;
   const bossWobble = () => Math.sin((t - T.wobble) * 28) * 3 * seg(t, T.wobble, T.crown) * (1 - seg(t, T.crown, T.cut));
 
   // --- ideas ----------------------------------------------------------------
@@ -338,11 +346,11 @@
         const f = (d - rest) * 0.012, fx = dx / d * f, fy = dy / d * f;
         A.vx += fx; A.vy += fy; B.vx -= fx; B.vy -= fy;
       }
-      const m = r + 18, bottom = H - r - capSize() * 2.4;
+      const m = r + 18, bottom = H - r - capBand();
       // Keep the crowd centred as a whole; nobody is pulled to a middle.
       let cx = 0, cy = 0;
       for (const N of nodes) { cx += N.x / n; cy += N.y / n; }
-      const shx = (W / 2 - cx) * 0.004, shy = ((H - capSize() * 2) / 2 - cy) * 0.004;
+      const shx = (W / 2 - cx) * 0.004, shy = ((H - capBand()) / 2 - cy) * 0.004;
       for (const N of nodes) {
         if (t >= T.grow) { N.vx += shx; N.vy += shy; }
         if (N.i < 10 && hold > 0) { N.vx += (N.rx - N.x) * 0.05 * hold; N.vy += (N.ry - N.y) * 0.05 * hold; }
@@ -413,23 +421,25 @@
     ctx.globalAlpha = 1;
   }
 
+  const captionLines = (year, n) => /^pt/i.test(document.documentElement.lang) ? [
+    [T.chart, 'o formato de sempre'],
+    [T.crown - 0.3, 'mas e se ninguém estiver no topo?'],
+    [T.ring, '2001 · dez engenheiros, todos conectados'],
+    [T.grow + 0.3, `${year} · ${n} pessoas, e ainda sem chefes`],
+  ] : [
+    [T.chart, 'the usual shape'],
+    [T.crown - 0.3, 'but what if nobody is on top?'],
+    [T.ring, '2001 · ten engineers, all connected'],
+    [T.grow + 0.3, `${year} · ${n} people, still no bosses`],
+  ];
+
   function caption() {
     const n = nodes.length, year = Math.min(2026, 2001 + Math.floor(25 * seg(t, T.grow, T.growEnd - 0.4)));
-    const lines = [
-      [T.chart, 'the usual shape'],
-      [T.crown - 0.3, 'but what if nobody is on top?'],
-      [T.ring, '2001 · ten engineers, all connected'],
-      [T.grow + 0.3, `${year} · ${n} people, still no bosses`],
-    ];
+    const lines = captionLines(year, n);
     let cur = lines[0];
     for (const l of lines) if (t >= l[0]) cur = l;
-    if (t < T.chart) return;
-    const text = cur[1].slice(0, Math.floor((t - cur[0]) * 40));
-    const fs = capSize();
-    ctx.font = `italic 400 ${fs}px Lora, Georgia, serif`;
-    ctx.fillStyle = INK; ctx.globalAlpha = 0.85; ctx.textBaseline = 'alphabetic';
-    ctx.fillText(text, W * 0.045, H - fs * 1.1);
-    ctx.globalAlpha = 1;
+    const text = t < T.chart ? '' : cur[1].slice(0, Math.floor((t - cur[0]) * 40));
+    if (capEl.textContent !== text) capEl.textContent = text;
   }
 
   function render() {
@@ -550,6 +560,7 @@
   function resize() {
     const w = stage.clientWidth;
     if (!w) return;
+    capPx = parseFloat(getComputedStyle(capEl).fontSize) || 16;
     const mobile = w < 560, nW = mobile ? 640 : 1000, nH = mobile ? 800 : 625;
     if (nodes && (nW !== W || nH !== H)) {
       for (const n of nodes) { n.x *= nW / W; n.y *= nH / H; }
@@ -606,7 +617,7 @@
 
   const params = new URLSearchParams(location.search);
   const fonts = document.fonts ? Promise.race([
-    Promise.all([document.fonts.load('italic 400 16px Lora'), document.fonts.load('700 40px Lora')]),
+    document.fonts.load('700 40px Lora'),
     new Promise(r => setTimeout(r, 1500)),
   ]) : Promise.resolve();
 

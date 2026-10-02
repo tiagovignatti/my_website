@@ -1237,7 +1237,17 @@ body {
 }
 
 .sketch-stage {
+    position: relative;
     aspect-ratio: 16 / 10;
+}
+
+/* Caption typed over the bottom of the canvas: plain body text, selectable. */
+.sketch-live-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.5rem;
+    cursor: text;
 }
 
 .sketch-stage canvas {
