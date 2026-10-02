@@ -46,5 +46,5 @@ Organizations that are able to be built without hierarchy leads to more trust an
 {{< style "text-align:right; font-style:italic; font-size:0.95em; margin-bottom:2.5rem;" >}}
 As pessoas são como as palavras\
 Só tem sentido se junto das outras\
-<span style="display:inline-block; margin-top:0.6rem; font-style:normal; font-size:0.85em; opacity:0.7;">— Emicida, “Yasuke (Bendito, Louvado Seja)” <a href="https://open.spotify.com/track/1jRSkkv872U6AYK7c6rcek" target="_blank" rel="noreferrer" aria-label="Listen on Spotify" title="Listen on Spotify" style="color:inherit; text-decoration:none;">{{< icon "spotify" >}}</a></span>
+<span style="display:inline-block; margin-top:0.6rem; font-style:normal; font-size:0.85em; opacity:0.7;">— Emicida, “Yasuke (Bendito, Louvado Seja)” <a href="https://open.spotify.com/track/1jRSkkv872U6AYK7c6rcek" target="_blank" rel="noreferrer" aria-label="Listen on Spotify" title="Listen on Spotify" class="listen-link">{{< icon "spotify" >}}</a></span>
 {{< /style >}}

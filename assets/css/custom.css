@@ -1346,3 +1346,15 @@ body {
     margin-top: 0.6rem;
     text-align: center;
 }
+
+/* Small "listen on…" icon link after a quote's credit: no underline, the
+   credit's own colour, and centred on the capitals instead of sitting on the
+   descender line like the theme's icons do. */
+.listen-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.listen-link .icon {
+    vertical-align: -0.125em;
+}
