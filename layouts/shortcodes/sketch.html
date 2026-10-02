@@ -1,6 +1,7 @@
 {{- /*
   Interactive canvas sketch driven by a page-bundle script.
   Usage: {{< sketch src="no-hierarchy.js" label="Accessible description" caption="Optional caption" >}}
+  Optional audio="guitar.js" loads a second page-bundle script for the same figure.
 */ -}}
 {{- $src := .Get "src" -}}
 {{- $res := .Page.Resources.GetMatch $src -}}
@@ -18,3 +19,11 @@
   {{- end }}
 </figure>
 <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" data-figure="{{ $id }}" defer></script>
+{{- with .Get "audio" }}
+  {{- $a := $.Page.Resources.GetMatch . -}}
+  {{- if not $a -}}
+    {{- errorf "sketch shortcode: unable to find %q: %s" . $.Position -}}
+  {{- end -}}
+  {{- $a = $a | minify | fingerprint }}
+<script src="{{ $a.RelPermalink }}" integrity="{{ $a.Data.Integrity }}" data-figure="{{ $id }}" defer></script>
+{{- end }}

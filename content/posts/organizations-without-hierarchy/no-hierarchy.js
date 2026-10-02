@@ -30,9 +30,12 @@
   };
   // The caption is real text laid over the canvas, so it reads, selects and
   // styles like the post's body text. The canvas only keeps room for it.
-  const capEl = document.createElement('div');
+  // Sits in a row of its own so page controls (e.g. sound) can share the line.
+  const capRow = document.createElement('div'), capEl = document.createElement('div');
+  capRow.className = 'sketch-caption-row';
   capEl.className = 'sketch-live-caption';
-  stage.appendChild(capEl);
+  capRow.appendChild(capEl);
+  stage.appendChild(capRow);
   let capPx = 16;
   const TAU = Math.PI * 2, DT = 1 / 60, HOP = 0.11, FINAL_N = 200;
 

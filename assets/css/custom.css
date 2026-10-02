@@ -1241,13 +1241,97 @@ body {
     aspect-ratio: 16 / 10;
 }
 
-/* Caption typed over the bottom of the canvas: plain body text, selectable. */
-.sketch-live-caption {
+/* Caption row over the bottom of the canvas: plain body text, selectable,
+   with room on the right for page controls such as the sound switch. */
+.sketch-caption-row {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.sketch-live-caption {
+    flex: 1;
+    min-width: 0;
     cursor: text;
+}
+
+/* Sound switch: small page chrome, deliberately not part of the drawing. */
+.sketch-sound {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.2rem;
+    padding: 0.2rem 0.45rem;
+    border: 1px solid rgb(var(--color-neutral-300));
+    border-radius: 999px;
+    background: rgb(var(--color-neutral-50));
+    color: rgb(var(--color-neutral-500));
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.sketch-sound:hover,
+.sketch-sound:focus-visible {
+    color: rgb(var(--color-neutral-800));
+    border-color: rgb(var(--color-neutral-400));
+}
+
+.sketch-sound-track {
+    position: relative;
+    width: 1.5rem;
+    height: 0.8rem;
+    border-radius: 999px;
+    background: rgb(var(--color-neutral-300));
+    transition: background-color 0.15s ease;
+}
+
+.sketch-sound-track span {
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.15s ease;
+}
+
+.sketch-sound[aria-pressed="true"] .sketch-sound-track {
+    background: rgb(var(--color-primary-600));
+}
+
+.sketch-sound[aria-pressed="true"] .sketch-sound-track span {
+    transform: translateX(0.7rem);
+}
+
+.sketch-sound[aria-pressed="false"] .sketch-sound-waves,
+.sketch-sound[aria-pressed="true"] .sketch-sound-mute {
+    display: none;
+}
+
+.dark .sketch-sound {
+    border-color: rgb(var(--color-neutral-600));
+    background: rgb(var(--color-neutral-800));
+    color: rgb(var(--color-neutral-400));
+}
+
+.dark .sketch-sound:hover,
+.dark .sketch-sound:focus-visible {
+    color: rgb(var(--color-neutral-100));
+    border-color: rgb(var(--color-neutral-500));
+}
+
+.dark .sketch-sound-track {
+    background: rgb(var(--color-neutral-600));
+}
+
+.dark .sketch-sound[aria-pressed="true"] .sketch-sound-track {
+    background: rgb(var(--color-primary-400));
 }
 
 .sketch-stage canvas {

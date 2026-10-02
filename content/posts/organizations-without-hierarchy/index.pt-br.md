@@ -38,4 +38,4 @@ Nesse grupo, todo mundo ganha o mesmo salário e, desde o começo, eles escolher
 
 {{< /style >}}
 
-{{< sketch src="no-hierarchy.js" label="Animação: um organograma com um chefe coroado no topo perde a coroa; as caixas se derretem em dez círculos iguais de aquarela, todos conectados entre si, que crescem até formar uma rede de quase 200 pessoas onde as ideias se espalham de qualquer um pra todo mundo." >}}
+{{< sketch src="no-hierarchy.js" audio="guitar.js" label="Animação: um organograma com um chefe coroado no topo perde a coroa; as caixas se derretem em dez círculos iguais de aquarela, todos conectados entre si, que crescem até formar uma rede de quase 200 pessoas onde as ideias se espalham de qualquer um pra todo mundo." >}}
