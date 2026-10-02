@@ -1,0 +1,42 @@
+{{- /*
+  Override of Hugo's embedded _funcs/get-page-images, which feeds the
+  internal Open Graph and Twitter card templates (og:image, twitter:image,
+  summary_large_image). Same logic as Hugo's, plus a fallback to this site's
+  LoveIt-era front matter: featuredImagePreview, then featuredImage. Each may
+  be a bundle file ("background.jpg"), a site path ("/images/x.jpg") or a URL.
+*/ -}}
+{{- $imgs := slice }}
+{{- $imgParams := .Params.images }}
+{{- if not $imgParams }}
+  {{- with .Params.featuredImagePreview | default .Params.featuredImage }}
+    {{- $imgParams = slice . }}
+  {{- end }}
+{{- end }}
+{{- $resources := .Resources.ByType "image" -}}
+{{- /* Find featured image resources if there is still no image parameter. */ -}}
+{{- if not $imgParams }}
+  {{- $featured := $resources.GetMatch "*feature*" -}}
+  {{- if not $featured }}{{ $featured = $resources.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+  {{- with $featured }}
+    {{- $imgs = $imgs | append (dict "Image" . "RelPermalink" .RelPermalink "Permalink" .Permalink) }}
+  {{- end }}
+{{- end }}
+{{- /* Use the first one of site images as the fallback. */ -}}
+{{- if and (not $imgParams) (not $imgs) }}
+  {{- with site.Params.images }}{{ $imgParams = first 1 . }}{{ end }}
+{{- end }}
+{{- /* Parse the image parameters. */ -}}
+{{- range $imgParams }}
+  {{- $img := . }}
+  {{- $url := urls.Parse $img }}
+  {{- if eq $url.Scheme "" }}
+    {{- with $resources.GetMatch $img -}}
+      {{- $imgs = $imgs | append (dict "Image" . "RelPermalink" .RelPermalink "Permalink" .Permalink) }}
+    {{- else }}
+      {{- $imgs = $imgs | append (dict "RelPermalink" (relURL $img) "Permalink" (absURL $img)) }}
+    {{- end }}
+  {{- else }}
+    {{- $imgs = $imgs | append (dict "RelPermalink" $img "Permalink" $img) }}
+  {{- end }}
+{{- end }}
+{{- return $imgs }}
