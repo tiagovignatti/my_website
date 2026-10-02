@@ -35,7 +35,7 @@ Mas queriam fazer isso do jeito deles, ou seja, queriam a liberdade de tomar as 
 
 Hoje, esse grupo cresceu pra quase 200 pessoas, trabalhando com navegadores da internet, programas que conversam com o hardware e vários componentes sobre os quais toda a indústria de software roda.
 
-Talvez o mais interessante seja que, nesse grupo, todo mundo é tratado de forma igual. **Não existem chefes e não existe hierarquia.**
+Mas talvez o mais interessante seja que, nesse grupo, todo mundo é tratado de forma igual. **Não existem chefes e não existe hierarquia.**
 
 {{< /style >}}
 

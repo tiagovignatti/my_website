@@ -35,7 +35,7 @@ But they wanted to do it their own way i.e. wanted the freedom to make the decis
 
 Today, that group has grown to nearly 200 people, working on web browsers, programs that talk to the hardware and many components that all software industry runs on.
 
-Perhaps most interestingly, everyone is treated equally in this group. **There are no bosses and no hierarchy.**
+But perhaps most interestingly, everyone is treated equally in this group. **There are no bosses and no hierarchy.**
 
 {{< /style >}}
 
