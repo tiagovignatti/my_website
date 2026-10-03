@@ -41,7 +41,7 @@ But perhaps most interestingly, everyone is treated equally in this group. **The
 
 {{< sketch src="no-hierarchy.js" audio="guitar.js" label="Animation: an org chart with a crowned boss on top loses its crown; the boxes melt into ten equal watercolour circles, all connected to each other, which grow into a network of nearly 200 people where ideas spread from anyone to everyone." >}}
 
-Organizations that are able to be built without hierarchy leads to more trust and collaboration among the peers. Human aspects like social interaction and communication happen more harmoniously when we leave behind the noise caused by the constant pursuit of power. Another consequence, more importantly, is the natural (re)focusing of people towards the pleasant work.
+Organizations that are able to be built without hierarchy leads to more trust and collaboration among the peers. Human aspects like social interaction and communication happen more harmoniously when we leave behind the noise caused by the constant pursuit of power. Another consequence, more importantly, is the natural (re)focusing of people towards the pleasant and cooperative work.
 
 {{< style "text-align:right; font-style:italic; font-size:0.95em; margin-bottom:2.5rem;" >}}
 As pessoas são como as palavras\
