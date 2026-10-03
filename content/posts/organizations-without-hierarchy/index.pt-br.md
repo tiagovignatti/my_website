@@ -41,7 +41,7 @@ Mas talvez o mais interessante seja que, nesse grupo, todo mundo é tratado de f
 
 {{< sketch src="no-hierarchy.js" audio="guitar.js" label="Animação: um organograma com um chefe coroado no topo perde a coroa; as caixas se derretem em dez círculos iguais de aquarela, todos conectados entre si, que crescem até formar uma rede de quase 200 pessoas onde as ideias se espalham de qualquer um pra todo mundo." >}}
 
-Organizações que conseguem ser construídas sem hierarquia geram mais confiança e colaboração entre os pares. Aspectos humanos como a interação social e a comunicação acontecem de forma mais harmoniosa quando deixamos para trás o ruído causado pela busca constante por poder.
+Organizações que conseguem ser construídas sem hierarquia geram mais confiança e colaboração entre os pares. Aspectos humanos como a interação social e a comunicação acontecem de forma mais harmoniosa quando deixamos para trás o ruído causado pela busca constante por poder. Outra consequência, mais importante ainda, é o (re)direcionamento natural das pessoas para o trabalho prazeroso.
 
 {{< style "text-align:right; font-style:italic; font-size:0.95em; margin-bottom:2.5rem;" >}}
 As pessoas são como as palavras\
