@@ -3,7 +3,14 @@ title: "As psicoses de 2026"
 summary: "Psicose política, psicose da IA."
 featuredImagePreview: "/images/psychoses-2026-preview.jpg"
 date: 2026-10-27T12:00:00-03:00
-draft: true
+# Unlisted preview: built at its URL but kept out of every list, feed,
+# sitemap and search engine. To publish, delete these lines (draft too).
+draft: false
+build:
+  list: never
+sitemap:
+  disable: true
+robots: "noindex, nofollow"
 toc: false
 ---
 
