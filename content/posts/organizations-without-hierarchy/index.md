@@ -6,7 +6,7 @@ featuredImagePreview: "/posts/organizations-without-hierarchy/preview.jpg"
 date: 2026-10-02T14:18:22-03:00
 # Unlisted preview: built at its URL but kept out of every list, feed,
 # sitemap and search engine. To publish, delete these lines (draft too).
-draft: false
+draft: true
 build:
   list: never
 sitemap:
