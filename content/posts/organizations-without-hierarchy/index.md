@@ -28,6 +28,10 @@ heroImageOpacity: 0.3
 
 {{< style "text-align:justify; strong{color:#00b1ff;}" >}}
 
+Twenty-five years ago, I was playing in Jack O' Lantern, what eventually has became **João Lanterna**. João Laterna performed authoral music, playing Rock, Jazz, Brazilian in the most creative festivals of that time, for example the Psicodália Festival. The group was a united five students (4 of them from Universidade Federal do Paraná), which each had strong view. It was a huge succesful band that lasted for 12 -15 years almost (assuming the HotBuriHop was a continuation of their projects).
+
+
+
 Twenty-five years ago, a group of ten engineers in Galicia, Spain, started [a project](https://www.igalia.com/2026/09/21/Twenty-Five-Years-Upstream.html). They wanted to do something impactful and work with technology.
 {.dropcap}
 
@@ -41,7 +45,7 @@ But perhaps most interestingly, everyone is treated equally in this group. **The
 
 {{< sketch src="no-hierarchy.js" audio="guitar.js" label="Animation: an org chart with a crowned boss on top loses its crown; the boxes melt into ten equal watercolour circles, all connected to each other, which grow into a network of nearly 200 people where ideas spread from anyone to everyone." >}}
 
-Organizations that are able to be built without hierarchy leads to more trust and collaboration among the peers. Human aspects like social interaction and communication happen more harmoniously when we leave behind the noise caused by the constant pursuit of power. Another consequence, more importantly, is the natural (re)focusing of people towards the pleasant and cooperative work.
+Organizations that are able to be built without hierarchy leads to more trust and collaboration among the peers [REF?]. Human aspects like social interaction and communication happen more harmoniously when we leave behind the noise caused by the constant pursuit of power [REF?]. Another consequence, more importantly, is the natural (re)focusing of people towards the pleasant and cooperative work, and this is something that motivates me deeply.
 
 {{< style "text-align:right; font-style:italic; font-size:0.95em; margin-bottom:2.5rem;" >}}
 As pessoas são como as palavras\
