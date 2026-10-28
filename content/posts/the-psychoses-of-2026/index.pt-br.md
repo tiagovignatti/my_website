@@ -40,4 +40,4 @@ Sem IA, o meu dia mais movimentado tinha sido de 6 mudanças de código integrad
 
 {{< /style >}}
 
-{{< figure src="images/dancing-in-the-canyon.jpg" alt="Ilustração de pessoas dançando e tocando música num cânion no deserto, cercadas por trilhos de trem sinuosos e um pequeno trem." >}}
+{{< figure src="images/dancing-in-the-canyon.jpg" caption="Ilustração de [Hiro Kamigaki e IC4DESIGN](https://www.instagram.com/hirokamigaki_ic4design/), do livro *Pierre – O detetive dos labirintos*, de Chihiro Maruyama (Ciranda Cultural, 2016)." alt="Ilustração de pessoas dançando e tocando música num cânion no deserto, cercadas por trilhos de trem sinuosos e um pequeno trem." >}}

@@ -42,4 +42,4 @@ It's a really tricky balance, for sure. The psychoses are real though. All I nee
 
 {{< /style >}}
 
-{{< figure src="images/dancing-in-the-canyon.jpg" alt="Illustration of people dancing and playing music in a desert canyon, surrounded by winding railway tracks and a small train." >}}
+{{< figure src="images/dancing-in-the-canyon.jpg" caption="Illustration by [Hiro Kamigaki and IC4DESIGN](https://www.instagram.com/hirokamigaki_ic4design/), from *Pierre the Maze Detective* by Chihiro Maruyama (Brazilian edition: Ciranda Cultural, 2016)." alt="Illustration of people dancing and playing music in a desert canyon, surrounded by winding railway tracks and a small train." >}}
