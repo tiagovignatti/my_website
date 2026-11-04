@@ -2,7 +2,7 @@
 title: "As psicoses de 2026"
 summary: "Psicose política, psicose da IA."
 featuredImagePreview: "/images/psychoses-2026-preview.jpg"
-date: 2026-11-04T11:00:00-03:00
+date: 2026-10-27T12:00:00-03:00
 draft: false
 toc: false
 ---
