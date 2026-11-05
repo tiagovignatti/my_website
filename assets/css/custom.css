@@ -1007,6 +1007,23 @@ body {
     font-weight: 700 !important;
 }
 
+/* "About" link: same primary accent as the "See all" links, so it stands apart from the other menu items (desktop + mobile) */
+.main-menu a[href="/about/"] span {
+    color: rgb(var(--color-primary-500));
+}
+
+.main-menu a[href="/about/"]:hover span {
+    color: rgb(var(--color-primary-600));
+}
+
+.dark .main-menu a[href="/about/"] span {
+    color: rgb(var(--color-primary-400));
+}
+
+.dark .main-menu a[href="/about/"]:hover span {
+    color: rgb(var(--color-primary-300));
+}
+
 /* ===== POSTS LIST: overreacted.io-style bold titles ===== */
 
 .article-link--simple header a {
