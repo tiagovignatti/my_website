@@ -22,6 +22,14 @@ Technology: Vue.js. Vuetify. Node.js, MongoDB, Elastic Search.
 
 ---
 
+## Chromium Developer
+
+Since **2013** I'm a [Chromium](https://www.chromium.org/Home/) developer and committer. I started on Wayland for ChromeOS, then helped bring Chromium's Blink engine to iOS (V8 and ANGLE included), and worked on making the Chrome PDF viewer readable by screen readers through [Tagged PDFs](/posts/accessibility-and-pdfs/). These days I'm mostly [splitting the giant `//chrome/browser` into smaller modules](https://groups.google.com/a/chromium.org/g/chromium-dev/c/IAHOYNgJQ74) and decoupling the Chrome OS code from the browser.
+
+All my contributions are listed in the [Chromium commit tracker](https://chrome-commit-tracker.arthursonzogni.com/developers/tvignatti/).
+
+---
+
 ## 3D viewer for the Web
 
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
