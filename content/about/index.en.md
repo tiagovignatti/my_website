@@ -22,7 +22,7 @@ Igalia is a leading open source consultancy with 25 years of experience, headqua
 
 ### Open-source
 
-Open-source development has been at the core of my career. You can find my work on [GitHub](https://github.com/tiagovignatti) and explore some highlights in the [projects](/projects/) page.
+Open-source software development has been at the core of my career. You can find my work on [GitHub](https://github.com/tiagovignatti) and explore some highlights in the [projects](/projects/) page.
 
 ### Career
 
@@ -35,4 +35,4 @@ Before graduating, I worked at **C3SL** at the **Federal University of Paraná**
 
 ### Say hello
 
-Say hello on Bluesky: [@tvignatti.bsky.social](https://bsky.app/profile/tvignatti.bsky.social).
+Say hello on Bluesky: [@tvignatti.bsky.social](https://bsky.app/profile/tvignatti.bsky.social) or on Instagram: [@tiagovignatti](https://instagram.com/tiagovignatti).
