@@ -30,7 +30,7 @@ I co-founded **[Imersys](https://www.crunchbase.com/organization/imersys)**, whe
 
 Prior to that, I lived in Helsinki, Finland, where I worked at **Intel** and earlier at **Nokia** as a Linux Graphics Engineer. You can find more details on my [LinkedIn profile](https://www.linkedin.com/in/tiagovignatti/).
 
-Before graduating, I worked at **C3SL** at the **Federal University of Paraná** in Curitiba, Brazil. During that time, I also engaged in academic research, focusing on [Distributed Archiving Systems](https://ieeexplore.ieee.org/document/5284519) and [Peer-to-Peer networks](http://www.inf.ufpr.br/bona/disser-vignatti.pdf).
+Before graduating, I worked at **C3SL**, the free software lab at the **Federal University of Paraná** in Curitiba, Brazil. At the same time, I did academic research on [distributed archiving systems](https://ieeexplore.ieee.org/document/5284519) and [peer-to-peer networks](http://www.inf.ufpr.br/bona/disser-vignatti.pdf).
 
 
 ### Say hello
