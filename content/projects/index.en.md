@@ -67,15 +67,15 @@ During **2017 - 2020**, I've directed teams of audiovisual editors, 3D artists, 
 
 ## Sharing CPU and GPU buffers on Linux
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/203px-Tux.svg.png" class="float-left" >}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/250px-Tux.svg.png" class="float-left" >}}
 
-I've designed [an architecture for systems with shared physical memory to exploit the advantages of heterogeneous computing](https://software.intel.com/content/www/us/en/develop/blogs/sharing-cpu-and-gpu-buffers-on-linux.html), saving memory and boosting performance on graphics libraries. As of **2016**, this innovative architecture and code are fully-upstreamed on Linux and also in Chrome OS, and being largely shipped within Chromebooks and other products.
+I've designed [an architecture for systems with shared physical memory to exploit the advantages of heterogeneous computing](https://web.archive.org/web/20190117153724/https://01.org/blogs/2016/sharing-cpu-and-gpu-buffers-linux), saving memory and boosting performance on graphics libraries. As of **2016**, this innovative architecture and code are fully-upstreamed on Linux and also in Chrome OS, and being largely shipped within Chromebooks and other products.
 
 ---
 
 ## Zero-Copy Texture Uploads in Chrome OS
 
-{{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/zero-copy-texture-uploads-in-chrome-os-fig1-599269.png" class="float-right" >}}
+{{< figure src="/images/zero-copy-texture-uploads-fig1.png" class="float-right" >}}
 
 In **2015**, I've worked on optimizing Chromium graphics rendering pipeline for Web applications running on Chrome OS. It used the parallelism between the CPU and GPU under Intel architecture by using a technique called [zero-copy texture upload](https://web.archive.org/web/20210616140223/https://01.org/chromium/blogs/zero-copy-texture-uploads-chrome-os). Web content could be loaded 38% faster, using 65% lower memory, extending battery life and therefore the user perceiving a smoother, less jank experience.
 
@@ -83,9 +83,9 @@ In **2015**, I've worked on optimizing Chromium graphics rendering pipeline for 
 
 ## Chromium Ozone-GBM
 
-{{< figure src="https://software.intel.com/content/dam/develop/external/us/en/images/ozone-architecture-overview-534299.png" class="float-right" >}}
+{{< figure src="/images/ozone-architecture-overview.png" class="float-right" >}}
 
-My work on Ozone architecture and Ozone-Wayland implementation influenced Google to switch Chrome for Ozone, through Ozone-GBM, as well in **2014**. [Chromium Ozone-GBM](https://software.intel.com/content/www/us/en/develop/blogs/chromium-ozone-gbm-explained.html) is the native platform, fullscreen-only, that delegates the composition tasks of the root window to a new platform based on KMS/DRM. It uses EGL/GLES2 for accelerated rendering and has an internal implementation of the Linux evdev subsystem.
+My work on Ozone architecture and Ozone-Wayland implementation influenced Google to switch Chrome for Ozone, through Ozone-GBM, as well in **2014**. [Chromium Ozone-GBM](https://web.archive.org/web/20150928024707/https://01.org/chromium/blogs/tiagovignatti/2014/chromium-ozone-gbm-explained) is the native platform, fullscreen-only, that delegates the composition tasks of the root window to a new platform based on KMS/DRM. It uses EGL/GLES2 for accelerated rendering and has an internal implementation of the Linux evdev subsystem.
 
 ---
 
