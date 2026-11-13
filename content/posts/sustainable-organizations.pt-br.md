@@ -5,14 +5,15 @@ featuredImagePreview: /images/bacia-da-vovo_2025-preview.jpg
 date: 2025-04-09T11:05:16-03:00
 draft: false
 toc: false
+# This text was first published as a standalone post at
+# /posts/organizacoes-sustentaveis/, before the site had two languages.
+# That URL still works: static/posts/organizacoes-sustentaveis/index.html
+# redirects it here. (A Hugo alias can't do it, because aliases of pt-br
+# pages are written under /pt-br/.)
 
 ---
 
 {{< style "text-align:justify; strong{color:#00b1ff;}" >}}
-
-_Esta é uma versão traduzida para o português do [texto original publicado em inglês](https://vignatti.com/posts/sustainable-organizations/)._
-
---
 
 Na [Igalia](https://www.igalia.com/), a gente trabalha com o desenvolvimento de navegadores da Internet, tipo Chrome e Safari. Na verdade, atuamos com as tecnologias por trás desses navegadores, que permitem que os _sites_ tenham uma boa aparência e funcionem corretamente, como HTML, CSS e JavaScript—os blocos de construção de todas as aplicações da Internet.
 
