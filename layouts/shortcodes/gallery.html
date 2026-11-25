@@ -119,8 +119,8 @@ Ordinal: {{ .Ordinal}}
 
 			{{/* If the image has EXIF informations, those are merged together with the metadata from the file */}}
 			{{ if in "jpeg png tiff webp" $original.MediaType.SubType }}
-				{{ with $original.Exif }}
-					{{ $metadata = merge .Tags $metadata }}
+				{{ with $original.Meta }}
+					{{ $metadata = merge .Exif $metadata }}
 				{{ end }}
 			{{ end }}
 
