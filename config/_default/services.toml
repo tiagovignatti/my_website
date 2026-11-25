@@ -3,3 +3,7 @@
 [googleAnalytics]
   id = "G-C1XH4SJP6N"
   anonymizeIP = true
+
+# Keep the full-text feed small: only the 20 most recent posts.
+[rss]
+  limit = 20

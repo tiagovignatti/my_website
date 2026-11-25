@@ -1,0 +1,106 @@
+{{- /*
+  Rich RSS feed (overrides Blowfish's rss.xml).
+
+  Gives feed readers and planets what the social cards already get:
+  - the same preview image as og:image (via _funcs/get-page-images), as Media
+    RSS <media:content>/<media:thumbnail> for reader thumbnails, and as an
+    <img> on top of the item body, which every reader renders;
+  - the summary in <description>, the full post in <content:encoded>;
+  - author (<dc:creator>), categories and a channel <image>.
+  The home feed lists only mainSections (posts), not About, Library, etc.
+*/ -}}
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := slice -}}
+{{- if .IsHome -}}
+  {{- $pages = where site.RegularPages "Section" "in" (site.Params.mainSections | default (slice "posts")) -}}
+{{- else if .IsSection -}}
+  {{- $pages = $pctx.RegularPages -}}
+{{- else -}}
+  {{- $pages = $pctx.Pages -}}
+{{- end -}}
+{{- $limit := site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+  {{- $pages = $pages | first $limit -}}
+{{- end -}}
+{{- $author := site.Params.author.name | default site.Title -}}
+{{- $mime := dict ".jpg" "image/jpeg" ".jpeg" "image/jpeg" ".png" "image/png" ".webp" "image/webp" ".gif" "image/gif" -}}
+{{- $title := site.Title -}}
+{{- if ne .Title site.Title }}{{ with .Title }}{{ $title = printf "%s on %s" . site.Title }}{{ end }}{{ end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>{{ $title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ site.Params.description | default (printf "Recent content on %s" site.Title) }}</description>
+    <generator>Hugo</generator>
+    <language>{{ site.Language.Locale }}</language>
+    <copyright>{{ replace site.Params.copyright "{ year }" now.Year }}</copyright>
+    {{- with $pages }}
+    <lastBuildDate>{{ (index .ByLastmod.Reverse 0).Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- with resources.Get "images/avatar.png" }}
+    <image>
+      <url>{{ .Permalink }}</url>
+      <title>{{ $title }}</title>
+      <link>{{ $.Permalink }}</link>
+    </image>
+    {{- end }}
+    {{- range $pages }}
+    {{- $img := "" }}
+    {{- with partial "_funcs/get-page-images.html" . }}{{ $img = index . 0 }}{{ end }}
+
+    {{- /* Post body, made for readers, which run no scripts and load no site
+         CSS (Hugo already makes src/href absolute in RSS): no scripts, no
+         heading "#" anchors, no srcset; gallery placeholders swapped for the
+         real images; YouTube embeds turned into linked thumbnails, since
+         planets strip iframes; canvas sketches turned into a link to the
+         post; inline SVG icons kept at text size. */}}
+    {{- $content := string .Content }}
+    {{- $content = replaceRE `(?s)<script\b.*?</script>` "" $content }}
+    {{- $content = replaceRE `(?s)<span\s+class="absolute[^"]*select-none">.*?</span>` "" $content }}
+    {{- $content = replaceRE `\s(?:srcset|sizes)="[^"]*"` "" $content }}
+    {{- $content = replaceRE `<img([^>]*?)\ssrc="data:[^"]*"([^>]*?)\sdata-src="([^"]+)"` `<img${1}${2} src="${3}"` $content }}
+    {{- $content = replaceRE `\sstyle="filter:[^"]*"` "" $content }}
+    {{- $content = replaceRE `<div style="[^"]*padding-bottom[^"]*">\s*<iframe[^>]*\ssrc="https://www\.youtube(?:-nocookie)?\.com/embed/([\w-]+)[^"]*"[^>]*>\s*</iframe>\s*</div>` `<p><a href="https://www.youtube.com/watch?v=${1}"><img src="https://i.ytimg.com/vi/${1}/hqdefault.jpg" alt="Watch on YouTube"></a></p>` $content }}
+    {{- $content = replaceRE `<canvas[^>]*\saria-label="([^"]*)"[^>]*></canvas>` (printf `<p><em>${1}</em> <a href="%s">▶ Play it on the site</a></p>` .Permalink) $content }}
+    {{- $content = replaceRE `(<span class="[^"]*\bicon"><svg)\b` `${1} width="1em" height="1em"` $content }}
+
+    {{- $summary := string .Summary }}
+    {{- if not (hasPrefix (trim $summary " \n") "<") }}{{ $summary = printf "<p>%s</p>" $summary }}{{ end }}
+
+    {{- /* Cover image on top, unless the body already shows that photo. */}}
+    {{- $cover := "" }}
+    {{- with $img }}
+      {{- $cover = printf `<p><img src="%s" alt=""></p>` .Permalink }}
+    {{- end }}
+    {{- $bodyCover := $cover }}
+    {{- with $img }}
+      {{- $stem := replaceRE `-preview$` "" (strings.TrimSuffix (path.Ext .Permalink) (path.Base .Permalink)) }}
+      {{- if strings.Contains $content $stem }}{{ $bodyCover = "" }}{{ end }}
+    {{- end }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      <dc:creator>{{ $author }}</dc:creator>
+      <guid>{{ .Permalink }}</guid>
+      {{- range .GetTerms "categories" }}
+      <category>{{ .LinkTitle }}</category>
+      {{- end }}
+      {{- range .GetTerms "tags" }}
+      <category>{{ .LinkTitle }}</category>
+      {{- end }}
+      <description>{{ print $cover $summary | transform.XMLEscape | safeHTML }}</description>
+      <content:encoded>{{ print $bodyCover $content | transform.XMLEscape | safeHTML }}</content:encoded>
+      {{- with $img }}
+      <media:content url="{{ .Permalink }}" medium="image"{{ with index $mime (path.Ext .Permalink | lower) }} type="{{ . }}"{{ end }} />
+      <media:thumbnail url="{{ .Permalink }}" />
+      {{- end }}
+    </item>
+    {{- end }}
+  </channel>
+</rss>
