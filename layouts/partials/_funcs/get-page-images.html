@@ -32,6 +32,9 @@
   {{- if eq $url.Scheme "" }}
     {{- with $resources.GetMatch $img -}}
       {{- $imgs = $imgs | append (dict "Image" . "RelPermalink" .RelPermalink "Permalink" .Permalink) }}
+    {{- else with resources.Get (strings.TrimPrefix "/" $img) -}}
+      {{- /* A file in assets/ (not static/): asking for .Permalink publishes it. */ -}}
+      {{- $imgs = $imgs | append (dict "Image" . "RelPermalink" .RelPermalink "Permalink" .Permalink) }}
     {{- else }}
       {{- $imgs = $imgs | append (dict "RelPermalink" (relURL $img) "Permalink" (absURL $img)) }}
     {{- end }}
