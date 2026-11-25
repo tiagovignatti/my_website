@@ -2,3 +2,8 @@
 {{ with .Params.heroImageOpacity }}
 <style>#background-image { opacity: {{ printf "%g" (float .) | safeCSS }}; }</style>
 {{ end }}
+
+{{/* Point every post to the feed, so readers can subscribe from a shared link. */}}
+{{- if .IsPage }}{{ with site.Home.OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+{{- end }}{{ end }}
